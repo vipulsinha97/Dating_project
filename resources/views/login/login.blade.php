@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    @include("includes/top")
+    <link rel="stylesheet" type="text/css" href="assets/css/homepage-style.css">
+</head>
+
+<body>
+    @include("includes/header")
+    <main>
+        <section class="signup-main login-main">
+            <div class="container-fluid mt-0">
+                <div class="row">
+                    <!-- Left Column: Form -->
+                    <div class="col-md-6 ver-center">
+                        <div class="formleftmain">
+                            <h2>Welcome Back !</h2>
+                            <p class="plz-login">Please login to your account</p>
+                            <form class="form-main">
+                                <div class="mb-5 bb-1">
+                                    <div class="input-group">
+                                        <span class="input-group-text"><img src="assets/images/ion_mail-outline.svg" /></span>
+                                        <input type="email" class="form-control" id="email" placeholder="Enter your email">
+                                    </div>
+                                </div>
+
+                                <div class="mb-5 bb-1">
+                                    <div class="input-group">
+                                        <span class="input-group-text"><img src="assets/images/mynaui_lock-password.svg" /></span>
+                                        <input type="password" class="form-control pass" id="password" placeholder="Enter your password">
+                                        <span class="input-group-text toggle-password" id="togglePassword1"><img src="assets/images/mage_eye-off.svg" /></span>
+                                    </div>
+                                </div>
+
+                                <div class="mb-4 form-check-main">
+                                    <div class="mb-3 form-check">
+                                        <input type="checkbox" class="form-check-input" id="rememberMe">
+                                        <label class="form-check-label remember-me" for="rememberMe">Remember Me</label>
+                                    </div>
+                                    <div class="mb-4">
+                                        <a href="#" class="forget-password">Forgot Password?</a>
+                                    </div>
+                                </div>
+                                <a href="#" class="btn btn-primary0 btn-geen">Login</a>
+                                <p class="mt-3"><span>Don't have an account?</span><span class="blue"><a href="/signup.php"> Sign up</a></span></p>
+                            </form>
+                        </div>
+                    </div>
+
+                    <!-- Right Column: Image -->
+
+                    <div class="col-md-6">
+                        <img src="assets/images/signup-banner.jpg" class="img-fluid fh" alt="Placeholder Image">
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    @include("includes/footer")
+    @include("includes/bottom")
+
+    <script src="assets/js/homepage-script.js"></script>
+</body>
+
+</html>

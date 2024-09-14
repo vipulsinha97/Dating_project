@@ -1,0 +1,367 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Pridi:wght@200;300;400;500;600;700&display=swap");
+
+.fullwidth-banner {
+  position: relative;
+  width: 100%;
+  height: 90vh; /* Ensure this is the height you want */
+  background-size: cover;
+  background-position: center;
+  color: white;
+  margin: 0; /* Remove default margin */
+  padding: 0; /* Remove default padding */
+}
+
+.banner-text {
+  position: absolute;
+  top: 50%; /* Center vertically */
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  margin: 0; /* Remove default margin */
+  padding: 0; /* Remove default padding */
+}
+
+.banner-text h1 {
+  color: #000;
+  font-weight: 700;
+  font-size: 62px;
+  margin: 0; /* Remove default margin */
+  padding: 0; /* Remove default padding */
+}
+
+.bluebtn a {
+  color: #fff;
+  font-family: var(--heading-font);
+  font-size: 14px;
+  background: #1fcce8;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 54px;
+  width: 144px;
+  height: 54px;
+  text-decoration: none; /* Use 'none' instead of 'unset' */
+  display: inline-block;
+  text-align: center;
+  border-radius: 10px;
+  margin: 0; /* Remove default margin */
+  padding: 0; /* Remove default padding */
+}
+
+.pinkbtn a {
+  color: #fff;
+  font-family: var(--heading-font);
+  font-size: 14px;
+  background: #d26b81;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 54px;
+  max-width: 260px;
+  width: 100%;
+  text-decoration: none; /* Use 'none' instead of 'unset' */
+  display: inline-block;
+  text-align: center;
+  border-radius: 10px;
+  margin: 0; /* Remove default margin */
+  padding: 0; /* Remove default padding */
+}
+
+.pinkbtn {
+  background: #d26b81;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 54px;
+  max-width: 260px;
+  width: 100%;
+  height: 54px;
+  text-decoration: none; /* Use 'none' instead of 'unset' */
+  display: inline-block;
+  text-align: center;
+  border-radius: 10px;
+  font-family: "Marcellus";
+  font-size: 24px;
+  line-height: 30px;
+  color: #f8f7f4;
+  overflow: hidden;
+  margin: 0; /* Remove default margin */
+  padding: 0; /* Remove default padding */
+}
+.h2-head {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 68px;
+  line-height: 86px;
+  display: flex;
+  align-items: center;
+  color: #000000;
+}
+.nutino-font {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 28px;
+  line-height: 38px;
+  color: #666666;
+  font-family: "Nunito Sans", sans-serif;
+  text-align: left;
+}
+.bluebg p {
+  font-family: "Nunito Sans", sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 28px;
+  line-height: 38px;
+  color: #ffffff;
+  text-align: left;
+}
+.bluebg {
+  background-image: url(/assets/images/bluebg.png);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  padding: 60px;
+}
+img.cusimg {
+  /* width: 72%; */
+  margin-left: 6%;
+}
+.d-inline span a {
+  font-family: "Manrope";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 22px;
+  color: #d9d9d9;
+}
+.yellowbg p {
+  font-family: "Nunito Sans", sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 28px;
+  line-height: 38px;
+  color: #ffffff;
+  text-align: left;
+}
+.yellowbg {
+  background-image: url(/assets/images/yellowbg.png);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  padding: 156px 65px 18px 60px;
+  margin-top: -14px;
+  margin-left: 14px;
+}
+.bgimg {
+  background-image: url(/assets/images/circlebg.png);
+  background-size: 114% 125%;
+  height: 100vh;
+  width: 100%;
+  max-width: 1900px;
+}
+.align-center {
+  text-align: center !important;
+}
+
+.njs-speeddate .p-desc {
+  font-family: "Pridi";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 50px;
+  text-align: center;
+  color: #909191;
+}
+.njs-speeddate ul li {
+  font-family: "Nunito Sans", sans-serif;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 24px;
+  line-height: 33px;
+  color: #868585;
+  margin-bottom: 20px;
+}
+.njs-speeddate ul li b {
+  font-family: "Nunito Sans", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 33px;
+  color: #868585;
+}
+.njs-speeddate h2 {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 68px;
+}
+.outerbarr h2 {
+  font-family: "Roboto";
+  font-style: normal;
+  font-size: 48px;
+  /* line-height: 86px; */
+  line-height: normal;
+  align-items: center;
+  display: flex;
+}
+.outerbarr {
+  justify-content: flex-end;
+  display: flex;
+  margin: 100px 0;
+}
+.barcont {
+  display: flex;
+  gap: 65px;
+  padding: 0px 0 0px 20px;
+  width: 100%;
+  justify-content: flex-end;
+  max-width: 80%;
+  border-radius: 0px 0px 0px 34px;
+  /* box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); */
+  box-shadow: 0 8px 23px 0 rgb(0 0 0 / 0%), 0 7px 7px 0 rgb(0 0 0 / 13%);
+}
+.mt-75 {
+  margin-top: 75px;
+}
+.eventsnearme h2 {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 68px;
+}
+.eventsnearme .p-desc {
+  font-family: "Pridi";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 50px;
+  text-align: center;
+  color: #909191;
+}
+.card-img-overlayed {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding: 1rem;
+  border-radius: calc(0.25rem - 1px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.eventsnearme .card {
+  border: none;
+  border-radius: 10px;
+}
+.eventsnearme .card .card-title {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 38px;
+  color: #ffffff;
+}
+.event-btn {
+  font-family: "Manrope";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 22px;
+  text-align: center;
+  color: #000000;
+  background: #fff;
+  border: none;
+  min-height: 40px;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+.carousel-item-next,
+.carousel-item-prev,
+.carousel-item.active {
+  transition: transform 0.6s ease; /* Adjust transition duration and easing here */
+}
+.howitworks h2 {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 68px;
+}
+.howitworks ul li {
+  font-family: "Nunito Sans", sans-serif;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 24px;
+  line-height: 33px;
+  color: #868585;
+  margin-bottom: 20px;
+}
+.success-rate {
+  font-family: "Pridi";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 32px;
+  line-height: 50px;
+  text-align: center;
+  color: #909191;
+}
+
+.howitworks .p-desc {
+  font-family: "Nunito Sans";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 33px;
+  text-align: center;
+  color: #868585;
+}
+.security-feat h2 {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 68px;
+}
+.security-feat .p-desc {
+  font-family: "Pridi";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 50px;
+  text-align: center;
+  color: #909191;
+}
+.sub-head {
+  font-family: "Pridi";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 50px;
+  text-align: left;
+  color: #909191;
+}
+.vp-center {
+  align-items: center;
+}
+.p-para {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 34px;
+  color: #868585;
+  font-family: "Nunito Sans", sans-serif;
+  text-align: left;
+  font-style: normal;
+}
+.justify-end {
+  display: flex;
+  justify-content: end;
+}
+#testimonialID .carousel-caption {
+  background: #F6E1E6;
+  border-radius: 30px;
+  width: 100%;
+  margin: 100px 0 0 0 !important;
+}
