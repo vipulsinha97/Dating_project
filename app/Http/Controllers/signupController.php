@@ -3,54 +3,56 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Http\Requests\storeRegistrationRequest;
-use App\Services\registrationServices;
+use App\Http\Requests\StoreRegistrationRequest;
+use App\Services\RegistrationServices;
 
-class signupController extends Controller
+class SignupController extends Controller
 {
-    
     protected $registrationServices;
 
-    public function _construct(registrationServices $registrationServices) {
+    public function __construct(RegistrationServices $registrationServices)
+    {
         $this->registrationServices = $registrationServices;
     }
 
-    //signup page view
-    
+    // Signup page view
     public function index()
     {
         return view('signup/signup');
     }
 
-    //Signup detail page
-
+    // Signup detail page
     public function signupDetails()
     {
         return view('signup/signup-details');
     }
-    
-    //save Registration details
 
-    public function saveRegistration(storeRegistrationRequest $request)
+    // Save Registration details
+    public function saveRegistration(StoreRegistrationRequest $request)
     {
         $data = $request->all();
-         // Store the uploaded files and get their paths
-        $file1Path = $request->file('image1')->store('uploads');
-        $file2Path = $request->file('image2')->store('uploads');
-        $file3Path = $request->file('image3')->store('uploads');
 
-        // Combine file paths into a single string (JSON or comma-separated)
-        $combinedFilePaths = json_encode([
-            'file1' => $file1Path,
-            'file2' => $file2Path,
-            'file3' => $file3Path,
-        ]);
-        $storeRegistration = $this->registrationServices->storeUserRegistration($data, $combinedFilePaths);
-        if($storeRegistration === true) {
-            $storePrefrence = $this->registrationServices->storeUserPrefrence($data);
-            if($storePrefrence === true) {
-                return response()->json(['status'=>'true', 'message'=>'Registration successful']);
-            } 
+        // Store uploaded files and get their paths
+        $filePaths = [];
+        foreach (['image1', 'image2', 'image3'] as $image) {
+            if ($request->hasFile($image)) {
+                $filePaths[$image] = $request->file($image)->store('uploads');
+            }
         }
+
+        // Combine file paths into a single JSON string
+        $combinedFilePaths = json_encode($filePaths);
+
+        // Store registration
+        $storeRegistration = $this->registrationServices->storeUserRegistration($data, $combinedFilePaths);
+        if ($storeRegistration === true) {
+            $storePreference = $this->registrationServices->storeUserPreference($data);
+            if ($storePreference === true) {
+                return response()->json(['status' => 'true', 'message' => 'Registration successful']);
+            }
+        }
+
+        // Return error response
+        return response()->json(['status' => 'false', 'message' => 'Registration failed'], 500);
     }
 }

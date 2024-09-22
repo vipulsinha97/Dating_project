@@ -5,7 +5,7 @@ namespace App\Http\Requests;
 use Illuminate\Foundation\Http\FormRequest;
 use App\Http\Requests\BaseRequest as BaseRequest;
 
-class storeRegistrationRequest extends BaseRequest
+class StoreRegistrationRequest extends BaseRequest
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -58,3 +58,7 @@ class storeRegistrationRequest extends BaseRequest
         ];
     }
 }
+
+
+
+
