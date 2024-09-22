@@ -5,7 +5,7 @@ use App\Models\User;
 use App\Models\Prefrence;
 use Carbon\Carbon;
 
-class registrationServices {
+class RegistrationServices {
     
     //user registration
 

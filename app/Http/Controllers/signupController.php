@@ -34,18 +34,28 @@ class signupController extends Controller
     public function saveRegistration(storeRegistrationRequest $request)
     {
         $data = $request->all();
-         // Store the uploaded files and get their paths
-        $file1Path = $request->file('image1')->store('uploads');
-        $file2Path = $request->file('image2')->store('uploads');
-        $file3Path = $request->file('image3')->store('uploads');
 
-        // Combine file paths into a single string (JSON or comma-separated)
-        $combinedFilePaths = json_encode([
-            'file1' => $file1Path,
-            'file2' => $file2Path,
-            'file3' => $file3Path,
-        ]);
-        $storeRegistration = $this->registrationServices->storeUserRegistration($data, $combinedFilePaths);
+        // Initialize an array to hold file paths
+        $filePaths = [];
+
+        // Check if each file exists and store it
+        if ($request->hasFile('image1')) {
+            $filePaths['file1'] = $request->file('image1')->store('uploads');
+        }
+
+        if ($request->hasFile('image2')) {
+            $filePaths['file2'] = $request->file('image2')->store('uploads');
+        }
+
+        if ($request->hasFile('image3')) {
+            $filePaths['file3'] = $request->file('image3')->store('uploads');
+        }
+
+        // Combine file paths into a single JSON string
+        $combinedFilePaths = json_encode($filePaths);
+
+        // Store registration data
+        $storeRegistration = $this->storeUserRegistration($data, $combinedFilePaths);
         if($storeRegistration === true) {
             $storePrefrence = $this->registrationServices->storeUserPrefrence($data);
             if($storePrefrence === true) {
