@@ -11,7 +11,7 @@
             <div class="container-fluid mt-0">
                 <div class="row justify-content-center">
                     <div class="col-md-8">
-                        <form class="form-main" id="multiStepForm">
+                        <form action="" class="form-main" id="multiStepForm">
                             <!-- Step 1 -->
                             <div class="form-step" id="step1">
                                 <div class="mb-5 tifle-box">
@@ -40,37 +40,37 @@
                                 </div>
                                 <div class="mb-4">
                                     <div class="input-group bb-1-light">
-                                        <input type="text" class="form-control" id="firstName" placeholder="First Name">
+                                        <input type="text" class="form-control" id="firstName" name="firstName" placeholder="First Name">
                                     </div>
                                 </div>
                                 <div class="mb-4">
                                     <div class="input-group bb-1-light">
-                                        <input type="text" class="form-control" id="lastName" placeholder="Last Name">
+                                        <input type="text" class="form-control" id="lastName" name="lastName" placeholder="Last Name">
                                     </div>
                                 </div>
                                 <div class="mb-4">
                                     <div class="input-group bb-1-light">
-                                        <input type="email" class="form-control" id="email" placeholder="Email">
+                                        <input type="email" class="form-control" id="email" name="email" placeholder="Email">
                                     </div>
                                 </div>
                                 <div class="mb-4">
                                     <div class="input-group bb-1-light">
-                                        <input type="text" class="form-control" id="phone" placeholder="Phone No.">
+                                        <input type="text" class="form-control" id="phone" name="phone" placeholder="Phone No.">
                                     </div>
                                 </div>
                                 <div class="mb-4">
                                     <div class="input-group bb-1-light">
-                                        <input type="date" class="form-control" id="dob" placeholder="Date of Birth">
+                                        <input type="date" class="form-control" id="dob" name="dob" placeholder="Date of Birth">
                                     </div>
                                 </div>
                                 <div class="mb-4">
                                     <div class="input-group bb-1-light">
-                                        <input type="password" class="form-control" id="createpass" placeholder="Create password">
+                                        <input type="password" class="form-control" id="createpass" name="createpass" placeholder="Create password">
                                     </div>
                                 </div>
                                 <div class="mb-4">
                                     <div class="input-group bb-1-light">
-                                        <input type="password" class="form-control" id="confirmpass" placeholder="Confirm password">
+                                        <input type="password" class="form-control" id="confirmpass" name="confirmpass" placeholder="Confirm password">
                                     </div>
                                 </div>
                                 <div class="d-flex justify-content-between">
@@ -104,15 +104,62 @@
                                     <h2>Location</h2>
                                 </div>
                                 <div class="mb-4">
-                                    <label for="plocation">Enter your permanent location</label>
+                                    <label for="plocation">Enter your city</label>
                                     <div class="input-group bb-1-light0 bbr">
-                                        <input type="text" class="form-control" id="plocation" placeholder="Enter your permanent location">
+                                        <div class="mb-4">
+                                            <div class="select-container">
+                                                <select id="height-select" name="state">
+                                                <option value="">Select a state</option>
+                                                <option value="Andhra Pradesh">Andhra Pradesh</option>
+                                                <option value="Arunachal Pradesh">Arunachal Pradesh</option>
+                                                <option value="Assam">Assam</option>
+                                                <option value="Bihar">Bihar</option>
+                                                <option value="Chandigarh">Chandigarh</option>
+                                                <option value="Chhattisgarh">Chhattisgarh</option>
+                                                <option value="Dadra and Nagar Haveli and Daman and Diu">Dadra and Nagar Haveli and Daman and Diu</option>
+                                                <option value="Delhi">Delhi</option>
+                                                <option value="Goa">Goa</option>
+                                                <option value="Gujarat">Gujarat</option>
+                                                <option value="Haryana">Haryana</option>
+                                                <option value="Himachal Pradesh">Himachal Pradesh</option>
+                                                <option value="Jharkhand">Jharkhand</option>
+                                                <option value="Karnataka">Karnataka</option>
+                                                <option value="Kerala">Kerala</option>
+                                                <option value="Ladakh">Ladakh</option>
+                                                <option value="Lakshadweep">Lakshadweep</option>
+                                                <option value="Madhya Pradesh">Madhya Pradesh</option>
+                                                <option value="Maharashtra">Maharashtra</option>
+                                                <option value="Manipur">Manipur</option>
+                                                <option value="Meghalaya">Meghalaya</option>
+                                                <option value="Mizoram">Mizoram</option>
+                                                <option value="Nagaland">Nagaland</option>
+                                                <option value="Odisha">Odisha</option>
+                                                <option value="Puducherry">Puducherry</option>
+                                                <option value="Punjab">Punjab</option>
+                                                <option value="Rajasthan">Rajasthan</option>
+                                                <option value="Sikkim">Sikkim</option>
+                                                <option value="Tamil Nadu">Tamil Nadu</option>
+                                                <option value="Telangana">Telangana</option>
+                                                <option value="Tripura">Tripura</option>
+                                                <option value="Uttar Pradesh">Uttar Pradesh</option>
+                                                <option value="Uttarakhand">Uttarakhand</option>
+                                                <option value="West Bengal">West Bengal</option>
+                                                    <!-- Add more options as needed -->
+                                                </select>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                                 <div class="mb-4">
-                                    <label for="clocation">Enter your current location</label>
+                                    <label for="plocation">Enter your city</label>
                                     <div class="input-group bb-1-light0 bbr">
-                                        <input type="text" class="form-control" id="clocation" placeholder="Enter your current location">
+                                        <input type="text" class="form-control" id="plocation" name="city" placeholder="Enter your permanent location">
+                                    </div>
+                                </div>
+                                <div class="mb-4">
+                                    <label for="clocation">Enter your Address</label>
+                                    <div class="input-group bb-1-light0 bbr">
+                                        <input type="text" class="form-control" id="address" name="address" placeholder="Enter your current location">
                                     </div>
                                 </div>
                                 <div class="d-flex justify-content-between">
@@ -128,7 +175,7 @@
                                 </div>
                                 <div class="mb-4">
                                     <div class="select-container">
-                                        <select id="height-select">
+                                        <select id="height-select" name="height">
                                             <option value="5ft">5 feet</option>
                                             <option value="5ft1in">5 feet 1 inch</option>
                                             <option value="5ft2in">5 feet 2 inches</option>
@@ -150,7 +197,7 @@
                                 </div>
                                 <div class="mb-4">
                                     <div class="select-container">
-                                        <select id="pd-select">
+                                        <select id="pd-select" name="profession">
                                             <optgroup class="optlabel" label="Choose Your Profession">
                                                 <option value="" disabled selected>Profession</option> 
                                                 <option value="">Finance</option>
@@ -168,12 +215,12 @@
                                 </div>
                                 <div class="mb-4">
                                     <div class="input-group bb-1-light">
-                                        <input type="text" class="form-control" id="education" placeholder="Education">
+                                        <input type="text" class="form-control" id="education" name="education" placeholder="Education">
                                     </div>
                                 </div>
                                 <div class="mb-4">
                                     <div class="select-container">
-                                        <select id="sal-select">
+                                        <select id="sal-select" name="salary">
                                             <optgroup class="optlabel" label="Chose Your Salary  Package">
                                                 <option value="" disabled selected>Salary</option>
                                                 <option value="">
@@ -248,13 +295,13 @@
                                 </div>
                                 <div class="mb-4">
                                     <div class="input-group bb-1-light0 radiobtn">
-                                        <input type="radio" id="nm" name="status" value="nm">
+                                        <input type="radio" id="nm" name="relation_status" value="nm">
                                         <label for="nm" class="option-button">Never married</label>
-                                        <input type="radio" id="widow" name="status" value="widow">
+                                        <input type="radio" id="widow" name="relation_status" value="widow">
                                         <label for="widow" class="option-button">Widow</label>
-                                        <input type="radio" id="divorced" name="status" value="divorced">
+                                        <input type="radio" id="divorced" name="relation_status" value="divorced">
                                         <label for="divorced" class="option-button">Divorced</label>
-                                        <input type="radio" id="ad" name="ad" value="ad">
+                                        <input type="radio" id="ad" name="relation_status" value="awaiting_divorce">
                                         <label for="ad" class="option-button">Awaiting Divorce</label>
                                     </div>
                                 </div>
@@ -316,13 +363,13 @@
                                 <div class="mb-4">
                                     <label for="qa1">Q.1 2 questions and small space for free text wherein people can answer.</label>
                                     <div class="input-group bb-1-light0 bbr">
-                                        <textarea id="qa1-ans" class="form-control" placeholder="Answer" aria-label="qa1-ans" rows="2"></textarea>
+                                        <textarea id="qa1-ans" name="qa1" class="form-control" placeholder="Answer" aria-label="qa1-ans" rows="2"></textarea>
                                     </div>
                                 </div>
                                 <div class="mb-4">
                                     <label for="qa2">Q.2 2 questions and small space for free text wherein people can answer.</label>
                                     <div class="input-group bb-1-light0 bbr">
-                                        <textarea id="qa2-ans" class="form-control" placeholder="Answer" aria-label="qa2-ans" rows="2"></textarea>
+                                        <textarea id="qa2-ans" name="qa1" class="form-control" placeholder="Answer" aria-label="qa2-ans" rows="2"></textarea>
                                     </div>
                                 </div>
                                 <div class="d-flex justify-content-between">
@@ -347,7 +394,7 @@
                                                         <div class="upload-icon">+</div>
                                                         <div class="upload-text">Add Image</div>
                                                     </label>
-                                                    <input id="file-upload1" type="file" accept="image/*" />
+                                                    <input id="file-upload1" type="file" name="image[]" accept="image/*" />
                                                     <img id="image-preview1" src="#" alt="Image preview" style="display: none;" />
                                                 </div>
                                             </div>
@@ -357,7 +404,7 @@
                                                         <div class="upload-icon">+</div>
                                                         <div class="upload-text">Add Image</div>
                                                     </label>
-                                                    <input id="file-upload2" type="file" accept="image/*" />
+                                                    <input id="file-upload2" type="file" name="image[]" accept="image/*" />
                                                     <img id="image-preview2" src="#" alt="Image preview" style="display: none;" />
                                                 </div>
                                             </div>
@@ -367,7 +414,7 @@
                                                         <div class="upload-icon">+</div>
                                                         <div class="upload-text">Add Image</div>
                                                     </label>
-                                                    <input id="file-upload3" type="file" accept="image/*" />
+                                                    <input id="file-upload3" type="file" name="image[]" accept="image/*" />
                                                     <img id="image-preview3" src="#" alt="Image preview" style="display: none;" />
                                                 </div>
                                             </div>
@@ -400,7 +447,7 @@
                                 <div class="mb-4">
                                     <h4 class="redcl">Smoke</h4>
                                     <div class="input-group bb-1-light0 radiobtn">
-                                        <input type="radio" id="dmsmoke" name="preferences-smoke" value="dmsmoke">
+                                        <input type="radio" id="dmsmoke" name="preferences_smoke" value="dmsmoke">
                                         <label for="dmsmoke" class="option-button">Doesn’t matter</label>
                                         <input type="radio" id="prefrence-notok" name="preferences-smoke" value="prefrence-notok">
                                         <label for="prefrence-notok" class="option-button">Not Ok</label>
@@ -409,7 +456,7 @@
                                 <div class="mb-4">
                                     <h4 class="redcl">Drink</h4>
                                     <div class="input-group bb-1-light0 radiobtn">
-                                        <input type="radio" id="drink-doesnot" name="drink" value="drink-doesnot">
+                                        <input type="radio" id="drink-doesnot" name="preferences_drink" value="drink-doesnot">
                                         <label for="drink-doesnot" class="option-button">Doesn’t matter</label>
                                         <input type="radio" id="drink-occasionally" name="drink" value="drink-occasionally">
                                         <label for="drink-occasionally" class="option-button">Occasionally</label>
@@ -421,31 +468,31 @@
                                     <h4 class="redcl">Marital Status</h4>
                                     <div class="input-group bb-1-light0 checkbtn">
                                         <div class="form-check">
-                                            <input class="form-check-input" type="checkbox" id="status-doesnt-matter" name="marital-status" value="doesnt-matter">
+                                            <input class="form-check-input" type="checkbox" id="status-doesnt-matter" name="preferences_marital_status" value="doesnt-matter">
                                             <label class="form-check-label" for="status-doesnt-matter">
                                                 Doesn’t matter
                                             </label>
                                         </div>
                                         <div class="form-check">
-                                            <input class="form-check-input" type="checkbox" id="status-never-married" name="marital-status" value="never-married">
+                                            <input class="form-check-input" type="checkbox" id="status-never-married" name="preferences_marital_status" value="never-married">
                                             <label class="form-check-label" for="status-never-married">
                                                 Never Married
                                             </label>
                                         </div>
                                         <div class="form-check">
-                                            <input class="form-check-input" type="checkbox" id="status-divorced" name="marital-status" value="divorced">
+                                            <input class="form-check-input" type="checkbox" id="status-divorced" name="preferences_marital_status" value="divorced">
                                             <label class="form-check-label" for="status-divorced">
                                                 Divorced
                                             </label>
                                         </div>
                                         <div class="form-check">
-                                            <input class="form-check-input" type="checkbox" id="status-awaiting-divorce" name="marital-status" value="awaiting-divorce">
+                                            <input class="form-check-input" type="checkbox" id="status-awaiting-divorce" name="preferences_marital_status" value="awaiting-divorce">
                                             <label class="form-check-label" for="status-awaiting-divorce">
                                                 Awaiting Divorce
                                             </label>
                                         </div>
                                         <div class="form-check">
-                                            <input class="form-check-input" type="checkbox" id="status-widow" name="marital-status" value="widow">
+                                            <input class="form-check-input" type="checkbox" id="status-widow" name="preferences_marital_status" value="widow">
                                             <label class="form-check-label" for="status-widow">
                                                 Widow
                                             </label>
@@ -467,49 +514,49 @@
                                     <h4 class="redcl">Religion</h4>
                                     <div class="input-group bb-1-light0 checkbtn">
                                         <div class="form-check">
-                                            <input class="form-check-input" type="checkbox" id="pr-doesntmatter" name="pref-religion" value="pr-doesntmatter">
+                                            <input class="form-check-input" type="checkbox" id="pr-doesntmatter" name="pref_religion" value="pr-doesntmatter">
                                             <label class="form-check-label" for="pr-doesntmatter">
                                                 Doesn’t matter
                                             </label>
                                         </div>
                                         <div class="form-check">
-                                            <input class="form-check-input" type="checkbox" id="pr-hinduism" name="pref-religion" value="pr-hinduism">
+                                            <input class="form-check-input" type="checkbox" id="pr-hinduism" name="pref_religion" value="pr-hinduism">
                                             <label class="form-check-label" for="pr-hinduism">
                                                 Hinduism
                                             </label>
                                         </div>
                                         <div class="form-check">
-                                            <input class="form-check-input" type="checkbox" id="pr-sikh" name="pref-religion" value="pr-sikh">
+                                            <input class="form-check-input" type="checkbox" id="pr-sikh" name="pref_religion" value="pr-sikh">
                                             <label class="form-check-label" for="pr-sikh">
                                                 Sikh
                                             </label>
                                         </div>
                                         <div class="form-check">
-                                            <input class="form-check-input" type="checkbox" id="pr-jain" name="pref-religion" value="pr-jain">
+                                            <input class="form-check-input" type="checkbox" id="pr-jain" name="pref_religion" value="pr-jain">
                                             <label class="form-check-label" for="pr-jain">
                                                 Jain
                                             </label>
                                         </div>
                                         <div class="form-check">
-                                            <input class="form-check-input" type="checkbox" id="pr-christ" name="pref-religion" value="pr-christ">
+                                            <input class="form-check-input" type="checkbox" id="pr-christ" name="pref_religion" value="pr-christ">
                                             <label class="form-check-label" for="pr-christ">
                                                 Christianity
                                             </label>
                                         </div>
                                         <div class="form-check">
-                                            <input class="form-check-input" type="checkbox" id="pr-muslim" name="pref-religion" value="pr-muslim">
+                                            <input class="form-check-input" type="checkbox" id="pr-muslim" name="pref_religion" value="pr-muslim">
                                             <label class="form-check-label" for="pr-muslim">
                                                 Muslim
                                             </label>
                                         </div>
                                         <div class="form-check">
-                                            <input class="form-check-input" type="checkbox" id="pr-budh" name="pref-religion" value="pr-budh">
+                                            <input class="form-check-input" type="checkbox" id="pr-budh" name="pref_religion" value="pr-budh">
                                             <label class="form-check-label" for="pr-budh">
                                                 Buddhist
                                             </label>
                                         </div>
                                         <div class="form-check">
-                                            <input class="form-check-input" type="checkbox" id="pr-spiritual" name="pref-religion" value="pr-spiritual">
+                                            <input class="form-check-input" type="checkbox" id="pr-spiritual" name="pref_religion" value="pr-spiritual">
                                             <label class="form-check-label" for="pr-spiritual">
                                                 Spiritual
                                             </label>
@@ -549,10 +596,10 @@
                                     <div class="select-container">
                                         <select id="pd-select">
                                             <optgroup class="optlabel" label="Choose time">                                            
-                                                <option value="">08:00 - 09:00</option>
-                                                <option value="">09:00 - 10:00</option>
-                                                <option value="">10:00 - 11:00</option>
-                                                <option value="">11:00 - 12:00</option>                                   
+                                                <option value="08:00 - 09:00">08:00 - 09:00</option>
+                                                <option value="09:00 - 10:0">09:00 - 10:00</option>
+                                                <option value="10:00 - 11:00">10:00 - 11:00</option>
+                                                <option value="11:00 - 12:00">11:00 - 12:00</option>                                   
                                                 <!-- Add more options as needed -->
                                             </optgroup>
                                         </select>
