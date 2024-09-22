@@ -23,7 +23,7 @@ return new class extends Migration
             $table->string('marital_status')->nullable();
             $table->string('profile_with_children')->nullable();
             $table->string('religion')->nullable();
-            $table->string('relaionship')->nullable();
+            $table->string('relationship')->nullable();
             $table->timestamps();
         });
     }
