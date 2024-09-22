@@ -35,8 +35,8 @@ return new class extends Migration
             $table->string('qa1')->nullable();
             $table->string('qa2')->nullable();
             $table->text('picture')->nullable();
-            $table->time('time')->nullable();
-            $table->date('date')->nullable();
+            $table->string('preferable_time')->nullable();
+            $table->string('preferable_date')->nullable();
             $table->rememberToken();
             $table->timestamps();
         });

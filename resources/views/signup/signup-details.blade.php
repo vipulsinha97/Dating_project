@@ -8,10 +8,19 @@
     @include("includes/header")
     <main>
         <section class="signup-details-main">
+            @if(Session::get('fail'))
+                <div class="alert alert-danger" id="fail">
+                    <center>{{Session::get('fail')}}</center>          
+                </div>
+            @elseif(Session::get('success'))
+                <div class="alert alert-success" id="success">
+                    <center>{{session('success')}}</center>          
+                </div>
+            @endif
             <div class="container-fluid mt-0">
                 <div class="row justify-content-center">
                     <div class="col-md-8">
-                        <form class="form-main" id="multiStepForm">
+                        <form class="form-main" id="multiStepForm" enctype="multipart/form-data">
                             <!-- Step 1 -->
                             <div class="form-step" id="step1">
                                 <div class="mb-5 tifle-box">
@@ -40,37 +49,37 @@
                                 </div>
                                 <div class="mb-4">
                                     <div class="input-group bb-1-light">
-                                        <input type="text" class="form-control" id="firstName" placeholder="First Name">
+                                        <input type="text" class="form-control firstName" id="firstName" name="firstName" placeholder="First Name">
                                     </div>
                                 </div>
                                 <div class="mb-4">
                                     <div class="input-group bb-1-light">
-                                        <input type="text" class="form-control" id="lastName" placeholder="Last Name">
+                                        <input type="text" class="form-control lastName" id="lastName" name="lastName" placeholder="Last Name">
                                     </div>
                                 </div>
                                 <div class="mb-4">
                                     <div class="input-group bb-1-light">
-                                        <input type="email" class="form-control" id="email" placeholder="Email">
+                                        <input type="email" class="form-control email" id="email" name="email" placeholder="Email">
                                     </div>
                                 </div>
                                 <div class="mb-4">
                                     <div class="input-group bb-1-light">
-                                        <input type="text" class="form-control" id="phone" placeholder="Phone No.">
+                                        <input type="text" class="form-control phone" id="phone" name="phone" placeholder="Phone No.">
                                     </div>
                                 </div>
                                 <div class="mb-4">
                                     <div class="input-group bb-1-light">
-                                        <input type="date" class="form-control" id="dob" placeholder="Date of Birth">
+                                        <input type="date" class="form-control dob" id="dob" name="dob" placeholder="Date of Birth">
                                     </div>
                                 </div>
                                 <div class="mb-4">
                                     <div class="input-group bb-1-light">
-                                        <input type="password" class="form-control" id="createpass" placeholder="Create password">
+                                        <input type="password" class="form-control createpass" id="createpass" name="createpass" placeholder="Create password">
                                     </div>
                                 </div>
                                 <div class="mb-4">
                                     <div class="input-group bb-1-light">
-                                        <input type="password" class="form-control" id="confirmpass" placeholder="Confirm password">
+                                        <input type="password" class="form-control confirmpass" id="confirmpass" name="confirmpass" placeholder="Confirm password">
                                     </div>
                                 </div>
                                 <div class="d-flex justify-content-between">
@@ -86,9 +95,9 @@
                                 </div>
                                 <div class="mb-4">
                                     <div class="input-group bb-1-light0 radiobtn">
-                                        <input type="radio" id="male" name="gender" value="male">
+                                        <input type="radio" id="male" class="gender" name="gender" value="male">
                                         <label for="male" class="option-button">Male</label>
-                                        <input type="radio" id="female" name="gender" value="female">
+                                        <input type="radio" id="female" class="gender" name="gender" value="female">
                                         <label for="female" class="option-button">Female</label>
                                     </div>
                                 </div>
@@ -104,15 +113,62 @@
                                     <h2>Location</h2>
                                 </div>
                                 <div class="mb-4">
-                                    <label for="plocation">Enter your permanent location</label>
+                                    <label for="plocation">Enter your city</label>
                                     <div class="input-group bb-1-light0 bbr">
-                                        <input type="text" class="form-control" id="plocation" placeholder="Enter your permanent location">
+                                        <div class="mb-4">
+                                            <div class="select-container">
+                                                <select id="height-select" class="state" name="state">
+                                                <option value="">Select a state</option>
+                                                <option value="Andhra Pradesh">Andhra Pradesh</option>
+                                                <option value="Arunachal Pradesh">Arunachal Pradesh</option>
+                                                <option value="Assam">Assam</option>
+                                                <option value="Bihar">Bihar</option>
+                                                <option value="Chandigarh">Chandigarh</option>
+                                                <option value="Chhattisgarh">Chhattisgarh</option>
+                                                <option value="Dadra and Nagar Haveli and Daman and Diu">Dadra and Nagar Haveli and Daman and Diu</option>
+                                                <option value="Delhi">Delhi</option>
+                                                <option value="Goa">Goa</option>
+                                                <option value="Gujarat">Gujarat</option>
+                                                <option value="Haryana">Haryana</option>
+                                                <option value="Himachal Pradesh">Himachal Pradesh</option>
+                                                <option value="Jharkhand">Jharkhand</option>
+                                                <option value="Karnataka">Karnataka</option>
+                                                <option value="Kerala">Kerala</option>
+                                                <option value="Ladakh">Ladakh</option>
+                                                <option value="Lakshadweep">Lakshadweep</option>
+                                                <option value="Madhya Pradesh">Madhya Pradesh</option>
+                                                <option value="Maharashtra">Maharashtra</option>
+                                                <option value="Manipur">Manipur</option>
+                                                <option value="Meghalaya">Meghalaya</option>
+                                                <option value="Mizoram">Mizoram</option>
+                                                <option value="Nagaland">Nagaland</option>
+                                                <option value="Odisha">Odisha</option>
+                                                <option value="Puducherry">Puducherry</option>
+                                                <option value="Punjab">Punjab</option>
+                                                <option value="Rajasthan">Rajasthan</option>
+                                                <option value="Sikkim">Sikkim</option>
+                                                <option value="Tamil Nadu">Tamil Nadu</option>
+                                                <option value="Telangana">Telangana</option>
+                                                <option value="Tripura">Tripura</option>
+                                                <option value="Uttar Pradesh">Uttar Pradesh</option>
+                                                <option value="Uttarakhand">Uttarakhand</option>
+                                                <option value="West Bengal">West Bengal</option>
+                                                    <!-- Add more options as needed -->
+                                                </select>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                                 <div class="mb-4">
-                                    <label for="clocation">Enter your current location</label>
+                                    <label for="plocation">Enter your city</label>
                                     <div class="input-group bb-1-light0 bbr">
-                                        <input type="text" class="form-control" id="clocation" placeholder="Enter your current location">
+                                        <input type="text" class="form-control plocation" id="plocation" name="city" placeholder="Enter your permanent location">
+                                    </div>
+                                </div>
+                                <div class="mb-4">
+                                    <label for="clocation">Enter your Address</label>
+                                    <div class="input-group bb-1-light0 bbr">
+                                        <input type="text" class="form-control address" id="address" name="address" placeholder="Enter your current location">
                                     </div>
                                 </div>
                                 <div class="d-flex justify-content-between">
@@ -128,12 +184,26 @@
                                 </div>
                                 <div class="mb-4">
                                     <div class="select-container">
-                                        <select id="height-select">
+                                        <select id="height-select" class="height" name="height">
                                             <option value="5ft">5 feet</option>
                                             <option value="5ft1in">5 feet 1 inch</option>
                                             <option value="5ft2in">5 feet 2 inches</option>
                                             <option value="5ft3in">5 feet 3 inches</option>
-                                            <!-- Add more options as needed -->
+                                            <option value="5ft4in">5 feet 4 inches</option>
+                                            <option value="5ft5in">5 feet 5 inches</option>
+                                            <option value="5ft6in">5 feet 6 inches</option>
+                                            <option value="5ft7in">5 feet 7 inches</option>
+                                            <option value="5ft8in">5 feet 8 inches</option>
+                                            <option value="5ft9in">5 feet 9 inches</option>
+                                            <option value="5ft10in">5 feet 10 inches</option>
+                                            <option value="5ft11in">5 feet 11 inches</option>
+                                            <option value="6ft0in">6 feet 0 inches</option>
+                                            <option value="6ft1in">6 feet 1 inch</option>
+                                            <option value="6ft2in">6 feet 2 inches</option>
+                                            <option value="6ft3in">6 feet 3 inches</option>
+                                            <option value="6ft4in">6 feet 4 inches</option>
+                                            <option value="6ft5in">6 feet 5 inches</option>
+                                            <option value="6ft6in">6 feet 6 inches</option>
                                         </select>
                                     </div>
                                 </div>
@@ -150,16 +220,16 @@
                                 </div>
                                 <div class="mb-4">
                                     <div class="select-container">
-                                        <select id="pd-select">
+                                        <select id="pd-select" class="profession" name="profession">
                                             <optgroup class="optlabel" label="Choose Your Profession">
                                                 <option value="" disabled selected>Profession</option> 
-                                                <option value="">Finance</option>
-                                                <option value="">Sales</option>
-                                                <option value="">Marketing</option>
-                                                <option value="">Information technology</option>
-                                                <option value="">Human resources</option>
-                                                <option value="">Admin</option>
-                                                <option value="">Operations</option>
+                                                <option value="Finance">Finance</option>
+                                                <option value="Sales">Sales</option>
+                                                <option value="Marketing">Marketing</option>
+                                                <option value="Information technology">Information technology</option>
+                                                <option value="Human resources">Human resources</option>
+                                                <option value="Admin">Admin</option>
+                                                <option value="Operations">Operations</option>
                                                 <option class="more" value="">More..</option>
                                                 <!-- Add more options as needed -->
                                             </optgroup>
@@ -168,24 +238,21 @@
                                 </div>
                                 <div class="mb-4">
                                     <div class="input-group bb-1-light">
-                                        <input type="text" class="form-control" id="education" placeholder="Education">
+                                        <input type="text" class="form-control" id="education" name="education" placeholder="Education">
                                     </div>
                                 </div>
                                 <div class="mb-4">
                                     <div class="select-container">
-                                        <select id="sal-select">
+                                        <select id="sal-select" class="salary" name="salary">
                                             <optgroup class="optlabel" label="Chose Your Salary  Package">
                                                 <option value="" disabled selected>Salary</option>
-                                                <option value="">
-                                                    < 5 lacs </option>
-                                                <option value="">5 lacs - 10 lacs</option>
-                                                <option value="">10 lacs - 15 lacs</option>
-                                                <option value="">15 lacs - 20 lacs</option>
-                                                <option value="">20 lacs - 25 lacs</option>
-                                                <option value="">25 lacs - 50 lacs</option>
-                                                <option value="">
-                                                    > 50 lacs </option>
-                                                <option class="more" value="">More..</option>
+                                                <option value="< 5 lacs"> < 5 lacs </option>
+                                                <option value="5 lacs - 10 lacs">5 lacs - 10 lacs</option>
+                                                <option value="10 lacs - 15 lacs">10 lacs - 15 lacs</option>
+                                                <option value="15 lacs - 20 lacs">15 lacs - 20 lacs</option>
+                                                <option value="20 lacs - 25 lacs">20 lacs - 25 lacs</option>
+                                                <option value="25 lacs - 50 lacs">25 lacs - 50 lacs</option>
+                                                <option value="> 50 lacs"> > 50 lacs </option>
                                                 <!-- Add more options as needed -->
                                             </optgroup>
                                         </select>
@@ -204,11 +271,11 @@
                                 </div>
                                 <div class="mb-4">
                                     <div class="input-group bb-1-light0 radiobtn">
-                                        <input type="radio" id="yes" name="drink" value="yes">
+                                        <input type="radio" class="drink" id="yes" name="drink" value="yes">
                                         <label for="yes" class="option-button">Yes</label>
-                                        <input type="radio" id="no" name="drink" value="no">
+                                        <input type="radio" class="drink" id="no" name="drink" value="no">
                                         <label for="no" class="option-button">No</label>
-                                        <input type="radio" id="occasionally" name="drink" value="occasionally">
+                                        <input type="radio" class="drink" id="occasionally" name="drink" value="occasionally">
                                         <label for="occasionally" class="option-button">Occasionally</label>
                                     </div>
                                 </div>
@@ -226,11 +293,11 @@
                                 </div>
                                 <div class="mb-4">
                                     <div class="input-group bb-1-light0 radiobtn">
-                                        <input type="radio" id="smoke_yes" name="smoke" value="smoke_yes">
+                                        <input type="radio" id="smoke_yes" class="smoke" name="smoke" value="smoke_yes">
                                         <label for="smoke_yes" class="option-button">Yes</label>
-                                        <input type="radio" id="smoke_no" name="smoke" value="smoke_no">
+                                        <input type="radio" id="smoke_no" class="smoke" name="smoke" value="smoke_no">
                                         <label for="smoke_no" class="option-button">No</label>
-                                        <input type="radio" id="smoke_occasionally" name="smoke" value="smoke_occasionally">
+                                        <input type="radio" id="smoke_occasionally" class="smoke" name="smoke" value="smoke_occasionally">
                                         <label for="smoke_occasionally" class="option-button">Occasionally</label>
                                     </div>
                                 </div>
@@ -248,24 +315,24 @@
                                 </div>
                                 <div class="mb-4">
                                     <div class="input-group bb-1-light0 radiobtn">
-                                        <input type="radio" id="nm" name="status" value="nm">
+                                        <input type="radio" id="nm" class="relation_status" name="relation_status" value="nm">
                                         <label for="nm" class="option-button">Never married</label>
-                                        <input type="radio" id="widow" name="status" value="widow">
+                                        <input type="radio" id="widow" class="relation_status" name="relation_status" value="widow">
                                         <label for="widow" class="option-button">Widow</label>
-                                        <input type="radio" id="divorced" name="status" value="divorced">
+                                        <input type="radio" id="divorced" class="relation_status" name="relation_status" value="divorced">
                                         <label for="divorced" class="option-button">Divorced</label>
-                                        <input type="radio" id="ad" name="ad" value="ad">
+                                        <input type="radio" id="ad" class="relation_status" name="relation_status" value="awaiting_divorce">
                                         <label for="ad" class="option-button">Awaiting Divorce</label>
                                     </div>
                                 </div>
                                 <div class="mb-4 mt-5">
                                     <h4 class="redcl mb-4">Have children</h4>
                                     <div class="input-group bb-1-light0 radiobtn">
-                                        <input type="radio" id="hc-no" name="hc" value="hc-no">
+                                        <input type="radio" id="hc-no" class="hc" name="hc" value="hc-no">
                                         <label for="hc-no" class="option-button">No</label>
-                                        <input type="radio" id="hc-yes" name="hc" value="hc-yes">
+                                        <input type="radio" id="hc-yes" class="hc" name="hc" value="hc-yes">
                                         <label for="hc-yes" class="option-button">Yes</label>
-                                        <input type="radio" id="hc-ss" name="hc" value="hc-ss">
+                                        <input type="radio" id="hc-ss" class="hc" name="hc" value="hc-ss">
                                         <label for="hc-ss" class="option-button">Yes but staying separately</label>
                                     </div>
                                 </div>
@@ -283,21 +350,21 @@
                                 </div>
                                 <div class="mb-4">
                                     <div class="input-group bb-1-light0 radiobtn">
-                                        <input type="radio" id="nm" name="religion" value="nm">
+                                        <input type="radio" id="nm" classs="religion" name="religion" value="nm">
                                         <label for="nm" class="option-button">Hinduism</label>
-                                        <input type="radio" id="religion-sikh" name="religion" value="religion-sikh">
+                                        <input type="radio" id="religion-sikh" classs="religion" name="religion" value="religion-sikh">
                                         <label for="religion-sikh" class="option-button">Sikh</label>
-                                        <input type="radio" id="religion-jain" name="religion" value="religion-jain">
+                                        <input type="radio" id="religion-jain" classs="religion" name="religion" value="religion-jain">
                                         <label for="religion-jain" class="option-button">Jain</label>
-                                        <input type="radio" id="religion-christian" name="religion" value="religion-christian">
+                                        <input type="radio" id="religion-christian" classs="religion" name="religion" value="religion-christian">
                                         <label for="religion-christian" class="option-button"> Christianity</label>
-                                        <input type="radio" id="religion-muslim" name="religion" value="religion-muslim">
+                                        <input type="radio" id="religion-muslim" classs="religion" name="religion" value="religion-muslim">
                                         <label for="religion-muslim" class="option-button"> Muslim</label>
-                                        <input type="radio" id="religion-budh" name="religion" value="religion-budh">
+                                        <input type="radio" id="religion-budh" classs="religion" name="religion" value="religion-budh">
                                         <label for="religion-budh" class="option-button"> Buddhist</label>
-                                        <input type="radio" id="religion-spritual" name="religion" value="religion-spritual">
+                                        <input type="radio" id="religion-spritual" classs="religion" name="religion" value="religion-spritual">
                                         <label for="religion-spritual" class="option-button"> Spiritual</label>
-                                        <input type="radio" id="religion-others" name="religion" value="religion-others">
+                                        <input type="radio" id="religion-others" classs="religion" name="religion" value="religion-others">
                                         <label for="religion-others" class="option-button"> Others</label>
                                     </div>
                                 </div>
@@ -316,13 +383,13 @@
                                 <div class="mb-4">
                                     <label for="qa1">Q.1 2 questions and small space for free text wherein people can answer.</label>
                                     <div class="input-group bb-1-light0 bbr">
-                                        <textarea id="qa1-ans" class="form-control" placeholder="Answer" aria-label="qa1-ans" rows="2"></textarea>
+                                        <textarea id="qa1-ans" name="qa1" class="form-control qa1" placeholder="Answer" aria-label="qa1-ans" rows="2"></textarea>
                                     </div>
                                 </div>
                                 <div class="mb-4">
                                     <label for="qa2">Q.2 2 questions and small space for free text wherein people can answer.</label>
                                     <div class="input-group bb-1-light0 bbr">
-                                        <textarea id="qa2-ans" class="form-control" placeholder="Answer" aria-label="qa2-ans" rows="2"></textarea>
+                                        <textarea id="qa2-ans" name="qa2" class="form-control qa2" placeholder="Answer" aria-label="qa2-ans" rows="2"></textarea>
                                     </div>
                                 </div>
                                 <div class="d-flex justify-content-between">
@@ -347,7 +414,7 @@
                                                         <div class="upload-icon">+</div>
                                                         <div class="upload-text">Add Image</div>
                                                     </label>
-                                                    <input id="file-upload1" type="file" accept="image/*" />
+                                                    <input id="file-upload1" type="file" class="image1" name="image[]" accept="image/*" />
                                                     <img id="image-preview1" src="#" alt="Image preview" style="display: none;" />
                                                 </div>
                                             </div>
@@ -357,7 +424,7 @@
                                                         <div class="upload-icon">+</div>
                                                         <div class="upload-text">Add Image</div>
                                                     </label>
-                                                    <input id="file-upload2" type="file" accept="image/*" />
+                                                    <input id="file-upload2" type="file" class="image2" name="image[]" accept="image/*" />
                                                     <img id="image-preview2" src="#" alt="Image preview" style="display: none;" />
                                                 </div>
                                             </div>
@@ -367,7 +434,7 @@
                                                         <div class="upload-icon">+</div>
                                                         <div class="upload-text">Add Image</div>
                                                     </label>
-                                                    <input id="file-upload3" type="file" accept="image/*" />
+                                                    <input id="file-upload3" type="file" class="image3" name="image[]" accept="image/*" />
                                                     <img id="image-preview3" src="#" alt="Image preview" style="display: none;" />
                                                 </div>
                                             </div>
@@ -400,20 +467,20 @@
                                 <div class="mb-4">
                                     <h4 class="redcl">Smoke</h4>
                                     <div class="input-group bb-1-light0 radiobtn">
-                                        <input type="radio" id="dmsmoke" name="preferences-smoke" value="dmsmoke">
+                                        <input type="radio" id="dmsmoke" class="preferences_smoke" name="preferences_smoke" value="dmsmoke">
                                         <label for="dmsmoke" class="option-button">Doesn’t matter</label>
-                                        <input type="radio" id="prefrence-notok" name="preferences-smoke" value="prefrence-notok">
+                                        <input type="radio" id="prefrence-notok" class="preferences_smoke" name="preferences-smoke" value="prefrence-notok">
                                         <label for="prefrence-notok" class="option-button">Not Ok</label>
                                     </div>
                                 </div>
                                 <div class="mb-4">
                                     <h4 class="redcl">Drink</h4>
                                     <div class="input-group bb-1-light0 radiobtn">
-                                        <input type="radio" id="drink-doesnot" name="drink" value="drink-doesnot">
+                                        <input type="radio" id="drink-doesnot" class="preferences_drink" name="preferences_drink" value="drink-doesnot">
                                         <label for="drink-doesnot" class="option-button">Doesn’t matter</label>
-                                        <input type="radio" id="drink-occasionally" name="drink" value="drink-occasionally">
+                                        <input type="radio" id="drink-occasionally" class="preferences_drink" name="preferences_drink" value="drink-occasionally">
                                         <label for="drink-occasionally" class="option-button">Occasionally</label>
-                                        <input type="radio" id="drink-notok" name="drink" value="drink-notok">
+                                        <input type="radio" id="drink-notok" class="preferences_drink" name="preferences_drink" value="drink-notok">
                                         <label for="drink-notok" class="option-button">Not Ok</label>
                                     </div>
                                 </div>
@@ -421,31 +488,31 @@
                                     <h4 class="redcl">Marital Status</h4>
                                     <div class="input-group bb-1-light0 checkbtn">
                                         <div class="form-check">
-                                            <input class="form-check-input" type="checkbox" id="status-doesnt-matter" name="marital-status" value="doesnt-matter">
+                                            <input class="form-check-input preferences_marital_status" type="checkbox" id="status-doesnt-matter" name="preferences_marital_status" value="doesnt-matter">
                                             <label class="form-check-label" for="status-doesnt-matter">
                                                 Doesn’t matter
                                             </label>
                                         </div>
                                         <div class="form-check">
-                                            <input class="form-check-input" type="checkbox" id="status-never-married" name="marital-status" value="never-married">
+                                            <input class="form-check-input preferences_marital_status" type="checkbox" id="status-never-married" name="preferences_marital_status" value="never-married">
                                             <label class="form-check-label" for="status-never-married">
                                                 Never Married
                                             </label>
                                         </div>
                                         <div class="form-check">
-                                            <input class="form-check-input" type="checkbox" id="status-divorced" name="marital-status" value="divorced">
+                                            <input class="form-check-input preferences_marital_status" type="checkbox" id="status-divorced" name="preferences_marital_status" value="divorced">
                                             <label class="form-check-label" for="status-divorced">
                                                 Divorced
                                             </label>
                                         </div>
                                         <div class="form-check">
-                                            <input class="form-check-input" type="checkbox" id="status-awaiting-divorce" name="marital-status" value="awaiting-divorce">
+                                            <input class="form-check-input preferences_marital_status" type="checkbox" id="status-awaiting-divorce" name="preferences_marital_status" value="awaiting-divorce">
                                             <label class="form-check-label" for="status-awaiting-divorce">
                                                 Awaiting Divorce
                                             </label>
                                         </div>
                                         <div class="form-check">
-                                            <input class="form-check-input" type="checkbox" id="status-widow" name="marital-status" value="widow">
+                                            <input class="form-check-input preferences_marital_status" type="checkbox" id="status-widow" name="preferences_marital_status" value="widow">
                                             <label class="form-check-label" for="status-widow">
                                                 Widow
                                             </label>
@@ -455,11 +522,11 @@
                                 <div class="mb-4">
                                     <h4 class="redcl">Profile with children</h4>
                                     <div class="input-group bb-1-light0 radiobtn">
-                                        <input type="radio" id="pwc-doesnot" name="pwc" value="pwc-doesnot">
+                                        <input type="radio" id="pwc-doesnot" class="pwc" name="pwc" value="pwc-doesnot">
                                         <label for="pwc-doesnot" class="option-button">Doesn’t matter</label>
-                                        <input type="radio" id="pwc-notok" name="pwc" value="pwc-notok">
+                                        <input type="radio" id="pwc-notok" class="pwc" name="pwc" value="pwc-notok">
                                         <label for="pwc-notok" class="option-button">Not Ok</label>
-                                        <input type="radio" id="pwc-occasionally" name="pwc" value="pwc-occasionally">
+                                        <input type="radio" id="pwc-occasionally" class="pwc" name="pwc" value="pwc-occasionally">
                                         <label for="pwc-occasionally" class="option-button"> If not living together</label>
                                     </div>
                                 </div>
@@ -467,49 +534,49 @@
                                     <h4 class="redcl">Religion</h4>
                                     <div class="input-group bb-1-light0 checkbtn">
                                         <div class="form-check">
-                                            <input class="form-check-input" type="checkbox" id="pr-doesntmatter" name="pref-religion" value="pr-doesntmatter">
+                                            <input class="form-check-input pref_religion" type="checkbox" id="pr-doesntmatter" name="pref_religion" value="pr-doesntmatter">
                                             <label class="form-check-label" for="pr-doesntmatter">
                                                 Doesn’t matter
                                             </label>
                                         </div>
                                         <div class="form-check">
-                                            <input class="form-check-input" type="checkbox" id="pr-hinduism" name="pref-religion" value="pr-hinduism">
+                                            <input class="form-check-input pref_religion" type="checkbox" id="pr-hinduism" name="pref_religion" value="pr-hinduism">
                                             <label class="form-check-label" for="pr-hinduism">
                                                 Hinduism
                                             </label>
                                         </div>
                                         <div class="form-check">
-                                            <input class="form-check-input" type="checkbox" id="pr-sikh" name="pref-religion" value="pr-sikh">
+                                            <input class="form-check-input pref_religion" type="checkbox" id="pr-sikh" name="pref_religion" value="pr-sikh">
                                             <label class="form-check-label" for="pr-sikh">
                                                 Sikh
                                             </label>
                                         </div>
                                         <div class="form-check">
-                                            <input class="form-check-input" type="checkbox" id="pr-jain" name="pref-religion" value="pr-jain">
+                                            <input class="form-check-input pref_religion" type="checkbox" id="pr-jain" name="pref_religion" value="pr-jain">
                                             <label class="form-check-label" for="pr-jain">
                                                 Jain
                                             </label>
                                         </div>
                                         <div class="form-check">
-                                            <input class="form-check-input" type="checkbox" id="pr-christ" name="pref-religion" value="pr-christ">
+                                            <input class="form-check-input pref_religion" type="checkbox" id="pr-christ" name="pref_religion" value="pr-christ">
                                             <label class="form-check-label" for="pr-christ">
                                                 Christianity
                                             </label>
                                         </div>
                                         <div class="form-check">
-                                            <input class="form-check-input" type="checkbox" id="pr-muslim" name="pref-religion" value="pr-muslim">
+                                            <input class="form-check-input pref_religion" type="checkbox" id="pr-muslim" name="pref_religion" value="pr-muslim">
                                             <label class="form-check-label" for="pr-muslim">
                                                 Muslim
                                             </label>
                                         </div>
                                         <div class="form-check">
-                                            <input class="form-check-input" type="checkbox" id="pr-budh" name="pref-religion" value="pr-budh">
+                                            <input class="form-check-input pref_religion" type="checkbox" id="pr-budh" name="pref_religion" value="pr-budh">
                                             <label class="form-check-label" for="pr-budh">
                                                 Buddhist
                                             </label>
                                         </div>
                                         <div class="form-check">
-                                            <input class="form-check-input" type="checkbox" id="pr-spiritual" name="pref-religion" value="pr-spiritual">
+                                            <input class="form-check-input pref_religion" type="checkbox" id="pr-spiritual" name="pref_religion" value="pr-spiritual">
                                             <label class="form-check-label" for="pr-spiritual">
                                                 Spiritual
                                             </label>
@@ -519,9 +586,9 @@
                                 <div class="mb-4">
                                     <h4 class="redcl">what are you looking for ?</h4>
                                     <div class="input-group bb-1-light0 radiobtn">
-                                        <input type="radio" id="lookingfor-casual" name="lookingfor" value="lookingfor-casual">
+                                        <input type="radio" id="lookingfor-casual" class="lookingfor" name="lookingfor" value="lookingfor-casual">
                                         <label for="lookingfor-casual" class="option-button">Casual</label>
-                                        <input type="radio" id="lookingfor-longterm" name="lookingfor" value="lookingfor-longterm">
+                                        <input type="radio" id="lookingfor-longterm" class="lookingfor" name="lookingfor" value="lookingfor-longterm">
                                         <label for="lookingfor-longterm" class="option-button"> long term relationship</label>
                                     </div>
                                 </div>
@@ -541,18 +608,18 @@
                                 <div class="mb-4">
                                     <h4 class="redcl">Choose date</h4>
                                     <div class="input-group bb-1-light">
-                                        <input type="date" id="date-picker" name="date-picker" class="form-control">
+                                        <input type="date" id="date-picker" name="preferable_date" class="form-control preferable_date">
                                     </div>
                                 </div>
                                 <div class="mb-4 mt-5">
                                     <h4 class="redcl">Choose time</h4>
                                     <div class="select-container">
-                                        <select id="pd-select">
+                                        <select id="pd-select" name="preferable_time" class="preferable_time">
                                             <optgroup class="optlabel" label="Choose time">                                            
-                                                <option value="">08:00 - 09:00</option>
-                                                <option value="">09:00 - 10:00</option>
-                                                <option value="">10:00 - 11:00</option>
-                                                <option value="">11:00 - 12:00</option>                                   
+                                                <option value="08:00 - 09:00">08:00 - 09:00</option>
+                                                <option value="09:00 - 10:0">09:00 - 10:00</option>
+                                                <option value="10:00 - 11:00">10:00 - 11:00</option>
+                                                <option value="11:00 - 12:00">11:00 - 12:00</option>                                   
                                                 <!-- Add more options as needed -->
                                             </optgroup>
                                         </select>
@@ -560,7 +627,7 @@
                                 </div>                              
                                 <div class="d-flex justify-content-between mt-5">
                                     <img src="{{asset('assets/images/prev.svg')}}" alt="Previous" class="arrow-icon" onclick="previousStep(13)">
-                                    <img src="{{asset('assets/images/next-blue.svg')}}" alt="Submit" class="arrow-icon" onclick="submitForm(14)">
+                                    <img src="{{asset('assets/images/next-blue.svg')}}" id="submitRegistration" alt="Submit" class="arrow-icon" onclick="submitForm(14)">
                                 </div>
                             </div>
                         </form>
@@ -624,6 +691,110 @@
                 });
             });
         });
+        
+        //form action
+        $('#submitRegistration').click(function(e) {
+    e.preventDefault();  // Prevent default form submission behavior
+
+    // Collect form data
+    var comment = $('#comment').val();
+    var firstName = $('.firstName').val();
+    var lastName = $('.lastName').val();
+    var email = $('.email').val();
+    var phone = $('.phone').val();
+    var dob = $('.dob').val();
+    var createpass = $('.createpass').val();
+    var confirmpass = $('.confirmpass').val();
+    var gender = $('.gender').val();
+    var state = $('.state').val();
+    var plocation = $('.plocation').val();
+    var address = $('.address').val();
+    var height = $('.height').val();
+    var profession = $('.profession').val();
+    var salary = $('.salary').val();
+    var education = $('#education').val();
+    var drink = $('.drink').val();
+    var smoke = $('.smoke').val();
+    var relation_status = $('.relation_status').val();
+    var hc = $('.hc').val();
+    var religion = $('.religion').val();
+    var qa1 = $('.qa1').val();
+    var qa2 = $('.qa2').val();
+    var preferences_smoke = $('.preferences_smoke').val();
+    var preferences_drink = $('.preferences_drink').val();
+    var preferences_marital_status = $('.preferences_marital_status').val();
+    var pwc = $('.pwc').val();
+    var pref_religion = $('.pref_religion').val();
+    var lookingfor = $('.lookingfor').val();
+    var preferable_date = $('.preferable_date').val();
+    var preferable_time = $('.preferable_time').val();
+
+    // Create FormData object
+    var formData = new FormData();
+    formData.append('comment', comment);
+    formData.append('firstName', firstName);
+    formData.append('lastName', lastName);
+    formData.append('email', email);
+    formData.append('phone', phone);
+    formData.append('dob', dob);
+    formData.append('createpass', createpass);
+    formData.append('confirmpass', confirmpass);
+    formData.append('gender', gender);
+    formData.append('state', state);
+    formData.append('plocation', plocation);
+    formData.append('address', address);
+    formData.append('height', height);
+    formData.append('profession', profession);
+    formData.append('salary', salary);
+    formData.append('education', education);
+    formData.append('drink', drink);
+    formData.append('smoke', smoke);
+    formData.append('relation_status', relation_status);
+    formData.append('hc', hc);
+    formData.append('religion', religion);
+    formData.append('qa1', qa1);
+    formData.append('qa2', qa2);
+    formData.append('preferences_smoke', preferences_smoke);
+    formData.append('preferences_drink', preferences_drink);
+    formData.append('preferences_marital_status', preferences_marital_status);
+    formData.append('pwc', pwc);
+    formData.append('pref_religion', pref_religion);
+    formData.append('lookingfor', lookingfor);
+    formData.append('preferable_date', preferable_date);
+    formData.append('preferable_time', preferable_time);
+
+    // Append files
+    formData.append('image1', $('.image1')[0].files[0]); // Append first file
+    formData.append('image2', $('.image2')[0].files[0]); // Append second file
+    formData.append('image3', $('.image3')[0].files[0]); // Append third file
+
+    // Add CSRF token
+    formData.append('_token', '{{ csrf_token() }}');
+
+    // AJAX request
+    $.ajax({
+        type: "POST",
+        url: "{{ URL::to('/saveRegistration') }}",  // Your Laravel route
+        data: formData,  // Send the FormData object
+        contentType: false,  // Required for FormData
+        processData: false,  // Prevent jQuery from processing the data
+        success: function(response) {
+            console.log(response);
+            alert('Registration saved successfully!');
+        },
+        error: function(xhr, status, error) {
+            console.log(xhr.responseText);
+            alert('An error occurred: ' + error);
+        }
+    });
+});
+
+        
+        //Flash data
+        setTimeout(function() {
+            $('#success').fadeOut('fast');
+            $('#fail').fadeOut('fast');
+        }, 4000);
     </script>
 </body>
 </html>
