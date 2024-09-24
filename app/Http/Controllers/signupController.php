@@ -31,7 +31,6 @@ class SignupController extends Controller
     public function saveRegistration(StoreRegistrationRequest $request)
     {
         $data = $request->all();
-
         // Store uploaded files and get their paths
         $filePaths = [];
         foreach (['image1', 'image2', 'image3'] as $image) {
