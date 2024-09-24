@@ -8,17 +8,11 @@
     @include("includes/header")
     <main>
         <section class="signup-details-main">
-            @if(Session::get('fail'))
-                <div class="alert alert-danger" id="fail">
-                    <center>{{Session::get('fail')}}</center>          
-                </div>
-            @elseif(Session::get('success'))
-                <div class="alert alert-success" id="success">
-                    <center>{{session('success')}}</center>          
-                </div>
-            @endif
             <div class="container-fluid mt-0">
                 <div class="row justify-content-center">
+                    <div id="error" class="error-message" style="display: none;">
+                        <center>Please fill all the fields for registration</center>
+                    </div>
                     <div class="col-md-8">
                         <form class="form-main" id="multiStepForm" enctype="multipart/form-data">
                             <!-- Step 1 -->
@@ -51,40 +45,57 @@
                                     <div class="input-group bb-1-light">
                                         <input type="text" class="form-control firstName" id="firstName" name="firstName" placeholder="First Name">
                                     </div>
+                                    <div id="error-firstName" class="error-message"></div>
                                 </div>
                                 <div class="mb-4">
                                     <div class="input-group bb-1-light">
                                         <input type="text" class="form-control lastName" id="lastName" name="lastName" placeholder="Last Name">
                                     </div>
+                                    <div id="error-lastName" class="error-message"></div>
                                 </div>
                                 <div class="mb-4">
                                     <div class="input-group bb-1-light">
                                         <input type="email" class="form-control email" id="email" name="email" placeholder="Email">
                                     </div>
+                                    <div id="error-email" class="error-message"></div>
                                 </div>
                                 <div class="mb-4">
                                     <div class="input-group bb-1-light">
                                         <input type="text" class="form-control phone" id="phone" name="phone" placeholder="Phone No.">
                                     </div>
+                                    <div id="error-phone" class="error-message"></div>
                                 </div>
                                 <div class="mb-4">
                                     <div class="input-group bb-1-light">
                                         <input type="date" class="form-control dob" id="dob" name="dob" placeholder="Date of Birth">
                                     </div>
+                                    <div id="error-dob" class="error-message"></div>
                                 </div>
                                 <div class="mb-4">
                                     <div class="input-group bb-1-light">
                                         <input type="password" class="form-control createpass" id="createpass" name="createpass" placeholder="Create password">
                                     </div>
+                                    <div id="error-createpass" class="error-message"></div>
+                                </div>
+                                <div id="pswd_info">
+                                    <h6>Password must meet the following requirements:</h6>
+                                    <ul>
+                                        <li id="letter" class="invalid">At least <strong>one small letter</strong></li>
+                                        <li id="capital" class="invalid">At least <strong>one capital letter</strong></li>
+                                        <li id="number" class="invalid">At least <strong>one number</strong></li>
+                                        <li id="length" class="invalid">Be at least <strong>8 characters</strong></li>
+                                        <li id="special" class="invalid">At least <strong>one special characters</strong></li>
+                                    </ul>
                                 </div>
                                 <div class="mb-4">
                                     <div class="input-group bb-1-light">
                                         <input type="password" class="form-control confirmpass" id="confirmpass" name="confirmpass" placeholder="Confirm password">
                                     </div>
+                                    <lable id="message"></lable>
                                 </div>
                                 <div class="d-flex justify-content-between">
                                     <img src="{{asset('assets/images/prev.svg')}}" alt="Previous" class="arrow-icon" onclick="previousStep(1)">
-                                    <img src="{{asset('assets/images/next-blue.svg')}}" alt="Next" class="arrow-icon" onclick="nextStep(3)">
+                                    <img src="{{asset('assets/images/next-blue.svg')}}" alt="Next" id="next" class="arrow-icon" onclick="nextStep(3)">
                                 </div>
                             </div>
                             <!-- Step 3  - GENDER-->
@@ -100,6 +111,7 @@
                                         <input type="radio" id="female" class="gender" name="gender" value="female">
                                         <label for="female" class="option-button">Female</label>
                                     </div>
+                                    <div id="error-gender" class="error-message"></div>
                                 </div>
                                 <div class="d-flex justify-content-between">
                                     <img src="{{asset('assets/images/prev.svg')}}" alt="Previous" class="arrow-icon" onclick="previousStep(2)">
@@ -156,6 +168,7 @@
                                                     <!-- Add more options as needed -->
                                                 </select>
                                             </div>
+                                            <div id="error-state" class="error-message"></div>
                                         </div>
                                     </div>
                                 </div>
@@ -164,12 +177,14 @@
                                     <div class="input-group bb-1-light0 bbr">
                                         <input type="text" class="form-control plocation" id="plocation" name="city" placeholder="Enter your permanent location">
                                     </div>
+                                    <div id="error-plocation" class="error-message"></div>
                                 </div>
                                 <div class="mb-4">
                                     <label for="clocation">Enter your Address</label>
                                     <div class="input-group bb-1-light0 bbr">
                                         <input type="text" class="form-control address" id="address" name="address" placeholder="Enter your current location">
                                     </div>
+                                    <div id="error-address" class="error-message"></div>
                                 </div>
                                 <div class="d-flex justify-content-between">
                                     <img src="{{asset('assets/images/prev.svg')}}" alt="Previous" class="arrow-icon" onclick="previousStep(3)">
@@ -206,6 +221,7 @@
                                             <option value="6ft6in">6 feet 6 inches</option>
                                         </select>
                                     </div>
+                                    <div id="error-height" class="error-message"></div>
                                 </div>
                                 <div class="d-flex justify-content-between">
                                     <img src="{{asset('assets/images/prev.svg')}}" alt="Previous" class="arrow-icon" onclick="previousStep(4)">
@@ -235,11 +251,13 @@
                                             </optgroup>
                                         </select>
                                     </div>
+                                    <div id="error-profession" class="error-message"></div>
                                 </div>
                                 <div class="mb-4">
                                     <div class="input-group bb-1-light">
                                         <input type="text" class="form-control" id="education" name="education" placeholder="Education">
                                     </div>
+                                    <div id="error-education" class="error-message"></div>
                                 </div>
                                 <div class="mb-4">
                                     <div class="select-container">
@@ -257,6 +275,7 @@
                                             </optgroup>
                                         </select>
                                     </div>
+                                    <div id="error-salary" class="error-message"></div>
                                 </div>
                                 <div class="d-flex justify-content-between">
                                     <img src="{{asset('assets/images/prev.svg')}}" alt="Previous" class="arrow-icon" onclick="previousStep(5)">
@@ -278,6 +297,7 @@
                                         <input type="radio" class="drink" id="occasionally" name="drink" value="occasionally">
                                         <label for="occasionally" class="option-button">Occasionally</label>
                                     </div>
+                                    <div id="error-drink" class="error-message"></div>
                                 </div>
                                 <div class="d-flex justify-content-between">
                                     <img src="{{asset('assets/images/prev.svg')}}" alt="Previous" class="arrow-icon" onclick="previousStep(6)">
@@ -300,6 +320,7 @@
                                         <input type="radio" id="smoke_occasionally" class="smoke" name="smoke" value="smoke_occasionally">
                                         <label for="smoke_occasionally" class="option-button">Occasionally</label>
                                     </div>
+                                    <div id="error-smoke" class="error-message"></div>
                                 </div>
                                 <div class="d-flex justify-content-between">
                                     <img src="{{asset('assets/images/prev.svg')}}" alt="Previous" class="arrow-icon" onclick="previousStep(7)">
@@ -324,6 +345,7 @@
                                         <input type="radio" id="ad" class="relation_status" name="relation_status" value="awaiting_divorce">
                                         <label for="ad" class="option-button">Awaiting Divorce</label>
                                     </div>
+                                    <div id="error-relation_status" class="error-message"></div>
                                 </div>
                                 <div class="mb-4 mt-5">
                                     <h4 class="redcl mb-4">Have children</h4>
@@ -335,6 +357,7 @@
                                         <input type="radio" id="hc-ss" class="hc" name="hc" value="hc-ss">
                                         <label for="hc-ss" class="option-button">Yes but staying separately</label>
                                     </div>
+                                    <div id="error-hc" class="error-message"></div>
                                 </div>
                                 <div class="d-flex justify-content-between">
                                     <img src="{{asset('assets/images/prev.svg')}}" alt="Previous" class="arrow-icon" onclick="previousStep(8)">
@@ -367,6 +390,7 @@
                                         <input type="radio" id="religion-others" classs="religion" name="religion" value="religion-others">
                                         <label for="religion-others" class="option-button"> Others</label>
                                     </div>
+                                    <div id="error-religion" class="error-message"></div>
                                 </div>
                                 <div class="d-flex justify-content-between">
                                     <img src="{{asset('assets/images/prev.svg')}}" alt="Previous" class="arrow-icon" onclick="previousStep(9)">
@@ -385,12 +409,14 @@
                                     <div class="input-group bb-1-light0 bbr">
                                         <textarea id="qa1-ans" name="qa1" class="form-control qa1" placeholder="Answer" aria-label="qa1-ans" rows="2"></textarea>
                                     </div>
+                                    <div id="error-qa1" class="error-message"></div>
                                 </div>
                                 <div class="mb-4">
                                     <label for="qa2">Q.2 2 questions and small space for free text wherein people can answer.</label>
                                     <div class="input-group bb-1-light0 bbr">
                                         <textarea id="qa2-ans" name="qa2" class="form-control qa2" placeholder="Answer" aria-label="qa2-ans" rows="2"></textarea>
                                     </div>
+                                    <div id="error-qa2" class="error-message"></div>
                                 </div>
                                 <div class="d-flex justify-content-between">
                                     <img src="{{asset('assets/images/prev.svg')}}" alt="Previous" class="arrow-icon" onclick="previousStep(10)">
@@ -417,6 +443,7 @@
                                                     <input id="file-upload1" type="file" class="image1" name="image[]" accept="image/*" />
                                                     <img id="image-preview1" src="#" alt="Image preview" style="display: none;" />
                                                 </div>
+                                                <div id="error-image1" class="error-message"></div>
                                             </div>
                                             <div class="col-md-4">
                                                 <div class="upload-box">
@@ -427,6 +454,7 @@
                                                     <input id="file-upload2" type="file" class="image2" name="image[]" accept="image/*" />
                                                     <img id="image-preview2" src="#" alt="Image preview" style="display: none;" />
                                                 </div>
+                                                <div id="error-image2" class="error-message"></div>
                                             </div>
                                             <div class="col-md-4">
                                                 <div class="upload-box">
@@ -437,6 +465,7 @@
                                                     <input id="file-upload3" type="file" class="image3" name="image[]" accept="image/*" />
                                                     <img id="image-preview3" src="#" alt="Image preview" style="display: none;" />
                                                 </div>
+                                                <div id="error-image3" class="error-message"></div>
                                             </div>
                                         </div>
                                     </div>
@@ -472,6 +501,7 @@
                                         <input type="radio" id="prefrence-notok" class="preferences_smoke" name="preferences-smoke" value="prefrence-notok">
                                         <label for="prefrence-notok" class="option-button">Not Ok</label>
                                     </div>
+                                    <div id="error-preferences_smoke" class="error-message"></div>
                                 </div>
                                 <div class="mb-4">
                                     <h4 class="redcl">Drink</h4>
@@ -483,6 +513,7 @@
                                         <input type="radio" id="drink-notok" class="preferences_drink" name="preferences_drink" value="drink-notok">
                                         <label for="drink-notok" class="option-button">Not Ok</label>
                                     </div>
+                                    <div id="error-preferences_drink" class="error-message"></div>
                                 </div>
                                 <div class="mb-4">
                                     <h4 class="redcl">Marital Status</h4>
@@ -518,6 +549,7 @@
                                             </label>
                                         </div>
                                     </div>
+                                    <div id="error-preferences_marital_status" class="error-message"></div>
                                 </div>
                                 <div class="mb-4">
                                     <h4 class="redcl">Profile with children</h4>
@@ -529,6 +561,7 @@
                                         <input type="radio" id="pwc-occasionally" class="pwc" name="pwc" value="pwc-occasionally">
                                         <label for="pwc-occasionally" class="option-button"> If not living together</label>
                                     </div>
+                                    <div id="error-pwc" class="error-message"></div>
                                 </div>
                                 <div class="mb-4">
                                     <h4 class="redcl">Religion</h4>
@@ -582,6 +615,7 @@
                                             </label>
                                         </div>
                                     </div>
+                                    <div id="error-pref_religion" class="error-message"></div>
                                 </div>
                                 <div class="mb-4">
                                     <h4 class="redcl">what are you looking for ?</h4>
@@ -591,6 +625,7 @@
                                         <input type="radio" id="lookingfor-longterm" class="lookingfor" name="lookingfor" value="lookingfor-longterm">
                                         <label for="lookingfor-longterm" class="option-button"> long term relationship</label>
                                     </div>
+                                    <div id="error-lookingfor" class="error-message"></div>
                                 </div>
                                 <div class="d-flex justify-content-between">
                                     <img src="{{asset('assets/images/prev.svg')}}" alt="Previous" class="arrow-icon" onclick="previousStep(12)">
@@ -610,6 +645,7 @@
                                     <div class="input-group bb-1-light">
                                         <input type="date" id="date-picker" name="preferable_date" class="form-control preferable_date">
                                     </div>
+                                    <div id="error-preferable_date" class="error-message"></div>
                                 </div>
                                 <div class="mb-4 mt-5">
                                     <h4 class="redcl">Choose time</h4>
@@ -624,6 +660,7 @@
                                             </optgroup>
                                         </select>
                                     </div>
+                                    <div id="error-preferable_time" class="error-message"></div>
                                 </div>                              
                                 <div class="d-flex justify-content-between mt-5">
                                     <img src="{{asset('assets/images/prev.svg')}}" alt="Previous" class="arrow-icon" onclick="previousStep(13)">
@@ -779,22 +816,102 @@
         contentType: false,  // Required for FormData
         processData: false,  // Prevent jQuery from processing the data
         success: function(response) {
-            console.log(response);
-            alert('Registration saved successfully!');
+            alert(response);
+            window.location.replace("{{URL::to('/login')}}");
         },
         error: function(xhr, status, error) {
-            console.log(xhr.responseText);
-            alert('An error occurred: ' + error);
+            var response = xhr.responseJSON; // Get the JSON response object
+            if (!response.success) {
+                console.log('Validation errors:', response.message);
+                
+                // Loop through the data object and print the validation errors
+                $.each(response.data, function(field, errors) {
+                    console.log(field + ': ' + errors.join(', '));
+
+                    // Optionally, display the error messages on the page
+                    var errorMessage = errors.join(', ');
+                    // Assume you have a div to show errors for each field, e.g. <div id="error-firstName"></div>
+                    $('#error-' + field).text(errorMessage);
+                });
+                $('#error').show();
+            }
         }
     });
 });
 
         
-        //Flash data
-        setTimeout(function() {
-            $('#success').fadeOut('fast');
-            $('#fail').fadeOut('fast');
-        }, 4000);
+//Flash data
+setTimeout(function() {
+    $('#success').fadeOut('fast');
+    $('#fail').fadeOut('fast');
+}, 4000);
+
+// password validation
+$('#createpass').keyup(function() {
+    var pswd = $(this).val();
+    if ( pswd.length < 8 ) {
+        $('#length').removeClass('valid').addClass('invalid')
+    } else {
+        $('#length').removeClass('invalid').addClass('valid');
+        $('#next').prop('disabled', true);
+    }
+    //validate letter
+    if ( pswd.match(/[a-z]/) ) {
+        $('#letter').removeClass('invalid').addClass('valid');
+
+    } else {
+        $('#letter').removeClass('valid').addClass('invalid');
+        $('#next').prop('disabled', true);
+    }
+    //validate capital letter
+    if ( pswd.match(/[A-Z]/) ) {
+        $('#capital').removeClass('invalid').addClass('valid');
+
+    } else {
+        $('#capital').removeClass('valid').addClass('invalid');
+        $('#next').prop('disabled', true);
+    }
+    //validate number
+    if ( pswd.match(/\d/) ) {
+        $('#number').removeClass('invalid').addClass('valid');
+
+    } else {
+        $('#number').removeClass('valid').addClass('invalid');
+        $('#next').prop('disabled', true);
+    }
+    //validate number
+    if ( pswd.match(/[@#/.!'$)]/) ) {
+        $('#special').removeClass('invalid').addClass('valid');
+    } else {
+        $('#special').removeClass('valid').addClass('invalid');
+        $('#next').prop('disabled', true);
+    }
+    }).focus(function() {
+        $('#pswd_info').show();
+    }).blur(function() {
+        $('#pswd_info').hide();
+    });
+// password validation end
+
+// password Confirmation
+$('#confirmpass').on('keyup',function(){
+    if($('#createpass').val() != $('#confirmpass').val())
+    {
+        $('#message').html('Not Matching').css('color', 'red');
+        $('#next').prop('disabled', true);
+    }
+    else
+    {
+        $('#message').html('');
+        $('#next').prop('disabled', false);
+    }
+});
+// Password Confirmation end
+
+//Flash data
+setTimeout(function() {
+    $('#error').fadeOut('fast');
+}, 4000);
     </script>
 </body>
 </html>
