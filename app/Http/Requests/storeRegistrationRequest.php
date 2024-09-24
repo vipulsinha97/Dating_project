@@ -57,6 +57,43 @@ class StoreRegistrationRequest extends BaseRequest
             'image3'=>'required|file|mimes:jpg,png',
         ];
     }
+
+    public function messages(): array
+    {
+        return [
+            'firstName.required' => 'First name is required',
+            'lastName.required' => 'Last name is required',
+            'email.required' => 'Email is reqired',
+            'email.unique'=>'Email should be unique',
+            'phone.required'=> 'Phone is required',
+            'phone.numeric'=>'Phone should be numeric',
+            'dob.required' => 'Please enter your Date of Birth',
+            'gender.required' => 'Please select your gender',
+            'state.required' => 'Please select your state',
+            'plocation.required' => 'Please enter your city',
+            'address.required' => 'Please enter your address',
+            'height.required' => 'Please select your height',
+            'profession.required' => 'Please select your profession',
+            'salary.required' => 'Please select your salary',
+            'education.required'=>'Please enter your education',
+            'drink.required' => 'Please select the option',
+            'createpass.required' => 'Please enter your password',
+            'smoke.required' => 'Please select your option',
+            'relation_status.required' => 'Please select your option',
+            'hc.required' => 'Please select your option',
+            'religion.required' => 'Please select your religion',
+            'qa1.required' => 'Please enter your Answer',
+            'qa2.required' => 'Please enter your Answer',
+            'preferences_smoke.required' => 'Please select your option',
+            'preferences_drink.required' => 'Please select your option',
+            'preferences_marital_status.required' => 'Please select your option',
+            'pwc.required' => 'Please select your option',
+            'pref_religion.required' => 'Please select your option',
+            'lookingfor.required' => 'Please select your option',
+            'preferable_date.required' => 'Please select your option',
+            'preferable_time.required' => 'Please select your option',
+        ];
+    }
 }
 
 
