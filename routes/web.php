@@ -11,4 +11,5 @@ Route::get('/login',[loginController::class, 'index']);
 Route::get('/signup',[signupController::class, 'index']);
 Route::get('/signup-details',[signupController::class, 'signupDetails']);
 Route::post('/saveRegistration', [signupController::class, 'saveRegistration']);
+
 Route::post('/login', [loginController::class, 'loginPost'])->name('loginPost');
