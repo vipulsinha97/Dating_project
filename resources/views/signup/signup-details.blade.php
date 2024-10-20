@@ -7,6 +7,17 @@
 <body>
     @include("includes/header")
     <main>
+
+    <!-- Button to Open the Modal START -->
+        <!-- <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#yourTrust">
+        Your Trust Our Priority
+        </button>
+
+        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#receivedModal">
+        receivedModal
+        </button> -->
+     <!-- Button to Open the Modal END -->
+
         <section class="signup-details-main">
             <div class="container-fluid mt-0">
                 <div class="row justify-content-center">
@@ -126,7 +137,7 @@
                                 </div>
                                 <div class="mb-4">
                                     <label for="plocation">Enter your city</label>
-                                    <div class="input-group bb-1-light0 bbr">
+                                    <div class="input-group0 bb-1-light0 bbr0">
                                         <div class="mb-4">
                                             <div class="select-container">
                                                 <select id="height-select" class="state" name="state">
@@ -174,14 +185,14 @@
                                 </div>
                                 <div class="mb-4">
                                     <label for="plocation">Enter your city</label>
-                                    <div class="input-group bb-1-light0 bbr">
+                                    <div class="input-group0 bb-1-light bbr0">
                                         <input type="text" class="form-control plocation" id="plocation" name="city" placeholder="Enter your permanent location">
                                     </div>
                                     <div id="error-plocation" class="error-message"></div>
                                 </div>
                                 <div class="mb-4">
                                     <label for="clocation">Enter your Address</label>
-                                    <div class="input-group bb-1-light0 bbr">
+                                    <div class="input-group0 bb-1-light bbr0">
                                         <input type="text" class="form-control address" id="address" name="address" placeholder="Enter your current location">
                                     </div>
                                     <div id="error-address" class="error-message"></div>
@@ -373,10 +384,15 @@
                                 </div>
                                 <div class="mb-4">
                                     <div class="input-group bb-1-light0 radiobtn">
-                                        <input type="radio" id="nm" classs="religion" name="religion" value="nm">
-                                        <label for="nm" class="option-button">Hinduism</label>
+                                        <!-- <input type="radio" id="nm" classs="religion-hinduism" name="religion" value="nm">
+                                        <label for="nm" class="option-button">Hinduism</label> -->
+
+                                        <input type="radio" id="religion-hinduism" classs="religion" name="religion" value="religion-hinduism">
+                                        <label for="religion-hinduism" class="option-button">Hinduism</label>
+
                                         <input type="radio" id="religion-sikh" classs="religion" name="religion" value="religion-sikh">
                                         <label for="religion-sikh" class="option-button">Sikh</label>
+
                                         <input type="radio" id="religion-jain" classs="religion" name="religion" value="religion-jain">
                                         <label for="religion-jain" class="option-button">Jain</label>
                                         <input type="radio" id="religion-christian" classs="religion" name="religion" value="religion-christian">
@@ -664,7 +680,8 @@
                                 </div>                              
                                 <div class="d-flex justify-content-between mt-5">
                                     <img src="{{asset('assets/images/prev.svg')}}" alt="Previous" class="arrow-icon" onclick="previousStep(13)">
-                                    <img src="{{asset('assets/images/next-blue.svg')}}" id="submitRegistration" alt="Submit" class="arrow-icon" onclick="submitForm(14)">
+                                    <button type="button" id="submitRegistration" class="btn btn-info">Submit</button>
+                                    <!-- <img src="{{asset('assets/images/next-blue.svg')}}" id="submitRegistration" alt="Submit" class="arrow-icon" onclick="submitForm(14)"> -->
                                 </div>
                             </div>
                         </form>
@@ -673,7 +690,7 @@
             </div>
         </section>
     </main>
-    @include("includes/footer")
+   <!-- @include("includes/footer") -->
     @include("includes/bottom")
     <script>
         document.addEventListener('DOMContentLoaded', () => {
@@ -728,9 +745,17 @@
                 });
             });
         });
+
+        $("#submitRegistration").click(function(e) {
+            $('#yourTrust').modal('show');
+        });
+
+        $("#submitData1").click(function(e) {
+            $('#receivedModal').modal('show');
+        });
         
         //form action
-        $('#submitRegistration').click(function(e) {
+        $('#submitData2').click(function(e) {
     e.preventDefault();  // Prevent default form submission behavior
 
     // Collect form data
@@ -816,10 +841,11 @@
         contentType: false,  // Required for FormData
         processData: false,  // Prevent jQuery from processing the data
         success: function(response) {
-            alert(response);
             window.location.replace("{{URL::to('/login')}}");
         },
         error: function(xhr, status, error) {
+                $('#yourTrust').modal('hide');
+                $('#receivedModal').modal('hide');
             var response = xhr.responseJSON; // Get the JSON response object
             if (!response.success) {
                 console.log('Validation errors:', response.message);

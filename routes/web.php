@@ -12,3 +12,23 @@ Route::get('/signup',[signupController::class, 'index']);
 Route::get('/signup-details',[signupController::class, 'signupDetails']);
 Route::post('/saveRegistration', [signupController::class, 'saveRegistration']);
 Route::post('/login', [loginController::class, 'loginPost'])->name('loginPost');
+
+//Event
+Route::get('/event', function() {
+    return view('event');
+});
+
+//Event Details
+Route::get('/event/details', function() {
+    return view('eventDetails');
+});
+
+//admin dashboard
+Route::get('/admin/dashboard', function() {
+    return view('dashboard.admin.admin');
+});
+
+//User dashboard
+Route::get('/user/dashboard', function() {
+    return view('dashboard.user.user');
+});
