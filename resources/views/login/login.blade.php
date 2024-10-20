@@ -10,10 +10,7 @@
     @include("includes/header")
     <main>
         <section class="signup-main login-main">
-            <div class="container-fluid mt-0">
-
-            
-
+            <div class="container-fluid mt-0">         
                 <div class="row">
                     <!-- Left Column: Form -->
                     <div class="col-md-6 ver-center">
@@ -34,7 +31,19 @@
                             <p class="plz-login">Please login to your account</p>
                             <form class="form-main" action="{{ route('loginPost') }}" method="post" >
                             @csrf
-
+                            <div class="mt-3 social-btns">
+                                <a href="{{URL::to('/signup-details')}}" class="btn mb-4 btn-outline"><img src="{{asset('assets/images/logos_facebook.svg')}}" /> Login  with Facebook</a>
+                                <a href="{{URL::to('/signup-details')}}" class="btn mb-4 btn-outline"><img src="{{asset('assets/images/insta.svg')}}" style="width: 24px;height: 24px;" /> Login with Instagram</a>
+                            </div>
+                            <div class="group-66">
+                                <div class="line-13">
+                                </div>
+                                <span class="or">
+                                    OR
+                                </span>
+                                <div class="line-14">
+                                </div>
+                            </div>
                             <div class="mb-5 bb-1">
                                     <div class="input-group">
                                         <span class="input-group-text"><img src="assets/images/ion_mail-outline.svg" /></span>

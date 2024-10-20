@@ -15,16 +15,14 @@
                         <div class="formleftmain">
                             <h2>Welcome</h2>
                             <div class="para">
-                                <p>We only allow you to sign in from your profiles as we screen and verify the profiles before allowing them to attend our events. Linking both your professional (linkedIn) and social profile gives you a higher chance of being admitted to events.</p>
+                                <p>For your safety and to maintain the authenticity of our community, we require users to sign in via their social media profiles. This helps us verify identities and ensure that only genuine profiles are allowed to participate in our events. This information is kept private and your social media details are not shared.</p>
                             </div>
                             <div class="mt-3 social-btns">
-                                <button class="btn mb-4 btn-outline"><img src="{{asset('assets/images/logos_facebook.svg')}}" /> Sign up with Facebook</button>
+                                <a href="{{URL::to('/signup-details')}}" class="btn mb-4 btn-outline"><img src="{{asset('assets/images/logos_facebook.svg')}}" /> Sign up with Facebook</a>
                             </div>
-
                             <div class="mt-3 social-btns">
-                                <button class="btn mb-4 btn-outline"><img src="{{asset('assets/images/insta.svg')}}" style="width: 24px;height: 24px;" /> Sign up with Inatagram</button>
+                                <a href="{{URL::to('/signup-details')}}" class="btn mb-4 btn-outline"><img src="{{asset('assets/images/insta.svg')}}" style="width: 24px;height: 24px;" /> Sign up with Instagram</a>
                             </div>
-
                             <div class="group-66">
                                 <div class="line-13">
                                 </div>
@@ -35,7 +33,7 @@
                                 </div>
                             </div>
                             <div class="form-main mb-3">
-                                <a href="http://localhost/njs/login.php" class="btn btn-primary0 btn-geen">Already have an account</a>
+                                <a href="{{URL::to('/signup-details')}}" class="btn btn-primary0 btn-geen">Already have an account</a>
                             </div>
                         </div>
                     </div>
@@ -47,7 +45,6 @@
             </div>
         </section>
     </main>
-
     @include("includes/footer")
     @include("includes/bottom")
     <script src="{{asset('assets/js/homepage-script.js')}}"></script>
