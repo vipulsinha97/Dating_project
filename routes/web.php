@@ -33,7 +33,7 @@ Route::get('/user/dashboard', function() {
     return view('dashboard.user.user');
 });
 
-//User dashboard
+//Privacy policy
 Route::get('/privacy-policy', function() {
     return view('privacyPolicyPage');
 });
