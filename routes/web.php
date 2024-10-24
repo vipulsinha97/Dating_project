@@ -32,3 +32,8 @@ Route::get('/admin/dashboard', function() {
 Route::get('/user/dashboard', function() {
     return view('dashboard.user.user');
 });
+
+//Privacy policy
+Route::get('/privacy-policy', function() {
+    return view('privacyPolicyPage');
+});
