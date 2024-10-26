@@ -47,7 +47,7 @@ class SignupController extends Controller
         if ($storeRegistration === true) {
             $storePreference = $this->registrationServices->storeUserPreference($data);
             if ($storePreference === true) {
-                dispatch(new SendEmailJob($request));
+                // dispatch(new SendEmailJob($request));
                 return response()->json(['status' => 'true', 'message' => 'Registration successful']);
             }
         }
