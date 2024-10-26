@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\loginController;
 use App\Http\Controllers\signupController;
+use App\Http\Controllers\socialController;
 
 Route::get('/', function () {
     return view('index');
@@ -12,6 +13,10 @@ Route::get('/signup',[signupController::class, 'index']);
 Route::get('/signup-details',[signupController::class, 'signupDetails']);
 Route::post('/saveRegistration', [signupController::class, 'saveRegistration']);
 Route::post('/login', [loginController::class, 'loginPost'])->name('loginPost');
+
+//social login
+Route::get('facebook/login', [socialController::class, 'provider']);
+Route::get('facebook/callback', [socialController::class, 'handleCallBack']);
 
 //Event
 Route::get('/event', function() {
