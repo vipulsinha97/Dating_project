@@ -32,7 +32,7 @@
                             <form class="form-main" action="{{ route('loginPost') }}" method="post" >
                             @csrf
                             <div class="mt-3 social-btns">
-                                <a href="{{URL::to('/signup-details')}}" class="btn mb-4 btn-outline"><img src="{{asset('assets/images/logos_facebook.svg')}}" /> Login  with Facebook</a>
+                                <a href="{{URL::to('/facebook/login')}}" class="btn mb-4 btn-outline"><img src="{{asset('assets/images/logos_facebook.svg')}}" /> Login  with Facebook</a>
                                 <a href="{{URL::to('/signup-details')}}" class="btn mb-4 btn-outline"><img src="{{asset('assets/images/insta.svg')}}" style="width: 24px;height: 24px;" /> Login with Instagram</a>
                             </div>
                             <div class="group-66">
