@@ -36,8 +36,8 @@ return [
     ],
 
     'facebook' => [
-        'client_id' => env('FACEBOOK_CLIENT_ID'),
-        'client_secret' => env('FACEBOOK_CLIENT_SECRET'),
+        'client_id' => '531110669726532',
+        'client_secret' => 'e67b5a08961f8259005a5c435155c05f',
         'redirect' => 'https://notjustswipe.com//facebook/callback',
     ],
 
