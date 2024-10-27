@@ -16,7 +16,7 @@ class socialController extends Controller
 
     public function handleCallBack()
     {
-        $data = Socialite::driver('facebook')->user();
-        dd(user);
+        $user = Socialite::driver('facebook')->user();
+        dd($user);
     }
 }
