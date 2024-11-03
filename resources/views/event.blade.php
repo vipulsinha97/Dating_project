@@ -1,6 +1,6 @@
 <!doctype html>
 <html lang="en">
-
+    <!-- test -->
 <head>
     @include("includes/top")
     <link rel="stylesheet" type="text/css" href="{{asset('assets/css/events.css')}}">
