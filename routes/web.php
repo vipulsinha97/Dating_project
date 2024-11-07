@@ -9,7 +9,7 @@ Route::get('/', function () {
     return view('index');
 });
 Route::get('/home', function(){
-    return view('index.blade-OLD');
+    return view('home');
 });
 Route::get('/login',[loginController::class, 'index']);
 Route::get('/signup',[signupController::class, 'index']);
