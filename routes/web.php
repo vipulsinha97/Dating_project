@@ -8,6 +8,9 @@ use App\Http\Controllers\socialController;
 Route::get('/', function () {
     return view('index');
 });
+Route::get('/home', function(){
+    return view('index.blade-OLD');
+});
 Route::get('/login',[loginController::class, 'index']);
 Route::get('/signup',[signupController::class, 'index']);
 Route::get('/signup-details',[signupController::class, 'signupDetails']);
