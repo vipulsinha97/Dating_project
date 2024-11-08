@@ -136,7 +136,7 @@
                                     <h2>Location</h2>
                                 </div>
                                 <div class="mb-4">
-                                    <label for="plocation">Enter your city</label>
+                                    <label for="plocation">Which state do you live in?</label>
                                     <div class="input-group0 bb-1-light0 bbr0">
                                         <div class="mb-4">
                                             <div class="select-container">
@@ -184,14 +184,14 @@
                                     </div>
                                 </div>
                                 <div class="mb-4">
-                                    <label for="plocation">Enter your city</label>
+                                    <label for="plocation">Which city do you live in?</label>
                                     <div class="input-group0 bb-1-light bbr0">
                                         <input type="text" class="form-control plocation" id="plocation" name="city" placeholder="Enter your permanent location">
                                     </div>
                                     <div id="error-plocation" class="error-message"></div>
                                 </div>
                                 <div class="mb-4">
-                                    <label for="clocation">Enter your Address</label>
+                                    <label for="clocation">Where are you originally from (City / State) </label>
                                     <div class="input-group0 bb-1-light bbr0">
                                         <input type="text" class="form-control address" id="address" name="address" placeholder="Enter your current location">
                                     </div>
@@ -249,7 +249,7 @@
                                     <div class="select-container">
                                         <select id="pd-select" class="profession" name="profession">
                                             <optgroup class="optlabel" label="Choose Your Profession">
-                                                <option value="" disabled selected>Profession</option> 
+                                                <option class="dnone" value="" disabled selected>Choose Your Profession</option> 
                                                 <option value="Finance">Finance</option>
                                                 <option value="Sales">Sales</option>
                                                 <option value="Marketing">Marketing</option>
@@ -257,7 +257,7 @@
                                                 <option value="Human resources">Human resources</option>
                                                 <option value="Admin">Admin</option>
                                                 <option value="Operations">Operations</option>
-                                                <option class="more" value="">More..</option>
+                                                <option class="more" value="">Others..</option>
                                                 <!-- Add more options as needed -->
                                             </optgroup>
                                         </select>
@@ -343,7 +343,7 @@
                             <div class="form-step" id="step9" style="display: none;">
                                 <div class="mb-5 tifle-box">
                                     <img class="mb-2" src="{{asset('assets/images/hc.svg')}}" />
-                                    <h2>Relationship Status</h2>
+                                    <h2>Marital status</h2>
                                 </div>
                                 <div class="mb-4">
                                     <div class="input-group bb-1-light0 radiobtn">
@@ -359,7 +359,7 @@
                                     <div id="error-relation_status" class="error-message"></div>
                                 </div>
                                 <div class="mb-4 mt-5">
-                                    <h4 class="redcl mb-4">Have children</h4>
+                                    <h4 class="redcl-black mb-4">Do you have children?</h4>
                                     <div class="input-group bb-1-light0 radiobtn">
                                         <input type="radio" id="hc-no" class="hc" name="hc" value="hc-no">
                                         <label for="hc-no" class="option-button">No</label>
@@ -388,7 +388,7 @@
                                         <label for="nm" class="option-button">Hinduism</label> -->
 
                                         <input type="radio" id="religion-hinduism" classs="religion" name="religion" value="religion-hinduism">
-                                        <label for="religion-hinduism" class="option-button">Hinduism</label>
+                                        <label for="religion-hinduism" class="option-button">Hindu</label>
 
                                         <input type="radio" id="religion-sikh" classs="religion" name="religion" value="religion-sikh">
                                         <label for="religion-sikh" class="option-button">Sikh</label>
@@ -396,7 +396,7 @@
                                         <input type="radio" id="religion-jain" classs="religion" name="religion" value="religion-jain">
                                         <label for="religion-jain" class="option-button">Jain</label>
                                         <input type="radio" id="religion-christian" classs="religion" name="religion" value="religion-christian">
-                                        <label for="religion-christian" class="option-button"> Christianity</label>
+                                        <label for="religion-christian" class="option-button"> Christian</label>
                                         <input type="radio" id="religion-muslim" classs="religion" name="religion" value="religion-muslim">
                                         <label for="religion-muslim" class="option-button"> Muslim</label>
                                         <input type="radio" id="religion-budh" classs="religion" name="religion" value="religion-budh">
@@ -418,17 +418,17 @@
                             <div class="form-step" id="step11" style="display: none;">
                                 <div class="mb-5 tifle-box">
                                     <img class="mb-2" src="{{asset('assets/images/qa.svg')}}" />
-                                    <h2>Questions & Answer</h2>
+                                    <h2>Let’s get some fun facts for your event</h2>
                                 </div>
                                 <div class="mb-4">
-                                    <label for="qa1">Q.1 2 questions and small space for free text wherein people can answer.</label>
+                                    <label for="qa1">1.	If you were a character in a movie/series, which one would it be and why?</label>
                                     <div class="input-group bb-1-light0 bbr">
                                         <textarea id="qa1-ans" name="qa1" class="form-control qa1" placeholder="Answer" aria-label="qa1-ans" rows="2"></textarea>
                                     </div>
                                     <div id="error-qa1" class="error-message"></div>
                                 </div>
                                 <div class="mb-4">
-                                    <label for="qa2">Q.2 2 questions and small space for free text wherein people can answer.</label>
+                                    <label for="qa2">2.	What is the one quality that really attracts you to someone?</label>
                                     <div class="input-group bb-1-light0 bbr">
                                         <textarea id="qa2-ans" name="qa2" class="form-control qa2" placeholder="Answer" aria-label="qa2-ans" rows="2"></textarea>
                                     </div>
@@ -444,7 +444,7 @@
                             <div class="form-step" id="step12" style="display: none;">
                                 <div class="mb-5 tifle-box">
                                     <img class="mb-2" src="{{asset('assets/images/mynaui_image.svg')}}" />
-                                    <h2>Add your Pics</h2>
+                                    <h2>Please upload photos.</h2>
                                     <p class="para">Please upload at least two photos from your LinkedIn or Facebook profile. Additionally, take and upload one selfie to verify that your photos are genuine. This helps us maintain a safe and trustworthy community for everyone.</p>
                                 </div>
                                 <div class="mb-4 mb-5">
@@ -476,7 +476,7 @@
                                                 <div class="upload-box">
                                                     <label for="file-upload3" class="upload-trigger">
                                                         <div class="upload-icon">+</div>
-                                                        <div class="upload-text">Add Image</div>
+                                                        <div class="upload-text">Add selfie</div>
                                                     </label>
                                                     <input id="file-upload3" type="file" class="image3" name="image[]" accept="image/*" />
                                                     <img id="image-preview3" src="#" alt="Image preview" style="display: none;" />
@@ -493,6 +493,7 @@
                                         <li>No nudity. </li>
                                         <li>No fake & Celebrity photo</li>
                                         <li>No information on photo</li>
+                                        <li>Stay clear of inappropriate content, else your profile will be rejected.  </li>
                                     </ul>
                                 </div>
                                 <div class="d-flex justify-content-between">
@@ -505,9 +506,8 @@
                             <div class="form-step" id="step13" style="display: none;">
                                 <div class="mb-5 tifle-box">
                                     <img class="mb-2" src="{{asset('assets/images/preferences.svg')}}" />
-                                    <h2>Preferences for ideal date</h2>
-                                    <p class="spara">We believe chemistry goes beyond questionnaires and algorithms. That's why a 5-minute conversation can help you identify if there is some vibe rather than algorithms. </p>
-                                    <p class="para">However, to ensure the best matches, we also consider your key preferences such as:</p>
+                                    <h2>Partner preference</h2>
+                                    <p class="spara">Please enter your key partner preferences which will be used to find the right matches for your event</p>
                                 </div>
                                 <div class="mb-4">
                                     <h4 class="redcl">Smoke</h4>
@@ -591,7 +591,7 @@
                                         <div class="form-check">
                                             <input class="form-check-input pref_religion" type="checkbox" id="pr-hinduism" name="pref_religion" value="pr-hinduism">
                                             <label class="form-check-label" for="pr-hinduism">
-                                                Hinduism
+                                            Hindu 
                                             </label>
                                         </div>
                                         <div class="form-check">
@@ -609,7 +609,7 @@
                                         <div class="form-check">
                                             <input class="form-check-input pref_religion" type="checkbox" id="pr-christ" name="pref_religion" value="pr-christ">
                                             <label class="form-check-label" for="pr-christ">
-                                                Christianity
+                                            Christian
                                             </label>
                                         </div>
                                         <div class="form-check">
@@ -654,7 +654,7 @@
                                 <div class="mb-5 tifle-box">
                                     <img class="mb-2" src="{{asset('assets/images/callu.svg')}}" />
                                     <h2>What is best time to call you?</h2>
-                                    <p class="para">What’s your contact number and best time to call you? We will give you a quick call as part of screening process.</p>
+                                    <p class="para">To ensure only genuine profiles are admitted to events, we will give you a quick call as part of the screening process</p>
                                 </div>
                                 <div class="mb-4">
                                     <h4 class="redcl">Choose date</h4>
@@ -680,7 +680,7 @@
                                 </div>                              
                                 <div class="d-flex justify-content-between mt-5">
                                     <img src="{{asset('assets/images/prev.svg')}}" alt="Previous" class="arrow-icon" onclick="previousStep(13)">
-                                    <button type="button" id="submitRegistration" class="btn btn-info">Submit</button>
+                                    <button type="button" id="submitRegistration" class="btn btn-info0 reg-btnn">Submit</button>
                                     <!-- <img src="{{asset('assets/images/next-blue.svg')}}" id="submitRegistration" alt="Submit" class="arrow-icon" onclick="submitForm(14)"> -->
                                 </div>
                             </div>

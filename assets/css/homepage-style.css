@@ -506,3 +506,12 @@ text-align: left !important;
     line-height: 54px !important;
     color: #4B4A4A;
 }
+.form-main input {
+  color: #000;
+}
+.form-main select {
+  color: #000;
+}
+.dnone {
+  display: none;
+}
