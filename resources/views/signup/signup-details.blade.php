@@ -274,7 +274,7 @@
                                     <div class="select-container">
                                         <select id="sal-select" class="salary" name="salary">
                                             <optgroup class="optlabel" label="Chose Your Salary  Package">
-                                                <option value="" disabled selected>Salary</option>
+                                                <option class="dnone" value="" disabled selected>Salary</option>
                                                 <option value="< 5 lacs"> < 5 lacs </option>
                                                 <option value="5 lacs - 10 lacs">5 lacs - 10 lacs</option>
                                                 <option value="10 lacs - 15 lacs">10 lacs - 15 lacs</option>
