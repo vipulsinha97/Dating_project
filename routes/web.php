@@ -31,6 +31,11 @@ Route::get('/event/details', function() {
     return view('eventDetails');
 });
 
+//Add Event 
+Route::get('/admin/dashboard/add-event', function() {
+    return view('dashboard.admin.addEvent');
+});
+
 //admin dashboard
 Route::get('/admin/dashboard', function() {
     return view('dashboard.admin.admin');
