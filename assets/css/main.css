@@ -14998,3 +14998,24 @@ border-top: none !important;
   justify-content: center;
   align-items: center;
 }
+.cbtnstyle-logout {
+  color: #fff !important;
+  background: #3CA2B3;
+  font-style: normal;
+  width: 144px;
+  height: 54px;
+  flex-shrink: 0;
+  text-decoration: unset;
+  display: inline-block;
+  text-align: center;
+  border-radius: 10px;
+  font-family: Manrope;
+  font-size: 20px;
+  font-weight: 700;
+  outline: 0 !important;
+  box-shadow: none !important;
+}
+.cbtnstyle-logout:focus { 
+  outline: 0 !important;
+  box-shadow: none !important;
+}
