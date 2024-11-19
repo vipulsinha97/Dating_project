@@ -6,7 +6,7 @@
 				<span><a href="javascript:;" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" aria-controls="offcanvasExample"><img src="{{asset('assets/images/menu.svg')}}" /></a></span>
 			</div>
 			<div class="col-4 col-md-4">
-				<!-- Offcanvas Menu Hamburger Button -->				
+				<!-- Offcanvas Menu Hamburger Button -->
 				<span><a href="#"><img class="logo" src="{{asset('assets/images/logo.svg')}}" /></a></span>
 			</div>
 			<div class="col-4 col-md-4 ccmenuright">
@@ -26,6 +26,11 @@
 				<span>
 					<h5>REHINA D.</h5>
 				</span>
+			</div>
+			<div class="logout-main">
+				<button type="button" class="btn btn-primary0 cbtnstyle-logout">
+					Logout
+				</button>
 			</div>
 			<!-- <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button> -->
 		</div>
