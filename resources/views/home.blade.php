@@ -4,6 +4,9 @@
 <head>
     @include("includes/top")
     <link rel="stylesheet" type="text/css" href="{{asset('assets/css/homepage-style.css')}}">
+
+    <style>
+    </style>
 </head>
 
 <body>
@@ -38,22 +41,25 @@
         </section>
 
         <section class="bgimg">
-            <div class="container">
-                <h1>Carousel Testing</h1>
-                <div class="wrapper">
-                    <div class="center-slider">
-                        <div>Slide 1</div>
-                        <div>Slide 2</div>
-                        <div>Slide 3</div>
-                        <div>Slide 4</div>
-                        <div>Slide 5</div>
-                        <div>Slide 6</div>
+            <div class="container-fluid py-5">
+              
+                <div class="center-slider">
+                    <div id="center" class="sliderwrapper">
+                        <div class="item i1"><img src="{{asset('assets/images/f1.png')}}" alt=""></div>
+                        <div class="item i2"><img src="{{asset('assets/images/f2.png')}}" alt=""></div>
+                        <div class="item i3"><img src="{{asset('assets/images/f3.png')}}" alt=""></div>
+                        <div class="item i4 active"><img src="{{asset('assets/images/f4.png')}}" alt=""></div>
+                    </div>
+
+                    <div class="controls selection-off">
+                        <div class="left selection-off arrr-left" onclick="turnLeft()"><img src="{{asset('assets/images/slider-arrow-left.svg')}}" alt=""></div>
+                        <div class="right selection-off arrr-right" onclick="turnRight()"><img src="{{asset('assets/images/slider-arrow-right.svg')}}" alt=""></div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section class="njs-speeddate mt-5 mb-5">
+        <section class="njs-speeddate pt-5 mb-5">
             <div class="container">
                 <h2 class="align-center mt-4 mb-4">NJS Speed Dating</h2>
                 <p class="p-desc mb-5">Settle into a comfortable spot at home, launch NotJustSwipe, join the online dating events and instantly connect with someone who truly gets you.</p>
@@ -286,7 +292,7 @@
                     <div class="accordion-item">
                         <h2 class="accordion-header" id="headingOne">
                             <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                            Q 1. How does Just Not Swipe work?
+                                Q 1. How does Just Not Swipe work?
                             </button>
                         </h2>
                         <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#faq">
@@ -299,60 +305,60 @@
                     <div class="accordion-item">
                         <h2 class="accordion-header" id="headingTwo">
                             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                            Q 2. Is Just Not Swipe free to use?
+                                Q 2. Is Just Not Swipe free to use?
                             </button>
                         </h2>
                         <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#faq">
                             <div class="accordion-body">
-                            <p>Just Not Swipe takes the safety and privacy of its users seriously. We have robust security measures in place, including profile verification options and reporting features. Additionally, we recommend practicing caution when sharing personal information and meeting matches in person for the first time.</p>
+                                <p>Just Not Swipe takes the safety and privacy of its users seriously. We have robust security measures in place, including profile verification options and reporting features. Additionally, we recommend practicing caution when sharing personal information and meeting matches in person for the first time.</p>
                             </div>
                         </div>
                     </div>
                     <div class="accordion-item">
                         <h2 class="accordion-header" id="headingThree">
                             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                            Q 3. Can I delete my Just Not Swipe account?
+                                Q 3. Can I delete my Just Not Swipe account?
                             </button>
                         </h2>
                         <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#faq">
                             <div class="accordion-body">
-                            <p>Just Not Swipe takes the safety and privacy of its users seriously. We have robust security measures in place, including profile verification options and reporting features. Additionally, we recommend practicing caution when sharing personal information and meeting matches in person for the first time.</p>
+                                <p>Just Not Swipe takes the safety and privacy of its users seriously. We have robust security measures in place, including profile verification options and reporting features. Additionally, we recommend practicing caution when sharing personal information and meeting matches in person for the first time.</p>
                             </div>
                         </div>
                     </div>
                     <div class="accordion-item">
                         <h2 class="accordion-header" id="headingFour">
                             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
-                            Q 4. How do I create a profile on Just Not Swipe?**
+                                Q 4. How do I create a profile on Just Not Swipe?**
                             </button>
                         </h2>
                         <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#faq">
                             <div class="accordion-body">
-                            <p>Just Not Swipe takes the safety and privacy of its users seriously. We have robust security measures in place, including profile verification options and reporting features. Additionally, we recommend practicing caution when sharing personal information and meeting matches in person for the first time.</p>
+                                <p>Just Not Swipe takes the safety and privacy of its users seriously. We have robust security measures in place, including profile verification options and reporting features. Additionally, we recommend practicing caution when sharing personal information and meeting matches in person for the first time.</p>
                             </div>
                         </div>
                     </div>
                     <div class="accordion-item">
                         <h2 class="accordion-header" id="headingFive">
                             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
-                            Q 5. How can I ensure my safety while using Just Not Swipe?**
+                                Q 5. How can I ensure my safety while using Just Not Swipe?**
                             </button>
                         </h2>
                         <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive" data-bs-parent="#faq">
                             <div class="accordion-body">
-                            <p>Just Not Swipe takes the safety and privacy of its users seriously. We have robust security measures in place, including profile verification options and reporting features. Additionally, we recommend practicing caution when sharing personal information and meeting matches in person for the first time.</p>
+                                <p>Just Not Swipe takes the safety and privacy of its users seriously. We have robust security measures in place, including profile verification options and reporting features. Additionally, we recommend practicing caution when sharing personal information and meeting matches in person for the first time.</p>
                             </div>
                         </div>
                     </div>
                     <div class="accordion-item">
                         <h2 class="accordion-header" id="headingSix">
                             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
-                            Q 6. How do I contact customer support if I have a problem or question?*
+                                Q 6. How do I contact customer support if I have a problem or question?*
                             </button>
                         </h2>
                         <div id="collapseSix" class="accordion-collapse collapse" aria-labelledby="headingSix" data-bs-parent="#faq">
                             <div class="accordion-body">
-                            <p>Just Not Swipe takes the safety and privacy of its users seriously. We have robust security measures in place, including profile verification options and reporting features. Additionally, we recommend practicing caution when sharing personal information and meeting matches in person for the first time.</p>
+                                <p>Just Not Swipe takes the safety and privacy of its users seriously. We have robust security measures in place, including profile verification options and reporting features. Additionally, we recommend practicing caution when sharing personal information and meeting matches in person for the first time.</p>
                             </div>
                         </div>
                     </div>
@@ -370,17 +376,45 @@
 
     <script>
         $(document).ready(function() {
-
             $('#cardCarousel').carousel({
-
                 interval: 3000,
-
                 pause: 'hover'
-
             });
-
         });
     </script>
+    <script>
+        var htmlCollection = document.getElementsByClassName('item');
+        var itemsId = Array.from(htmlCollection);
+        var sectionDeg = 180 / itemsId.length;
+        var radianSectionDeg = sectionDeg * Math.PI * 2 / 360;
+        var radiusLength = 600;
+
+        for (var i = 0; i < itemsId.length; i++) {
+            itemsId[i].style.top = radiusLength * Math.sin(radianSectionDeg * i - 1.5708) - 50 + 'px';
+            itemsId[i].style.left = radiusLength * Math.cos(radianSectionDeg * i - 1.5708) - 50 + 'px';
+        }
+
+        var rotation = 0;
+        var center = document.getElementById('center');
+
+        function turnLeft() {
+            rotation = rotation + radianSectionDeg;
+            center.style.transform = 'rotate(' + rotation + 'rad)';
+            for (var i = 0; i < itemsId.length; i++) {
+                itemsId[i].style.transform = 'rotate(' + -rotation + 'rad)';
+            }
+        }
+
+        function turnRight() {
+            rotation = rotation - radianSectionDeg;
+            center.style.transform = 'rotate(' + rotation + 'rad)';
+            for (var i = 0; i < itemsId.length; i++) {
+                itemsId[i].style.transform = 'rotate(' + -rotation + 'rad)';
+            }
+        }
+    </script>
+
+
 
 </body>
 
