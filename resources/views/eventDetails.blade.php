@@ -10,23 +10,22 @@
 <body>
     @include("includes/header")
     <main>
-        <section class="container-fluid banner-bg">
-            <div class="row pt-5 pb-5">
+        <section class="container-fluid banner-bg p-0" style="background: #fcf6f6;overflow: hidden;">
+            <div class="row pt-5 pb-0">
                 <!-- Column for content -->
                 <div class="col-md-6 d-flex-center">
-                    <h2 class="h2-head">Find Your Perfect Match Today</h2>
                 </div>
                 <!-- Column for image -->
-                <div class="col-md-6  align-right">
-                    <img src="{{asset('/assets/images/group20.png')}}" class="img-fluid" alt="Description of Image">
+                <div class="col-md-6  align-right posabs">
+                    <img src="{{asset('/assets/images/eventdetailsicon.svg')}}" class="img-fluid" alt="Description of Image">
                 </div>
             </div>
         </section>
 
         <section class="howitworks mt-5 mb-5">
             <div class="container-fluid py-0">
-                <h2 class="align-left mt-4 mb-4">Speed Dating NJS</h2>
-                <p class="p-desc align-left mb-5">Smart Dating at live events, Not just Swipe is the most successful way to date</p>
+                <h2 class="align-left mt-4 mb-4">Virtual Speed Dating NJS</h2>
+                <p class="p-desc align-left mb-5">Smart mating at live events, Not just Swipe is the most successful way to date</p>
             </div>
         </section>
 
@@ -51,185 +50,44 @@
                 </div>
                 <!-- Age Group: (25-30) START -->
                 <div class="row">
-                    <div class="col-md-12">
-                        <h4>Age Group: (25-30)</h4>
+                    <div class="col-md-6 pt-5">
+                        <div class="event-details-left">
+                        <img src="{{asset('/assets/images/d1.png')}}" class="" alt="">
+                        <div class="date">Saturday, 31st May - Mumbai</div>
+                        <div class="ed-title"><h2>Saturday Night Virtual Matched Speed Dating Mumbai</h2></div>
+                        <div class="ed-subtitle"><h4>Saturday Night Virtual Dating - Start the weekend in style</h4></div>
+                        <ul>
+                        <li>Online Speed Dating</li>
+                        <li>Matched dates, based on your profile</li>
+                        <li>Contact with your matches after the event</li>
+                        </ul>
+                        <div class="ed-date-time">
+                            <span class="post-date"><img src="{{asset('/assets/images/carbon_user-multiple.svg')}}" class="" alt="">Age: 25-30</span>
+                            <span class="post-time"><img src="{{asset('/assets/images/hugeicons_time-half-pass.svg')}}" class="" alt="">Duration: 2:30 h</span>
+                                                    </div>
+                        </div>
+                        
+                
                     </div>
-                    <div class="col-md-12">
-                        <div class="events-carsouel-main">
-                            <div class="container-fluid">
-                                <div class="row">
-                                    <div class="col-md-12">
-                                        <div id="events-slider" class="owl-carousel">
-                                            <div class="post-slide">
-                                                <div class="post-img">
-                                                    <img src="../assets/images/me1.png" alt="">
-                                                    <div class="eventtime">
-                                                        <span class="session">45 min</span>
-                                                    </div>
-                                                    <!-- <a href="#" class="over-layer"><i class="fa fa-link"></i></a> -->
-                                                </div>
-                                                <div class="post-content">
-                                                    <h3 class="post-title">
-                                                        <a href="#">Saturday Night Virtual Speed Dating.</a>
-                                                    </h3>
-                                                    <p class="post-description">Date live via NJS on a series of live, matched dates from the comfort of your home.</p>
-                                                    <div class="date-time-main">
-                                                        <span class="post-date"><img src="../assets/images/edate.svg" alt="">May 31</span>
-                                                        <span class="post-time"><img src="../assets/images/etime.svg" alt="">Sat- 7:30</span>
-                                                    </div>
-                                                </div>
-                                                <div class="buytkt">
-                                                    <span class="bt"><a href="#" class="book-ticket">Book Ticket</a></span>
-                                                    <span class="bb"><a href="#" class="book-btn"><img src="../assets/images/arw-diag.svg" alt=""></a></span>
-                                                </div>
-                                            </div>
-
-                                            <div class="post-slide">
-                                                <div class="post-img">
-                                                    <img src="../assets/images/me1.png" alt="">
-                                                    <div class="eventtime">
-                                                        <span class="session">45 min</span>
-                                                    </div>
-                                                    <!-- <a href="#" class="over-layer"><i class="fa fa-link"></i></a> -->
-                                                </div>
-                                                <div class="post-content">
-                                                    <h3 class="post-title">
-                                                        <a href="#">Saturday Night Virtual Speed Dating.</a>
-                                                    </h3>
-                                                    <p class="post-description">Date live via NJS on a series of live, matched dates from the comfort of your home.</p>
-                                                    <div class="date-time-main">
-                                                        <span class="post-date"><img src="../assets/images/edate.svg" alt="">May 31</span>
-                                                        <span class="post-time"><img src="../assets/images/etime.svg" alt="">Sat- 7:30</span>
-                                                    </div>
-                                                </div>
-                                                <div class="buytkt">
-                                                    <span class="bt"><a href="#" class="book-ticket">Book Ticket</a></span>
-                                                    <span class="bb"><a href="#" class="book-btn"><img src="../assets/images/arw-diag.svg" alt=""></a></span>
-                                                </div>
-                                            </div>
-
-                                            <div class="post-slide">
-                                                <div class="post-img">
-                                                    <img src="../assets/images/me1.png" alt="">
-                                                    <div class="eventtime">
-                                                        <span class="session">45 min</span>
-                                                    </div>
-                                                    <!-- <a href="#" class="over-layer"><i class="fa fa-link"></i></a> -->
-                                                </div>
-                                                <div class="post-content">
-                                                    <h3 class="post-title">
-                                                        <a href="#">Saturday Night Virtual Speed Dating.</a>
-                                                    </h3>
-                                                    <p class="post-description">Date live via NJS on a series of live, matched dates from the comfort of your home.</p>
-                                                    <div class="date-time-main">
-                                                        <span class="post-date"><img src="../assets/images/edate.svg" alt="">May 31</span>
-                                                        <span class="post-time"><img src="../assets/images/etime.svg" alt="">Sat- 7:30</span>
-                                                    </div>
-                                                </div>
-                                                <div class="buytkt">
-                                                    <span class="bt"><a href="#" class="book-ticket">Book Ticket</a></span>
-                                                    <span class="bb"><a href="#" class="book-btn"><img src="../assets/images/arw-diag.svg" alt=""></a></span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
+                    <div class="col-md-6">
+                    <div class="event-details-right">
+                            <div class="ed-tickettitle"><h2>Ticket</h2></div>
+                           
+                            <div class="ticket-main">
+                                <div class="ticket-left">
+                                <img src="{{asset('/assets/images/d1.png')}}" class="" alt="">
+                                </div>
+                                <div class="ticket-right">
+                               <h4>Saturday Date Night in Mumbai</h4>
+                               <div class="price"><span><b>Price-</b></span><span>₹320</span></div>
                                 </div>
                             </div>
+                          
                         </div>
                     </div>
+
                 </div>
                 <!-- Age Group: (25-30) END -->
-
-                <!-- Age Group: (30-35) START -->
-                <div class="row">
-                    <div class="col-md-12">
-                        <h4>Age Group: (30-35)</h4>
-                    </div>
-                    <div class="col-md-12">
-                        <div class="events-carsouel-main">
-                            <div class="container-fluid">
-                                <div class="row">
-                                    <div class="col-md-12">
-                                        <div id="events-slider2" class="owl-carousel">
-                                            <div class="post-slide">
-                                                <div class="post-img">
-                                                    <img src="/assets/images/me1.png" alt="">
-                                                    <div class="eventtime">
-                                                        <span class="session">45 min</span>
-                                                    </div>
-                                                    <!-- <a href="#" class="over-layer"><i class="fa fa-link"></i></a> -->
-                                                </div>
-                                                <div class="post-content">
-                                                    <h3 class="post-title">
-                                                        <a href="#">Saturday Night Virtual Speed Dating.</a>
-                                                    </h3>
-                                                    <p class="post-description">Date live via NJS on a series of live, matched dates from the comfort of your home.</p>
-                                                    <div class="date-time-main">
-                                                        <span class="post-date"><img src="/assets/images/edate.svg" alt="">May 31</span>
-                                                        <span class="post-time"><img src="/assets/images/etime.svg" alt="">Sat- 7:30</span>
-                                                    </div>
-                                                </div>
-                                                <div class="buytkt">
-                                                    <span class="bt"><a href="#" class="book-ticket">Book Ticket</a></span>
-                                                    <span class="bb"><a href="#" class="book-btn"><img src="/assets/images/arw-diag.svg" alt=""></a></span>
-                                                </div>
-                                            </div>
-
-                                            <div class="post-slide">
-                                                <div class="post-img">
-                                                    <img src="/assets/images/me1.png" alt="">
-                                                    <div class="eventtime">
-                                                        <span class="session">45 min</span>
-                                                    </div>
-                                                    <!-- <a href="#" class="over-layer"><i class="fa fa-link"></i></a> -->
-                                                </div>
-                                                <div class="post-content">
-                                                    <h3 class="post-title">
-                                                        <a href="#">Saturday Night Virtual Speed Dating.</a>
-                                                    </h3>
-                                                    <p class="post-description">Date live via NJS on a series of live, matched dates from the comfort of your home.</p>
-                                                    <div class="date-time-main">
-                                                        <span class="post-date"><img src="/assets/images/edate.svg" alt="">May 31</span>
-                                                        <span class="post-time"><img src="/assets/images/etime.svg" alt="">Sat- 7:30</span>
-                                                    </div>
-                                                </div>
-                                                <div class="buytkt">
-                                                    <span class="bt"><a href="#" class="book-ticket">Book Ticket</a></span>
-                                                    <span class="bb"><a href="#" class="book-btn"><img src="/assets/images/arw-diag.svg" alt=""></a></span>
-                                                </div>
-                                            </div>
-
-                                            <div class="post-slide">
-                                                <div class="post-img">
-                                                    <img src="/assets/images/me1.png" alt="">
-                                                    <div class="eventtime">
-                                                        <span class="session">45 min</span>
-                                                    </div>
-                                                    <!-- <a href="#" class="over-layer"><i class="fa fa-link"></i></a> -->
-                                                </div>
-                                                <div class="post-content">
-                                                    <h3 class="post-title">
-                                                        <a href="#">Saturday Night Virtual Speed Dating.</a>
-                                                    </h3>
-                                                    <p class="post-description">Date live via NJS on a series of live, matched dates from the comfort of your home.</p>
-                                                    <div class="date-time-main">
-                                                        <span class="post-date"><img src="/assets/images/edate.svg" alt="">May 31</span>
-                                                        <span class="post-time"><img src="/assets/images/etime.svg" alt="">Sat- 7:30</span>
-                                                    </div>
-                                                </div>
-                                                <div class="buytkt">
-                                                    <span class="bt"><a href="#" class="book-ticket">Book Ticket</a></span>
-                                                    <span class="bb"><a href="#" class="book-btn"><img src="/assets/images/arw-diag.svg" alt=""></a></span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- Age Group: (30-35) END -->
 
             </div>
         </section>
