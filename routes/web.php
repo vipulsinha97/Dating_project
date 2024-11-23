@@ -5,6 +5,7 @@ use App\Http\Controllers\loginController;
 use App\Http\Controllers\signupController;
 use App\Http\Controllers\socialController;
 use App\Http\Controllers\chatController;
+use App\Http\Controllers\MeetingController;
 use App\Livewire\Chat\Index;
 use App\Livewire\Chat\Chat;
 use App\Livewire\Users;
@@ -66,3 +67,15 @@ Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.up
 Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 
 Route::get('/logout', [loginController::class, 'logout'])->name('logout');
+
+//Video call
+Route::get('/home', [MeetingController::class, 'meetingUser'])->name('meetingUser');
+Route::get('/createMeeting', [MeetingController::class, 'createMeeting'])->name('createMeeting');
+Route::get('joinMeeting/{url?}', [MeetingController::class, 'joinMeeting'])->name('joinMeeting');
+Route::get('/clear-cache', function () {
+    Artisan::call('cache:clear');
+    Artisan::call('route:cache');
+    Artisan::call('config:cache');
+    Artisan::call('view:clear');
+    return "/clear-cache";
+});

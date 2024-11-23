@@ -59,4 +59,9 @@ class User extends Authenticatable
     {
         return 'users.'.$this->id;
     }
+
+    public function getUserMeetingInfo()
+    {
+         return $this->hasOne(UserMeeting::class,'user_id','id');
+    }
 }
