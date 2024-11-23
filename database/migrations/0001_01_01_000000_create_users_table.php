@@ -37,6 +37,7 @@ return new class extends Migration
             $table->text('picture')->nullable();
             $table->string('preferable_time')->nullable();
             $table->string('preferable_date')->nullable();
+            $table->string('role')->nullable();
             $table->rememberToken();
             $table->timestamps();
         });
