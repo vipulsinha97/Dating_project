@@ -4,8 +4,82 @@
 <head>
     @include("includes/top")
     <link rel="stylesheet" type="text/css" href="{{asset('assets/css/homepage-style.css')}}">
+    <!-- Slick CSS -->
+    <link rel="stylesheet" type="text/css" href="{{asset('assets/css/slick.css')}}" />
+    <link rel="stylesheet" type="text/css" href="{{asset('assets/css/slick-theme.css')}}" />
+
 
     <style>
+        .home_slider {
+            width: 100%;
+            margin: 0 auto;
+        }
+
+        .slick-slide img {
+            width: 100%;
+            height: auto;
+            transition: transform 0.3s ease, opacity 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .slick-slide img {
+            transform: scale(0.7);
+            opacity: 0.7;
+        }
+
+        /* Custom Arrow Styles */
+        .slick-prev,
+        .slick-next {
+            font-size: 0;
+            background: transparent;
+            border: none;
+            z-index: 1;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+
+        .slick-prev {
+            left: 50px;
+            background-image: url('assets/images/slider-arrow-left.svg');
+            background-size: cover;
+            width: 120px;
+            height: 120px;
+        }
+
+        .slick-next {
+            right: 50px;
+            background-image: url('assets/images/slider-arrow-right.svg');
+            background-size: cover;
+            width: 120px;
+            height: 120px;
+        }
+
+        .slick-prev:hover,
+        .slick-prev:focus {
+            background-image: url('assets/images/slider-arrow-left.svg');
+            background-size: cover;
+            width: 120px;
+            height: 120px;
+        }
+
+        .slick-next:hover,
+        .slick-next:focus {
+            background-image: url('assets/images/slider-arrow-right.svg');
+            background-size: cover;
+            width: 120px;
+            height: 120px;
+        }
+
+        /* Additional Customization for Center Slide */
+        .home_slider .slick-center img {
+            transform: scale(0.9);
+            opacity: 1;
+        }
+
+        .slick-prev:before,
+        .slick-next:before {
+            content: "";
+        }
     </style>
 </head>
 
@@ -40,9 +114,23 @@
             </div>
         </section>
 
-        <section class="bgimg">
+        <section class="bgimg0">
             <div class="container-fluid py-5">
-              
+                <div class="center-slider">
+                    <div class="home_slider">
+                        <div><img src="{{asset('assets/images/f1.png')}}" alt=""></div>
+                        <div><img src="{{asset('assets/images/f2.png')}}" alt=""></div>
+                        <div><img src="{{asset('assets/images/f3.png')}}" alt=""></div>
+                        <div><img src="{{asset('assets/images/f4.png')}}" alt=""></div>
+                        <!-- Add more images as needed -->
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- <section class="bgimg">
+            <div class="container-fluid py-5">
+
                 <div class="center-slider">
                     <div id="center" class="sliderwrapper">
                         <div class="item i1"><img src="{{asset('assets/images/f1.png')}}" alt=""></div>
@@ -57,7 +145,7 @@
                     </div>
                 </div>
             </div>
-        </section>
+        </section> -->
 
         <section class="njs-speeddate pt-5 mb-5">
             <div class="container">
@@ -373,6 +461,9 @@
     @include("includes/footer")
 
     @include("includes/bottom")
+    <!-- jQuery and Slick JS -->
+    <script type="text/javascript" src="{{asset('assets/js/slick.min.js')}}"></script>
+
 
     <script>
         $(document).ready(function() {
@@ -382,7 +473,7 @@
             });
         });
     </script>
-    <script>
+    <!-- <script>
         var htmlCollection = document.getElementsByClassName('item');
         var itemsId = Array.from(htmlCollection);
         var sectionDeg = 180 / itemsId.length;
@@ -412,8 +503,40 @@
                 itemsId[i].style.transform = 'rotate(' + -rotation + 'rad)';
             }
         }
-    </script>
+    </script> -->
 
+    <script>
+        $(document).ready(function() {
+            $('.home_slider').slick({
+                centerMode: true, // Enable center mode
+                centerPadding: '60px', // Padding around the center slide
+                slidesToShow: 3, // Show 3 slides at a time
+                arrows: true, // Enable arrows
+                autoplay: false, // Autoplay the slides
+                autoplaySpeed: 2000, // Autoplay speed in milliseconds
+                speed: 500, // Smooth slide transition speed
+                responsive: [{
+                        breakpoint: 768, // For screens <= 768px
+                        settings: {
+                            arrows: true, // Hide arrows on small screens
+                            centerMode: true,
+                            centerPadding: '40px', // Reduce padding for smaller screens
+                            slidesToShow: 3 // Show 3 slides on smaller screens
+                        }
+                    },
+                    {
+                        breakpoint: 480, // For screens <= 480px
+                        settings: {
+                            arrows: true, // Hide arrows on very small screens
+                            centerMode: true,
+                            centerPadding: '40px', // Reduce padding
+                            slidesToShow: 1 // Show 1 slide on very small screens
+                        }
+                    }
+                ]
+            });
+        });
+    </script>
 
 
 </body>
