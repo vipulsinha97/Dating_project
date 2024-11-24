@@ -69,7 +69,7 @@ Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.
 Route::get('/logout', [loginController::class, 'logout'])->name('logout');
 
 //Video call
-Route::get('/home', [MeetingController::class, 'meetingUser'])->name('meetingUser');
+Route::get('/meeting', [MeetingController::class, 'meetingUser'])->name('meetingUser');
 Route::get('/createMeeting', [MeetingController::class, 'createMeeting'])->name('createMeeting');
 Route::get('joinMeeting/{url?}', [MeetingController::class, 'joinMeeting'])->name('joinMeeting');
 Route::get('/clear-cache', function () {
