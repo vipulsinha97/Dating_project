@@ -7,6 +7,11 @@
     <link rel="stylesheet" type="text/css" href="{{ asset('assets/agoraVideo/main.css') }}">
     <script src="https://code.jquery.com/jquery-3.7.0.min.js" crossorigin="anonymous"></script>
 </head>
+<style>
+    .hidden {
+    display: none;
+}
+</style>
 <body>
 @if(!session()->has('meeting'))
     <input type="text" id="linkname" placeholder="Enter your name">
