@@ -12,13 +12,13 @@
     <input type="text" id="linkname" placeholder="Enter your name">
 @endif
 <input type="hidden" id="linkUrl" value="{{ url('joinMeeting') }}/{{ $meeting->url }}">
-<button id="join-btn" style="display: none;"></button>
+
 <button id="join-btn2">Join Stream</button>
 <button id="join-btns" onclick="copyLink()">Copy link</button>
 
-<div id="stream-wrapper" style="height: 100%; display: none;">
+<div id="stream-wrapper" class="hidden">
     <div id="video-streams"></div>
-    <div id="stream-controls">
+    <div id="stream-controls" class="hidden">
         <button id="leave-btn">Leave Stream</button>
         <button id="mic-btn">Mic On</button>
         <button id="camera-btn">Camera On</button>
@@ -33,49 +33,61 @@
 <script src="{{ asset('assets/agoraVideo/AgoraRTC_N-4.7.3.js') }}"></script>
 <script src="{{ asset('assets/agoraVideo/main.js') }}"></script>
 <script>
-function copyLink() {
-    var urlPage = window.location.href;
-    var temp = $("<input>");
-    $("body").append(temp);
-    temp.val(urlPage).select();
-    document.execCommand("copy");
-    temp.remove();
-    $('#join-btns').text('URL COPIED');
-}
+$(document).ready(function () {
+    // Function to copy the meeting link
+    function copyLink() {
+        const urlPage = window.location.href;
+        const tempInput = $('<input>');
+        $('body').append(tempInput);
+        tempInput.val(urlPage).select();
+        document.execCommand('copy');
+        tempInput.remove();
+        $('#join-btns').text('URL COPIED').prop('disabled', true);
+    }
 
-$('#join-btn2').click(function() {
-    var name = $('#linkname').val();
-    if (name === '' || name.length < 1) {
-        alert("Enter your name");
-        return;
-    } else {
+    // Event listener for the "Copy Link" button
+    $('#join-btns').click(copyLink);
+
+    // Join Stream button logic
+    $('#join-btn2').click(function () {
+        const name = $('#linkname').val().trim();
+
+        if (!name) {
+            alert('Please enter your name');
+            return;
+        }
+
         saveUserName(name);
-        $('#join-btn').click();
-        document.getElementById('stream-wrapper').style.display = 'block';
-        document.getElementById('stream-controls').style.display = 'flex';
+        $('#stream-wrapper').removeClass('hidden');
+        $('#stream-controls').removeClass('hidden');
+    });
+
+    // Function to save the user's name
+    function saveUserName(name) {
+        const url = "{{ url('saveUserName') }}";
+        const random = "{{ session()->get('random_user') }}";
+        const urlId = $('#urlId').val();
+
+        $.ajax({
+            url: url,
+            headers: {
+                'X-CSRF-TOKEN': '{{ csrf_token() }}'
+            },
+            data: {
+                url: urlId,
+                name: name,
+                random: random
+            },
+            type: 'POST',
+            success: function (result) {
+                console.log('Name saved successfully:', result);
+            },
+            error: function (xhr, status, error) {
+                console.error('Failed to save name:', error);
+            }
+        });
     }
 });
-
-function saveUserName(name) {
-    var url = "{{ url('saveUserName') }}";
-    var random = "{{ session()->get('random_user') }}";
-    var urlId = $('#urlId').val();
-    $.ajax({
-        url: url,
-        headers: {
-            'X-CSRF-TOKEN': '{{ csrf_token() }}'
-        },
-        data: {
-            'url': urlId,
-            'name': name,
-            'random': random
-        },
-        type: 'post',
-        success: function(result) {
-            console.log("Name saved successfully");
-        }
-    });
-}
 </script>
 </body>
 </html>
