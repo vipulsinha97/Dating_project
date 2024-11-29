@@ -754,7 +754,7 @@
             $('#receivedModal').modal('show');
         });
         
-        $("#submitData1").click(function(e) {
+        $("#submitData2").click(function(e) {
             window.location.replace("{{URL::to('/login')}}");
         });
         //form action
