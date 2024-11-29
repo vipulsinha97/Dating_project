@@ -64,4 +64,16 @@ class User extends Authenticatable
     {
          return $this->hasOne(UserMeeting::class,'user_id','id');
     }
+
+    // Check if the user is an admin
+    public function isAdmin()
+    {
+        return $this->role === 'admin';
+    }
+
+    // Check if the user is a regular user
+    public function isUser()
+    {
+        return $this->role === 'user';
+    }
 }

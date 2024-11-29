@@ -140,7 +140,7 @@
                                     <div class="input-group0 bb-1-light0 bbr0">
                                         <div class="mb-4">
                                             <div class="select-container">
-                                                <select id="height-select" class="state" name="state">
+                                                <select id="state-select" class="state" name="state">
                                                 <option value="">Select a state</option>
                                                 <option value="Andhra Pradesh">Andhra Pradesh</option>
                                                 <option value="Arunachal Pradesh">Arunachal Pradesh</option>
@@ -666,7 +666,7 @@
                                 <div class="mb-4 mt-5">
                                     <h4 class="redcl">Choose time</h4>
                                     <div class="select-container">
-                                        <select id="pd-select" name="preferable_time" class="preferable_time">
+                                        <select id="pt-select" name="preferable_time" class="preferable_time">
                                             <optgroup class="optlabel" label="Choose time">                                            
                                                 <option value="08:00 - 09:00">08:00 - 09:00</option>
                                                 <option value="09:00 - 10:0">09:00 - 10:00</option>
@@ -746,16 +746,19 @@
             });
         });
 
-        $("#submitRegistration").click(function(e) {
-            $('#yourTrust').modal('show');
-        });
+        // $("#submitRegistration").click(function(e) {
+        //     $('#yourTrust').modal('show');
+        // });
 
         $("#submitData1").click(function(e) {
             $('#receivedModal').modal('show');
         });
         
+        $("#submitData1").click(function(e) {
+            window.location.replace("{{URL::to('/login')}}");
+        });
         //form action
-        $('#submitData2').click(function(e) {
+        $('#submitRegistration').click(function(e) {
     e.preventDefault();  // Prevent default form submission behavior
 
     // Collect form data
@@ -765,7 +768,7 @@
     var email = $('.email').val();
     var phone = $('.phone').val();
     var dob = $('.dob').val();
-    var createpass = $('.createpass').val();
+    var password = $('.createpass').val();
     var confirmpass = $('.confirmpass').val();
     var gender = $('.gender').val();
     var state = $('.state').val();
@@ -799,7 +802,7 @@
     formData.append('email', email);
     formData.append('phone', phone);
     formData.append('dob', dob);
-    formData.append('createpass', createpass);
+    formData.append('password', password);
     formData.append('confirmpass', confirmpass);
     formData.append('gender', gender);
     formData.append('state', state);
@@ -841,7 +844,7 @@
         contentType: false,  // Required for FormData
         processData: false,  // Prevent jQuery from processing the data
         success: function(response) {
-            window.location.replace("{{URL::to('/login')}}");
+            $('#yourTrust').modal('show');
         },
         error: function(xhr, status, error) {
                 $('#yourTrust').modal('hide');
