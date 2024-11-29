@@ -6,6 +6,7 @@ use App\Http\Controllers\signupController;
 use App\Http\Controllers\socialController;
 use App\Http\Controllers\chatController;
 use App\Http\Controllers\MeetingController;
+use App\Http\Middleware\AuthMiddleware;
 use App\Livewire\Chat\Index;
 use App\Livewire\Chat\Chat;
 use App\Livewire\Users;
@@ -16,7 +17,7 @@ Route::get('/', function () {
 Route::get('/home', function(){
     return view('home');
 });
-Route::get('/login',[loginController::class, 'index']);
+Route::get('/login',[loginController::class, 'index'])->name('login');
 Route::get('/signup',[signupController::class, 'index']);
 Route::get('/signup-details',[signupController::class, 'signupDetails']);
 Route::post('/saveRegistration', [signupController::class, 'saveRegistration']);
@@ -35,21 +36,6 @@ Route::get('/event', function() {
 Route::get('/event/details', function() {
     return view('eventDetails');
 });
-
-//Add Event 
-Route::get('/admin/dashboard/add-event', function() {
-    return view('dashboard.admin.addEvent');
-});
-
-//admin dashboard
-Route::get('/admin/dashboard', function() {
-    return view('dashboard.admin.admin');
-});
-
-//User dashboard
-Route::get('/user/dashboard', function() {
-    return view('dashboard.user.user');
-})->name('dashboard');
 
 //Privacy policy
 Route::get('/privacy-policy', function() {
@@ -72,10 +58,36 @@ Route::get('/logout', [loginController::class, 'logout'])->name('logout');
 Route::get('/meeting', [MeetingController::class, 'meetingUser'])->name('meetingUser');
 Route::get('/createMeeting', [MeetingController::class, 'createMeeting'])->name('createMeeting');
 Route::get('joinMeeting/{url?}', [MeetingController::class, 'joinMeeting'])->name('joinMeeting');
+Route::post('/saveUserName', [MeetingController::class, 'saveUserName'])->name('saveUserName');
 Route::get('/clear-cache', function () {
     Artisan::call('cache:clear');
     Artisan::call('route:cache');
     Artisan::call('config:cache');
     Artisan::call('view:clear');
     return "/clear-cache";
+});
+
+// Admin routes
+Route::middleware([AuthMiddleware::class.':admin'])->group(function () {
+
+//admin dashboard
+Route::get('/admin/dashboard', function() {
+    return view('dashboard.admin.admin');
+});
+
+//Add Event 
+Route::get('/admin/dashboard/add-event', function() {
+    return view('dashboard.admin.addEvent');
+});
+
+});
+
+// User routes
+Route::middleware([AuthMiddleware::class.':user'])->group(function () {
+
+//User dashboard
+Route::get('/user/dashboard', function() {
+    return view('dashboard.user.user');
+})->name('dashboard');
+
 });

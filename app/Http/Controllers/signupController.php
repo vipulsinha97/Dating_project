@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Http\Requests\StoreRegistrationRequest; 
 use App\Services\RegistrationServices; 
+use Illuminate\Support\Facades\Session;
 
 class SignupController extends Controller
 {
@@ -48,6 +49,7 @@ class SignupController extends Controller
             $storePreference = $this->registrationServices->storeUserPreference($data);
             if ($storePreference === true) {
                 // dispatch(new SendEmailJob($request));
+                session('success', 'Your Registration is successful Please login now');
                 return response()->json(['status' => 'true', 'message' => 'Registration successful']);
             }
         }

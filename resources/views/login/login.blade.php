@@ -28,6 +28,15 @@
             </div>
             @endforeach
             @endif
+            @if(Session::get('fail'))
+              <div class="alert alert-danger" id="fail">
+                <center>{{Session::get('fail')}}</center>          
+              </div>
+          @elseif(Session::get('success'))
+              <div class="alert alert-success" id="success">
+                <center>{{session('success')}}</center>          
+              </div>
+          @endif
                             <p class="plz-login">Please login to your account</p>
                             <form class="form-main" action="{{ route('loginPost') }}" method="post" >
                             @csrf
