@@ -33,9 +33,9 @@ class loginController extends Controller
                 // Check user's role and redirect accordingly
                 if 
                 ($user->role === 'admin') {
-                    return redirect()->intended('/admin_dashboard');
+                    return redirect()->intended('/admin/dashboard');
                 } elseif ($user->role === 'user') {
-                    return redirect()->intended('/user_dashboard');
+                    return redirect()->intended('/user/dashboard');
                 } 
             } else {
                 return redirect()->back()->withErrors('Invalid credentials');

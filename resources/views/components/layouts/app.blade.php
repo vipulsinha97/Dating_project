@@ -31,7 +31,7 @@
     @livewireScripts
 
     <!-- Vite JS (Make sure this is loaded before Alpine.js) -->
-    @vite(['resources/js/app.js'])
+    @vite(['resources/js/bootstrap.js'])
 
     <!-- Alpine.js CDN (make sure it's loaded after Livewire scripts) -->
     <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.12.0/cdn.min.js" defer></script>
