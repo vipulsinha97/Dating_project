@@ -633,7 +633,7 @@
                                     </div>
                                     <div id="error-pref_religion" class="error-message"></div>
                                 </div>
-                                <div class="mb-4">
+                                <!-- <div class="mb-4">
                                     <h4 class="redcl">what are you looking for ?</h4>
                                     <div class="input-group bb-1-light0 radiobtn">
                                         <input type="radio" id="lookingfor-casual" class="lookingfor" name="lookingfor" value="lookingfor-casual">
@@ -642,7 +642,7 @@
                                         <label for="lookingfor-longterm" class="option-button"> long term relationship</label>
                                     </div>
                                     <div id="error-lookingfor" class="error-message"></div>
-                                </div>
+                                </div> -->
                                 <div class="d-flex justify-content-between">
                                     <img src="{{asset('assets/images/prev.svg')}}" alt="Previous" class="arrow-icon" onclick="previousStep(12)">
                                     <img src="{{asset('assets/images/next-blue.svg')}}" alt="Next" class="arrow-icon" onclick="nextStep(14)">
