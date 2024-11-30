@@ -24,13 +24,23 @@ h2 {
     line-height: 80px;
     color: #000000;
 }
+.ed-tickettitle h2 { 
+font-family: 'Roboto';
+font-style: normal;
+font-weight: 700;
+font-size: 48px;
+line-height: 56px;
+text-align: center;
+color: #000000;
+}
 p.p-desc {
-    font-family: 'Pridi';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 24px;
-    line-height: 37px;
-    color: #9D9E9E;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 28px;
+  line-height: 38px;
+  color: #666666;
+  font-family: "Nunito Sans", sans-serif;
+  text-align: left;
 }
 h3 {
     font-family: 'Roboto';
@@ -358,4 +368,5 @@ background-size: cover;
     height: 100vh;
     width: 100%;
     background-repeat: no-repeat;
+    padding: 50px;
 }
