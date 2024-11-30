@@ -1,5 +1,5 @@
 @php
-  $sidebarMenu = 'Add Event';
+    $sidebarMenu = "Event";
 @endphp
 <!DOCTYPE html>
 <html lang="en">
@@ -156,151 +156,98 @@
     </ul>
   </nav>
   <!-- /.navbar -->
-
-  <!-- Main Sidebar Container -->
   @include("../includes/sidebar");
 
-  <!-- Content Wrapper. Contains page content -->
-  <div class="content-wrapper">
-    <!-- Content Header (Page header) -->
-    <div class="content-header">
-      <div class="container-fluid">
-        <div class="row mb-2">
-          <div class="col-sm-6">
-            <h1 class="m-0">Dashboard</h1>
-          </div><!-- /.col -->
-          <div class="col-sm-6">
-            <ol class="breadcrumb float-sm-right">
-              <li class="breadcrumb-item"><a href="#">Home</a></li>
-              <li class="breadcrumb-item active">Add Event</li>
-            </ol>
-          </div><!-- /.col -->
-        </div><!-- /.row -->
-      </div><!-- /.container-fluid -->
-    </div>
-    <!-- /.content-header -->
+        <!-- Content Wrapper. Contains page content -->
+        <div class="content-wrapper">
+            <!-- Content Header (Page header) -->
+            <div class="content-header">
+                <div class="container-fluid">
+                <div class="row mb-2">
+                    <div class="col-sm-6">
+                    <h1 class="m-0">Dashboard</h1>
+                    </div><!-- /.col -->
+                    <div class="col-sm-6">
+                    <ol class="breadcrumb float-sm-right">
+                        <li class="breadcrumb-item"><a href="#">Home</a></li>
+                        <li class="breadcrumb-item active">Starter Page</li>
+                    </ol>
+                    </div><!-- /.col -->
+                </div><!-- /.row -->
+                </div><!-- /.container-fluid -->
+            </div>
+            <!-- /.content-header -->
 
-    <!-- Main content -->
-    <div class="content">
-      <div class="container-fluid">
-
-         <!-- Horizontal Form -->
-         <div class="card card-info">
-          <div class="card-header">
-            <h3 class="card-title">Add Event</h3>
-          </div>
-          <!-- /.card-header -->
-          <!-- form start -->
-          <form action="{{route('newEvent')}}" class="form-horizontal" method="POST" enctype="multipart/form-data">
-            @csrf
-            <div class="card-body">
-                <div class="form-group row">
-                  <label for="Select" class="col-sm-2 col-form-label">Select Location</label>
-                    <div class="col-sm-10">
-                    <select name="location" class="form-control">
-                      @if(old('location'))
-                        <option value="{{old('location')}}">{{old('location')}}</option>
-                      @else
-                        <option disabled selected>-Choose location-</option>
-                      @endif
-                        <option value="Delhi">Delhi</option>
-                        <option value="Mumbai">Mumbai</option>
-                        <option value="Bengaluru">Bengaluru</option>
-                        <option value="Hyderabad">Hyderabad</option>
-                        <option value="Noida">Noida</option>
-                    </select>
-                    <span style="color: red;">@error('location') {{$message}} @enderror</span>
-                    </div>
-                </div>
-
-                <div class="form-group row">
-                  <label for="Select" class="col-sm-2 col-form-label">Select Age Group</label>
-                    <div class="col-sm-10">
-                    <select name="age_group" class="form-control">
-                    @if(old('location'))
-                      <option value="{{old('age_group')}}">{{old('age_group')}}</option>
-                    @else
-                    <option disabled selected>-Choose Age-Group-</option>
+            <!-- Main content -->
+            <div class="content">
+                <div class="container-fluid">
+                <div class="row">
+                    <div class="col-12">
+                    @if(Session::get('fail'))
+                        <div class="alert alert-danger" id="fail">
+                          <center>{{Session::get('fail')}}</center>          
+                        </div>
+                    @elseif(Session::get('success'))
+                        <div class="alert alert-success" id="success">
+                          <center>{{Session::get('success')}}</center>          
+                        </div>
                     @endif
-                    <option value="25-30">25-30</option>
-                    <option value="30-35">30-35</-option>
-                    <option value="35-40">35-40</option>
-                    <option value="40-45">40-45</option>
-                    </select>
-                    <span style="color: red;">@error('age_group') {{$message}} @enderror</span>
+                        <div class="card">
+                        <div class="card-header">
+                        <h3 class="card-title">EVENT TABLE</h3>
+                        <div class="card-tools">
+                            <div class="input-group input-group-sm" style="width: 150px;">
+                            <input type="text" name="table_search" class="form-control float-right" placeholder="Search">
+                            <div class="input-group-append">
+                                <button type="submit" class="btn btn-default">
+                                <i class="fas fa-search"></i>
+                                </button>
+                            </div>
+                            </div>
+                        </div>
+                        </div>
+                        <!-- /.card-header -->
+                        <div class="card-body table-responsive p-0">
+                        <table class="table table-hover text-nowrap">
+                            <thead>
+                            <tr>
+                                <th>S.NO</th>
+                                <th>Title</th>
+                                <th>Event Date</th>
+                                <th>Location</th>
+                                <th>Event Duration</th>
+                                <th>Action</th>
+
+                            </tr>
+                            </thead>
+                            <tbody>
+                            @php
+                                $i=1;
+                            @endphp
+                            @foreach ($event as $event)
+                            <tr>
+                                <td>@php echo $i++; @endphp</td>
+                                <td>{{$event->title}}</td>
+                                <td>{{$event->event_date}}</td>
+                                <td><span class="tag tag-success">{{$event->location}}</span></td>
+                                <td>{{$event->event_duration}}</td>
+                                <td><a href="{{ URL::to('/admin/dashboard/delete-event/') }}/{{$event->id}}" class="btn btn-danger">Delete</a></td>
+                            </tr>    
+                            @endforeach
+                            </tbody>
+                        </table>
+                        </div>
+                        <!-- /.card-body -->
+                    </div>
+                    <!-- /.card -->
                     </div>
                 </div>
 
-                <div class="form-group row">
-                <label for="CustomFile" class="col-sm-2 col-form-label">Featured Image</label>
-                <div class="col-sm-10">
-                  <div class="custom-file">
-                    <input type="file" name="image" class="custom-file-input" id="customFile">
-                    <label class="custom-file-label" for="customFile">Choose file</label>
-                  </div>
-                  <span style="color: red;">@error('image') {{$message}} @enderror</span>
                 </div>
-              </div>
-
-              <div class="form-group row">
-                  <label for="inputtitle" class="col-sm-2 col-form-label">Title</label>
-                  <div class="col-sm-10">
-                    <input type="text" class="form-control" name="title" value="{{old('title')}}" id="inputtitle" placeholder="Event title">
-                    <span style="color: red;">@error('title') {{$message}} @enderror</span>
-                  </div>
+                <!-- /.card -->
                 </div>
-
-                <div class="form-group row">
-                  <label for="eventdescription" class="col-sm-2 col-form-label">Description</label>
-                  <div class="col-sm-10">
-                    <textarea class="form-control" rows="3" name="description" placeholder="Event description...">{{old('description')}}</textarea>
-                    <span style="color: red;">@error('description') {{$message}} @enderror</span>
-                  </div>
-                </div>
-
-                <div class="form-group row">
-                  <label for="eventdescription" class="col-sm-2 col-form-label">Event Date</label>
-                  <div class="col-sm-10">
-                    <input type="date" name="event_date" value="{{old('event_date')}}" class="form-control">
-                    <span style="color: red;">@error('event_date') {{$message}} @enderror</span>
-                  </div>
-                </div>
-
-                <div class="form-group row">
-                  <label for="eventtimestart" class="col-sm-2 col-form-label">Event Start Time</label>
-                  <div class="col-sm-4">
-                    <input type="time" name="event_start_time" value="{{old('event_start_time')}}" class="form-control" id="eventtimestartid">
-                    <span style="color: red;">@error('event_start_time') {{$message}} @enderror</span>
-                  </div>
-
-                  <label for="eventtimeend" class="col-sm-2 col-form-label">Event Duration[In Minutes]</label>
-                  <div class="col-sm-4">
-                    <input type="number" name="event_duration" value="{{old('event_duration')}}" class="form-control" id="eventtimeendid">
-                    <span style="color: red;">@error('event_duration') {{$message}} @enderror</span>
-                  </div>
-                </div>
-
-                <div class="form-group row">
-                  <label for="ticket" class="col-sm-2 col-form-label">Ticket Price</label>
-                  <div class="col-sm-10">
-                    <input type="text" name="ticket_price" value="{{old('ticket_price')}}" class="form-control" id="ticketid" placeholder="Ticket title">
-                    <span style="color: red;">@error('ticket_price') {{$message}} @enderror</span>
-                  </div>
-                </div>
-
-            </div>
-            <!-- /.card-body -->
-            <div class="card-footer">
-              <button type="submit" class="btn btn-info">ADD EVENT</button>
-              <button type="submit" class="btn btn-default float-right">Back</button>
-            </div>
-            <!-- /.card-footer -->
-          </form>
         </div>
-        <!-- /.card -->
-      </div>
-    </div>
-    <!-- content -->
+        <!-- content -->
   </div>
 
 
@@ -310,7 +257,7 @@
   <footer class="main-footer">
     <!-- To the right -->
     <div class="float-right d-none d-sm-inline">
-      <!-- Anything you want -->
+      Anything you want
     </div>
     <!-- Default to the left -->
     <strong>Copyright &copy; 2024 <a href="#">NSJ</a>.</strong>
@@ -331,6 +278,12 @@
   $(function () {
     bsCustomFileInput.init();
   });
+
+  // flash data
+  setTimeout(function() {
+            $('#success').fadeOut('fast');
+            $('#fail').fadeOut('fast');
+        }, 4000);
   </script>
 </body>
 </html>
