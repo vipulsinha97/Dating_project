@@ -478,7 +478,7 @@
                                                         <div class="upload-icon">+</div>
                                                         <div class="upload-text">Add selfie</div>
                                                     </label>
-                                                    <input id="file-upload3" type="file" class="image3" name="image[]" accept="image/*" />
+                                                    <input id="file-upload3" type="file" class="image3" name="image[]" accept="image/*" capture="camera" />
                                                     <img id="image-preview3" src="#" alt="Image preview" style="display: none;" />
                                                 </div>
                                                 <div id="error-image3" class="error-message"></div>
