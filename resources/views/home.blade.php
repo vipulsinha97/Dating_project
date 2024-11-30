@@ -149,7 +149,7 @@
 
         <section class="njs-speeddate pt-5 mb-5">
             <div class="container">
-                <h2 class="align-center mt-4 mb-4">NJS Speed Dating</h2>
+                <h2 class="align-center mt-4 mb-4">Not Just Swipe Speed Dating</h2>
                 <p class="p-desc mb-5">Settle into a comfortable spot at home, launch NotJustSwipe, join the online dating events and instantly connect with someone who truly gets you.</p>
                 <ul class="list">
                     <li><b>Genuine profiles:</b> Our stringent screening process ensures you connect with only the most genuine individuals. With fewer than 30% of applicants approved for events, you can be confident in the quality of our premium profiles. Quality over quantity.</li>
@@ -179,7 +179,7 @@
                                     <div class="card">
                                         <img src="{{asset('assets/images/punjab.png')}}" class="card-img-top" alt="...">
                                         <div class="card-body card-img-overlayed">
-                                            <h5 class="card-title">Panjab</h5>
+                                            <h5 class="card-title">Chandigarh</h5>
                                             <a href="#" class="btn btn-primary0 event-btn">Book Event <img src="{{asset('assets/images/arrow-diag.svg')}}" /></a>
                                         </div>
                                     </div>
@@ -249,7 +249,7 @@
         </section>
 
         <section class="howitworks mt-5 mb-5">
-            <div class="container-fluid py-5">
+            <div class="container py-5">
                 <h2 class="align-center mt-4 mb-4">How It Works</h2>
                 <ul class="center">
                     <li>Each online speed dating event lasts approximately 45 minutes.</li>
@@ -258,9 +258,9 @@
                     <li>Rate each date and indicate your interest by liking or disliking profiles after each interaction.</li>
                     <li>After all dates, connect via NJS chat with those you clicked with.</li>
                 </ul>
-                <p class="success-rate mt-5 mb-2">Success Rate</p>
+                <!-- <p class="success-rate mt-5 mb-2">Success Rate</p>
                 <p class="p-desc mb-5">On average, 95% of people find someone they are interested in, significantly increasing your<br>
-                    chances of finding a meaningful connection.</p>
+                    chances of finding a meaningful connection.</p> -->
             </div>
         </section>
 
@@ -288,13 +288,14 @@
                         <div class="hcenter">
                             <h2 class="h2heading">Secure Environment:</h2>
                             <p class="sub-head">Safety For Woman</p>
-                            <p class="p-para">Our platform prohibits screenshots, downloads, and nudity during events, ensuring a respectful and secure experience.</p>
+                            <p class="p-para">Our platform prohibits screenshots during events, ensuring a respectful and secure experience.</p>
+                            <p class="p-para">Eliminate the risk of unwanted attention and stalking in physical events.</p>
                         </div>
                     </div>
                     <div class="col-md-6 justify-end"><img src="{{asset('assets/images/sf-2.png')}}" alt=""></div>
                 </div>
             </div>
-            <div class="container-fluid py-5">
+            <!-- <div class="container-fluid py-5">
                 <div class="row vp-center">
                     <div class="col-md-6"><img src="{{asset('assets/images/sf-3.png')}}" alt=""></div>
                     <div class="col-md-6">
@@ -317,13 +318,12 @@
                     </div>
                     <div class="col-md-6 justify-end"><img src="{{asset('assets/images/sf-4.png')}}" alt=""></div>
                 </div>
-            </div>
+            </div> -->
         </section>
 
         <section class="testimonial-main">
             <div class="container my-5">
-                <h2 class="align-center my-4">Testimonial</h2>
-                <p class="p-desc mt-0 mb-4">Hear from our delight users</p>
+                <h2 class="align-center my-4">Testimonials</h2>
                 <div id="testimonialID" class="carousel carousel-dark slide carousel-fade0" data-bs-ride="carousel">
                     <div class="carousel-indicators">
                         <button type="button" data-bs-target="#testimonialID" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
