@@ -71,7 +71,7 @@
                     </div>
                     <div class="col-md-6">
                     <div class="event-details-right">
-                            <div class="ed-tickettitle"><h2>Ticket</h2></div>
+                            <div class="ed-tickettitle mb-5"><h2>Ticket</h2></div>
                            
                             <div class="ticket-main">
                                 <div class="ticket-left">
