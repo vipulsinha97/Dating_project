@@ -23,19 +23,13 @@ class MeetingController extends Controller
         $name = 'agora' . rand(1111, 9999);
         $meetingData = createAgoraProject($name);
 
-        if (!empty($meetingData->project->id)) {
-            $meetingInfo = new UserMeeting();
-            $meetingInfo->user_id = Auth::user()->id;
-            $meetingInfo->app_id = $meetingData->project->vendor_key;
-            $meetingInfo->appCertificate = $meetingData->project->sign_key;
-            $meetingInfo->channel = $meetingData->project->name;
-            $meetingInfo->uid = $uid;
-            $meetingInfo->save();
-        } else {
-            return response()->json([
-                'msg' => 'Project not created'
-            ]);
-        }
+        $meetingInfo = new UserMeeting();
+        $meetingInfo->user_id = Auth::user()->id;
+        $meetingInfo->app_id = $meetingData->project->vendor_key;
+        $meetingInfo->appCertificate = $meetingData->project->sign_key;
+        $meetingInfo->channel = $meetingData->project->name;
+        $meetingInfo->uid = $uid;
+        $meetingInfo->save();
 
         $token = createToken($meetingData->project->vendor_key, $meetingData->project->sign_key, $meetingData->project->name);
 

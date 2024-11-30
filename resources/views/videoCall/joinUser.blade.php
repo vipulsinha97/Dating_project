@@ -5,21 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Video Stream</title>
     <link rel="stylesheet" type="text/css" href="{{ asset('assets/agoraVideo/main.css') }}">
-    <script src="https://code.jquery.com/jquery-3.7.0.min.js" crossorigin="anonymous"></script>
+    <style>
+        .hidden {
+            display: none;
+        }
+    </style>
 </head>
-<style>
-    .hidden {
-    display: none;
-}
-</style>
 <body>
-@if(!session()->has('meeting'))
-    <input type="text" id="linkname" placeholder="Enter your name">
-@endif
+<input type="text" id="linkname" placeholder="Enter your name">
 <input type="hidden" id="linkUrl" value="{{ url('joinMeeting') }}/{{ $meeting->url }}">
 
 <button id="join-btn2">Join Stream</button>
-<button id="join-btns" onclick="copyLink()">Copy link</button>
+<button id="join-btns">Copy link</button>
 
 <div id="stream-wrapper" class="hidden">
     <div id="video-streams"></div>
@@ -36,7 +33,9 @@
 <input id="urlId" type="hidden" value="{{ $meeting->url }}" readonly>
 
 <script src="{{ asset('assets/agoraVideo/AgoraRTC_N-4.7.3.js') }}"></script>
-<script src="{{ asset('assets/agoraVideo/main.js') }}"></script>
+<!--<script src="{{ asset('assets/agoraVideo/main.js') }}"></script>-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js" crossorigin="anonymous"></script>
 <script>
 $(document).ready(function () {
     // Function to copy the meeting link
@@ -48,6 +47,7 @@ $(document).ready(function () {
         document.execCommand('copy');
         tempInput.remove();
         $('#join-btns').text('URL COPIED').prop('disabled', true);
+        setTimeout(() => $('#join-btns').prop('disabled', false).text('Copy link'), 3000); // Re-enable after 3 seconds
     }
 
     // Event listener for the "Copy Link" button
@@ -63,8 +63,15 @@ $(document).ready(function () {
         }
 
         saveUserName(name);
-        $('#stream-wrapper').removeClass('hidden');
-        $('#stream-controls').removeClass('hidden');
+        const streamWrapper = $('#stream-wrapper');
+        const streamControls = $('#stream-controls');
+
+        if (streamWrapper.length && streamControls.length) {
+            streamWrapper.removeClass('hidden');
+            streamControls.removeClass('hidden');
+        } else {
+            console.error('Stream elements not found');
+        }
     });
 
     // Function to save the user's name

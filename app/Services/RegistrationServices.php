@@ -17,7 +17,7 @@ class RegistrationServices {
         $user->email = $data['email'];
         $user->phone_number = $data['phone'];
         $user->dob = $data['dob'];
-        $user->password = Hash::make($data['createpass']);
+        $user->password = Hash::make($data['password']);
         $user->gender = $data['gender'];
         $user->state = $data['state'];
         $user->city = $data['plocation'];
