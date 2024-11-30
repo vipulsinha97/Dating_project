@@ -473,6 +473,9 @@
                                                 <div id="error-image2" class="error-message"></div>
                                             </div>
                                             <div class="col-md-4">
+        
+                                            </div>
+                                            <div class="col-md-4">
                                                 <div class="upload-box">
                                                     <label for="file-upload3" class="upload-trigger">
                                                         <div class="upload-icon">+</div>
@@ -490,10 +493,6 @@
                                     <h4 class="redcl">Note</h4>
                                     <ul class="bullets">
                                         <li>Stay clear of inappropriate content</li>
-                                        <li>No nudity. </li>
-                                        <li>No fake & Celebrity photo</li>
-                                        <li>No information on photo</li>
-                                        <li>Stay clear of inappropriate content, else your profile will be rejected.  </li>
                                     </ul>
                                 </div>
                                 <div class="d-flex justify-content-between">
