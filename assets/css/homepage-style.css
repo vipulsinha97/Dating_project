@@ -163,13 +163,12 @@ img.cusimg {
 }
 
 .njs-speeddate .p-desc {
-  font-family: "Pridi";
-  font-style: normal;
-  font-weight: 400;
-  font-size: 32px;
-  line-height: 50px;
-  text-align: center;
-  color: #909191;
+   font-style: normal;
+   font-weight: 400;
+   font-size: 32px;
+   line-height: 50px;
+   color: #666666;
+   font-family: "Nunito Sans", sans-serif;
 }
 .njs-speeddate ul li {
   font-family: "Nunito Sans", sans-serif;
@@ -229,13 +228,20 @@ img.cusimg {
   font-size: 68px;
 }
 .eventsnearme .p-desc {
-  font-family: "Pridi";
+  /* font-family: "Pridi";
   font-style: normal;
   font-weight: 400;
   font-size: 32px;
   line-height: 50px;
   text-align: center;
   color: #909191;
+   */
+   font-style: normal;
+   font-weight: 400;
+   font-size: 32px;
+   line-height: 50px;
+   color: #666666;
+   font-family: "Nunito Sans", sans-serif;
 }
 .card-img-overlayed {
   position: absolute;
@@ -292,13 +298,19 @@ img.cusimg {
   font-size: 68px;
 }
 .howitworks ul li {
-  font-family: "Nunito Sans", sans-serif;
+  /* font-family: "Nunito Sans", sans-serif;
   font-style: normal;
   font-weight: 300;
   font-size: 24px;
   line-height: 33px;
   color: #868585;
-  margin-bottom: 20px;
+  margin-bottom: 20px; */
+  font-style: normal;
+  font-weight: 400;
+  font-size: 28px;
+  line-height: 50px;
+  color: #666666;
+  font-family: "Nunito Sans", sans-serif;
 }
 .success-rate {
   font-family: "Pridi";
@@ -326,22 +338,36 @@ img.cusimg {
   font-size: 68px;
 }
 .security-feat .p-desc {
-  font-family: "Pridi";
+  /* font-family: "Pridi";
   font-style: normal;
   font-weight: 400;
   font-size: 32px;
   line-height: 50px;
   text-align: center;
-  color: #909191;
+  color: #909191; */
+  font-style: normal;
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 50px;
+  color: #666666;
+  font-family: "Nunito Sans", sans-serif;
+  text-align: center;
 }
 .sub-head {
-  font-family: "Pridi";
+  /* font-family: "Pridi";
   font-style: normal;
   font-weight: 400;
   font-size: 32px;
   line-height: 50px;
   text-align: left;
-  color: #909191;
+  color: #909191; */
+  font-style: normal;
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 50px;
+  color: #666666;
+  font-family: "Nunito Sans", sans-serif;
+  text-align: left;
 }
 .vp-center {
   align-items: center;
@@ -571,7 +597,7 @@ position: absolute;
 }
 .center-slider {
   position: relative;
-  height: 100vh;
+  /* height: 100vh; */
 }
 .center-slider .sliderwrapper {
   position: absolute;
@@ -592,4 +618,7 @@ position: absolute;
       padding-top: 500px;
 }
 /* Slick Slider Css */
-
+.carousel-control-next-icon, .carousel-control-prev-icon {
+  width: 4rem;
+  height: 4rem;
+}
