@@ -6,6 +6,8 @@ use App\Http\Controllers\signupController;
 use App\Http\Controllers\socialController;
 use App\Http\Controllers\chatController;
 use App\Http\Controllers\MeetingController;
+use App\Http\Controllers\AdminController;
+use App\Http\Controllers\EventController;
 use App\Http\Middleware\AuthMiddleware;
 use App\Livewire\Chat\Index;
 use App\Livewire\Chat\Chat;
@@ -75,11 +77,14 @@ Route::get('/admin/dashboard', function() {
     return view('dashboard.admin.admin');
 });
 
-//Add Event 
-Route::get('/admin/dashboard/add-event', function() {
-    return view('dashboard.admin.addEvent');
-});
-
+//Add Event page
+Route::get('/admin/dashboard/add-event', [AdminController::class, 'addEvent'])->name('addEvent');
+//Add Event function
+Route::post('/admin/dashboard/new-event', [EventController::class, 'newEvent'])->name('newEvent');
+//Event list
+Route::get('/admin/dashboard/event', [AdminController::class, 'event'])->name('Event');
+//Add Event function
+Route::get('/admin/dashboard/delete-event/{id}', [EventController::class, 'deleteEvent'])->name('deleteEvent');
 });
 
 // User routes
