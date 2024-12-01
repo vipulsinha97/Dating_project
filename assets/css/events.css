@@ -567,5 +567,7 @@ background-image: url(../images/ticket-bg.svg);
     .top-row {
       margin-bottom: 80px !important;
     }
+    .ed-ticket-details .ed-ticket-data {
+      font-size: 28px;
+  }
     }
-    
