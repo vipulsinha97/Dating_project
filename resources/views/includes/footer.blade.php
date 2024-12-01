@@ -3,7 +3,7 @@
 		<div class="container-fluid">
 			<div class="row">
 				<div class="col-6 col-md-6">
-					<p class="align-left"><img src="assets/images/logonjs-foo.svg" style="width: 100%;max-width: 40%;"/></p>
+					<p class="align-left"><img src="{{asset('assets/images/logonjs-foo.svg')}}" style="width: 100%;max-width: 40%;"/></p>
 				</div>
 				<div class="col-6 col-md-6 d-flex justify-content-end align-center">
 					<div class="align-right">
@@ -32,10 +32,10 @@
 				<div class="col-6 col-md-6">
 					<div class="d-flex0 align-right social-icons">
 						<ul class="footer_menu_soc_link">
-							<li><a href="#" target="_blank"><img src="assets/images/ic_baseline-facebook.svg" alt="facebook"></a></li>
-							<li><a href="#" target="_blank"><img src="assets/images/ri_instagram-fill.svg" alt="Insta"></a></li>
-							<li><a href="#" target="_blank"><img src="assets/images/mingcute_youtube-fill.svg" alt="youtube"></a></li>
-							<li><a href="#" target="_blank"><img src="assets/images/mdi_linkedin.svg" alt="youtube"></a></li>
+							<li><a href="#" target="_blank"><img src="{{asset('assets/images/ic_baseline-facebook.svg')}}" alt="facebook"></a></li>
+							<li><a href="#" target="_blank"><img src="{{asset('assets/images/ri_instagram-fill.svg')}}" alt="Insta"></a></li>
+							<li><a href="#" target="_blank"><img src="{{asset('assets/images/mingcute_youtube-fill.svg')}}" alt="youtube"></a></li>
+							<li><a href="#" target="_blank"><img src="{{asset('assets/images/mdi_linkedin.svg')}}" alt="youtube"></a></li>
 						</ul>
 					</div>
 				</div>
