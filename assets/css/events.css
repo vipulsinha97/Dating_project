@@ -362,11 +362,209 @@ html .owl-carousel .owl-dots.disabled, html .owl-carousel .owl-nav.disabled {
 }
 
 /* Events Details page Css */
-.event-details-right { 
-background-image: url(../images/ticket-bg.svg);
-background-size: cover;
-    height: 100vh;
+/* .event-details-right { 
+  background-image: url(../images/ticket-bg.svg);
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  padding: 31px;
+  height: 1006px;
+} */
+.ticket-main {
+  display: flex;
     width: 100%;
-    background-repeat: no-repeat;
-    padding: 50px;
+    /* justify-content: center; */
+    gap: 50px;
 }
+.ticket-left img {
+  height: 250px;
+  width: 100%;
+  object-fit: cover;
+  max-width: 250px;
+}
+.ticket-right h4 {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 800;
+  font-size: 40px;
+  line-height: 47px;
+  color: #000000;
+}
+.price b {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 42px;
+  color: #000000;
+}
+.price span.amount { 
+font-family: 'Nunito Sans';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 32px;
+    line-height: 44px;
+    color: #5E5E5E;
+    margin-left: 20px;
+}
+/* .top-row {
+  margin-bottom: 150px;
+} */
+/* .bottom-row {
+  margin-top: 200px;
+} */
+.event-details-left {
+  margin-right: 50px;
+}
+.event-details-left img {
+width: 100%;
+}
+.single-date { 
+  font-style: normal;
+  font-weight: 600;
+  font-size: 28px;
+  line-height: 38px;
+  color: #666666;
+  font-family: "Nunito Sans", sans-serif;
+  text-align: left;
+}
+.ed-title h2 {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 80px;
+  color: #000000;
+}
+.ed-list li { 
+font-family: 'Manrope';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 33px;
+    color: #5E5E5E;
+}
+.ed-date-time .post-date, .ed-date-time .post-time {
+font-family: 'Roboto';
+font-style: normal;
+font-weight: 500;
+font-size: 24px;
+line-height: 28px;
+text-align: center;
+color: #000000;
+margin-right: 20px;
+}
+.ed-date-time img { 
+margin-right: 14px;
+}
+.ticket-right {
+  display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      height: 250px;
+}
+.buy-ticket {
+  color: #fff;
+  background: #1FCCE8;
+  font-style: normal;
+  line-height: 64px;
+  width: 208px;
+  height: 64px;
+  flex-shrink: 0;
+  text-decoration: unset;
+  display: inline-block;
+  text-align: center;
+  border-radius: 50px;
+  font-family: Manrope;
+  font-size: 20px;
+  font-weight: 700;
+}
+.buy-ticket-btn {
+  text-align: center;
+}
+.ed-ticket-details .ed-ticket-data { 
+font-family: 'Roboto';
+font-style: normal;
+font-weight: 700;
+font-size: 36px;
+line-height: 42px;
+color: #000000;
+}
+.ed-ticket-data img { 
+margin-right: 10px;
+}
+.ed-ticket-details span { 
+font-family: 'Nunito Sans';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 48px;
+    color: #5E5E5E;
+}
+.ed-para {
+  font-family: 'Manrope';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 33px;
+    color: #5E5E5E;
+}
+.align-left {
+  text-align: left;
+}
+.barcont {
+  display: flex;
+  gap: 65px;
+  padding: 0px 0 0px 20px;
+  width: 100%;
+  justify-content: space-between;
+  max-width: 80%;
+  border-radius: 0px 0px 0px 34px;
+  /* box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); */
+  box-shadow: 0 8px 23px 0 rgb(0 0 0 / 0%), 0 7px 7px 0 rgb(0 0 0 / 13%);
+}
+.outerbarr {
+  justify-content: flex-end;
+  display: flex;
+  margin: 100px 0;
+}
+.mt-75 {
+  margin-top: 75px;
+}
+/* .ticket-bg { 
+background-image: url(../images/ticket-bg.svg);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    padding: 31px;
+    height: 1006px;
+} */
+
+.ticket-bg {
+  position: relative;
+}
+.ticket-bg .col-md-12  img {
+  width: 100%;
+}
+.event-details-right {
+  position: absolute;
+    top: 0;
+    left: 50px;
+    right: 50px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+/* @media screen and (max-width: 1300.98px) {
+.top-row {
+  margin-bottom: 70px;
+}
+} */
+
+@media screen and (min-width: 1620.98px) and (max-width: 1920.98px) {
+  .top-row {
+    margin-bottom: 250px !important;
+  }
+  }
+@media screen and (min-width: 1200.98px) and (max-width: 1619.98px) {
+    .top-row {
+      margin-bottom: 80px !important;
+    }
+    }
