@@ -26,8 +26,8 @@ Route::post('/saveRegistration', [signupController::class, 'saveRegistration']);
 Route::post('/login', [loginController::class, 'loginPost'])->name('loginPost');
 
 //social login
-Route::get('facebook/login', [socialController::class, 'provider']);
-Route::get('facebook/callback', [socialController::class, 'handleCallBack']);
+Route::get('facebook/login', [socialController::class, 'provider'])->name('facebook.login');
+Route::get('facebook/callback', [socialController::class, 'handleCallBack'])->name('facebook.callback');
 
 //Event
 Route::get('/event', function() {
