@@ -36,9 +36,15 @@ return [
     ],
 
     'facebook' => [
+        'client_id' => '932349968440229',
+        'client_secret' => '33c71d49e11c1a71bd289a989a0ce73d',
+        'redirect' => 'https://notjustswipe.com/facebook/callback',
+    ],
+
+    'linkedIn' => [
         'client_id' => '531110669726532',
         'client_secret' => 'e67b5a08961f8259005a5c435155c05f',
-        'redirect' => 'https://notjustswipe.com//facebook/callback',
+        'redirect' => 'https://notjustswipe.com//linkedIn/callback',
     ],
 
 ];
