@@ -33,6 +33,10 @@ Route::get('facebook/callback', [socialController::class, 'handleCallBack'])->na
 Route::get('linkedin/login', [socialController::class, 'linkedinProvider'])->name('linkedin.login');
 Route::get('linkedin/callback', [socialController::class, 'linkedinHandleCallBack'])->name('linkedin.callback');
 
+//social linkedin login
+Route::get('insta/login', [socialController::class, 'instaProvider'])->name('insta.login');
+Route::get('insta/callback', [socialController::class, 'instaHandleCallBack'])->name('insta.callback');
+
 //Event
 Route::get('/event', function() {
     return view('event');
