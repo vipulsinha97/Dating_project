@@ -34,7 +34,7 @@
                                     <p class="weensure">We ensure genuineness by verifying social and professional profiles. Connect your LinkedIn for verification.</p>
                                 </div>
                                 <div class="mt-3 mb-5 social-btns w-40">
-                                    <button class="btn mb-4 btn-outline"><img class="cw" src="{{asset('assets/images/logos_linkdin.svg')}}" /> Connect with Linkedin</button>
+                                    <a href="{{ route('linkedin.login')}}" class="btn mb-4 btn-outline"><img class="cw" src="{{asset('assets/images/logos_linkdin.svg')}}" /> Connect with Linkedin</a>
                                 </div>
                                 <div class="mb-4">
                                     <label for="comment">Don’t have LinkedIn? Leave a comment for profile assessment:</label>

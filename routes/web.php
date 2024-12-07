@@ -25,9 +25,13 @@ Route::get('/signup-details',[signupController::class, 'signupDetails']);
 Route::post('/saveRegistration', [signupController::class, 'saveRegistration']);
 Route::post('/login', [loginController::class, 'loginPost'])->name('loginPost');
 
-//social login
+//social facebook login
 Route::get('facebook/login', [socialController::class, 'provider'])->name('facebook.login');
 Route::get('facebook/callback', [socialController::class, 'handleCallBack'])->name('facebook.callback');
+
+//social linkedin login
+Route::get('linkedin/login', [socialController::class, 'linkedinProvider'])->name('linkedin.login');
+Route::get('linkedin/callback', [socialController::class, 'linkedinHandleCallBack'])->name('linkedin.callback');
 
 //Event
 Route::get('/event', function() {
