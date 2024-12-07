@@ -42,8 +42,8 @@ return [
     ],
 
     'linkedIn' => [
-        'client_id' => '77sn5lb14uympj',
-        'client_secret' => 'WPL_AP1.7NqAvnIBR51u77UP.7OyhFg==',
+        'client_id' => '86glcfhj82vd0z',
+        'client_secret' => 'WPL_AP1.yKzUQfdwlWRWMN6Q.PQQwZA==',
         'redirect' => 'https://notjustswipe.com/linkedin/callback',
     ],
 
