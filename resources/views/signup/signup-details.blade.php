@@ -54,19 +54,19 @@
                                 </div>
                                 <div class="mb-4">
                                     <div class="input-group bb-1-light">
-                                        <input type="text" class="form-control firstName" id="firstName" name="firstName" placeholder="First Name">
+                                        <input type="text" class="form-control firstName" id="firstName" name="firstName" placeholder="First Name" value="{{ session('first_name') }}">
                                     </div>
                                     <div id="error-firstName" class="error-message"></div>
                                 </div>
                                 <div class="mb-4">
                                     <div class="input-group bb-1-light">
-                                        <input type="text" class="form-control lastName" id="lastName" name="lastName" placeholder="Last Name">
+                                        <input type="text" class="form-control lastName" id="lastName" name="lastName" placeholder="Last Name" value="{{ session('last_name') }}">
                                     </div>
                                     <div id="error-lastName" class="error-message"></div>
                                 </div>
                                 <div class="mb-4">
                                     <div class="input-group bb-1-light">
-                                        <input type="email" class="form-control email" id="email" name="email" placeholder="Email">
+                                        <input type="email" class="form-control email" id="email" name="email" placeholder="Email" value="{{ session('email') }}">
                                     </div>
                                     <div id="error-email" class="error-message"></div>
                                 </div>
