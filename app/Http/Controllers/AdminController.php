@@ -5,15 +5,26 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Http\Middleware\AuthMiddleware;
 use App\Models\Event;
+use App\Models\User;
 
 class AdminController extends Controller
 {
+    // this will look for resources/views/admin/dashboard.blade.php
 
-    public function dashboard()
+    public function allUsers()
     {
-        return view('dashboard.admin.index'); // this will look for resources/views/admin/dashboard.blade.php
+        $users = User::where('role', '!=', 'admin')->where('status', 'activate')->get();
+        return view('dashboard.admin.allUsers', ['users'=>$users]);
     }
-    
+
+    // this will open pending user request page
+
+    public function pendingRequest()
+    {
+        $users = User::where('role', '!=', 'admin')->where('status', 'deactivate')->get();
+        return view('dashboard.admin.pendingUsers', ['users'=>$users]);
+    }
+
     //open event page
 
     public function event()

@@ -38,6 +38,7 @@ return new class extends Migration
             $table->string('preferable_time')->nullable();
             $table->string('preferable_date')->nullable();
             $table->string('role')->default('user');
+            $table->string('status')->default('deactivate');
             $table->text('facebook_token')->nullable();
             $table->text('instagram_token')->nullable();
             $table->text('linkedIn_token')->nullable();
