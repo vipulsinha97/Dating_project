@@ -42,8 +42,8 @@ return [
     ],
 
     'linkedIn' => [
-        'client_id' => env('LinkedIn_CLIENT_ID'),
-        'client_secret' => env('LinkedIn_CLIENT_SECRET'),
+        'client_id' => '77sn5lb14uympj',
+        'client_secret' => 'WPL_AP1.7NqAvnIBR51u77UP.7OyhFg==',
         'redirect' => 'https://notjustswipe.com/linkedin/callback',
     ],
 
