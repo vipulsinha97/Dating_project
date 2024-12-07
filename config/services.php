@@ -42,9 +42,9 @@ return [
     ],
 
     'linkedIn' => [
-        'client_id' => '531110669726532',
-        'client_secret' => 'e67b5a08961f8259005a5c435155c05f',
-        'redirect' => 'https://notjustswipe.com//linkedIn/callback',
+        'client_id' => env('LinkedIn_CLIENT_ID'),
+        'client_secret' => env('LinkedIn_CLIENT_SECRET'),
+        'redirect' => 'https://notjustswipe.com/linkedin/callback',
     ],
 
 ];
