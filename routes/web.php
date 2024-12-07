@@ -81,10 +81,9 @@ Route::get('/clear-cache', function () {
 Route::middleware([AuthMiddleware::class.':admin'])->group(function () {
 
 //admin dashboard
-Route::get('/admin/dashboard', function() {
-    return view('dashboard.admin.admin');
-});
-
+Route::get('/admin/dashboard', [AdminController::class, 'allUsers'])->name('allUsers');
+//Pending user registration request
+Route::get('/admin/dashboard/pending-request', [AdminController::class, 'pendingRequest'])->name('pendingRequest');
 //Add Event page
 Route::get('/admin/dashboard/add-event', [AdminController::class, 'addEvent'])->name('addEvent');
 //Add Event function

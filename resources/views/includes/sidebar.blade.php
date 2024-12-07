@@ -11,26 +11,34 @@
             <ul class="nav nav-treeview">          
               <li class="nav-header">MANAGE USERS</li>
               <li class="nav-item">
-                <a href="#" class="nav-link ">
+                @if($dashboard==='admin' && $sidebarMenu === 'allUsers')
+                <a href="{{route('allUsers')}}" class="nav-link active">
+                @else
+                <a href="{{route('allUsers')}}" class="nav-link">
+                @endif
                   <i class="far fa-circle nav-icon"></i>
-                  <p>Approved</p>
+                  <p>Users</p>
                 </a>
               </li>
               <li class="nav-item">
-                <a href="#" class="nav-link">
+                @if($dashboard==='admin' && $sidebarMenu === 'pendingRequest')
+                <a href="{{route('pendingRequest')}}" class="nav-link active">
+                @else
+                <a href="{{route('pendingRequest')}}" class="nav-link">
+                @endif
                   <i class="far fa-circle nav-icon"></i>
-                  <p>Unapproved</p>
+                  <p>Pending Request</p>
                 </a>
               </li>
-              <li class="nav-item">
+              {{-- <li class="nav-item">
                 <a href="#" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Inactive Page</p>
                 </a>
-              </li>
+              </li> --}}
               <li class="nav-header">MANAGE EVENTS</li>
               <li class="nav-item">
-                @if($sidebarMenu === 'Event')
+                @if($dashboard==='admin' && $sidebarMenu === 'Event')
                 <a href="{{route('Event')}}" class="nav-link active">
                 @else
                 <a href="{{route('Event')}}" class="nav-link">
@@ -40,7 +48,7 @@
                 </a>
               </li>
               <li class="nav-item">
-                @if($sidebarMenu === 'Add Event')
+                @if($dashboard==='admin' && $sidebarMenu === 'Add Event')
                 <a href="{{route('addEvent')}}" class="nav-link active">
                 @else
                 <a href="{{route('addEvent')}}" class="nav-link">

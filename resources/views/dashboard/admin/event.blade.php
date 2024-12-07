@@ -1,4 +1,5 @@
 @php
+    $dashboard="admin";
     $sidebarMenu = "Event";
 @endphp
 <!DOCTYPE html>
