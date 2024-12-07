@@ -41,10 +41,15 @@ return [
         'redirect' => 'https://notjustswipe.com/facebook/callback',
     ],
 
-    'linkedIn' => [
+    'linkedin-openid' => [
         'client_id' => '86glcfhj82vd0z',
         'client_secret' => 'WPL_AP1.yKzUQfdwlWRWMN6Q.PQQwZA==',
         'redirect' => 'https://notjustswipe.com/linkedin/callback',
     ],
 
+    'insta-openid' => [
+        'client_id' => '589059930152184',
+        'client_secret' => '1c05e4f6c8ec41a8b699729f4fb27816',
+        'redirect' => 'https://notjustswipe.com/insta/callback',
+    ],
 ];
