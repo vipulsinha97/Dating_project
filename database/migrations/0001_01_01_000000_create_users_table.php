@@ -38,8 +38,8 @@ return new class extends Migration
             $table->string('preferable_time')->nullable();
             $table->string('preferable_date')->nullable();
             $table->string('role')->default('user');
-            $table->string('facebook_token')->nullable();
-            $table->string('instagram_token')->nullable();
+            $table->text('facebook_token')->nullable();
+            $table->text('instagram_token')->nullable();
             $table->text('linkedIn_token')->nullable();
             $table->rememberToken();
             $table->timestamps();
