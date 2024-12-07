@@ -7,6 +7,7 @@ use App\Models\Preference;
 use Carbon\Carbon;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Session;
+use Illuminate\Http\Request;
 
 class RegistrationServices {
     
@@ -39,16 +40,16 @@ class RegistrationServices {
         $user->preferable_date = $data['preferable_date'];
         $user->picture = $picture;
 
-        if($request->session()->has('facebook_token')) {
-            $user->facebook_token = $request->session()->get('facebook_token');
+        if(Session::has('facebook_token')) {
+            $user->facebook_token = Session::get('facebook_token');
         }
 
-        if($request->session()->has('instagram_token')) {
-            $user->facebook_token = $request->session()->get('facebook_token');
+        if(Session::has('instagram_token')) {
+            $user->facebook_token = Session::get('facebook_token');
         }
 
-        if($request->session()->has('linkedin_token')) {
-            $user->facebook_token = $request->session()->get('facebook_token');
+        if(Session::has('linkedin_token')) {
+            $user->facebook_token = Session::get('facebook_token');
         }
 
         return $user->save();
