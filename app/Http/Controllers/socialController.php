@@ -22,11 +22,11 @@ class socialController extends Controller
         $user_email = $user->email;
         
         //Finding data in our database
-        $data = User::where('email', $user_email)->first();
+        $existingUser = User::where('email', $user_email)->first();
 
-        if(!empty($data)) {
+        if(!empty($existingUser)) {
             
-            Auth::login($user);
+            Auth::login($existingUser);
             return redirect('/user/dashboard');
         }
         else {
@@ -50,25 +50,13 @@ class socialController extends Controller
     {
         //finding user data using linkedin login
         $user = Socialite::driver('linkedin')->stateless()->user();
-        $user_email = $user->email;
         
-        //Finding data in our database
-        $data = User::where('email', $user_email)->first();
-
-        if(!empty($data)) {
-            
-            Auth::login($user);
-            return redirect('/user/dashboard');
-        }
-        else {
-
-            $name = $user->name;
-            $split_name = explode(" ", $name);
-            Session::put('first_name', $split_name[0]);
-            Session::put('last_name', $split_name[1]);
-            Session::put('email', $user->email);
-            Session::put('facebook_token', $user->token);
-            return redirect('/signup-details');
-        }
+        $name = $user->name;
+        $split_name = explode(" ", $name);
+        Session::put('first_name', $split_name[0]);
+        Session::put('last_name', $split_name[1]);
+        Session::put('email', $user->email);
+        Session::put('facebook_token', $user->token);
+        return redirect('/signup-details');
     }
 }
