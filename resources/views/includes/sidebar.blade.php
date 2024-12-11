@@ -17,7 +17,7 @@
                 <a href="{{route('allUsers')}}" class="nav-link">
                 @endif
                   <i class="far fa-circle nav-icon"></i>
-                  <p>Users</p>
+                  <p>All Users</p>
                 </a>
               </li>
               <li class="nav-item">

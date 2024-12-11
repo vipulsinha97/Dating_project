@@ -15019,3 +15019,8 @@ border-top: none !important;
   outline: 0 !important;
   box-shadow: none !important;
 }
+
+/* Admin dashboard Css START */
+.dataTables_wrapper {
+  margin: 20px !important;
+}
