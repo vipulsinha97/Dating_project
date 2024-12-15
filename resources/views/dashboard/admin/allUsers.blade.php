@@ -16,6 +16,10 @@
   <!-- Theme style -->
   <link rel="stylesheet" href="{{ asset('assets/dist/css/adminlte.min.css') }}">
   <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/main.css') }}">
+    <!-- datatable css -->
+    <link rel="stylesheet" href="{{ asset('assets/css/dataTables.bootstrap5.min.css') }}">
+  
+
 
   <style>
     :root {
@@ -166,12 +170,12 @@
       <div class="container-fluid">
         <div class="row mb-2">
           <div class="col-sm-6">
-            <h1 class="m-0">Dashboard</h1>
+            <h1 class="m-0">All Users</h1>
           </div><!-- /.col -->
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
               <li class="breadcrumb-item"><a href="#">Home</a></li>
-              <li class="breadcrumb-item active">Starter Page</li>
+              <li class="breadcrumb-item active">All Users</li>
             </ol>
           </div><!-- /.col -->
         </div><!-- /.row -->
@@ -185,22 +189,8 @@
         <div class="row">
           <div class="col-12">
             <div class="card">
-              <div class="card-header">
-                <h3 class="card-title">APPROVE TABLE</h3>
-                <div class="card-tools">
-                  <div class="input-group input-group-sm" style="width: 150px;">
-                    <input type="text" name="table_search" class="form-control float-right" placeholder="Search">
-                    <div class="input-group-append">
-                      <button type="submit" class="btn btn-default">
-                        <i class="fas fa-search"></i>
-                      </button>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <!-- /.card-header -->
               <div class="card-body table-responsive p-0">
-                <table class="table table-hover text-nowrap">
+                <table class="table table-hover text-nowrap table-striped0 table-bordered0 custumise-datatable" id="allusersId" style="width:100%">
                   <thead>
                     <tr>
                       <th>ID</th>
@@ -266,7 +256,7 @@
   <footer class="main-footer">
     <!-- To the right -->
     <div class="float-right d-none d-sm-inline">
-      Anything you want
+
     </div>
     <!-- Default to the left -->
     <strong>Copyright &copy; 2024 <a href="#">NSJ</a>.</strong>
@@ -275,18 +265,33 @@
 <!-- ./wrapper -->
 
 <!-- REQUIRED SCRIPTS -->
-
-<!-- jQuery -->
-<script src="{{ asset('plugins/jquery/jquery.min.js') }}"></script>
-<!-- Bootstrap 4 -->
 <script src="{{ asset('plugins/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
 <!-- AdminLTE App -->
 <script src="{{ asset('assets/dist/js/adminlte.min.js') }}"></script>
-<!-- <script src="{{ asset('plugins/bootstrap/js/bs-custom-file-input.min.js') }}"></script> -->
+
+<!--  datatable Js -->
+<script src="{{ asset('assets/js/jquery-3.6.0.min.js') }}"></script>
+<script src="{{ asset('assets/js/jquery.dataTables.min.js') }}"></script>
+<script src="{{ asset('assets/js/dataTables.bootstrap5.min.js') }}"></script>
+
+
 <script>
   $(function () {
     bsCustomFileInput.init();
   });
+
+  //datatable
+  new DataTable('#allusersId', {
+    select: true
+});
   </script>
+      <script>
+        // Initialize the DataTable
+        $(document).ready(function() {
+            $('#allusersId').DataTable();
+        });
+    </script>
+
+  
 </body>
 </html>
