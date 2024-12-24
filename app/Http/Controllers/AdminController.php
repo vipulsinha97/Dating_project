@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Http\Middleware\AuthMiddleware;
 use App\Models\Event;
 use App\Models\User;
+use App\Models\Location;
 
 class AdminController extends Controller
 {
@@ -25,6 +26,13 @@ class AdminController extends Controller
         return view('dashboard.admin.pendingUsers', ['users'=>$users]);
     }
 
+    //this will open category page
+
+    public function location()
+    {
+        $location = Location::all();
+    }
+
     //open event page
 
     public function event()
@@ -38,6 +46,16 @@ class AdminController extends Controller
     public function addEvent() 
     {
         return view('dashboard.admin.addEvent');  
+    }
+
+    //open edit event page
+
+    public function editEvent($id)
+    {
+        //fetching data of selected event
+        $event = Event::where('id', $id)->get();
+        
+        return view('dashboard.admin.editEvent', ['event'=>$event]);
     }
 
 }

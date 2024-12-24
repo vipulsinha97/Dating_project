@@ -16,27 +16,15 @@
                     <div class="col-md-6 ver-center">
                         <div class="formleftmain">
                             <h2>Welcome Back !</h2>
-                            @if(count($errors) > 0)
-            @foreach( $errors->all() as $message )
-            <div class="row justify-content-center">
-                <div class="col-md-6 col-lg-5">
-                    <div class="alert alert-danger display-hide" style="text-align:center;">
-                        <button class="close" data-close="alert"></button>
-                        <span>{{ $message }}</span>
-                    </div>
-                </div>
-            </div>
-            @endforeach
-            @endif
-            @if(Session::get('fail'))
-              <div class="alert alert-danger" id="fail">
-                <center>{{Session::get('fail')}}</center>          
-              </div>
-          @elseif(Session::get('success'))
-              <div class="alert alert-success" id="success">
-                <center>{{session('success')}}</center>          
-              </div>
-          @endif
+                            @if(Session::get('fail'))
+                                <div class="alert alert-danger" id="fail">
+                                    <center>{{Session::get('fail')}}</center>          
+                                </div>
+                            @elseif(Session::get('success'))
+                                <div class="alert alert-success" id="success">
+                                    <center>{{session('success')}}</center>          
+                                </div>
+                            @endif
                             <p class="plz-login">Please login to your account</p>
                             <form class="form-main" action="{{ route('loginPost') }}" method="post" >
                             @csrf

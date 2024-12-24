@@ -38,6 +38,16 @@
               </li> --}}
               <li class="nav-header">MANAGE EVENTS</li>
               <li class="nav-item">
+                @if($dashboard==='admin' && $sidebarMenu === 'location')
+                <a href="{{route('location')}}" class="nav-link active">
+                @else
+                <a href="{{route('location')}}" class="nav-link">
+                @endif
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Category</p>
+                </a>
+              </li>
+              <li class="nav-item">
                 @if($dashboard==='admin' && $sidebarMenu === 'Event')
                 <a href="{{route('Event')}}" class="nav-link active">
                 @else
@@ -55,12 +65,6 @@
                 @endif
                   <i class="far fa-circle nav-icon"></i>
                   <p>Add Event</p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="#" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Edit Events</p>
                 </a>
               </li>
             </ul>
