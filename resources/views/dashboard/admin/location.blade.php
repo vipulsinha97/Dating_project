@@ -197,7 +197,7 @@
                     @endif
                         <div class="card">
                         <div class="card-header">
-                        <h3 class="card-title">EVENT TABLE</h3>
+                        <h3 class="card-title">LOCATION TABLE</h3>
                         <div class="card-tools">
                             <div class="input-group input-group-sm" style="width: 150px;">
                             <input type="text" name="table_search" class="form-control float-right" placeholder="Search">
@@ -215,10 +215,8 @@
                             <thead>
                             <tr>
                                 <th>S.NO</th>
-                                <th>Title</th>
-                                <th>Event Date</th>
-                                <th>Location</th>
-                                <th>Event Duration</th>
+                                <th>Location Name</th>
+                                <th>Location Image</th>
                                 <th>Action</th>
 
                             </tr>
@@ -227,16 +225,14 @@
                             @php
                                 $i=1;
                             @endphp
-                            @foreach ($event as $event)
+                            @foreach ($location as $location)
                             <tr>
                                 <td>@php echo $i++; @endphp</td>
-                                <td>{{$event->title}}</td>
-                                <td>{{$event->event_date}}</td>
-                                <td><span class="tag tag-success">{{$event->location}}</span></td>
-                                <td>{{$event->event_duration}}</td>
+                                <td>{{$location->location_name}}</td>
+                                <td>{{$location->location_image}}</td>
                                 <td>
-                                  <a href="{{ URL::to('/admin/dashboard/edit-event/') }}/{{$event->id}}" class="btn btn-primary">Edit</a>
-                                  <a href="{{ URL::to('/admin/dashboard/delete-event/') }}/{{$event->id}}" class="btn btn-danger">Delete</a>
+                                  <a href="{{ URL::to('/admin/dashboard/edit-location/') }}/{{$location->id}}" class="btn btn-primary">Edit</a>
+                                  <a href="{{ URL::to('/admin/dashboard/delete-location/') }}/{{$location->id}}" class="btn btn-danger">Delete</a>
                                 </td>
                             </tr>    
                             @endforeach

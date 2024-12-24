@@ -27,18 +27,22 @@ class loginController extends Controller
             $user = User::where('email', $requestData['email'])->first();
 
             if ($user && Hash::check($requestData['password'], $user->password)) {
-                
-                Auth::login($user);
+                if($user->status === 'activate') {    
+                    Auth::login($user);
 
-                // Check user's role and redirect accordingly
-                if 
-                ($user->role === 'admin') {
-                    return redirect()->intended('/admin/dashboard');
-                } elseif ($user->role === 'user') {
-                    return redirect()->intended('/user/dashboard');
+                    // Check user's role and redirect accordingly
+                    if 
+                    ($user->role === 'admin') {
+                        return redirect()->intended('/admin/dashboard');
+                    } elseif ($user->role === 'user') {
+                        return redirect()->intended('/user/dashboard');
+                    }
+                }
+                else {
+                    return back()->with('fail', 'Admin needs to authorise your account first');
                 } 
             } else {
-                return redirect()->back()->withErrors('Invalid credentials');
+                return back()->with('fail','Invalid credentials');
             }
         }
 

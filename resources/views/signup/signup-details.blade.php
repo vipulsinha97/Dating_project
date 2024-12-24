@@ -22,7 +22,6 @@
             <div class="container-fluid mt-0">
                 <div class="row justify-content-center">
                     <div id="error" class="error-message" style="display: none;">
-                        <center>Please fill all the fields for registration</center>
                     </div>
                     <div class="col-md-8">
                         <form class="form-main" id="multiStepForm" enctype="multipart/form-data">
@@ -852,6 +851,7 @@
             if (!response.success) {
                 console.log('Validation errors:', response.message);
                 
+                $('#error').show();
                 // Loop through the data object and print the validation errors
                 $.each(response.data, function(field, errors) {
                     console.log(field + ': ' + errors.join(', '));
@@ -860,8 +860,8 @@
                     var errorMessage = errors.join(', ');
                     // Assume you have a div to show errors for each field, e.g. <div id="error-firstName"></div>
                     $('#error-' + field).text(errorMessage);
+                    $('#error').text(errorMessage);
                 });
-                $('#error').show();
             }
         }
     });

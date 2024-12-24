@@ -90,8 +90,14 @@ Route::get('/admin/dashboard/add-event', [AdminController::class, 'addEvent'])->
 Route::post('/admin/dashboard/new-event', [EventController::class, 'newEvent'])->name('newEvent');
 //Event list
 Route::get('/admin/dashboard/event', [AdminController::class, 'event'])->name('Event');
-//Add Event function
+//Edit Event page
+Route::get('/admin/dashboard/edit-event/{id}', [AdminController::class, 'editEvent'])->name('editEvent');
+//Edit Event function
+Route::post('/admin/dashboard/edit/event', [EventController::class, 'eventEdit'])->name('editCurrentEvent');
+//Delete Event function
 Route::get('/admin/dashboard/delete-event/{id}', [EventController::class, 'deleteEvent'])->name('deleteEvent');
+//Location
+Route::get('/admin/dashboard/location', [EventController::class, 'location'])->name('location');
 });
 
 // User routes
