@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Http\Requests\StoreEventRequest; 
+use App\Http\Requests\editEventRequest; 
 use App\Services\EventServices;
 
 class EventController extends Controller
@@ -30,6 +31,24 @@ class EventController extends Controller
         if ($storeEvent === true) {
 
             return redirect('/admin/dashboard/event')->with('success', 'New Event Added');
+        }
+    }
+    
+    //edit event
+
+    public function eventEdit(editEventRequest $request)
+    {
+        $data = $request->all();
+
+        if ($request->hasFile('image')) {
+            $filePath = $request->file('image')->store('uploads/event_feature_image');
+        }
+        
+        // Store event
+        $storeEvent = $this->EventServices->editEvent($data);
+        if ($storeEvent === true) {
+
+            return redirect('/admin/dashboard/event')->with('success', 'Event Edited');
         }
     }
 
