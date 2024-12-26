@@ -224,22 +224,22 @@
                             </tr>
                             </thead>
                             <tbody>
-                            @php
-                                $i=1;
-                            @endphp
-                            @foreach ($event as $event)
-                            <tr>
-                                <td>@php echo $i++; @endphp</td>
-                                <td>{{$event->title}}</td>
-                                <td>{{$event->event_date}}</td>
-                                <td><span class="tag tag-success">{{$event->location}}</span></td>
-                                <td>{{$event->event_duration}}</td>
-                                <td>
-                                  <a href="{{ URL::to('/admin/dashboard/edit-event/') }}/{{$event->id}}" class="btn btn-primary">Edit</a>
-                                  <a href="{{ URL::to('/admin/dashboard/delete-event/') }}/{{$event->id}}" class="btn btn-danger">Delete</a>
-                                </td>
-                            </tr>    
-                            @endforeach
+                              @php
+                                  $i=1;
+                              @endphp
+                              @foreach ($event as $event)
+                              <tr>
+                                  <td>@php echo $i++; @endphp</td>
+                                  <td>{{$event->title}}</td>
+                                  <td>{{$event->event_date}}</td>
+                                  <td><span class="tag tag-success">{{$event->location}}</span></td>
+                                  <td>{{$event->event_duration}}</td>
+                                  <td>
+                                    <a href="{{ URL::to('/admin/dashboard/edit-event/') }}/{{$event->id}}" class="btn btn-primary">Edit</a>
+                                    <a href="{{ URL::to('/admin/dashboard/delete-event/') }}/{{$event->id}}" class="btn btn-danger">Delete</a>
+                                  </td>
+                              </tr>    
+                              @endforeach
                             </tbody>
                         </table>
                         </div>

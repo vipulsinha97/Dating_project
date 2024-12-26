@@ -98,6 +98,11 @@ Route::post('/admin/dashboard/edit/event', [EventController::class, 'eventEdit']
 Route::get('/admin/dashboard/delete-event/{id}', [EventController::class, 'deleteEvent'])->name('deleteEvent');
 //Location
 Route::get('/admin/dashboard/location', [EventController::class, 'location'])->name('location');
+//approve user
+Route::get('/admin/dashboard/approveUser/{id}', [UserController::class, 'approveUser'])->name('approve-user');
+//disapprove user
+Route::get('/admin/dashboard/disapproveUser/{id}', [UserController::class, 'disapproveUser'])->name('disapprove-user');
+
 });
 
 // User routes
