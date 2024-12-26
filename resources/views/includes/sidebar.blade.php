@@ -44,7 +44,7 @@
                 <a href="{{route('location')}}" class="nav-link">
                 @endif
                   <i class="far fa-circle nav-icon"></i>
-                  <p>Category</p>
+                  <p>Location</p>
                 </a>
               </li>
               <li class="nav-item">
