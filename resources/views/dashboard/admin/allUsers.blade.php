@@ -193,48 +193,40 @@
                 <table class="table table-hover text-nowrap table-striped0 table-bordered0 custumise-datatable" id="allusersId" style="width:100%">
                   <thead>
                     <tr>
-                      <th>ID</th>
-                      <th>User</th>
-                      <th>Date</th>
-                      <th>Status</th>
-                      <th>Reason</th>
-                      <th>Action</th>
+                      <th>FIRST NAME</th>
+                      <th>LAST NAME</th>
+                      <th>EMAIL</th>
+                      <th>PHONE</th>
+                      <th>DOB</th>
+                      <th>GENDER</th>
+                      <th>STATE</th>
+                      <th>CITY</th>
+                      <th>EDUCATION</th>
+                      <th>PROFESSION</th>
+                      <th>SALARY</th>
 
                     </tr>
                   </thead>
                   <tbody>
+                    @php
+                        $i=1;
+                    @endphp
+                    @foreach ($users as $users)
                     <tr>
-                      <td>183</td>
-                      <td>John Doe</td>
-                      <td>11-7-2014</td>
-                      <td><span class="tag tag-success">Approved</span></td>
-                      <td>Bacon ipsum dolor sit amet salami venison chicken flank fatback doner.</td>
-                      <td><button type="button" class="btn btn-danger">Delete</button></td>
-                    </tr>
-                    <tr>
-                      <td>219</td>
-                      <td>Alexander Pierce</td>
-                      <td>11-7-2014</td>
-                      <td><span class="tag tag-warning">Pending</span></td>
-                      <td>Bacon ipsum dolor sit amet salami venison chicken flank fatback doner.</td>
-                      <td><button type="button" class="btn btn-danger">Delete</button></td>
-                    </tr>
-                    <tr>
-                      <td>657</td>
-                      <td>Bob Doe</td>
-                      <td>11-7-2014</td>
-                      <td><span class="tag tag-primary">Approved</span></td>
-                      <td>Bacon ipsum dolor sit amet salami venison chicken flank fatback doner.</td>
-                      <td><button type="button" class="btn btn-danger">Delete</button></td>
-                    </tr>
-                    <tr>
-                      <td>175</td>
-                      <td>Mike Doe</td>
-                      <td>11-7-2014</td>
-                      <td><span class="tag tag-danger">Denied</span></td>
-                      <td>Bacon ipsum dolor sit amet salami venison chicken flank fatback doner.</td>
-                      <td><button type="button" class="btn btn-danger">Delete</button></td>
-                    </tr>
+                        <td>@php echo $i++; @endphp</td>
+                        <td>{{$users->first_name}}</td>
+                        <td>{{$users->last_name}}</td>
+                        <td>{{$users->email}}</span></td>
+                        <td>{{$users->phone}}</td>
+                        <td>{{$users->dob}}</td>
+                        <td>{{$users->gender}}</td>
+                        <td>{{$users->state}}</td>
+                        <td>{{$users->city}}</td>
+                        <td>{{$users->education}}</td>
+                        <td>{{$users->profession}}</td>
+                        <td>{{$users->salary}}</td>
+                    </tr>    
+                    @endforeach
                   </tbody>
                 </table>
               </div>
