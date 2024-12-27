@@ -473,39 +473,7 @@
             });
         });
     </script>
-    <!-- <script>
-        var htmlCollection = document.getElementsByClassName('item');
-        var itemsId = Array.from(htmlCollection);
-        var sectionDeg = 180 / itemsId.length;
-        var radianSectionDeg = sectionDeg * Math.PI * 2 / 360;
-        var radiusLength = 600;
-
-        for (var i = 0; i < itemsId.length; i++) {
-            itemsId[i].style.top = radiusLength * Math.sin(radianSectionDeg * i - 1.5708) - 50 + 'px';
-            itemsId[i].style.left = radiusLength * Math.cos(radianSectionDeg * i - 1.5708) - 50 + 'px';
-        }
-
-        var rotation = 0;
-        var center = document.getElementById('center');
-
-        function turnLeft() {
-            rotation = rotation + radianSectionDeg;
-            center.style.transform = 'rotate(' + rotation + 'rad)';
-            for (var i = 0; i < itemsId.length; i++) {
-                itemsId[i].style.transform = 'rotate(' + -rotation + 'rad)';
-            }
-        }
-
-        function turnRight() {
-            rotation = rotation - radianSectionDeg;
-            center.style.transform = 'rotate(' + rotation + 'rad)';
-            for (var i = 0; i < itemsId.length; i++) {
-                itemsId[i].style.transform = 'rotate(' + -rotation + 'rad)';
-            }
-        }
-    </script> -->
-
-    <script>
+   <!-- <script>
         $(document).ready(function() {
             $('.home_slider').slick({
                 centerMode: true, // Enable center mode
@@ -536,9 +504,81 @@
                 ]
             });
         });
-    </script>
+    </script> -->
+
+<script>
+$(document).ready(function() {
+    var $slider = $('.home_slider');
+
+    // Initialize the slick slider
+    $slider.slick({
+        centerMode: true, // Enable center mode
+        centerPadding: '60px', // Padding around the center slide
+        slidesToShow: 3, // Show 3 slides at a time
+        arrows: true, // Enable arrows
+        autoplay: false, // Autoplay the slides
+        autoplaySpeed: 2000, // Autoplay speed in milliseconds
+        speed: 500, // Smooth slide transition speed
+        responsive: [{
+                breakpoint: 768, // For screens <= 768px
+                settings: {
+                    arrows: true, // Enable arrows on smaller screens
+                    centerMode: true,
+                    centerPadding: '40px', // Reduce padding for smaller screens
+                    slidesToShow: 3 // Show 3 slides on smaller screens
+                }
+            },
+            {
+                breakpoint: 480, // For screens <= 480px
+                settings: {
+                    arrows: true, // Enable arrows on very small screens
+                    centerMode: true,
+                    centerPadding: '40px', // Reduce padding
+                    slidesToShow: 1 // Show 1 slide on very small screens
+                }
+            }
+        ]
+    });
+
+    // Hide the previous arrow by default
+    $('.slick-prev').hide();
+
+    // Hide arrows when at the first or last slide
+    $slider.on('beforeChange', function(event, slick, currentSlide, nextSlide) {
+        // Check if we are at the first slide
+        if (nextSlide === 0) {
+            $('.slick-prev').hide(); // Hide the 'previous' arrow
+        } else {
+            $('.slick-prev').show(); // Show the 'previous' arrow
+        }
+
+        // Check if we are at the last slide
+        if (nextSlide === slick.slideCount - 1) {
+            $('.slick-next').hide(); // Hide the 'next' arrow
+        } else {
+            $('.slick-next').show(); // Show the 'next' arrow
+        }
+    });
+
+    // Initialize by hiding the previous arrow if on the first slide
+    $slider.on('init', function(event, slick) {
+        if (slick.currentSlide === 0) {
+            $('.slick-prev').hide(); // Hide the 'previous' arrow on the first slide
+        } else {
+            $('.slick-prev').show(); // Show the 'previous' arrow if not on the first slide
+        }
+
+        // Ensure the next arrow visibility is set correctly
+        if (slick.currentSlide === slick.slideCount - 1) {
+            $('.slick-next').hide(); // Hide the 'next' arrow on the last slide
+        } else {
+            $('.slick-next').show(); // Show the 'next' arrow if not on the last slide
+        }
+    });
+});
 
 
+</script>
 </body>
 
 
