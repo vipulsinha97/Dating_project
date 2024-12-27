@@ -226,8 +226,8 @@
                         <td>{{$users->profession}}</td>
                         <td>{{$users->salary}}</td>
                         <td>
-                          <a href="{{ route('approve-user') }}/{{$users->id}}" class="btn btn-primary">APPROVE</a>
-                          <a href="{{ route('disapprove-user') }}/{{$users->id}}" class="btn btn-danger">DISAPPROVE</a>
+                          <a href="{{ URL::to('/admin/dashboard/approveUser/') }}/{{$users->id}}" class="btn btn-primary">APPROVE</a>
+                          <a href="{{ URL::to('/admin/dashboard/disapproveUser/') }}/{{$users->id}}" class="btn btn-danger">DISAPPROVE</a>
                         </td>
                     </tr>    
                     @endforeach
