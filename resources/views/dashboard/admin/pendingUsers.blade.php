@@ -193,6 +193,7 @@
                 <table class="table table-hover text-nowrap table-striped0 table-bordered0 custumise-datatable" id="allusersId" style="width:100%">
                   <thead>
                     <tr>
+                      <th>S NO.</th>
                       <th>FIRST NAME</th>
                       <th>LAST NAME</th>
                       <th>EMAIL</th>
@@ -204,7 +205,7 @@
                       <th>EDUCATION</th>
                       <th>PROFESSION</th>
                       <th>SALARY</th>
-
+                      <th>ACTION</th>
                     </tr>
                   </thead>
                   <tbody>
