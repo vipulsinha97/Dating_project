@@ -6,6 +6,7 @@ use App\Http\Controllers\signupController;
 use App\Http\Controllers\socialController;
 use App\Http\Controllers\chatController;
 use App\Http\Controllers\MeetingController;
+use App\Http\Controllers\UserController;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\EventController;
 use App\Http\Middleware\AuthMiddleware;
