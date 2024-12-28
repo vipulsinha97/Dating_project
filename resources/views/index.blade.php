@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -153,5 +153,123 @@ function getTrueNumber(x) {
   else return x
 }
 </script>
+</body>
+</html> -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+@include("includes/top")
+<link rel="stylesheet" type="text/css" href="{{asset('assets/css/homepage-style.css')}}">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video Chat Template</title>
+    <!-- Bootstrap 5 CSS -->
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"> -->
+    <style>
+        /* Custom styles for video chat */
+        .video-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 80vh;
+            position: relative;
+        }
+        .video-feed {
+            border: 2px solid #ddd;
+            width: 80%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .video-controls {
+            position: absolute;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: rgba(0, 0, 0, 0.5);
+            padding: 10px;
+            border-radius: 10px;
+            display: flex;
+            gap: 15px;
+        }
+        .video-controls button {
+            color: white;
+            border: none;
+            background-color: transparent;
+            font-size: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Video Chat Container -->
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-12">
+                <h2 class="text-center mb-4">Video Chat Room</h2>
+                <div class="video-container">
+                    <!-- Video Feed -->
+                    <video id="main-video" class="video-feed" autoplay muted></video>
+
+                    <!-- Controls -->
+                    <div class="video-controls">
+                        <button id="muteBtn" title="Mute/Unmute"><i class="bi bi-mic"></i></button>
+                        <button id="videoBtn" title="Start/Stop Video"><i class="bi bi-camera-video"></i></button>
+                        <button id="endCallBtn" title="End Call"><i class="bi bi-phone-slash"></i></button>
+                    </div>
+                </div>
+
+                <!-- Additional Participants (small video feeds) -->
+                <div class="d-flex justify-content-center mt-3">
+                    <div class="participant-video">
+                        <video id="participant1" class="video-feed" autoplay></video>
+                    </div>
+                    <div class="participant-video mx-2">
+                        <video id="participant2" class="video-feed" autoplay></video>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap 5 JS and Icons -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.min.js"></script>
+
+    <script>
+        // JavaScript for basic controls (mute, video toggle, and end call)
+        const muteBtn = document.getElementById("muteBtn");
+        const videoBtn = document.getElementById("videoBtn");
+        const endCallBtn = document.getElementById("endCallBtn");
+        const mainVideo = document.getElementById("main-video");
+
+        let isMuted = false;
+        let isVideoOn = true;
+
+        // Mute/Unmute
+        muteBtn.addEventListener("click", () => {
+            isMuted = !isMuted;
+            mainVideo.muted = isMuted;
+            muteBtn.innerHTML = isMuted ? '<i class="bi bi-mic-mute"></i>' : '<i class="bi bi-mic"></i>';
+        });
+
+        // Start/Stop Video
+        videoBtn.addEventListener("click", () => {
+            isVideoOn = !isVideoOn;
+            mainVideo.style.display = isVideoOn ? "block" : "none";
+            videoBtn.innerHTML = isVideoOn ? '<i class="bi bi-camera-video"></i>' : '<i class="bi bi-camera-off"></i>';
+        });
+
+        // End Call
+        endCallBtn.addEventListener("click", () => {
+            alert("Call Ended");
+            // Ideally, stop the video feed here
+        });
+    </script>
+    
+    @include("includes/footer")
+
+    @include("includes/bottom")
 </body>
 </html>
