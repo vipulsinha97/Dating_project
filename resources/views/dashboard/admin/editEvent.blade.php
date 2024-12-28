@@ -204,8 +204,8 @@ $sidebarMenu = 'Add Event';
                   <label for="Select" class="col-sm-2 col-form-label">Select Location</label>
                   <div class="col-sm-10">
                     <select name="location" class="form-control">
-                      @if($data->location)
-                      <option value="{{$data->location}}" selected>{{$data->location}}</option>
+                      @if($data->location_name)
+                      <option value="{{$data->location_name}}" selected>{{$data->location_name}}</option>
                       @else
                       <option disabled selected>-Choose location-</option>
                       @endif
@@ -221,7 +221,7 @@ $sidebarMenu = 'Add Event';
                   <label for="Select" class="col-sm-2 col-form-label">Select Age Group</label>
                   <div class="col-sm-10">
                     <select name="age_group" class="form-control">
-                      @if($data->title)
+                      @if($data->age_group)
                       <option value="{{$data->age_group}}" selected>{{$data->age_group}}</option>
                       @else
                       <option disabled selected>-Choose Age-Group-</option>

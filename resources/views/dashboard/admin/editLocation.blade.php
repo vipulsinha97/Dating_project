@@ -191,7 +191,7 @@ $sidebarMenu = 'Add Event';
           <!-- Horizontal Form -->
           <div class="card card-info">
             <div class="card-header">
-              <h3 class="card-title">Add Event</h3>
+              <h3 class="card-title">Edit Location</h3>
             </div>
             <!-- /.card-header -->
             <!-- form start -->

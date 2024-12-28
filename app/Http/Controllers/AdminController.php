@@ -39,7 +39,9 @@ class AdminController extends Controller
 
     public function event()
     {
-        $event = Event::all();
+        $event = Event::leftJoin('locations', 'locations.id', '=', 'events.location')
+        ->select('events.*', 'locations.location_name')
+        ->get();
         return view('dashboard.admin.event', ['event'=>$event]);
     }
 
@@ -57,7 +59,9 @@ class AdminController extends Controller
     public function editEvent($id)
     {
         //fetching data of selected event
-        $event = Event::where('id', $id)->get();
+        $event = Event::leftJoin('locations', 'locations.id', '=', 'events.location')
+        ->select('events.*', 'locations.location_name')
+        ->get();
         $location = Location::all();
 
         return view('dashboard.admin.editEvent', ['event'=>$event, 'location'=>$location]);
