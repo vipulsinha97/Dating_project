@@ -217,7 +217,7 @@
                         <td>{{$users->first_name}}</td>
                         <td>{{$users->last_name}}</td>
                         <td>{{$users->email}}</span></td>
-                        <td>{{$users->phone}}</td>
+                        <td>{{$users->phone_number}}</td>
                         <td>{{$users->dob}}</td>
                         <td>{{$users->gender}}</td>
                         <td>{{$users->state}}</td>
