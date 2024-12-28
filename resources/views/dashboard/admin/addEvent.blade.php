@@ -224,10 +224,10 @@ $sidebarMenu = 'Add Event';
                       @else
                       <option disabled selected>-Choose Age-Group-</option>
                       @endif
-                      <option value="25-30">25-30</option>
-                      <option value="30-35">30-35</-option>
-                      <option value="35-40">35-40</option>
-                      <option value="40-45">40-45</option>
+                      @foreach ($ageGroup as $ag)
+                        <option value="{{$ag->id}}">{{$ag->starting_age}}-{{$ag->ending_age}}</option>
+                      @endforeach
+                      <>
                     </select>
                     <span style="color: red;">@error('age_group') {{$message}} @enderror</span>
                   </div>

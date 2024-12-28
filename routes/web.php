@@ -10,6 +10,7 @@ use App\Http\Controllers\UserController;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\EventController;
 use App\Http\Controllers\LocationController;
+use App\Http\Controllers\AgeGroupController;
 use App\Http\Middleware\AuthMiddleware;
 use App\Livewire\Chat\Index;
 use App\Livewire\Chat\Chat;
@@ -120,6 +121,10 @@ Route::get('/admin/dashboard/approveUser/{id}', [UserController::class, 'approve
 Route::get('/admin/dashboard/disapproveUser/{id}', [UserController::class, 'disapproveUser'])->name('disapprove-user');
 //Age group
 Route::get('/admin/dashboard/ageGroup', [AdminController::class, 'age_group'])->name('age_group');
+//Edit age group page
+Route::get('/admin/dashboard/editAgeGroup/{id}', [AdminController::class, 'editAgeGroup'])->name('edit_age_group');
+//Edit Age group function
+Route::post('/admin/dashboard/edit/ageGroup', [AgeGroupController::class, 'ageGroupEdit'])->name('editCurrentAgeGroup');
 
 });
 
