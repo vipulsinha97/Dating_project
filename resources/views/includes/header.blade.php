@@ -7,7 +7,7 @@
 			</div>
 			<div class="col-4 col-md-4">
 				<!-- Offcanvas Menu Hamburger Button -->
-				<span><a href="#"><img class="logo" src="{{asset('assets/images/logo.svg')}}" /></a></span>
+				<span><a href="https://notjustswipe.com/"><img class="logo" src="{{asset('assets/images/logo.svg')}}" /></a></span>
 			</div>
 			<div class="col-4 col-md-4 ccmenuright">
 				<div class="njshright">

@@ -15024,3 +15024,77 @@ border-top: none !important;
 .dataTables_wrapper {
   margin: 20px !important;
 }
+
+/* About Us page Css START */
+.aboutus-main {
+  background: #E6EFED;
+    padding: 50px 0;
+    text-align: center;
+}
+.bannersec { 
+text-align: center;
+}
+.title-abtus { 
+  font-family: "Manrope";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 55px;
+    text-align: center;
+    color: #000000;
+    position: relative; 
+}
+.title-abtus:after {
+  content: "";
+  border-bottom: solid 4px #D26B81;
+  position: absolute;
+  width: 120px;
+  left: 50%;
+  bottom: -5px;
+}
+.about-contentsec h2 { 
+font-family: 'Roboto';
+font-style: normal;
+font-weight: 700;
+font-size: 68px;
+line-height: 80px;
+text-align: center;
+color: #000000;
+}
+.about-contentsec h4 { 
+font-style: normal;
+    font-weight: 600;
+    font-size: 32px;
+    line-height: 50px;
+    color: #666666;
+    font-family: "Nunito Sans", sans-serif;
+}
+.aboutus-main p.aboutpara { 
+font-style: normal;
+font-weight: 400;
+font-size: 24px;
+line-height: 35px;
+text-align: center;
+color: #868585;
+font-family: "Nunito Sans", sans-serif !important;
+width: 75%;
+margin: 0 auto;
+}
+.about-btn {
+  color: #fff !important;
+    background: #3CA2B3;
+    width: 220px;
+    height: 54px;
+    flex-shrink: 0;
+    text-decoration: unset;
+    display: inline-block;
+    text-align: center;
+    border-radius: 10px;
+    outline: 0 !important;
+    box-shadow: none !important;
+    font-family: 'Manrope';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 23.25px;
+    line-height: inherit;
+}
