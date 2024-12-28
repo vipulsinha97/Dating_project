@@ -9,6 +9,7 @@ use App\Http\Controllers\MeetingController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\EventController;
+use App\Http\Controllers\LocationController;
 use App\Http\Middleware\AuthMiddleware;
 use App\Livewire\Chat\Index;
 use App\Livewire\Chat\Chat;
@@ -48,6 +49,10 @@ Route::get('/event/details', function() {
     return view('eventDetails');
 });
 
+//about us page
+Route::get('/aboutUs', function () {
+    return view('aboutUs');
+});
 //Privacy policy
 Route::get('/privacy-policy', function() {
     return view('privacyPolicyPage');
@@ -98,11 +103,23 @@ Route::post('/admin/dashboard/edit/event', [EventController::class, 'eventEdit']
 //Delete Event function
 Route::get('/admin/dashboard/delete-event/{id}', [EventController::class, 'deleteEvent'])->name('deleteEvent');
 //Location
-Route::get('/admin/dashboard/location', [EventController::class, 'location'])->name('location');
+Route::get('/admin/dashboard/location', [AdminController::class, 'location'])->name('location');
+//Add Location Page
+Route::get('/admin/dashboard/addLocation', [AdminController::class, 'addLocationPage'])->name('addLocation');
+//new Location Page
+Route::post('/admin/dashboard/newLocation', [LocationController::class, 'newLocation'])->name('newLocation');
+//Edit location page
+Route::get('/admin/dashboard/edit-location/{id}', [AdminController::class, 'editLocation'])->name('editLocation');
+//Edit location function
+Route::post('/admin/dashboard/edit/location', [LocationController::class, 'locationEdit'])->name('editCurrentlocation');
+//Delete location function
+Route::get('/admin/dashboard/delete-location/{id}', [LocationController::class, 'deleteLocation'])->name('deleteLocation');
 //approve user
 Route::get('/admin/dashboard/approveUser/{id}', [UserController::class, 'approveUser'])->name('approve-user');
 //disapprove user
 Route::get('/admin/dashboard/disapproveUser/{id}', [UserController::class, 'disapproveUser'])->name('disapprove-user');
+//Age group
+Route::get('/admin/dashboard/ageGroup', [AdminController::class, 'age_group'])->name('age_group');
 
 });
 

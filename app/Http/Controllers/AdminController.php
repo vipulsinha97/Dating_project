@@ -31,6 +31,8 @@ class AdminController extends Controller
     public function location()
     {
         $location = Location::all();
+        
+        return view('dashboard.admin.location', ['location'=>$location]);
     }
 
     //open event page
@@ -45,7 +47,9 @@ class AdminController extends Controller
 
     public function addEvent() 
     {
-        return view('dashboard.admin.addEvent');  
+        $location = Location::all();
+
+        return view('dashboard.admin.addEvent', ['location'=>$location]);  
     }
 
     //open edit event page
@@ -54,8 +58,34 @@ class AdminController extends Controller
     {
         //fetching data of selected event
         $event = Event::where('id', $id)->get();
-        
-        return view('dashboard.admin.editEvent', ['event'=>$event]);
+        $location = Location::all();
+
+        return view('dashboard.admin.editEvent', ['event'=>$event, 'location'=>$location]);
+    }
+
+    // open age group page
+
+    public function age_group()
+    {
+        $ageGroup = Age_group::all();
+
+        return view('dashboard.admin.ageGroup', ['ageGroup'=>$ageGroup]);
+    }
+
+    //Open add location page
+
+    public function addLocationPage()
+    {
+        return view('dashboard.admin.addLocation');
+    }
+
+    //Open add location page
+
+    public function editLocation($id)
+    {
+        $location = Location::where('id', $id)->get();
+
+        return view('dashboard.admin.editLocation', ['location'=>$location]);
     }
 
 }

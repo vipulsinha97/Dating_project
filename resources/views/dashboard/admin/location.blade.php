@@ -1,6 +1,6 @@
 @php
     $dashboard="admin";
-    $sidebarMenu = "Event";
+    $sidebarMenu = "location";
 @endphp
 <!DOCTYPE html>
 <html lang="en">
@@ -168,7 +168,7 @@
                 <div class="container-fluid">
                 <div class="row mb-2">
                     <div class="col-sm-6">
-                    <h1 class="m-0">All Events</h1>
+                    <h1 class="m-0">LOCATION</h1>
                     </div><!-- /.col -->
                     <div class="col-sm-6">
                     <ol class="breadcrumb float-sm-right">
@@ -216,7 +216,6 @@
                             <tr>
                                 <th>S.NO</th>
                                 <th>Location Name</th>
-                                <th>Location Image</th>
                                 <th>Action</th>
 
                             </tr>
@@ -229,7 +228,6 @@
                             <tr>
                                 <td>@php echo $i++; @endphp</td>
                                 <td>{{$location->location_name}}</td>
-                                <td>{{$location->location_image}}</td>
                                 <td>
                                   <a href="{{ URL::to('/admin/dashboard/edit-location/') }}/{{$location->id}}" class="btn btn-primary">Edit</a>
                                   <a href="{{ URL::to('/admin/dashboard/delete-location/') }}/{{$location->id}}" class="btn btn-danger">Delete</a>
