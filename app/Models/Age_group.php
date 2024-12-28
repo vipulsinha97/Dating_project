@@ -6,5 +6,5 @@ use Illuminate\Database\Eloquent\Model;
 
 class Age_group extends Model
 {
-    //
+    protected $table = 'age_groups';
 }

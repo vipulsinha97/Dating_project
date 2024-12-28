@@ -13,6 +13,8 @@ return new class extends Migration
     {
         Schema::create('age_groups', function (Blueprint $table) {
             $table->id();
+            $table->string('starting_age')->nullable();
+            $table->string('ending_age')->nullable();
             $table->timestamps();
         });
     }
