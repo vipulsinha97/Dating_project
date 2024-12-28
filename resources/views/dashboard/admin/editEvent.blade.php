@@ -209,11 +209,9 @@ $sidebarMenu = 'Add Event';
                       @else
                       <option disabled selected>-Choose location-</option>
                       @endif
-                      <option value="Delhi">Delhi</option>
-                      <option value="Mumbai">Mumbai</option>
-                      <option value="Bengaluru">Bengaluru</option>
-                      <option value="Hyderabad">Hyderabad</option>
-                      <option value="Noida">Noida</option>
+                      @foreach ($location as $location)
+                        <option value="{{$location->id}}">{{$location->location_name}}</option>
+                      @endforeach
                     </select>
                     <span style="color: red;">@error('location') {{$message}} @enderror</span>
                   </div>

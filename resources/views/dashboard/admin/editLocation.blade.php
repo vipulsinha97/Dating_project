@@ -195,42 +195,18 @@ $sidebarMenu = 'Add Event';
             </div>
             <!-- /.card-header -->
             <!-- form start -->
-            <form action="{{route('newEvent')}}" class="form-horizontal" method="POST" enctype="multipart/form-data">
+            @foreach($location as $data)
+            <form action="{{route('editCurrentlocation')}}" class="form-horizontal" method="POST" enctype="multipart/form-data">
               @csrf
+              <input type="hidden" name="id" value="{{$data->id}}">
               <div class="card-body">
-                <div class="form-group row">
-                  <label for="Select" class="col-sm-2 col-form-label">Select Location</label>
-                  <div class="col-sm-10">
-                    <select name="location" class="form-control">
-                      @if(old('location'))
-                      <option value="{{old('location')}}">{{old('location')}}</option>
-                      @else
-                      <option disabled selected>-Choose location-</option>
-                      @endif
-                      @foreach ($location as $location)
-                        <option value="{{$location->id}}">{{$location->location_name}}</option>
-                      @endforeach
-                    </select>
-                    <span style="color: red;">@error('location') {{$message}} @enderror</span>
-                  </div>
-                </div>
 
                 <div class="form-group row">
-                  <label for="Select" class="col-sm-2 col-form-label">Select Age Group</label>
-                  <div class="col-sm-10">
-                    <select name="age_group" class="form-control">
-                      @if(old('location'))
-                      <option value="{{old('age_group')}}">{{old('age_group')}}</option>
-                      @else
-                      <option disabled selected>-Choose Age-Group-</option>
-                      @endif
-                      <option value="25-30">25-30</option>
-                      <option value="30-35">30-35</-option>
-                      <option value="35-40">35-40</option>
-                      <option value="40-45">40-45</option>
-                    </select>
-                    <span style="color: red;">@error('age_group') {{$message}} @enderror</span>
-                  </div>
+                    <label for="inputtitle" class="col-sm-2 col-form-label">Location Name</label>
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control" name="location" value="{{ $data->location_name }}" id="inputtitle" placeholder="Event title">
+                        <span style="color: red;">@error('location_name') {{$message}} @enderror</span>
+                    </div>
                 </div>
 
                 <div class="form-group row">
@@ -249,61 +225,15 @@ $sidebarMenu = 'Add Event';
                     <span style="color: red;">@error('image') {{$message}} @enderror</span>
                   </div>
                 </div>
-
-                <div class="form-group row">
-                  <label for="inputtitle" class="col-sm-2 col-form-label">Title</label>
-                  <div class="col-sm-10">
-                    <input type="text" class="form-control" name="title" value="{{old('title')}}" id="inputtitle" placeholder="Event title">
-                    <span style="color: red;">@error('title') {{$message}} @enderror</span>
-                  </div>
-                </div>
-
-                <div class="form-group row">
-                  <label for="eventdescription" class="col-sm-2 col-form-label">Description</label>
-                  <div class="col-sm-10">
-                    <textarea class="form-control" rows="3" name="description" placeholder="Event description...">{{old('description')}}</textarea>
-                    <span style="color: red;">@error('description') {{$message}} @enderror</span>
-                  </div>
-                </div>
-
-                <div class="form-group row">
-                  <label for="eventdescription" class="col-sm-2 col-form-label">Event Date</label>
-                  <div class="col-sm-10">
-                    <input type="date" name="event_date" value="{{old('event_date')}}" class="form-control">
-                    <span style="color: red;">@error('event_date') {{$message}} @enderror</span>
-                  </div>
-                </div>
-
-                <div class="form-group row">
-                  <label for="eventtimestart" class="col-sm-2 col-form-label">Event Start Time</label>
-                  <div class="col-sm-4">
-                    <input type="time" name="event_start_time" value="{{old('event_start_time')}}" class="form-control" id="eventtimestartid">
-                    <span style="color: red;">@error('event_start_time') {{$message}} @enderror</span>
-                  </div>
-
-                  <label for="eventtimeend" class="col-sm-2 col-form-label">Event Duration[In Minutes]</label>
-                  <div class="col-sm-4">
-                    <input type="number" name="event_duration" value="{{old('event_duration')}}" class="form-control" id="eventtimeendid">
-                    <span style="color: red;">@error('event_duration') {{$message}} @enderror</span>
-                  </div>
-                </div>
-
-                <div class="form-group row">
-                  <label for="ticket" class="col-sm-2 col-form-label">Ticket Price</label>
-                  <div class="col-sm-10">
-                    <input type="text" name="ticket_price" value="{{old('ticket_price')}}" class="form-control" id="ticketid" placeholder="Ticket title">
-                    <span style="color: red;">@error('ticket_price') {{$message}} @enderror</span>
-                  </div>
-                </div>
-
               </div>
               <!-- /.card-body -->
               <div class="card-footer">
-                <button type="submit" class="btn btn-info">ADD EVENT</button>
+                <button type="submit" class="btn btn-info">SAVE</button>
                 <button type="submit" class="btn btn-default float-right">Back</button>
               </div>
               <!-- /.card-footer -->
             </form>
+            @endforeach
           </div>
           <!-- /.card -->
         </div>
