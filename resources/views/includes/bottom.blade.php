@@ -20,17 +20,17 @@
         });
     });
 </script>
-
+<!-- toggle password and eye icons -->
 <script>
     document.querySelectorAll('.toggle-password').forEach(item => {
         item.addEventListener('click', function() {
-            const input = this.previousElementSibling;
+            const input = this.previousElementSibling; 
             if (input.type === 'password') {
-                input.type = 'text';
-                this.innerHTML = '<img src="{{asset('assets/images/mage_eye-off.svg')}}" />';
+                input.type = 'text'; 
+                this.innerHTML = '<i class="fas fa-eye" style="color: #A8A9A9;"></i>'; 
             } else {
                 input.type = 'password';
-                this.innerHTML = '<img src="{{asset('assets/images/ion_mail-outline.svg')}}" />';
+                this.innerHTML = '<i class="fas fa-eye-slash" style="color: #A8A9A9;"></i>'; 
             }
         });
     });

@@ -52,7 +52,7 @@
                                     <div class="input-group">
                                         <span class="input-group-text"><img src="assets/images/mynaui_lock-password.svg" /></span>
                                         <input type="password" name="password" class="form-control pass" id="password" placeholder="Enter your password">
-                                        <span class="input-group-text toggle-password" id="togglePassword1" onclick="togglePassword('password',this)"><img src="assets/images/mage_eye-off.svg" /></span>
+                                        <span class="input-group-text toggle-password" id="togglePassword1" onclick="togglePassword('password',this)"><i class="fas fa-eye-slash" style="color: #A8A9A9;"></i></span>
                                     </div>
                                 </div>
 
