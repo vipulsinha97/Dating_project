@@ -68,7 +68,7 @@
                                 <!-- <a href="#" class="btn btn-primary0 btn-geen">Login</a> -->
                                 <button type="submit" class="btn btn-primary0 btn-geen">Login</button>
 
-                                <p class="mt-3"><span>Don't have an account?</span><span class="blue"><a href="/signup.php"> Sign up</a></span></p>
+                                <p class="mt-3"><span>Don't have an account?</span><span class="blue"><a href="signup"> Sign up</a></span></p>
                             </form>
                         </div>
                     </div>
