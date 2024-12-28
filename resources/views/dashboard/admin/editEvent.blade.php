@@ -206,8 +206,6 @@ $sidebarMenu = 'Add Event';
                     <select name="location" class="form-control">
                       @if($data->location_name)
                       <option value="{{$data->location_name}}" selected>{{$data->location_name}}</option>
-                      @else
-                      <option disabled selected>-Choose location-</option>
                       @endif
                       @foreach ($location as $location)
                         <option value="{{$location->id}}">{{$location->location_name}}</option>
