@@ -77,7 +77,7 @@
                   <p>All Events</p>
                 </a>
               </li>
-              <li class="nav-item'">
+              <li class="nav-item">
                 @if($dashboard==='admin' && $sidebarMenu === 'Add Event')
                 <a href="{{route('addEvent')}}" class="nav-link active">
                 @else
