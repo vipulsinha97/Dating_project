@@ -27,7 +27,7 @@ class LocationController extends Controller
             $filePath = $request->file('image')->store('uploads/location_feature_image');
         }
         
-        // Store event
+        // Store Location
         $storeLocation = $this->LocationService->storeLocation($data);
         if ($storeLocation === true) {
 
@@ -45,21 +45,21 @@ class LocationController extends Controller
             $filePath = $request->file('image')->store('uploads/location_feature_image');
         }
         
-        // Store event
-        $storeEvent = $this->LocationService->editlocation($data);
-        if ($storeEvent === true) {
+        // Store Location
+        $storeLocation = $this->LocationService->editlocation($data);
+        if ($storeLocation === true) {
 
             return redirect('/admin/dashboard/location')->with('success', 'Location Edited');
         }
     }
 
-    //Delete event
+    //Delete Location
     
     public function deleteLocation($id)
     {
-        // delete event
-        $storeEvent = $this->LocationService->deleteLocation($id);
-        if ($storeEvent === true) {
+        // delete Location
+        $storeLocation = $this->LocationService->deleteLocation($id);
+        if ($storeLocation === true) {
 
             return redirect('/admin/dashboard/location')->with('success', 'Location Deleted');
         }
