@@ -1,6 +1,6 @@
 <aside class="main-sidebar sidebar-dark-primary elevation-4">
     <!-- Brand Logo -->
-    <div class="brndlogo user-panel mt-3 pb-3 mb-3 d-flex"> <img src="../../assets/images/logo.svg" style="width: 100%;"></div>
+    <div class="brndlogo user-panel mt-3 pb-3 mb-3 d-flex"> <img src="{{ asset('assets/images/logo.svg') }}" style="width: 100%;"></div>
 
     <!-- Sidebar -->
     <div class="sidebar">
@@ -77,7 +77,7 @@
                   <p>All Events</p>
                 </a>
               </li>
-              <li class="nav-item==='">
+              <li class="nav-item'">
                 @if($dashboard==='admin' && $sidebarMenu === 'Add Event')
                 <a href="{{route('addEvent')}}" class="nav-link active">
                 @else
