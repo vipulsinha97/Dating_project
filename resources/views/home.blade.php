@@ -96,7 +96,7 @@
                 </div>
                 <!-- Column for image -->
                 <div class="col-md-6  align-right">
-                    <img src="{{asset('assets/images/home-img1.png')}}" class="img-fluid" alt="Description of Image">
+                    <img src="{{asset('assets/images/home-img.png')}}" class="img-fluid" alt="Description of Image">
                 </div>
             </div>
             <div class="row mt-5 mb-5">
@@ -117,35 +117,18 @@
         <section class="bgimg0">
             <div class="container-fluid py-5">
                 <div class="center-slider">
-                    <div class="home_slider">
+                    <div class="home_slider featured">
                         <div><img src="{{asset('assets/images/f1.png')}}" alt=""></div>
-                        <div><img src="{{asset('assets/images/f2.png')}}" alt=""></div>
-                        <div><img src="{{asset('assets/images/f3.png')}}" alt=""></div>
+                        <div><img src="{{asset('assets/images/f2N.png')}}" alt=""></div>
+                        <div><img src="{{asset('assets/images/f3N.png')}}" alt=""></div>
                         <div><img src="{{asset('assets/images/f4.png')}}" alt=""></div>
+                        <div><img src="{{asset('assets/images/blankslide.png')}}" alt=""></div>
+
                         <!-- Add more images as needed -->
                     </div>
                 </div>
             </div>
         </section>
-
-        <!-- <section class="bgimg">
-            <div class="container-fluid py-5">
-
-                <div class="center-slider">
-                    <div id="center" class="sliderwrapper">
-                        <div class="item i1"><img src="{{asset('assets/images/f1.png')}}" alt=""></div>
-                        <div class="item i2"><img src="{{asset('assets/images/f2.png')}}" alt=""></div>
-                        <div class="item i3"><img src="{{asset('assets/images/f3.png')}}" alt=""></div>
-                        <div class="item i4 active"><img src="{{asset('assets/images/f4.png')}}" alt=""></div>
-                    </div>
-
-                    <div class="controls selection-off">
-                        <div class="left selection-off arrr-left" onclick="turnLeft()"><img src="{{asset('assets/images/slider-arrow-left.svg')}}" alt=""></div>
-                        <div class="right selection-off arrr-right" onclick="turnRight()"><img src="{{asset('assets/images/slider-arrow-right.svg')}}" alt=""></div>
-                    </div>
-                </div>
-            </div>
-        </section> -->
 
         <section class="njs-speeddate pt-5 mb-5">
             <div class="container">
@@ -385,7 +368,7 @@
                         </h2>
                         <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#faq">
                             <div class="accordion-body">
-                                <p>Unlike traditional apps, we eliminate endless swiping by letting you meet hand-picked matches in virtual speed dating events. We combine the best of dating/matrimonial sites and traditional matchmaking service (Rem Seema Aunty’s matchmaking) . Our focus on authenticity, premium profiles, and meaningful connections sets us apart.
+                                <p>Unlike traditional apps, we eliminate endless swiping by letting you meet hand-picked matches in virtual speed dating events. We combine the best of dating/matrimonial sites and traditional matchmaking service (Rem Seema Aunty’s matchmaking). Our focus on authenticity, premium profiles, and meaningful connections sets us apart.
                                 </p>
                             </div>
                         </div>
@@ -473,38 +456,6 @@
             });
         });
     </script>
-   <!-- <script>
-        $(document).ready(function() {
-            $('.home_slider').slick({
-                centerMode: true, // Enable center mode
-                centerPadding: '60px', // Padding around the center slide
-                slidesToShow: 3, // Show 3 slides at a time
-                arrows: true, // Enable arrows
-                autoplay: false, // Autoplay the slides
-                autoplaySpeed: 2000, // Autoplay speed in milliseconds
-                speed: 500, // Smooth slide transition speed
-                responsive: [{
-                        breakpoint: 768, // For screens <= 768px
-                        settings: {
-                            arrows: true, // Hide arrows on small screens
-                            centerMode: true,
-                            centerPadding: '40px', // Reduce padding for smaller screens
-                            slidesToShow: 3 // Show 3 slides on smaller screens
-                        }
-                    },
-                    {
-                        breakpoint: 480, // For screens <= 480px
-                        settings: {
-                            arrows: true, // Hide arrows on very small screens
-                            centerMode: true,
-                            centerPadding: '40px', // Reduce padding
-                            slidesToShow: 1 // Show 1 slide on very small screens
-                        }
-                    }
-                ]
-            });
-        });
-    </script> -->
 
 <script>
 $(document).ready(function() {
@@ -553,7 +504,7 @@ $(document).ready(function() {
         }
 
         // Check if we are at the last slide
-        if (nextSlide === slick.slideCount - 1) {
+        if (nextSlide === slick.slideCount - 2) {
             $('.slick-next').hide(); // Hide the 'next' arrow
         } else {
             $('.slick-next').show(); // Show the 'next' arrow
