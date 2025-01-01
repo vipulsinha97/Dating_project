@@ -380,12 +380,12 @@
                     <div class="accordion-item">
                         <h2 class="accordion-header" id="headingOne">
                             <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                                Q 1. How does Just Not Swipe work?
+                                Q 1. What makes NotJustSwipe different from other dating platforms?
                             </button>
                         </h2>
                         <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#faq">
                             <div class="accordion-body">
-                                <p>Just Not Swipe takes the safety and privacy of its users seriously. We have robust security measures in place, including profile verification options and reporting features. Additionally, we recommend practicing caution when sharing personal information and meeting matches in person for the first time.
+                                <p>Unlike traditional apps, we eliminate endless swiping by letting you meet hand-picked matches in virtual speed dating events. We combine the best of dating/matrimonial sites and traditional matchmaking service (Rem Seema Aunty’s matchmaking) . Our focus on authenticity, premium profiles, and meaningful connections sets us apart.
                                 </p>
                             </div>
                         </div>
@@ -393,60 +393,60 @@
                     <div class="accordion-item">
                         <h2 class="accordion-header" id="headingTwo">
                             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                                Q 2. Is Just Not Swipe free to use?
+                                Q 2. How does NotJustSwipe ensure the authenticity of its members?
                             </button>
                         </h2>
                         <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#faq">
                             <div class="accordion-body">
-                                <p>Just Not Swipe takes the safety and privacy of its users seriously. We have robust security measures in place, including profile verification options and reporting features. Additionally, we recommend practicing caution when sharing personal information and meeting matches in person for the first time.</p>
+                                <p>We prioritize quality and authenticity. Each profile is carefully verified through professional and social media links, and further screened through a phone call. Only approved members gain access to our events, ensuring you connect with genuine individuals.</p>
                             </div>
                         </div>
                     </div>
                     <div class="accordion-item">
                         <h2 class="accordion-header" id="headingThree">
                             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                                Q 3. Can I delete my Just Not Swipe account?
+                                Q 3. How are matches decided during the events?
                             </button>
                         </h2>
                         <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#faq">
                             <div class="accordion-body">
-                                <p>Just Not Swipe takes the safety and privacy of its users seriously. We have robust security measures in place, including profile verification options and reporting features. Additionally, we recommend practicing caution when sharing personal information and meeting matches in person for the first time.</p>
+                                <p>As part of user registration, we call you and understand your requirements. Based on mutual interest, we offer you hand-picked matches to meet and connect. After each virtual speed date, both participants can indicate interest, and can chat with mutual matches. </p>
                             </div>
                         </div>
                     </div>
                     <div class="accordion-item">
                         <h2 class="accordion-header" id="headingFour">
                             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
-                                Q 4. How do I create a profile on Just Not Swipe?**
+                                Q 4. What happens if I don’t connect with anyone during the event?
                             </button>
                         </h2>
                         <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#faq">
                             <div class="accordion-body">
-                                <p>Just Not Swipe takes the safety and privacy of its users seriously. We have robust security measures in place, including profile verification options and reporting features. Additionally, we recommend practicing caution when sharing personal information and meeting matches in person for the first time.</p>
+                                <p>Our goal is to facilitate meaningful connections. If you don’t find a match and want to delete your profile, we will offer you 100% refund. </p>
                             </div>
                         </div>
                     </div>
                     <div class="accordion-item">
                         <h2 class="accordion-header" id="headingFive">
                             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
-                                Q 5. How can I ensure my safety while using Just Not Swipe?**
+                                Q 5. Can I attend events for cities other than my own?
                             </button>
                         </h2>
                         <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive" data-bs-parent="#faq">
                             <div class="accordion-body">
-                                <p>Just Not Swipe takes the safety and privacy of its users seriously. We have robust security measures in place, including profile verification options and reporting features. Additionally, we recommend practicing caution when sharing personal information and meeting matches in person for the first time.</p>
+                                <p>Yes, you can attend events in other cities if you’re open to long-distance connections. However, we recommend starting with your local city for convenience and nearby matches.</p>
                             </div>
                         </div>
                     </div>
                     <div class="accordion-item">
                         <h2 class="accordion-header" id="headingSix">
                             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
-                                Q 6. How do I contact customer support if I have a problem or question?*
+                                Q 6. What if I feel uncomfortable during an event?
                             </button>
                         </h2>
                         <div id="collapseSix" class="accordion-collapse collapse" aria-labelledby="headingSix" data-bs-parent="#faq">
                             <div class="accordion-body">
-                                <p>Just Not Swipe takes the safety and privacy of its users seriously. We have robust security measures in place, including profile verification options and reporting features. Additionally, we recommend practicing caution when sharing personal information and meeting matches in person for the first time.</p>
+                                <p>Your comfort is our priority. Each event is monitored to ensure a safe and respectful environment. If you face any issues, our support team is readily available to assist.</p>
                             </div>
                         </div>
                     </div>
