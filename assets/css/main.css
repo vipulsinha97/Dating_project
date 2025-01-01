@@ -14856,9 +14856,9 @@ input[type="file"] {
   height: 24px;
 }
 
-.njsfootop {
+/* .njsfootop {
   background: #f6e1e6;
-}
+} */
 
 .align-center {
   align-items: center;
@@ -15097,4 +15097,7 @@ margin: 0 auto;
     font-weight: 500;
     font-size: 23.25px;
     line-height: inherit;
+}
+.njsfootop {
+  background: #f6e1e687 !important;
 }
