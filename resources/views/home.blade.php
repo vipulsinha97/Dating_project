@@ -236,7 +236,7 @@
                 <ul class="center">
                     <li>Each online speed dating event lasts approximately 45 minutes.</li>
                     <li>Rigorous profile screening and a phone call ensure only a select few are approved for each dating event.</li>
-                    <li>Following the hosts' introduction, engage in a series of five-minute one-on-one dates.</li>
+                    <li>Following the hosts' introduction, engage in a series of multiple one-on-one dates.</li>
                     <li>Rate each date and indicate your interest by liking or disliking profiles after each interaction.</li>
                     <li>After all dates, connect via NJS chat with those you clicked with.</li>
                 </ul>
