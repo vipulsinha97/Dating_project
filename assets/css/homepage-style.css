@@ -623,9 +623,23 @@ position: absolute;
   height: 4rem;
 }
 /* New style for home page */
-.njs-speeddate ul li b {
-  color: #000000ba;
-}
 .outerbarr {
   justify-content: center;
+}
+.njs-speeddate ul li b {
+  font-family: "Nunito Sans", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 28px;
+  line-height: 33px;
+  color: #000000ba;
+}
+.njs-speeddate ul li { 
+margin-bottom: 20px;
+font-style: normal;
+font-weight: 400;
+font-size: 28px;
+line-height: 50px;
+color: #666666;
+font-family: "Nunito Sans", sans-serif;
 }
