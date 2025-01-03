@@ -16,10 +16,10 @@ use App\Livewire\Chat\Index;
 use App\Livewire\Chat\Chat;
 use App\Livewire\Users;
 
-Route::get('/', function () {
+Route::get('/home', function () {
     return view('index');
 });
-Route::get('/home', function(){
+Route::get('/', function(){
     return view('home');
 });
 Route::get('/login',[loginController::class, 'index'])->name('login');
