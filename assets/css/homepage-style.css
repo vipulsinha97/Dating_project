@@ -622,3 +622,10 @@ position: absolute;
   width: 4rem;
   height: 4rem;
 }
+/* New style for home page */
+.njs-speeddate ul li b {
+  color: #000000ba;
+}
+.outerbarr {
+  justify-content: center;
+}

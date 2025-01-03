@@ -102,7 +102,7 @@
             <div class="row mt-5 mb-5">
                 <div class="col-md-8">
                     <div class="bluebg">
-                        <p>Introducing NJS – An exclusive, application-only network for professionals where you can make virtual face-to-face connections. We're bringing authenticity back to dating</p>
+                        <p>NotJustSwipe: An exclusive platform for professionals to meet handpicked profiles and connect face-to-face virtually. We’re bringing authenticity back to your partner search.</p>
                         <p class="d-inline"><span><a href="#">Know More</a></span><span><img class="cusimg" src="{{asset('assets/images/knowmore.png')}}" /></span></p>
                     </div>
                 </div>
@@ -135,16 +135,15 @@
                 <h2 class="align-center mt-4 mb-4">Not Just Swipe Speed Dating</h2>
                 <p class="p-desc mb-5">Settle into a comfortable spot at home, launch NotJustSwipe, join the online dating events and instantly connect with someone who truly gets you.</p>
                 <ul class="list">
-                    <li><b>Genuine profiles:</b> Our stringent screening process ensures you connect with only the most genuine individuals. With fewer than 30% of applicants approved for events, you can be confident in the quality of our premium profiles. Quality over quantity.</li>
-                    <li><b>Fun and Exciting Experience:</b> Dive into the adventure of blind dates with genuine profiles, sparking curiosity and excitement. Enjoy the fun of discovering new connections in a lively and engaging setting, not the usual scripted chats</li>
-                    <li><b>Take Back Your Time:</b> Unlike dating apps where you chat for days, only to find no chemistry, NJS dating events let you meet and interact with 5 genuine profiles in one event. Quickly discover who you truly connect with, saving you valuable time.</li>
-                    <li><b>Enhanced Security and Privacy:</b> Enjoy a safe dating environment with advanced security features that protect your interactions and ensure your privacy.</li>
+                    <li><b>Verified Corporate Members Only:</b> Looking to connect with people who understand your professional lifestyle? Our multi-verification process (Fb + LinkedIn+ Phone screening) ensures only serious, like-minded individuals join for serious relationship.</li>
+                    <li><b>No Random Messages or Public Profiles:</b> No more putting your profile out there for random strangers on dating apps and say goodbye to random matrimonial messages. NJS is designed for private, curated connections, not public swiping.</li>
+                    <li><b>Save Time with Curated Blind Dates:</b> Meet 5 premium matches in one engaging event. No swiping or chatting for weeks—just real chemistry, discovered instantly.</li>                    
                 </ul>
             </div>
             <div class="outerbarr">
                 <div class="barcont">
                     <img class="m-4" src="{{asset('assets/images/bar-img1.png')}}" />
-                    <h2>Now its the time to get together</h2>
+                    <h2>Love the experience,<br> or your money back.</h2>
                     <img class="mt-75" src="{{asset('assets/images/barr-arw.png')}}" />
                 </div>
             </div>
@@ -311,7 +310,7 @@
                     <div class="carousel-indicators">
                         <button type="button" data-bs-target="#testimonialID" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
                         <button type="button" data-bs-target="#testimonialID" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                        <button type="button" data-bs-target="#testimonialID" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                        <!-- <button type="button" data-bs-target="#testimonialID" data-bs-slide-to="2" aria-label="Slide 3"></button> -->
                     </div>
                     <div class="carousel-inner">
                         <div class="carousel-item active" data-bs-interval0="10000">
@@ -321,20 +320,20 @@
                                 <h5>Mahima Malhotra, 29</h5>
                                 <p class="city">Mumbai</p>
                                 <p class="starrating"><img src="{{asset('assets/images/stars.svg')}}" alt="" /></p>
-                                <p>"Just Not Swipe revolutionized my online dating experience! No more mindless swiping - just genuine connections based on shared interests. User-friendly interface, diverse community, and meaningful matches. Highly recommend!"</p>
+                                <p>"NotJustSwipe took my dating experience to the next level! Instead of endless swiping, I got to meet genuine, like-minded individuals in a fun and exciting way. The carefully curated profiles, secure platform, and unique virtual speed dating events made every interaction meaningful."</p>
                             </div>
                         </div>
                         <div class="carousel-item" data-bs-interval="2000">
                             <img src="{{asset('assets/images/testi-1.png')}}" class="d-block w-30 testi-img" alt="...">
                             <div class="carousel-caption d-none d-md-block">
                                 <div class="image-quote"> <img src="{{asset('assets/images/carbon_quotes.svg')}}" /></div>
-                                <h5>Title 2, 30</h5>
+                                <h5>Mahima Malhotra, 29</h5>
                                 <p class="city">Mumbai</p>
                                 <p class="starrating"><img src="{{asset('assets/images/stars.svg')}}" alt="" /></p>
-                                <p>"Just Not Swipe revolutionized my online dating experience! No more mindless swiping - just genuine connections based on shared interests. User-friendly interface, diverse community, and meaningful matches. Highly recommend!"</p>
+                                <p>"NotJustSwipe took my dating experience to the next level! Instead of endless swiping, I got to meet genuine, like-minded individuals in a fun and exciting way. The carefully curated profiles, secure platform, and unique virtual speed dating events made every interaction meaningful."</p>
                             </div>
                         </div>
-                        <div class="carousel-item">
+                         <!-- <div class="carousel-item">
                             <img src="{{asset('assets/images/testi-1.png')}}" class="d-block w-30 testi-img" alt="...">
                             <div class="carousel-caption d-none d-md-block">
                                 <div class="image-quote"> <img src="{{asset('assets/images/carbon_quotes.svg')}}" /></div>
@@ -343,7 +342,7 @@
                                 <p class="starrating"><img src="{{asset('assets/images/stars.svg')}}" alt="" /></p>
                                 <p>"Just Not Swipe revolutionized my online dating experience! No more mindless swiping - just genuine connections based on shared interests. User-friendly interface, diverse community, and meaningful matches. Highly recommend!"</p>
                             </div>
-                        </div>
+                        </div> -->
                     </div>
                     <button class="carousel-control-prev" type="button" data-bs-target="#testimonialID" data-bs-slide="prev">
                         <img src="{{asset('assets/images/testi-arw-left.svg')}}" />
