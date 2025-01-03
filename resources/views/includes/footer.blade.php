@@ -9,7 +9,7 @@
 					<div class="align-right">
 						<div class="d-flex">
 							<ul class="footer_menu_link">
-								<li><a href="../privacy-policy">Privacy Policy</a></li>
+								<li><a href="privacy-policy">Privacy Policy</a></li>
 								<li><a href="#">Terms of Use</a></li>
 								<li><a href="#">Safety Guidelines</a></li>
 								<li><a href="#">Speed Dating Tips</a></li>
