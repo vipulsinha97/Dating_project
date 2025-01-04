@@ -35,22 +35,53 @@
 			<!-- <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button> -->
 		</div>
 
+		<div class="offcanvas-body sidebarmenu">
+    <ul class="list-unstyled">
+        <li>
+            <a href="/" class="nav-link {{ Request::is('/') ? 'active' : '' }}" 
+               data-inactive-src="{{asset('assets/images/sm-3.svg')}}" 
+               data-active-src="{{asset('assets/images/sm-1.svg')}}">
+                <img src="{{ Request::is('/') ? asset('assets/images/sm-1.svg') : asset('assets/images/sm-3.svg') }}" alt="">Home
+            </a>
+        </li>
+        <li>
+            <a href="aboutUs" class="nav-link {{ Request::is('aboutUs') ? 'active' : '' }}" 
+               data-inactive-src="{{asset('assets/images/abouticon-blue.svg')}}" 
+               data-active-src="{{asset('assets/images/abouticon-white.svg')}}">
+                <img src="{{ Request::is('aboutUs') ? asset('assets/images/abouticon-white.svg') : asset('assets/images/abouticon-blue.svg') }}" alt="">About us
+            </a>
+        </li>
+        <li>
+            <a href="event" class="nav-link {{ Request::is('event') ? 'active' : '' }}" 
+               data-inactive-src="{{asset('assets/images/eventicon-blue.svg')}}" 
+               data-active-src="{{asset('assets/images/eventicon-white.svg')}}">
+                <img src="{{ Request::is('event') ? asset('assets/images/eventicon-white.svg') : asset('assets/images/eventicon-blue.svg') }}" alt="">Events
+            </a>
+        </li>
+        <li>
+            <a href="#" class="nav-link {{ Request::is('faq') ? 'active' : '' }}" 
+               data-inactive-src="{{asset('assets/images/faqicon-blue.svg')}}" 
+               data-active-src="{{asset('assets/images/faqicon-white.svg')}}">
+                <img src="{{ Request::is('faq') ? asset('assets/images/faqicon-white.svg') : asset('assets/images/faqicon-blue.svg') }}" alt="">FAQ
+            </a>
+        </li>
+        <li>
+            <a href="#" class="nav-link {{ Request::is('help') ? 'active' : '' }}" 
+               data-inactive-src="{{asset('assets/images/helpicon-blue.svg')}}" 
+               data-active-src="{{asset('assets/images/helpicon-white.svg')}}">
+                <img src="{{ Request::is('help') ? asset('assets/images/helpicon-white.svg') : asset('assets/images/helpicon-blue.svg') }}" alt="">Help
+            </a>
+        </li>
+        <li>
+            <a href="#" class="nav-link {{ Request::is('settings') ? 'active' : '' }}" 
+               data-inactive-src="{{asset('assets/images/settingicon-blue.svg')}}" 
+               data-active-src="{{asset('assets/images/settingicon-white.svg')}}">
+                <img src="{{ Request::is('settings') ? asset('assets/images/settingicon-white.svg') : asset('assets/images/settingicon-blue.svg') }}" alt="">Settings
+            </a>
+        </li>
+    </ul>
+</div>
 
-		<div class="offcanvas-body">
-			<ul class="list-unstyled">
-				<li><a href="#" class="nav-link active" data-inactive-src="{{asset('assets/images/sm-3.svg')}}" data-active-src="{{asset('assets/images/sm-1.svg')}}"><img src="{{asset('assets/images/sm-1.svg')}}" alt="">Home</a></li>
-				<li><a href="#" class="nav-link" data-inactive-src="{{asset('assets/images/about.png')}}" data-active-src="{{asset('assets/images/about-active.png')}}"><img src="{{asset('assets/images/sm-3.svg')}}" alt="">Features</a></li>
-				<li><a href="#" class="nav-link" data-inactive-src="services.png" data-active-src="services-active.png"><img src="{{asset('assets/images/sm-4.svg')}}" alt="">About us</a></li>
-				<li><a href="#" class="nav-link" data-inactive-src="contact.png" data-active-src="contact-active.png"><img src="{{asset('assets/images/sm-5.svg')}}" alt="">Events</a></li>
-				<li><a href="#" class="nav-link" data-inactive-src="contact.png" data-active-src="contact-active.png"><img src="{{asset('assets/images/sm-6.svg')}}" alt="">Testimonial</a></li>
-				<li><a href="#" class="nav-link" data-inactive-src="contact.png" data-active-src="contact-active.png"><img src="{{asset('assets/images/sm-7.svg')}}" alt="">FAQ</a></li>
-				<li><a href="#" class="nav-link" data-inactive-src="contact.png" data-active-src="contact-active.png"><img src="{{asset('assets/images/sm-8.svg')}}" alt="">Footer</a></li>
-				<li><a href="#" class="nav-link" data-inactive-src="contact.png" data-active-src="contact-active.png"><img src="{{asset('assets/images/sm-9.svg')}}" alt="">Contacts</a></li>
-				<li><a href="#" class="nav-link" data-inactive-src="contact.png" data-active-src="contact-active.png"><img src="{{asset('assets/images/sm-13.svg')}}" alt="">Settings</a></li>
-				<li><a href="#" class="nav-link" data-inactive-src="contact.png" data-active-src="contact-active.png"><img src="{{asset('assets/images/sm-10.svg')}}" alt="">Report</a></li>
-				<li><a href="#" class="nav-link" data-inactive-src="contact.png" data-active-src="contact-active.png"><img src="{{asset('assets/images/sm-11.svg')}}" alt="">Help</a></li>
-				<li><a href="#" class="nav-link" data-inactive-src="contact.png" data-active-src="contact-active.png"><img src="{{asset('assets/images/sm-12.svg')}}" alt="">Feedback</a></li>
-			</ul>
-		</div>
+
 	</div>
 </header>

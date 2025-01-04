@@ -15101,3 +15101,18 @@ margin: 0 auto;
 .njsfootop  {
   background: #f6e1e687 !important;
 }
+.sidebarmenu a.nav-link { 
+color: #3CA2B3;
+font-style: normal;
+font-weight: 400;
+font-size: 18px;
+/* line-height: 59px; */
+}
+.sidebarmenu a.nav-link.active { 
+  color: #fff;
+  font-style: normal;
+font-weight: 400;
+font-size: 18px;
+/* line-height: 59px; */
+}
+
