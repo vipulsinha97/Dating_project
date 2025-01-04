@@ -36,8 +36,8 @@ return [
     ],
 
     'facebook' => [
-        'client_id' => '932349968440229',
-        'client_secret' => '33c71d49e11c1a71bd289a989a0ce73d',
+        'client_id' => '970832964906200',
+        'client_secret' => '395d93bc0b6d424f96c660138f95f3f4',
         'redirect' => 'https://notjustswipe.com/facebook/callback',
     ],
 
