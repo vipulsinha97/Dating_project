@@ -54,6 +54,12 @@ Route::get('/event/details', function() {
 Route::get('/aboutUs', function () {
     return view('aboutUs');
 });
+
+//Reset password page
+Route::get('/resetPassword', function () {
+    return view('resetPassword');
+});
+
 //Privacy policy
 Route::get('/privacy-policy', function() {
     return view('privacyPolicyPage');
