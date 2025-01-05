@@ -48,8 +48,8 @@ return [
     ],
 
     'insta' => [
-        'client_id' => '589059930152184',
-        'client_secret' => '1c05e4f6c8ec41a8b699729f4fb27816',
+        'client_id' => '1136633648198958',
+        'client_secret' => 'fc4346a430d2f44adb4481c786c727fc',
         'redirect' => 'https://notjustswipe.com/insta/callback',
     ],
 ];
