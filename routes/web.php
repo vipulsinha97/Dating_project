@@ -18,10 +18,10 @@ use App\Livewire\Users;
 
 Route::get('/home', function () {
     return view('index');
-})->name('home');
+});
 Route::get('/', function(){
     return view('home');
-});
+})->name('home');
 Route::get('/login',[loginController::class, 'index'])->name('login');
 Route::get('/signup',[signupController::class, 'index']);
 Route::get('/signup-details',[signupController::class, 'signupDetails']);
