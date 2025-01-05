@@ -62,7 +62,7 @@
                                         <label class="form-check-label remember-me" for="rememberMe">Remember Me</label>
                                     </div>
                                     <div class="mb-4">
-                                        <a href="#" class="forget-password">Forgot Password?</a>
+                                        <a href="forgetPassword" class="forget-password" data-bs-toggle="modal" data-bs-target="#forgetPassword">Forgot Password?</a>
                                     </div>
                                 </div>
                                 <!-- <a href="#" class="btn btn-primary0 btn-geen">Login</a> -->
