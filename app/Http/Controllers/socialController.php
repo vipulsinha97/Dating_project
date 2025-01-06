@@ -14,13 +14,14 @@ class socialController extends Controller
 
     public function provider()
     {
-        return Socialite::driver('facebook')->redirect();
+        return Socialite::driver('facebook')->scopes(['email', 'public_profile', 'user_link'])->redirect();
     }
 
     public function handleCallBack()
     {
         //finding user data using facebook login
         $user = Socialite::driver('facebook')->stateless()->user();
+        dd($user);
         $user_email = $user->email;
         
         //Finding data in our database
