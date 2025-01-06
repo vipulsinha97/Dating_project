@@ -30,6 +30,7 @@ class editEventRequest extends FormRequest
             'event_start_time' => 'required',
             'event_duration' => 'required',
             'ticket_price' => 'required',
+            'gst_percentage'=>'required',
             'image'=>'file|mimes:jpg,png,webp',
         ];
     }
@@ -40,6 +41,7 @@ class editEventRequest extends FormRequest
             'location.required' => 'location is required',
             'age_group.required' => 'Age Group is required',
             'title.required' => 'Title is required',
+            'gst_percentage.required' => 'GST is required',
             'event_date.required'=>'Event Date is required',
             'description.required'=> 'Description is required',
             'event_start_time.required' => 'Event Start is required',

@@ -21,6 +21,7 @@ return new class extends Migration
             $table->date('event_date')->nullable();
             $table->string('event_start_time')->nullable();
             $table->integer('event_duration')->nullable();
+            $table->integer('gst_percentage')->nullable();
             $table->string('ticket_price')->nullable();
             $table->timestamps();
         });

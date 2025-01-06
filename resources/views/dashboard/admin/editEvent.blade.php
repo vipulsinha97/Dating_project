@@ -297,6 +297,14 @@ $sidebarMenu = 'Add Event';
                   </div>
                 </div>
 
+                <div class="form-group row">
+                  <label for="ticket" class="col-sm-2 col-form-label">Ticket Price</label>
+                  <div class="col-sm-10">
+                    <input type="text" name="gst_percentage" value="{{$data->gst_percentage}}" class="form-control" id="gst" placeholder="Ticket title">
+                    <span style="color: red;">@error('gst_percentage') {{$message}} @enderror</span>
+                  </div>
+                </div>
+
               </div>
               <!-- /.card-body -->
               <div class="card-footer">
