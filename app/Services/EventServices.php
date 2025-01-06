@@ -16,6 +16,7 @@ class EventServices {
         $event->age_group = $data['age_group'];
         $event->featured_image = $data['image'];
         $event->title = $data['title'];
+        $event->gst_percentage = $data['gst_percentage'];
         $event->description = $data['description'];
         $event->event_date = $data['event_date'];
         $event->event_start_time = $data['event_start_time'];
@@ -35,6 +36,7 @@ class EventServices {
             $event->featured_image = $data['image'];
         }
         $event->title = $data['title'];
+        $event->gst_percentage = $data['gst_percentage'];
         $event->description = $data['description'];
         $event->event_date = $data['event_date'];
         $event->event_start_time = $data['event_start_time'];
