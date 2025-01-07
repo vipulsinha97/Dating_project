@@ -1,5 +1,6 @@
 <!doctype html>
 <html lang="en">
+
 <head>
     @include("includes/top")
     <link rel="stylesheet" type="text/css" href="{{asset('assets/css/events.css')}}">
@@ -32,7 +33,7 @@
 
         <section class="events-main mt-5 mb-5">
             <div class="container-fluid py-5">
-                <div class="row">
+                <!-- <div class="row">
                     <div class="col-md-6">
                         <h3>Mumbai Events:</h3>
                     </div>
@@ -48,7 +49,26 @@
                             </ul>
                         </span>
                     </div>
+                </div> -->
+                <div class="row">
+                    <div class="col-md-6">
+                        <h3 id="city-heading">Mumbai Events:</h3>
+                    </div>
+                    <div class="col-md-6 align-right">
+                        <span class="city-drpdwn dropdown">
+                            <button type="button" class="btn btn-citydrpdwn dropdown-toggle" data-bs-toggle="dropdown">
+                                See All Cities
+                            </button>
+                            <ul class="dropdown-menu" id="city-dropdown">
+                                <li><a class="dropdown-item" href="javascript:;" onclick="changeHeading('Mumbai')">Mumbai</a></li>
+                                <li><a class="dropdown-item" href="javascript:;" onclick="changeHeading('Delhi')">Delhi</a></li>
+                                <li><a class="dropdown-item" href="javascript:;" onclick="changeHeading('Banglore')">Banglore</a></li>
+                            </ul>
+                        </span>
+                    </div>
                 </div>
+
+
                 <!-- Age Group: (25-30) START -->
                 <div class="row">
                     <div class="col-md-12">
@@ -233,12 +253,6 @@
 
             </div>
         </section>
-
-
-
-
-
-
     </main>
     @include("includes/footer")
     @include("includes/bottom")
@@ -284,8 +298,11 @@
                 autoPlay: true
             });
         });
-
-
+        // Change the Event City heading text dynamically.
+        function changeHeading(cityName) {
+            var heading = document.getElementById("city-heading");
+            heading.textContent = cityName + " Events:";
+        }
     </script>
 </body>
 
