@@ -357,7 +357,7 @@
         <section class="faq-main py-5">
             <div class="container">
                 <h2 class="align-center my-4">Frequently asked questions</h2>
-                <p class="p-desc mt-0 mb-4">Hear from our delight users</p>
+                <!-- <p class="p-desc mt-0 mb-4">Hear from our delight users</p> -->
                 <div class="accordion faq-inner my-5" id="faq">
                     <div class="accordion-item">
                         <h2 class="accordion-header" id="headingOne">
