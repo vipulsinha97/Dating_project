@@ -120,3 +120,92 @@
     </div>
   </div>
 </div>
+
+<!-- Checkout Modal START-->
+<div class="modal no-border" id="ticketCheckout">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <!-- Modal Header -->
+      <div class="modal-header bord-none">
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+      <!-- Modal body -->
+      <div class="modal-body align-center ytop checkoutmodle">
+        <h4 class="modal-title my-4">Checkout Summary</h4>
+        <div class="mb-4">
+          <div class="row">
+            <div class="col">
+            <p class="align-left">Saturday Date Night</p>
+            </div>
+            <div class="col">
+            <p class="align-right">₹320</p>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col">
+            <p class="align-left">Event Date:</p>
+            </div>
+            <div class="col">
+            <p class="align-right">Thu, May 31</p>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col">
+            <p class="align-left">Time:</p>
+            </div>
+            <div class="col">
+            <p class="align-right">7:30 PM</p>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col">
+            <p class="align-left">Location:</p>
+            </div>
+            <div class="col">
+            <p class="align-right">Online</p>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col">
+            <p class="align-left">Age Group:	</p>
+            </div>
+            <div class="col">
+            <p class="align-right">25-30</p>
+            </div>
+          </div>
+<hr>
+                    
+          <div class="row">
+            <div class="col">
+            <p class="align-left">GST</p>
+            </div>
+            <div class="col">
+            <p class="align-right">10</p>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col">
+            <b class="align-left">Total</b>
+            </div>
+            <div class="col">
+            <b class="align-right">₹330</b>
+            </div>
+          </div>
+          <hr>
+        </div>
+        <div class="modalbtnmain buyticketbtn align-center">
+          <button type="button" id="" class="btn btn-accept">BUY Ticket</button>
+        </div>
+      </div>
+      <!-- Modal footer -->
+      <div class="modal-footer bord-none">
+
+      </div>
+    </div>
+  </div>
+</div>
