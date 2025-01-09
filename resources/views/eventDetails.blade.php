@@ -163,108 +163,27 @@
             <div class="outerbarr">
                 <div class="barcont">
                     <img class="m-4" src="{{asset('assets/images/bar-img1.png')}}" />
-                    <h2>Now its the time to get together</h2>
+                    <h2>Love the experience,<br>
+                    or your money back.</h2>
                     <img class="mt-75" src="{{asset('assets/images/barr-arw.png')}}" />
                 </div>
             </div>
         </section>
-        <section class="events-main mt-5 mb-5">
-            <!-- Age Group: (25-30) START -->
-            <div class="container-fluid py-5">
-                <div class="row">
-                    <div class="col-md-12">
-                        <div class="events-carsouel-main">
-                            <div class="container-fluid">
-                                <div class="row">
-                                    <div class="col-md-12">
-                                        <div id="related-event-slider" class="owl-carousel">
-                                            <div class="post-slide">
-                                                <div class="post-img">
-                                                    <img src="{{asset('assets/images/me1.png')}}" alt="">
-                                                    <div class="eventtime">
-                                                        <span class="session">45 min</span>
-                                                    </div>
-                                                    <!-- <a href="#" class="over-layer"><i class="fa fa-link"></i></a> -->
-                                                </div>
-                                                <div class="post-content">
-                                                    <h3 class="post-title">
-                                                        <a href="#">Saturday Night Virtual Speed Dating.</a>
-                                                    </h3>
-                                                    <p class="post-description">Date live via NJS on a series of live, matched dates from the comfort of your home.</p>
-                                                    <div class="date-time-main">
-                                                        <span class="post-date"><img src="{{asset('assets/images/edate.svg')}}" alt="">May 31</span>
-                                                        <span class="post-time"><img src="{{asset('assets/images/etime.svg')}}" alt="">Sat- 7:30</span>
-                                                    </div>
-                                                </div>
-                                                <div class="buytkt">
-                                                    <span class="bt"><a href="#" class="book-ticket">Book Ticket</a></span>
-                                                    <span class="bb"><a href="#" class="book-btn"><img src="{{asset('assets/images/arw-diag.svg')}}" alt=""></a></span>
-                                                </div>
-                                            </div>
 
-                                            <div class="post-slide">
-                                                <div class="post-img">
-                                                    <img src="{{asset('assets/images/me1.png')}}" alt="">
-                                                    <div class="eventtime">
-                                                        <span class="session">45 min</span>
-                                                    </div>
-                                                    <!-- <a href="#" class="over-layer"><i class="fa fa-link"></i></a> -->
-                                                </div>
-                                                <div class="post-content">
-                                                    <h3 class="post-title">
-                                                        <a href="#">Saturday Night Virtual Speed Dating.</a>
-                                                    </h3>
-                                                    <p class="post-description">Date live via NJS on a series of live, matched dates from the comfort of your home.</p>
-                                                    <div class="date-time-main">
-                                                        <span class="post-date"><img src="{{asset('assets/images/edate.svg')}}" alt="">May 31</span>
-                                                        <span class="post-time"><img src="{{asset('assets/images/etime.svg')}}" alt="">Sat- 7:30</span>
-                                                    </div>
-                                                </div>
-                                                <div class="buytkt">
-                                                    <span class="bt"><a href="#" class="book-ticket">Book Ticket</a></span>
-                                                    <span class="bb"><a href="#" class="book-btn"><img src="{{asset('assets/images/arw-diag.svg')}}" alt=""></a></span>
-                                                </div>
-                                            </div>
-
-                                            <div class="post-slide">
-                                                <div class="post-img">
-                                                    <img src="{{asset('assets/images/me1.png')}}" alt="">
-                                                    <div class="eventtime">
-                                                        <span class="session">45 min</span>
-                                                    </div>
-                                                    <!-- <a href="#" class="over-layer"><i class="fa fa-link"></i></a> -->
-                                                </div>
-                                                <div class="post-content">
-                                                    <h3 class="post-title">
-                                                        <a href="#">Saturday Night Virtual Speed Dating.</a>
-                                                    </h3>
-                                                    <p class="post-description">Date live via NJS on a series of live, matched dates from the comfort of your home.</p>
-                                                    <div class="date-time-main">
-                                                        <span class="post-date"><img src="{{asset('assets/images/edate.svg')}}" alt="">May 31</span>
-                                                        <span class="post-time"><img src="{{asset('assets/images/etime.svg')}}" alt="">Sat- 7:30</span>
-                                                    </div>
-                                                </div>
-                                                <div class="buytkt">
-                                                    <span class="bt"><a href="#" class="book-ticket">Book Ticket</a></span>
-                                                    <span class="bb"><a href="#" class="book-btn"><img src="{{asset('assets/images/arw-diag.svg')}}" alt=""></a></span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+        <section class="theevent mt-5 mb-5">
+            <div class="container-fluid py-0">
+                <div class="ed-title">
+                    <h3>Refund T&Cs</h3>
                 </div>
+                <p class="ed-para align-left">If you attend the event, and are not happy with NotJustSwipe, you can claim full refund. Contact us from your registered email id asking to remove your profile and we will pay 100% refund.</p>
             </div>
-            <!-- Age Group: (25-30) END -->
         </section>
 
     </main>
     @include("includes/footer")
     @include("includes/bottom")
 
-    <script src="../assets/js/owl.carousel.min.js"></script>
+    <!-- <script src="../assets/js/owl.carousel.min.js"></script>
     <script>
         $(document).ready(function() {
             $("#related-event-slider").owlCarousel({
@@ -275,7 +194,6 @@
                 navigation: true,
                 nav: true,
                 navigationText: ["Next", "Prev"],
-                // navText: ["‹", "›"],
                 navText: [
                     '<img src="../assets/images/a1.svg" alt="Previous" style="width: 30px; height: 30px;">',
                     '<img src="../assets/images/a2.svg" alt="Next" style="width: 30px; height: 30px;">'
@@ -286,7 +204,7 @@
                 autoPlay: true
             });
         });
-    </script>
+    </script> -->
 </body>
 
 

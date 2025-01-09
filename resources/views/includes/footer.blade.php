@@ -27,7 +27,7 @@
 		<div class="container-fluid">
 			<div class="row">
 				<div class="col-6 col-md-6">
-					<p class="align-left">© Justnot swipe. All rights reserved</p>
+					<p class="align-left">© Not Just Swipe. All rights reserved</p>
 				</div>
 				<div class="col-6 col-md-6">
 					<div class="d-flex0 align-right social-icons">
