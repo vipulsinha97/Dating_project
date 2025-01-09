@@ -130,7 +130,7 @@
                                     </div>
                                     <div class="col-md-12">
                                         <div class="buy-ticket-btn">
-                                            <a href="#" class="buy-ticket">Buy Ticket</a>
+                                            <a href="#" class="buy-ticket" data-bs-toggle="modal" data-bs-target="#ticketCheckout">Buy Ticket</a>
                                         </div>
                                     </div>
                                 </div>

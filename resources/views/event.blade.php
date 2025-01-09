@@ -253,6 +253,39 @@
 
             </div>
         </section>
+
+        <!-- NOTE THIS IS SAMPLE Design for VIPUL-->
+        <section>
+            <div class="row">
+                <div class="col-md-6">
+                    <h3>Mumbai Events:</h3>
+                </div>
+                <div class="col-md-6 align-right">
+                    <span class="seeall">See All</span>
+                    <span class="city-drpdwn dropdown">
+                        <button type="button" class="btn btn-citydrpdwn dropdown-toggle" data-bs-toggle="dropdown">
+                            Cities
+                        </button>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="javascript:;" data-target="div1">div 1</a></li>
+                            <li><a class="dropdown-item" href="javascript:;" data-target="div2">div 2</a></li>
+                            <li><a class="dropdown-item" href="javascript:;" data-target="div3">div 3</a></li>
+                        </ul>
+                    </span>
+                </div>
+            </div>
+
+            <div id="div1" class="event-div" style="">
+                <p>Content for Div 1</p>
+            </div>
+            <div id="div2" class="event-div" style="display:none;">
+                <p>Content for Div 2</p>
+            </div>
+            <div id="div3" class="event-div" style="display:none;">
+                <p>Content for Div 3</p>
+            </div>
+        </section>
+
     </main>
     @include("includes/footer")
     @include("includes/bottom")
@@ -303,6 +336,17 @@
             var heading = document.getElementById("city-heading");
             heading.textContent = cityName + " Events:";
         }
+    </script>
+
+    <script>
+        // jQuery to show and hide the divs based on dropdown selection
+        $(document).ready(function() {
+            $('.dropdown-item').click(function() {
+                var target = $(this).data('target');
+                $('.event-div').hide();
+                $('#' + target).show();
+            });
+        });
     </script>
 </body>
 
