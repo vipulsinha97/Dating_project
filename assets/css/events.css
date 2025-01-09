@@ -552,6 +552,17 @@ background-image: url(../images/ticket-bg.svg);
     margin-top: 50px;
     margin-bottom: 50px;
 }
+.outerbarr {
+  justify-content: center;
+}
+.outerbarr h2 { 
+font-family: "Roboto";
+font-style: normal;
+font-size: 48px;
+line-height: normal;
+align-items: center;
+display: flex;
+}
 /* @media screen and (max-width: 1300.98px) {
 .top-row {
   margin-bottom: 70px;
