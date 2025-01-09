@@ -15118,3 +15118,14 @@ font-size: 18px;
 .njsheader {
     background: #f6e1e687 !important;
 }
+.checkoutmodle .align-left {
+  display: flex;
+      justify-content: left;
+}
+.checkoutmodle .align-right {
+  display: flex;
+      justify-content: end;
+}
+.checkoutmodle  .buyticketbtn {
+text-align: center;
+}
