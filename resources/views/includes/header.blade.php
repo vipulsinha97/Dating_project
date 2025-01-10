@@ -5,11 +5,11 @@
 				<!-- Offcanvas Menu Hamburger Button -->
 				<span><a href="javascript:;" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" aria-controls="offcanvasExample"><img src="{{asset('assets/images/menu.svg')}}" /></a></span>
 			</div>
-			<div class="col-4 col-md-4">
+			<div class="col-8 col-md-4">
 				<!-- Offcanvas Menu Hamburger Button -->
 				<span><a href="https://notjustswipe.com/"><img class="logo" src="{{asset('assets/images/logo.svg')}}" /></a></span>
 			</div>
-			<div class="col-4 col-md-4 ccmenuright">
+			<div class="col-12 col-md-4 ccmenuright">
 				<div class="njshright">
 					<a href="{{URL::to('/login')}}" class="cbtnstyle1">Log in</a>
 					<a href="{{URL::to('/signup')}}" class="cbtnstyle2">Sign up</a>
@@ -27,12 +27,12 @@
 					<h5>REHINA D.</h5>
 				</span>
 			</div>
-			<div class="logout-main">
+			<!-- <div class="logout-main">
 				<button type="button" class="btn btn-primary0 cbtnstyle-logout">
 					Logout
 				</button>
-			</div>
-			<!-- <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button> -->
+			</div> -->
+			<button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
 		</div>
 
 		<div class="offcanvas-body sidebarmenu">
