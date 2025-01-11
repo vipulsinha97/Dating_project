@@ -114,7 +114,7 @@
             </div>
         </section>
 
-        <section class="bgimg0">
+        <section class="bgimg0 mb-bg">
             <div class="container-fluid py-5">
                 <div class="center-slider">
                     <div class="home_slider featured">
@@ -149,7 +149,7 @@
             </div>
         </section>
 
-        <section class="eventsnearme mt-5 mb-5">
+        <section class="eventsnearme mt-5 mb-5 mb-bg">
             <div class="container-fluid py-5">
                 <h2 class="align-center mt-4 mb-4">NotJustSwipe Dating <br>events near me</h2>
                 <p class="p-desc mb-5">Register for events closest to your city. More cities will be added soon.</p>
@@ -230,8 +230,8 @@
             </div>
         </section>
 
-        <section class="howitworks mt-5 mb-5">
-            <div class="container py-5">
+        <section class="howitworks mt-0 mb-0 bg-grey">
+            <div class="container py-5 ">
                 <h2 class="align-center mt-4 mb-4">How It Works</h2>
                 <ul class="center">
                     <li>Each online speed dating event lasts approximately 45 minutes.</li>
@@ -265,7 +265,7 @@
             </div>
 
             <div class="container-fluid py-5">
-                <div class="row vp-center">
+                <div class="row vp-center mob-rev">
                     <div class="col-md-6">
                         <div class="hcenter">
                             <h2 class="h2heading">Secure Environment:</h2>
@@ -323,7 +323,7 @@
                                 <p>"NotJustSwipe took my dating experience to the next level! Instead of endless swiping, I got to meet genuine, like-minded individuals in a fun and exciting way. The carefully curated profiles, secure platform, and unique virtual speed dating events made every interaction meaningful."</p>
                             </div>
                         </div>
-                        <div class="carousel-item" data-bs-interval="2000">
+                         <div class="carousel-item" data-bs-interval="2000">
                             <img src="{{asset('assets/images/testi-1.png')}}" class="d-block w-30 testi-img" alt="...">
                             <div class="carousel-caption d-none d-md-block">
                                 <div class="image-quote"> <img src="{{asset('assets/images/carbon_quotes.svg')}}" /></div>
@@ -332,7 +332,7 @@
                                 <p class="starrating"><img src="{{asset('assets/images/stars.svg')}}" alt="" /></p>
                                 <p>"NotJustSwipe took my dating experience to the next level! Instead of endless swiping, I got to meet genuine, like-minded individuals in a fun and exciting way. The carefully curated profiles, secure platform, and unique virtual speed dating events made every interaction meaningful."</p>
                             </div>
-                        </div>
+                        </div> 
                          <!-- <div class="carousel-item">
                             <img src="{{asset('assets/images/testi-1.png')}}" class="d-block w-30 testi-img" alt="...">
                             <div class="carousel-caption d-none d-md-block">
