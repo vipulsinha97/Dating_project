@@ -15136,7 +15136,7 @@ text-align: center;
   padding: 0 20px;
 }
 .offcanvas-start {
-  width: 47%;
+  width: 80%;
 }
 .ccmenuright {
   display: flex;
@@ -15187,5 +15187,8 @@ margin-bottom: 30px;
 }
 .eventsnearme h2 {
   font-size: 50px;
+}
+.njsfootop .align-left img.logo {
+  max-width: 100% !important;
 }
 }

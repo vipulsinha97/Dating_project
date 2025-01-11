@@ -2,10 +2,10 @@
 	<div class="njsfootop">
 		<div class="container-fluid">
 			<div class="row">
-				<div class="col-6 col-md-6">
-					<p class="align-left"><img src="{{asset('assets/images/logonjs-foo.svg')}}" style="width: 100%;max-width: 40%;"/></p>
+				<div class="col-12 col-md-6">
+					<p class="align-left"><img class="logo" src="{{asset('assets/images/logonjs-foo.svg')}}" style="width: 100%;max-width: 40%;"/></p>
 				</div>
-				<div class="col-6 col-md-6 d-flex justify-content-end align-center">
+				<div class="col-12 col-md-6 d-flex justify-content-end align-center mb-center">
 					<div class="align-right">
 						<div class="d-flex">
 							<ul class="footer_menu_link">
