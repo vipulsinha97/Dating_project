@@ -4,6 +4,10 @@
  * Copyright 2011-2021 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
  */
+ @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+ @import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+ @import url("https://fonts.googleapis.com/css2?family=Pridi:wght@200;300;400;500;600;700&display=swap");
+
 :root {
   --bs-blue: #0d6efd;
   --bs-indigo: #6610f2;
@@ -14875,7 +14879,7 @@ input[type="file"] {
 }
 
 .footer_menu_link a {
-  font-family: Roboto;
+  /* font-family: Roboto; */
   font-size: 17px;
   font-weight: 500;
   line-height: 29px;
@@ -14959,7 +14963,8 @@ border-top: none !important;
 }
 
 .footer_menu_link a {
-    font-family: Roboto;
+    /* font-family: Roboto !important; */
+    /* font-family: "Nunito Sans", sans-serif; */
     font-size: 17px;
     font-weight: 500;
     line-height: 29px;
@@ -15129,7 +15134,18 @@ font-size: 18px;
 .checkoutmodle  .buyticketbtn {
 text-align: center;
 }
-
+.foolinks a { 
+font-family: Roboto;
+font-size: 17px;
+font-weight: 500;
+line-height: 29px;
+text-align: right;
+color: #000;
+text-decoration: none;
+}
+.foolinks li {
+  list-style: none;
+}
 /* Media Query STRAT */
 @media only screen and (max-width: 768.98px) {
 .container-fluid {
@@ -15190,5 +15206,28 @@ margin-bottom: 30px;
 }
 .njsfootop .align-left img.logo {
   max-width: 100% !important;
+}
+.mb-center {
+  justify-content: center !important;
+}
+.mb-center .align-right {
+  text-align: center;
+  margin-bottom: 30px;
+}
+.foolinks { 
+padding-left: 0;
+}
+/* About Us page css */
+.bannersec img {
+width: 100%;
+}
+.about-contentsec h2 {
+  font-size: 50px;
+  line-height: 60px;
+  text-align: center;
+  color: #000000;
+}
+.aboutus-main p.aboutpara {
+  width: 100%;
 }
 }
