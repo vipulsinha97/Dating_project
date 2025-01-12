@@ -54,7 +54,7 @@
                     <div class="col-md-6">
                         <h3 id="city-heading">Mumbai Events:</h3>
                     </div>
-                    <div class="col-md-6 align-right">
+                    <div class="col-md-6 align-right mob-center">
                         <span class="city-drpdwn dropdown">
                             <button type="button" class="btn btn-citydrpdwn dropdown-toggle" data-bs-toggle="dropdown">
                                 See All Cities
@@ -260,7 +260,7 @@
                 <div class="col-md-6">
                     <h3>Mumbai Events:</h3>
                 </div>
-                <div class="col-md-6 align-right">
+                <div class="col-md-6 align-right mob-center">
                     <span class="seeall">See All</span>
                     <span class="city-drpdwn dropdown">
                         <button type="button" class="btn btn-citydrpdwn dropdown-toggle" data-bs-toggle="dropdown">
@@ -295,9 +295,20 @@
         $(document).ready(function() {
             $("#events-slider").owlCarousel({
                 items: 3,
-                itemsDesktop: [1199, 3],
-                itemsDesktopSmall: [980, 2],
-                itemsMobile: [600, 1],
+                responsive: {
+        0: {
+            items: 1  // 1 item on screens smaller than 768px
+        },
+        768: {
+            items: 2  // 2 items on screens from 768px to 979px
+        },
+        980: {
+            items: 3  // 3 items on screens from 980px to 1199px
+        },
+        1200: {
+            items: 3  // 3 items on screens larger than 1199px
+        }
+    },
                 navigation: true,
                 nav: true,
                 navigationText: ["Next", "Prev"],
@@ -312,11 +323,41 @@
                 autoPlay: true
             });
 
+            // $("#events-slider2").owlCarousel({
+            //     items: 3,
+            //     itemsDesktop: [1199, 3],
+            //     itemsDesktopSmall: [980, 2],
+            //     itemsMobile: [768, 1],
+            //     navigation: true,
+            //     nav: true,
+            //     navigationText: ["Next", "Prev"],
+            //     // navText: ["‹", "›"],
+            //     navText: [
+            //         '<img src="assets/images/a1.svg" alt="Previous" style="width: 30px; height: 30px;">',
+            //         '<img src="assets/images/a2.svg" alt="Next" style="width: 30px; height: 30px;">'
+            //     ],
+            //     pagination: true,
+            //     loop: true,
+            //     dots: true,
+            //     autoPlay: true
+            // });
+
             $("#events-slider2").owlCarousel({
                 items: 3,
-                itemsDesktop: [1199, 3],
-                itemsDesktopSmall: [980, 2],
-                itemsMobile: [600, 1],
+                responsive: {
+        0: {
+            items: 1  // 1 item on screens smaller than 768px
+        },
+        768: {
+            items: 2  // 2 items on screens from 768px to 979px
+        },
+        980: {
+            items: 3  // 3 items on screens from 980px to 1199px
+        },
+        1200: {
+            items: 3  // 3 items on screens larger than 1199px
+        }
+    },
                 navigation: true,
                 nav: true,
                 navigationText: ["Next", "Prev"],
