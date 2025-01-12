@@ -8,7 +8,7 @@
 				<div class="col-12 col-md-6 d-flex justify-content-end align-center mb-center">
 					<div class="align-right">
 						<div class="d-flex">
-							<ul class="footer_menu_link">
+							<ul class="footer_menu_link0 foolinks">
 								<li><a href="privacy-policy">Privacy Policy</a></li>
 								<li><a href="#">Terms of Use</a></li>
 								<li><a href="#">Safety Guidelines</a></li>
