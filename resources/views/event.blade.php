@@ -77,7 +77,7 @@
             <div class="container-fluid py-5">
                 <div class="row">
                     <div class="col-md-6">
-                        <h3>Mumbai Events:</h3>
+                        <h3>{{ $currentLocation->location_name }} Events:</h3>
                     </div>
                     <div class="col-md-6 align-right mob-center">
                         <!-- <span class="seeall">See All</span> -->
@@ -86,15 +86,15 @@
                             See All Cities
                             </button>
                             <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="javascript:;" data-target="div1">Mumbai</a></li>
-                                <li><a class="dropdown-item" href="javascript:;" data-target="div2">Delhi</a></li>
-                                <li><a class="dropdown-item" href="javascript:;" data-target="div3">Banglore</a></li>
+                                @foreach ($location as $loc)
+                                    <li><a class="dropdown-item" href="{{ URL::to('/event') }}/{{$loc->id}}" data-target="{{ $loc->location_name }}">{{ $loc->location_name }}</a></li>
+                                @endforeach
                             </ul>
                         </span>
                     </div>
                 </div>
 
-                <div id="div1" class="event-div" style="">
+                <div id="{{ $currentLocation->location_name }}" class="event-div" style="">
                     <div class="mumbai">
                         <!-- Age Group: (25-30) START -->
                         <div class="row">
@@ -109,7 +109,7 @@
                                                 <div id="events-slider" class="owl-carousel events-slider">
                                                     <div class="post-slide">
                                                         <div class="post-img">
-                                                            <img src="assets/images/me1.png" alt="">
+                                                            <img src="{{ asset('assets/images/me1.png') }}" alt="">
                                                             <div class="eventtime">
                                                                 <span class="session">45 min</span>
                                                             </div>
@@ -121,19 +121,19 @@
                                                             </h3>
                                                             <p class="post-description">Date live via NJS on a series of live, matched dates from the comfort of your home.</p>
                                                             <div class="date-time-main">
-                                                                <span class="post-date"><img src="assets/images/edate.svg" alt="">May 31</span>
-                                                                <span class="post-time"><img src="assets/images/etime.svg" alt="">Sat- 7:30</span>
+                                                                <span class="post-date"><img src="{{ asset('assets/images/edate.svg') }}" alt="">May 31</span>
+                                                                <span class="post-time"><img src="{{asset('assets/images/etime.svg') }}" alt="">Sat- 7:30</span>
                                                             </div>
                                                         </div>
                                                         <div class="buytkt">
                                                             <span class="bt"><a href="#" class="book-ticket">Book Ticket</a></span>
-                                                            <span class="bb"><a href="#" class="book-btn"><img src="assets/images/arw-diag.svg" alt=""></a></span>
+                                                            <span class="bb"><a href="#" class="book-btn"><img src="{{ asset('assets/images/arw-diag.svg') }}" alt=""></a></span>
                                                         </div>
                                                     </div>
 
                                                     <div class="post-slide">
                                                         <div class="post-img">
-                                                            <img src="assets/images/me1.png" alt="">
+                                                            <img src="{{asset('assets/images/me1.png') }}" alt="">
                                                             <div class="eventtime">
                                                                 <span class="session">45 min</span>
                                                             </div>
@@ -145,19 +145,19 @@
                                                             </h3>
                                                             <p class="post-description">Date live via NJS on a series of live, matched dates from the comfort of your home.</p>
                                                             <div class="date-time-main">
-                                                                <span class="post-date"><img src="assets/images/edate.svg" alt="">May 31</span>
-                                                                <span class="post-time"><img src="assets/images/etime.svg" alt="">Sat- 7:30</span>
+                                                                <span class="post-date"><img src="{{asset('assets/images/edate.svg') }}" alt="">May 31</span>
+                                                                <span class="post-time"><img src="{{asset('assets/images/etime.svg') }}" alt="">Sat- 7:30</span>
                                                             </div>
                                                         </div>
                                                         <div class="buytkt">
                                                             <span class="bt"><a href="#" class="book-ticket">Book Ticket</a></span>
-                                                            <span class="bb"><a href="#" class="book-btn"><img src="assets/images/arw-diag.svg" alt=""></a></span>
+                                                            <span class="bb"><a href="#" class="book-btn"><img src="{{asset('assets/images/arw-diag.svg') }}" alt=""></a></span>
                                                         </div>
                                                     </div>
 
                                                     <div class="post-slide">
                                                         <div class="post-img">
-                                                            <img src="assets/images/me1.png" alt="">
+                                                            <img src="{{ asset('assets/images/me1.png') }}" alt="">
                                                             <div class="eventtime">
                                                                 <span class="session">45 min</span>
                                                             </div>
@@ -169,13 +169,13 @@
                                                             </h3>
                                                             <p class="post-description">Date live via NJS on a series of live, matched dates from the comfort of your home.</p>
                                                             <div class="date-time-main">
-                                                                <span class="post-date"><img src="assets/images/edate.svg" alt="">May 31</span>
-                                                                <span class="post-time"><img src="assets/images/etime.svg" alt="">Sat- 7:30</span>
+                                                                <span class="post-date"><img src="{{ asset('assets/images/edate.svg') }}" alt="">May 31</span>
+                                                                <span class="post-time"><img src="{{ asset('assets/images/etime.svg') }}" alt="">Sat- 7:30</span>
                                                             </div>
                                                         </div>
                                                         <div class="buytkt">
                                                             <span class="bt"><a href="#" class="book-ticket">Book Ticket</a></span>
-                                                            <span class="bb"><a href="#" class="book-btn"><img src="assets/images/arw-diag.svg" alt=""></a></span>
+                                                            <span class="bb"><a href="#" class="book-btn"><img src="{{ asset('assets/images/arw-diag.svg') }}" alt=""></a></span>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -200,7 +200,7 @@
                                                 <div id="events-slider2" class="owl-carousel events-slider">
                                                     <div class="post-slide">
                                                         <div class="post-img">
-                                                            <img src="assets/images/me1.png" alt="">
+                                                            <img src="{{ asset('assets/images/me1.png') }}" alt="">
                                                             <div class="eventtime">
                                                                 <span class="session">45 min</span>
                                                             </div>
@@ -212,13 +212,13 @@
                                                             </h3>
                                                             <p class="post-description">Date live via NJS on a series of live, matched dates from the comfort of your home.</p>
                                                             <div class="date-time-main">
-                                                                <span class="post-date"><img src="assets/images/edate.svg" alt="">May 31</span>
-                                                                <span class="post-time"><img src="assets/images/etime.svg" alt="">Sat- 7:30</span>
+                                                                <span class="post-date"><img src="{{ asset('assets/images/edate.svg') }}" alt="">May 31</span>
+                                                                <span class="post-time"><img src="{{ asset('assets/images/etime.svg') }}" alt="">Sat- 7:30</span>
                                                             </div>
                                                         </div>
                                                         <div class="buytkt">
                                                             <span class="bt"><a href="#" class="book-ticket">Book Ticket</a></span>
-                                                            <span class="bb"><a href="#" class="book-btn"><img src="assets/images/arw-diag.svg" alt=""></a></span>
+                                                            <span class="bb"><a href="#" class="book-btn"><img src="{{ asset('assets/images/arw-diag.svg') }}" alt=""></a></span>
                                                         </div>
                                                     </div>
 
@@ -236,19 +236,19 @@
                                                             </h3>
                                                             <p class="post-description">Date live via NJS on a series of live, matched dates from the comfort of your home.</p>
                                                             <div class="date-time-main">
-                                                                <span class="post-date"><img src="assets/images/edate.svg" alt="">May 31</span>
-                                                                <span class="post-time"><img src="assets/images/etime.svg" alt="">Sat- 7:30</span>
+                                                                <span class="post-date"><img src="{{ asset('assets/images/edate.svg') }}" alt="">May 31</span>
+                                                                <span class="post-time"><img src="{{ asset('assets/images/etime.svg') }}" alt="">Sat- 7:30</span>
                                                             </div>
                                                         </div>
                                                         <div class="buytkt">
                                                             <span class="bt"><a href="#" class="book-ticket">Book Ticket</a></span>
-                                                            <span class="bb"><a href="#" class="book-btn"><img src="assets/images/arw-diag.svg" alt=""></a></span>
+                                                            <span class="bb"><a href="#" class="book-btn"><img src="{{ asset('assets/images/arw-diag.svg') }}" alt=""></a></span>
                                                         </div>
                                                     </div>
 
                                                     <div class="post-slide">
                                                         <div class="post-img">
-                                                            <img src="assets/images/me1.png" alt="">
+                                                            <img src="{{ asset('assets/images/me1.png') }}" alt="">
                                                             <div class="eventtime">
                                                                 <span class="session">45 min</span>
                                                             </div>
@@ -260,13 +260,13 @@
                                                             </h3>
                                                             <p class="post-description">Date live via NJS on a series of live, matched dates from the comfort of your home.</p>
                                                             <div class="date-time-main">
-                                                                <span class="post-date"><img src="assets/images/edate.svg" alt="">May 31</span>
-                                                                <span class="post-time"><img src="assets/images/etime.svg" alt="">Sat- 7:30</span>
+                                                                <span class="post-date"><img src="{{ asset('assets/images/edate.svg') }}" alt="">May 31</span>
+                                                                <span class="post-time"><img src="{{ asset('assets/images/etime.svg') }}" alt="">Sat- 7:30</span>
                                                             </div>
                                                         </div>
                                                         <div class="buytkt">
                                                             <span class="bt"><a href="#" class="book-ticket">Book Ticket</a></span>
-                                                            <span class="bb"><a href="#" class="book-btn"><img src="assets/images/arw-diag.svg" alt=""></a></span>
+                                                            <span class="bb"><a href="#" class="book-btn"><img src="{{ asset('assets/images/arw-diag.svg') }}" alt=""></a></span>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -656,8 +656,9 @@
     @include("includes/footer")
     @include("includes/bottom")
 
-    <script src="assets/js/owl.carousel.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
     <script>
+
         $(document).ready(function() {
             $(".events-slider").owlCarousel({
                 items: 3,

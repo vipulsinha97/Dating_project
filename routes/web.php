@@ -11,6 +11,7 @@ use App\Http\Controllers\AdminController;
 use App\Http\Controllers\EventController;
 use App\Http\Controllers\LocationController;
 use App\Http\Controllers\AgeGroupController;
+use App\Http\Controllers\WebsiteController;
 use App\Http\Middleware\AuthMiddleware;
 use App\Livewire\Chat\Index;
 use App\Livewire\Chat\Chat;
@@ -41,9 +42,7 @@ Route::get('insta/login', [socialController::class, 'instaProvider'])->name('ins
 Route::get('insta/callback', [socialController::class, 'instaHandleCallBack'])->name('insta.callback');
 
 //Event
-Route::get('/event', function() {
-    return view('event');
-});
+Route::get('/event/{city?}', [WebsiteController::class, 'event']);
 
 //Event Details
 Route::get('/event/details', function() {
