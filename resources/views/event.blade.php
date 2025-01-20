@@ -77,7 +77,7 @@
             <div class="container-fluid py-5">
                 <div class="row">
                     <div class="col-md-6">
-                        <h3>{{ $currentLocation->location_name }} Events:</h3>
+                        <h3>{{ $currentLocation->location_name ?? '' }} Events:</h3>
                     </div>
                     <div class="col-md-6 align-right mob-center">
                         <!-- <span class="seeall">See All</span> -->
@@ -94,7 +94,7 @@
                     </div>
                 </div>
 
-                <div id="{{ $currentLocation->location_name }}" class="event-div" style="">
+                <div id="{{ $currentLocation->location_name ?? '' }}" class="event-div" style="">
                     <div class="mumbai">
                         @php $i = 0; @endphp
                 
