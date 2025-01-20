@@ -42,7 +42,7 @@ Route::get('insta/login', [socialController::class, 'instaProvider'])->name('ins
 Route::get('insta/callback', [socialController::class, 'instaHandleCallBack'])->name('insta.callback');
 
 //Event
-Route::get('/event/{city?}', [WebsiteController::class, 'event']);
+Route::get('/event/{city?}', [WebsiteController::class, 'event'])->name('event');
 
 //Event Details
 Route::get('/event/details/{id}', [WebsiteController::class, 'eventDetail']);
