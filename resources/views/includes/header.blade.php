@@ -52,7 +52,7 @@
             </a>
         </li>
         <li>
-            <a href="event" class="nav-link {{ Request::is('event') ? 'active' : '' }}" 
+            <a href="{{route('event')}}" class="nav-link {{ Request::is('event') ? 'active' : '' }}" 
                data-inactive-src="{{asset('assets/images/eventicon-blue.svg')}}" 
                data-active-src="{{asset('assets/images/eventicon-white.svg')}}">
                 <img src="{{ Request::is('event') ? asset('assets/images/eventicon-white.svg') : asset('assets/images/eventicon-blue.svg') }}" alt="">Events
