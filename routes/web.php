@@ -45,9 +45,7 @@ Route::get('insta/callback', [socialController::class, 'instaHandleCallBack'])->
 Route::get('/event/{city?}', [WebsiteController::class, 'event']);
 
 //Event Details
-Route::get('/event/details', function() {
-    return view('eventDetails');
-});
+Route::get('/event/details/{id}', [WebsiteController::class, 'eventDetail']);
 
 //about us page
 Route::get('/aboutUs', function () {
