@@ -91,14 +91,18 @@
                                     <div class="col-md-6">
                                         <div class="ticket-main">
                                             <div class="ticket-left">
+                                                @if(!empty($ed->featured_image))
+                                                <img src="{{asset('/assets/image/'.$ed->featured_image)}}">
+                                                @else
                                                 <img src="{{asset('/assets/images/d1.png')}}" class="" alt="">
+                                                @endif
                                             </div>
                                         </div>
                                     </div>
                                     <div class="col-md-6">
                                         <div class="ticket-right">
-                                            <h4>Saturday Date Night in Mumbai</h4>
-                                            <div class="price"><span><b>Price-</b></span><span class="amount">₹320</span></div>
+                                            <h4>{{$ed->title}}</h4>
+                                            <div class="price"><span><b>Price-</b></span><span class="amount">₹{{$ed->ticket_price}}</span></div>
                                         </div>
                                     </div>
                                 </div>
@@ -107,13 +111,16 @@
                                     <div class="col-md-6">
                                         <div class="ed-ticket-details mb-5">
                                             <span class="ed-ticket-data"><img src="{{asset('/assets/images/solar_calendar-outline.svg')}}" class="" alt="">Calendar</span> <br>
-                                            <span>Thu, May 31</span>
+                                            @php
+                                                $formattedDate = date("D, M j", strtotime($ed->event_date));
+                                            @endphp
+                                            <span>{{ $formattedDate }}</span>
                                         </div>
                                     </div>
                                     <div class="col-md-6">
                                         <div class="ed-ticket-details mb-5">
                                             <span class="ed-ticket-data"><img src="{{asset('/assets/images/pepicons-pencil_rewind-time.svg')}}" class="" alt="">Time</span> <br>
-                                            <span>7:30pm</span>
+                                            <span>{{$ed->event_start_time}}</span>
                                         </div>
                                     </div>
                                     <div class="col-md-6">
@@ -125,7 +132,7 @@
                                     <div class="col-md-6">
                                         <div class="ed-ticket-details mb-5">
                                             <span class="ed-ticket-data"><img src="{{asset('/assets/images/carbon_user-multiple.svg')}}" class="" alt="">Age Group</span> <br>
-                                            <span>25-30</span>
+                                            <span>{{$ed->starting_age}}-{{$ed->ending_age}}</span>
                                         </div>
                                     </div>
                                     <div class="col-md-12">
