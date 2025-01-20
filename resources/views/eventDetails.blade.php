@@ -185,8 +185,101 @@
                 <p class="ed-para align-left">If you attend the event, and are not happy with NotJustSwipe, you can claim full refund. Contact us from your registered email id asking to remove your profile and we will pay 100% refund.</p>
             </div>
         </section>
+<!-- Modal Start -->
+ 
+<!-- Checkout Modal START-->
+<div class="modal no-border" id="ticketCheckout">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <!-- Modal Header -->
+      <div class="modal-header bord-none">
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+      <!-- Modal body -->
+      <div class="modal-body align-center ytop checkoutmodle">
+        <h4 class="modal-title my-4">Checkout Summary</h4>
+        <div class="mb-4">
+          <div class="row">
+            <div class="col">
+              @php
+                $formattedDate = date("l", strtotime($ed->event_date));
+                $formattedDate2 = date("D, M j", strtotime($ed->event_date));;
+              @endphp
+            <p class="align-left">{{$formattedDate}} Date Night</p>
+            </div>
+            <div class="col">
+            <p class="align-right">₹{{$ed->ticket_price}}</p>
+            </div>
+          </div>
 
-    </main>
+          <div class="row">
+            <div class="col">
+            <p class="align-left">Event Date:</p>
+            </div>
+            <div class="col">
+            <p class="align-right">{{$formattedDate2}}</p>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col">
+            <p class="align-left">Time:</p>
+            </div>
+            <div class="col">
+            <p class="align-right">{{$ed->event_start_time}}</p>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col">
+            <p class="align-left">Location:</p>
+            </div>
+            <div class="col">
+            <p class="align-right">Online</p>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col">
+            <p class="align-left">Age Group:	</p>
+            </div>
+            <div class="col">
+            <p class="align-right">{{$ed->starting_age}}-{{$ed->ending_age}}</p>
+            </div>
+          </div>
+          <hr>          
+            <div class="row">
+              <div class="col">
+              <p class="align-left">GST</p>
+              </div>
+              <div class="col">
+              <p class="align-right">{{$ed->gst_percentage}}</p>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col">
+              <b class="align-left">Total</b>
+              </div>
+              <div class="col">
+              <b class="align-right">₹{{$ta}}</b>
+              </div>
+            </div>
+          <hr>
+        </div>
+        <div class="modalbtnmain buyticketbtn align-center">
+          <button type="button" id="" class="btn btn-accept">BUY Ticket</button>
+        </div>
+      </div>
+      <!-- Modal footer -->
+      <div class="modal-footer bord-none">
+
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Modal End -->
+</main>
     @include("includes/footer")
     @include("includes/bottom")
 
