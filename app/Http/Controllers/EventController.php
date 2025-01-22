@@ -23,11 +23,17 @@ class EventController extends Controller
         $data = $request->all();
 
         if ($request->hasFile('image')) {
-            $filePath = $request->file('image')->store('uploads/event_feature_image');
+            // Get the uploaded file
+            $file = $request->file('image');
+            // Generate a unique filename
+            $fileName = time() . '_' . uniqid() . '.' . $file->getClientOriginalExtension();
+
+            // Store the file in the 'uploads/event_feature_image' directory on the public disk
+            $filePath = $file->storeAs('uploads/event_feature_image', $fileName, 'public');
         }
-        
+
         // Store event
-        $storeEvent = $this->EventServices->storeEvent($data);
+        $storeEvent = $this->EventServices->storeEvent($data, $fileName);
         if ($storeEvent === true) {
 
             return redirect('/admin/dashboard/event')->with('success', 'New Event Added');
@@ -41,11 +47,17 @@ class EventController extends Controller
         $data = $request->all();
 
         if ($request->hasFile('image')) {
-            $filePath = $request->file('image')->store('uploads/event_feature_image');
+            // Get the uploaded file
+            $file = $request->file('image');
+            // Generate a unique filename
+            $fileName = time() . '_' . uniqid() . '.' . $file->getClientOriginalExtension();
+
+            // Store the file in the 'uploads/event_feature_image' directory on the public disk
+            $filePath = $file->storeAs('uploads/event_feature_image', $fileName, 'public');
         }
-        
+
         // Store event
-        $storeEvent = $this->EventServices->editEvent($data);
+        $storeEvent = $this->EventServices->editEvent($data, $fileName);
         if ($storeEvent === true) {
 
             return redirect('/admin/dashboard/event')->with('success', 'Event Edited');
