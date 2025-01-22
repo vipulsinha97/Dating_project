@@ -10,11 +10,11 @@ use Illuminate\Support\Facades\Hash;
 class EventServices {
     
     // Adding New Event
-    public function storeEvent($data) {
+    public function storeEvent($data, $fileName) {
         $event = new Event;
         $event->location = $data['location'];
         $event->age_group = $data['age_group'];
-        $event->featured_image = $data['image'];
+        $event->featured_image = $fileName;
         $event->title = $data['title'];
         $event->gst_percentage = $data['gst_percentage'];
         $event->description = $data['description'];
@@ -27,13 +27,13 @@ class EventServices {
     }
 
     // Edit Event
-    public function editEvent($data) {
+    public function editEvent($data, $fileName) {
         $event = Event::where('id', $data['id'])->first();
         $event->location = $data['location'];
         $event->age_group = $data['age_group'];
-        if(!empty($data['image']))
+        if(!empty($fileName))
         {
-            $event->featured_image = $data['image'];
+            $event->featured_image = $fileName;
         }
         $event->title = $data['title'];
         $event->gst_percentage = $data['gst_percentage'];

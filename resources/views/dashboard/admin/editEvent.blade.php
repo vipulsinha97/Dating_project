@@ -209,9 +209,13 @@ $sidebarMenu = 'Add Event';
                       @else
                       <option disabled selected>-Choose location-</option>
                       @endif
+                      @if (!empty($location))
                       @foreach ($location as $location)
-                        <option value="{{$location->id}}">{{$location->location_name}}</option>
+                          <option value="{{ $location->id ?? '' }}">{{ $location->location_name ?? '' }}</option>
                       @endforeach
+                      @else
+                          <option value="">No locations available</option>
+                      @endif
                     </select>
                     <span style="color: red;">@error('location') {{$message}} @enderror</span>
                   </div>
@@ -292,7 +296,7 @@ $sidebarMenu = 'Add Event';
                 <div class="form-group row">
                   <label for="ticket" class="col-sm-2 col-form-label">Ticket Price</label>
                   <div class="col-sm-10">
-                    <input type="text" name="ticket_price" value="{{$data->ticket_price}}" class="form-control" id="ticketid" placeholder="Ticket title">
+                    <input type="text" name="ticket_price" value="{{$data->ticket_price}}" class="form-control" id="ticketid" placeholder="Ticket Price">
                     <span style="color: red;">@error('ticket_price') {{$message}} @enderror</span>
                   </div>
                 </div>

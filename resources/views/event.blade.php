@@ -116,7 +116,9 @@
                                                                     <div class="post-slide">
                                                                         <div class="post-img">
                                                                             @if(!empty($singleEvent->featured_image))
-                                                                            <img src="{{ asset('assets/images/' . $singleEvent->featured_image) }}" alt="{{ $singleEvent->featured_image }}">
+                                                                            <img src="{{ asset('storage/uploads/event_feature_image/' . $singleEvent->featured_image) }}" 
+                                                                            alt="Featured Image for {{ $singleEvent->featured_image }}" 
+                                                                            style="max-width: 100%; height: auto;">
                                                                             @else
                                                                             <img src="{{ asset('assets/images/me1.png') }}" alt="me1.png">
                                                                             @endif
