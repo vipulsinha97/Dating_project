@@ -291,7 +291,7 @@ $sidebarMenu = 'Add Event';
                 <div class="form-group row">
                   <label for="ticket" class="col-sm-2 col-form-label">Ticket Price</label>
                   <div class="col-sm-10">
-                    <input type="text" name="ticket_price" value="{{old('ticket_price')}}" class="form-control" id="ticketid" placeholder="Ticket title">
+                    <input type="text" name="ticket_price" value="{{old('ticket_price')}}" class="form-control" id="ticketid" placeholder="Ticket Price">
                     <span style="color: red;">@error('ticket_price') {{$message}} @enderror</span>
                   </div>
                 </div>

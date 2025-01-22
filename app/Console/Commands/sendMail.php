@@ -3,6 +3,7 @@
 namespace App\Console\Commands;
 
 use Illuminate\Console\Command;
+use App\Model\Email;
 
 class sendMail extends Command
 {
@@ -11,14 +12,14 @@ class sendMail extends Command
      *
      * @var string
      */
-    protected $signature = 'app:send-mail';
+    protected $signature = 'app:sendmail';
 
     /**
      * The console command description.
      *
      * @var string
      */
-    protected $description = 'Command description';
+    protected $description = 'Send mail for forgot password';
 
     /**
      * Execute the console command.
