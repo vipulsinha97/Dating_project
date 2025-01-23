@@ -208,8 +208,8 @@
                     '<img src="{{ asset('assets/images/a2.svg') }}" alt="Next" style="width: 30px; height: 30px;">'
                 ], 
                 pagination: true,
-                loop: true,
-                dots: true,
+                loop: false,
+                dots: false,
                 autoPlay: true
             });
 
