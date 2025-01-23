@@ -38,8 +38,17 @@
                     <div class="col-md-6">
                         <h3>Mumbai Events:</h3>
                     </div>
-                    <div class="col-md-6 align-right">                        
-                    <span class="seeall"><a onclick="history.back()" style="cursor: pointer;">&larr; Back</a></span>
+                    <div class="col-md-6 align-right"><span class="seeall">See All</span>
+                        <span class="city-drpdwn dropdown">
+                            <button type="button" class="btn btn-citydrpdwn dropdown-toggle" data-bs-toggle="dropdown">
+                                Cities
+                            </button>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#">Link 1</a></li>
+                                <li><a class="dropdown-item" href="#">Link 2</a></li>
+                                <li><a class="dropdown-item" href="#">Link 3</a></li>
+                            </ul>
+                        </span>
                     </div>
                 </div>
                 <!-- Age Group: (25-30) START -->
