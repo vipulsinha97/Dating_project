@@ -225,7 +225,7 @@ $sidebarMenu = 'Add Event';
                   <label for="Select" class="col-sm-2 col-form-label">Select Age Group</label>
                   <div class="col-sm-10">
                     <select name="age_group" class="form-control">
-                      @if($data->age_group)
+                      @if($data->age_group)`
                       <option value="{{$data->age_group}}" selected>{{$data->starting_age}}-{{$data->ending_age}}</option>
                       @else
                       <option disabled selected>-Choose Age-Group-</option>

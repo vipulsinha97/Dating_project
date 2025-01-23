@@ -219,7 +219,7 @@ $sidebarMenu = 'Add Event';
                   <label for="Select" class="col-sm-2 col-form-label">Select Age Group</label>
                   <div class="col-sm-10">
                     <select name="age_group" class="form-control">
-                      @if(old('location'))
+                      @if(old('age_group'))
                       <option value="{{old('age_group')}}">{{old('age_group')}}</option>
                       @else
                       <option disabled selected>-Choose Age-Group-</option>
