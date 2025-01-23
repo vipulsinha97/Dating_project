@@ -210,7 +210,7 @@
                 navText: [
                     '<img src="{{ asset('assets/images/a1.svg') }}" alt="Previous" style="width: 30px; height: 30px;">',
                     '<img src="{{ asset('assets/images/a2.svg') }}" alt="Next" style="width: 30px; height: 30px;">'
-                ],
+                ], 
                 pagination: true,
                 loop: false,
                 dots: true,
