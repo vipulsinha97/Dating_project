@@ -80,7 +80,7 @@
                                 <div class="col-md-12">
                                     <img src="{{asset('/assets/images/ticket-bg.svg')}}" alt="">
                                 </div>
-                            </div>
+                            </div> 
                             <div class="event-details-right">
                                 <div class="row top-row">
                                     <div class="colmd-12">
