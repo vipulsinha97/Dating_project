@@ -65,6 +65,7 @@ class AdminController extends Controller
         $event = Event::leftJoin('locations', 'locations.id', '=', 'events.location')
         ->leftJoin('age_groups', 'age_groups.id', '=', 'events.age_group')
         ->select('events.*', 'locations.location_name', 'age_groups.starting_age', 'age_groups.ending_age')
+        ->where('events.id', $id)
         ->get();
         $location = Location::all();
         $ageGroup = Age_group::all();
