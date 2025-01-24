@@ -9,6 +9,13 @@ use App\Models\Age_group;
 
 class WebsiteController extends Controller
 {
+    //home page
+    public function index()
+    {
+        $location = Location::join('events', 'events.location', '=', 'location.id');
+        return view('home', ['location'=>$location]);
+    }
+
     //Event page details
     public function event($city = null)
     {
@@ -33,7 +40,10 @@ class WebsiteController extends Controller
         $location = Location::all();
 
         //Fetching all the Age group
-        $ageGroup = Age_group::join('events', 'events.age_group', '=', 'age_groups.id')->get();
+        $ageGroup = Age_group::join('events', 'events.age_group', '=', 'age_groups.id')
+        ->leftJoin('locations', 'locations.id', '=', 'events.location')
+        ->select('age_groups.starting_age', 'age_groups.ending_age', 'locations.location_name', 'events.age_group')
+        ->get();
         return view('event', ['event'=>$event, 'location'=>$location, 'ageGroup'=>$ageGroup, 'currentLocation'=>$currentLocation]);
     }
 

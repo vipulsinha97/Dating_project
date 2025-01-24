@@ -24,11 +24,17 @@ class LocationController extends Controller
         $data = $request->all();
 
         if ($request->hasFile('image')) {
-            $filePath = $request->file('image')->store('uploads/location_feature_image');
+            // Get the uploaded file
+            $file = $request->file('image');
+            // Generate a unique filename
+            $fileName = time() . '_' . uniqid() . '.' . $file->getClientOriginalExtension();
+
+            // Store the file in the 'uploads/event_feature_image' directory on the public disk
+            $filePath = $file->storeAs('uploads/location_feature_image', $fileName, 'public');
         }
         
         // Store Location
-        $storeLocation = $this->LocationService->storeLocation($data);
+        $storeLocation = $this->LocationService->storeLocation($data, $fileName);
         if ($storeLocation === true) {
 
             return redirect('/admin/dashboard/location')->with('success', 'New Location Added');
@@ -42,11 +48,22 @@ class LocationController extends Controller
         $data = $request->all();
 
         if ($request->hasFile('image')) {
-            $filePath = $request->file('image')->store('uploads/location_feature_image');
+            // Get the uploaded file
+            $file = $request->file('image');
+            // Generate a unique filename
+            $fileName = time() . '_' . uniqid() . '.' . $file->getClientOriginalExtension();
+
+            // Store the file in the 'uploads/event_feature_image' directory on the public disk
+            $filePath = $file->storeAs('uploads/location_feature_image', $fileName, 'public');
         }
         
         // Store Location
-        $storeLocation = $this->LocationService->editlocation($data);
+        if(!empty($fileName)) {
+            $storeLocation = $this->LocationService->editlocation($data, $fileName);
+        }
+        else {
+            $storeLocation = $this->LocationService->editlocation($data);
+        }
         if ($storeLocation === true) {
 
             return redirect('/admin/dashboard/location')->with('success', 'Location Edited');
