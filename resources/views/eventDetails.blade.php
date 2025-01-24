@@ -38,7 +38,7 @@
                     <div class="col-md-6">
                         <h3>Mumbai Events:</h3>
                     </div>
-                    <div class="col-md-6 align-right"><span class="seeall">See All</span>
+                    {{-- <div class="col-md-6 align-right"><span class="seeall">See All</span>
                         <span class="city-drpdwn dropdown">
                             <button type="button" class="btn btn-citydrpdwn dropdown-toggle" data-bs-toggle="dropdown">
                                 Cities
@@ -49,6 +49,9 @@
                                 <li><a class="dropdown-item" href="#">Link 3</a></li>
                             </ul>
                         </span>
+                    </div> --}}
+                    <div class="col-md-6 align-right">                        
+                        <span class="seeall"><a onclick="history.back()" style="cursor: pointer;">&larr; Back</a></span>
                     </div>
                 </div>
                 <!-- Age Group: (25-30) START -->
@@ -92,7 +95,7 @@
                                         <div class="ticket-main">
                                             <div class="ticket-left">
                                                 @if(!empty($ed->featured_image))
-                                                <img src="{{asset('/assets/image/'.$ed->featured_image)}}">
+                                                <img src="{{asset('storage/app/public/uploads/event_feature_image/'.$ed->featured_image)}}">
                                                 @else
                                                 <img src="{{asset('/assets/images/d1.png')}}" class="" alt="">
                                                 @endif

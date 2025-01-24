@@ -27,7 +27,7 @@ class EventServices {
     }
 
     // Edit Event
-    public function editEvent($data, $fileName) {
+    public function editEvent($data, $fileName=null) {
         $event = Event::where('id', $data['id'])->first();
         $event->location = $data['location'];
         $event->age_group = $data['age_group'];

@@ -100,6 +100,7 @@
                 
                         @if(!empty($ageGroup) && !empty($event))
                             @foreach ($ageGroup as $group)
+                                @if($group->location_name == $currentLocation->location_name)
                                 <!-- Age Group: (25-30) START -->
                                 <div class="row">
                                     <div class="col-md-12">
@@ -116,7 +117,7 @@
                                                                     <div class="post-slide">
                                                                         <div class="post-img">
                                                                             @if(!empty($singleEvent->featured_image))
-                                                                            <img src="{{ asset('storage/uploads/event_feature_image/' . $singleEvent->featured_image) }}" 
+                                                                            <img src="{{ asset('storage/app/public/uploads/event_feature_image/' . $singleEvent->featured_image) }}" 
                                                                             alt="Featured Image for {{ $singleEvent->featured_image }}" 
                                                                             style="max-width: 100%; height: auto;">
                                                                             @else
@@ -130,7 +131,7 @@
                                                                             <h3 class="post-title">
                                                                                 <a href="#">{{ $singleEvent->title }}</a>
                                                                             </h3>
-                                                                            <p class="post-description">{{ substr($singleEvent->description, 10) }}</p>
+                                                                            <p class="post-description">{{ substr($singleEvent->description, 0, 25) }}...</p>
                                                                             @php
                                                                                 $timestamp = strtotime($singleEvent->event_date);
                                                                                 $formattedDate = date("F j", $timestamp);
@@ -166,6 +167,7 @@
                                     </div>
                                 </div>
                                 <!-- Age Group: (25-30) END -->
+                                @endif
                             @endforeach
                         @else
                             <p>No events or age groups available.</p>
