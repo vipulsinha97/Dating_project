@@ -191,7 +191,7 @@ $sidebarMenu = 'Add Event';
           <!-- Horizontal Form -->
           <div class="card card-info">
             <div class="card-header">
-              <h3 class="card-title">Add Event</h3>
+              <h3 class="card-title">Edit Event</h3>
             </div>
             <!-- /.card-header -->
             <!-- form start -->
@@ -211,8 +211,10 @@ $sidebarMenu = 'Add Event';
                       @endif
                       @if (!empty($location))
                       @foreach ($location as $location)
-                          <option value="{{ $location->id ?? '' }}">{{ $location->location_name ?? '' }}</option>
-                      @endforeach
+                          @if($data->location != $location->id)
+                            <option value="{{ $location->id ?? '' }}">{{ $location->location_name ?? '' }}</option>
+                          @endif
+                          @endforeach
                       @else
                           <option value="">No locations available</option>
                       @endif
@@ -225,13 +227,15 @@ $sidebarMenu = 'Add Event';
                   <label for="Select" class="col-sm-2 col-form-label">Select Age Group</label>
                   <div class="col-sm-10">
                     <select name="age_group" class="form-control">
-                      @if($data->age_group)`
+                      @if($data->age_group)
                       <option value="{{$data->age_group}}" selected>{{$data->starting_age}}-{{$data->ending_age}}</option>
                       @else
                       <option disabled selected>-Choose Age-Group-</option>
                       @endif
                       @foreach ($ageGroup as $ag)
-                        <option value="{{$ag->id}}">{{$ag->starting_age}}-{{$ag->ending_age}}</option>
+                        @if($ag->id != $data->age_group)
+                          <option value="{{$ag->id}}">{{$ag->starting_age}}-{{$ag->ending_age}}</option>
+                        @endif
                       @endforeach
                     </select>
                     <span style="color: red;">@error('age_group') {{$message}} @enderror</span>

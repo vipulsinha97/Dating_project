@@ -11,7 +11,11 @@
 			</div>
 			<div class="col-12 col-md-4 ccmenuright">
 				<div class="njshright">
-					<a href="{{URL::to('/login')}}" class="cbtnstyle1">Log in</a>
+                    @if(session('role'))
+                        <a href="{{URL::to('/logout')}}" class="cbtnstyle1">Log out</a>
+                    @else
+					    <a href="{{URL::to('/login')}}" class="cbtnstyle1">Log in</a>
+                    @endif
 					<a href="{{URL::to('/signup')}}" class="cbtnstyle2">Sign up</a>
 				</div>
 			</div>

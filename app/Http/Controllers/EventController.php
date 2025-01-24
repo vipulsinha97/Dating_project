@@ -57,9 +57,13 @@ class EventController extends Controller
         }
 
         // Store event
-        $storeEvent = $this->EventServices->editEvent($data, $fileName);
+        if(!empty($fileName)) {
+            $storeEvent = $this->EventServices->editEvent($data, $fileName);
+        }
+        else {
+            $storeEvent = $this->EventServices->editEvent($data);
+        }
         if ($storeEvent === true) {
-
             return redirect('/admin/dashboard/event')->with('success', 'Event Edited');
         }
     }

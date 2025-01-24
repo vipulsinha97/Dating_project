@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Models\User;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Session;
 
 class loginController extends Controller
 {
@@ -33,8 +34,10 @@ class loginController extends Controller
                     // Check user's role and redirect accordingly
                     if 
                     ($user->role === 'admin') {
+                        Session::put('role', 'admin');
                         return redirect()->intended('/admin/dashboard');
                     } elseif ($user->role === 'user') {
+                        Session::put('role', 'user');
                         return redirect()->intended('/user/dashboard');
                     }
                 }
@@ -52,7 +55,7 @@ class loginController extends Controller
         $request->session()->invalidate();
         $request->session()->regenerateToken();
 
-        return response()->json(['message' => 'Session destroyed.']);
+        return redirect('/');
     }
 
 }
