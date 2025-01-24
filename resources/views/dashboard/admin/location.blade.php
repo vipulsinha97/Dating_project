@@ -216,6 +216,7 @@
                             <tr>
                                 <th>S.NO</th>
                                 <th>Location Name</th>
+                                <th>Location Feature Image</th>
                                 <th>Action</th>
 
                             </tr>
@@ -228,6 +229,7 @@
                             <tr>
                                 <td>@php echo $i++; @endphp</td>
                                 <td>{{$location->location_name}}</td>
+                                <td>{{$location->location_image}}</td>
                                 <td>
                                   <a href="{{ URL::to('/admin/dashboard/edit-location/') }}/{{$location->id}}" class="btn btn-primary">Edit</a>
                                   <a href="{{ URL::to('/admin/dashboard/delete-location/') }}/{{$location->id}}" class="btn btn-danger">Delete</a>
