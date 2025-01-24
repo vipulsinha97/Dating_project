@@ -229,7 +229,7 @@
                             <tr>
                                 <td>@php echo $i++; @endphp</td>
                                 <td>{{$location->location_name}}</td>
-                                <td>{{$location->location_image}}</td>
+                                <td>@if(!empty($location->location_image))<a href="{{ asset('storage/app/public/uploads/location_feature_image/' . $location->location_image) }}" target="_blank">{{$location->location_image}}</a>@endif</td>
                                 <td>
                                   <a href="{{ URL::to('/admin/dashboard/edit-location/') }}/{{$location->id}}" class="btn btn-primary">Edit</a>
                                   <a href="{{ URL::to('/admin/dashboard/delete-location/') }}/{{$location->id}}" class="btn btn-danger">Delete</a>
