@@ -8,6 +8,9 @@
     <link rel="stylesheet" type="text/css" href="{{asset('assets/css/slick.css')}}" />
     <link rel="stylesheet" type="text/css" href="{{asset('assets/css/slick-theme.css')}}" />
 
+    <!-- Owl Carousel CSS -->
+    <link rel="stylesheet" href="{{asset('assets/css/owl.carousel.min.css')}}">
+    <link rel="stylesheet" href="{{asset('assets/css/owl.theme.default.min.css')}}">
 
     <style>
         .home_slider {
@@ -80,6 +83,34 @@
         .slick-next:before {
             content: "";
         }
+
+        .owl-carousel .item {
+            position: relative;
+            height: 300px;
+            background-size: cover;
+            background-position: center;
+        }
+
+        .owl-carousel .item .button {
+            position: absolute;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            padding: 10px 20px;
+            background-color: rgba(0, 0, 0, 0.6);
+            color: white;
+            border: none;
+            font-size: 16px;
+            cursor: pointer;
+            z-index: 10;
+        }
+        .owl-carousel .owl-item img {
+    display: block;
+    width: auto;
+}
+.owl-theme .owl-nav [class*=owl-]:hover {
+    background: transparent;
+}
     </style>
 </head>
 
@@ -137,7 +168,7 @@
                 <ul class="list">
                     <li><b>Verified Corporate Members Only:</b> Looking to connect with people who understand your professional lifestyle? Our multi-verification process (Fb + LinkedIn+ Phone screening) ensures only serious, like-minded individuals join for serious relationship.</li>
                     <li><b>No Random Messages or Public Profiles:</b> No more putting your profile out there for random strangers on dating apps and say goodbye to random matrimonial messages. NJS is designed for private, curated connections, not public swiping.</li>
-                    <li><b>Save Time with Curated Blind Dates:</b> Meet 5 premium matches in one engaging event. No swiping or chatting for weeks—just real chemistry, discovered instantly.</li>                    
+                    <li><b>Save Time with Curated Blind Dates:</b> Meet 5 premium matches in one engaging event. No swiping or chatting for weeks—just real chemistry, discovered instantly.</li>
                 </ul>
             </div>
             <div class="outerbarr">
@@ -153,79 +184,44 @@
             <div class="container-fluid py-5">
                 <h2 class="align-center mt-4 mb-4">NotJustSwipe Dating <br>events near me</h2>
                 <p class="p-desc mb-5">Register for events closest to your city. More cities will be added soon.</p>
-                <div id="cardCarousel" class="carousel slide my-5" data-ride="carousel" data-interval="3000" data-pause="hover">
+                <!-- Owl car START -->
+                <div class="carousel slide my-5">
+                    <!-- Owl Carousel for Homepage -->
                     <div class="carousel-inner">
-                        <div class="carousel-item active">
-                            <div class="row">
-                                <div class="col-md-4">
-                                    <div class="card">
-                                        <img src="{{asset('assets/images/punjab.png')}}" class="card-img-top" alt="...">
-                                        <div class="card-body card-img-overlayed">
-                                            <h5 class="card-title">Chandigarh</h5>
-                                            <a href="#" class="btn btn-primary0 event-btn">Book Event <img src="{{asset('assets/images/arrow-diag.svg')}}" /></a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-4">
-                                    <div class="card">
-                                        <img src="{{asset('assets/images/bangalore.png')}}" class="card-img-top" alt="...">
-                                        <div class="card-body card-img-overlayed">
-                                            <h5 class="card-title">Banglore</h5>
-                                            <a href="#" class="btn btn-primary0 event-btn">Book Event <img src="{{asset('assets/images/arrow-diag.svg')}}" /></a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-4">
-                                    <div class="card">
-                                        <img src="{{asset('assets/images/mumbai.png')}}" class="card-img-top" alt="...">
-                                        <div class="card-body card-img-overlayed">
-                                            <h5 class="card-title">Mumbai</h5>
-                                            <a href="#" class="btn btn-primary0 event-btn">Book Event <img src="{{asset('assets/images/arrow-diag.svg')}}" /></a>
-                                        </div>
-                                    </div>
+                        <div class="owl-carousel owl-theme" id="location-slider">
+                            <div class="card post-slide0 ">
+                                <img src="{{asset('assets/images/mumbai.png')}}" class="card-img-top" alt="...">
+                                <div class="card-body card-img-overlayed">
+                                    <h5 class="card-title">Mumbai</h5>
+                                    <a href="#" class="btn btn-primary0 event-btn">Book Event <img src="{{asset('assets/images/arrow-diag.svg')}}" /></a>
                                 </div>
                             </div>
-                        </div>
-                        <div class="carousel-item">
-                            <div class="row">
-                                <div class="col-md-4">
-                                    <div class="card">
-                                        <img src="{{asset('assets/images/delhi.png')}}" class="card-img-top" alt="...">
-                                        <div class="card-body card-img-overlayed">
-                                            <h5 class="card-title">Delhi</h5>
-                                            <a href="#" class="btn btn-primary0 event-btn">Book Event <img src="{{asset('assets/images/arrow-diag.svg')}}" /></a>
-                                        </div>
-                                    </div>
+
+                            <div class="card post-slide0">
+                                <img src="{{asset('assets/images/mumbai.png')}}" class="card-img-top" alt="...">
+                                <div class="card-body card-img-overlayed">
+                                    <h5 class="card-title">Delhi</h5>
+                                    <a href="#" class="btn btn-primary0 event-btn">Book Event <img src="{{asset('assets/images/arrow-diag.svg')}}" /></a>
                                 </div>
-                                <div class="col-md-4">
-                                    <div class="card">
-                                        <img src="{{asset('assets/images/kalkata.png')}}" class="card-img-top" alt="...">
-                                        <div class="card-body card-img-overlayed">
-                                            <h5 class="card-title">Kolkata</h5>
-                                            <a href="#" class="btn btn-primary0 event-btn">Book Event <img src="{{asset('assets/images/arrow-diag.svg')}}" /></a>
-                                        </div>
-                                    </div>
+                            </div>
+
+                            <div class="card post-slide0">
+                                <img src="{{asset('assets/images/mumbai.png')}}" class="card-img-top" alt="...">
+                                <div class="card-body card-img-overlayed">
+                                    <h5 class="card-title">punjab</h5>
+                                    <a href="#" class="btn btn-primary0 event-btn">Book Event <img src="{{asset('assets/images/arrow-diag.svg')}}" /></a>
                                 </div>
-                                <div class="col-md-4">
-                                    <div class="card">
-                                        <img src="{{asset('assets/images/punjab.png')}}" class="card-img-top" alt="...">
-                                        <div class="card-body card-img-overlayed">
-                                            <h5 class="card-title">Punjab</h5>
-                                            <a href="#" class="btn btn-primary0 event-btn">Book Event <img src="{{asset('assets/images/arrow-diag.svg')}}" /></a>
-                                        </div>
-                                    </div>
+                            </div>
+
+                            <div class="card post-slide0">
+                                <img src="{{asset('assets/images/mumbai.png')}}" class="card-img-top" alt="...">
+                                <div class="card-body card-img-overlayed">
+                                    <h5 class="card-title">Banglore</h5>
+                                    <a href="#" class="btn btn-primary0 event-btn">Book Event <img src="{{asset('assets/images/arrow-diag.svg')}}" /></a>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <button class="carousel-control-prev" type="button" data-bs-target="#cardCarousel" data-bs-slide="prev">
-                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                        <span class="visually-hidden">Previous</span>
-                    </button>
-                    <button class="carousel-control-next" type="button" data-bs-target="#cardCarousel" data-bs-slide="next">
-                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                        <span class="visually-hidden">Next</span>
-                    </button>
                 </div>
             </div>
         </section>
@@ -323,7 +319,7 @@
                                 <p>"NotJustSwipe took my dating experience to the next level! Instead of endless swiping, I got to meet genuine, like-minded individuals in a fun and exciting way. The carefully curated profiles, secure platform, and unique virtual speed dating events made every interaction meaningful."</p>
                             </div>
                         </div>
-                         <div class="carousel-item" data-bs-interval="2000">
+                        <div class="carousel-item" data-bs-interval="2000">
                             <img src="{{asset('assets/images/testi-1.png')}}" class="d-block w-30 testi-img" alt="...">
                             <div class="carousel-caption d-none d-md-block">
                                 <div class="image-quote"> <img src="{{asset('assets/images/carbon_quotes.svg')}}" /></div>
@@ -332,8 +328,8 @@
                                 <p class="starrating"><img src="{{asset('assets/images/stars.svg')}}" alt="" /></p>
                                 <p>"NotJustSwipe took my dating experience to the next level! Instead of endless swiping, I got to meet genuine, like-minded individuals in a fun and exciting way. The carefully curated profiles, secure platform, and unique virtual speed dating events made every interaction meaningful."</p>
                             </div>
-                        </div> 
-                         <!-- <div class="carousel-item">
+                        </div>
+                        <!-- <div class="carousel-item">
                             <img src="{{asset('assets/images/testi-1.png')}}" class="d-block w-30 testi-img" alt="...">
                             <div class="carousel-caption d-none d-md-block">
                                 <div class="image-quote"> <img src="{{asset('assets/images/carbon_quotes.svg')}}" /></div>
@@ -445,90 +441,125 @@
     @include("includes/bottom")
     <!-- jQuery and Slick JS -->
     <script type="text/javascript" src="{{asset('assets/js/slick.min.js')}}"></script>
-
-
-    <script>
+    <!-- Owl Carousel JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <!-- <script>
         $(document).ready(function() {
             $('#cardCarousel').carousel({
                 interval: 3000,
                 pause: 'hover'
             });
         });
+    </script> -->
+
+    <script>
+        $(document).ready(function() {
+            var $slider = $('.home_slider');
+
+            // Initialize the slick slider
+            $slider.slick({
+                centerMode: true, // Enable center mode
+                centerPadding: '60px', // Padding around the center slide
+                slidesToShow: 3, // Show 3 slides at a time
+                arrows: true, // Enable arrows
+                autoplay: false, // Autoplay the slides
+                autoplaySpeed: 2000, // Autoplay speed in milliseconds
+                speed: 500, // Smooth slide transition speed
+                responsive: [{
+                        breakpoint: 768, // For screens <= 768px
+                        settings: {
+                            arrows: true, // Enable arrows on smaller screens
+                            centerMode: true,
+                            centerPadding: '40px', // Reduce padding for smaller screens
+                            slidesToShow: 3 // Show 3 slides on smaller screens
+                        }
+                    },
+                    {
+                        breakpoint: 480, // For screens <= 480px
+                        settings: {
+                            arrows: true, // Enable arrows on very small screens
+                            centerMode: true,
+                            centerPadding: '40px', // Reduce padding
+                            slidesToShow: 1 // Show 1 slide on very small screens
+                        }
+                    }
+                ]
+            });
+
+            // Hide the previous arrow by default
+            $('.slick-prev').hide();
+
+            // Hide arrows when at the first or last slide
+            $slider.on('beforeChange', function(event, slick, currentSlide, nextSlide) {
+                // Check if we are at the first slide
+                if (nextSlide === 0) {
+                    $('.slick-prev').hide(); // Hide the 'previous' arrow
+                } else {
+                    $('.slick-prev').show(); // Show the 'previous' arrow
+                }
+
+                // Check if we are at the last slide
+                if (nextSlide === slick.slideCount - 2) {
+                    $('.slick-next').hide(); // Hide the 'next' arrow
+                } else {
+                    $('.slick-next').show(); // Show the 'next' arrow
+                }
+            });
+
+            // Initialize by hiding the previous arrow if on the first slide
+            $slider.on('init', function(event, slick) {
+                if (slick.currentSlide === 0) {
+                    $('.slick-prev').hide(); // Hide the 'previous' arrow on the first slide
+                } else {
+                    $('.slick-prev').show(); // Show the 'previous' arrow if not on the first slide
+                }
+
+                // Ensure the next arrow visibility is set correctly
+                if (slick.currentSlide === slick.slideCount - 1) {
+                    $('.slick-next').hide(); // Hide the 'next' arrow on the last slide
+                } else {
+                    $('.slick-next').show(); // Show the 'next' arrow if not on the last slide
+                }
+            });
+        });
     </script>
 
-<script>
-$(document).ready(function() {
-    var $slider = $('.home_slider');
+    <script>
+        $(document).ready(function() {
+            $("#location-slider").owlCarousel({
+            items: 3,
+                responsive: {
+                    0: {
+                        items: 1 // 1 item on screens smaller than 768px
+                    },
+                    768: {
+                        items: 2 // 2 items on screens from 768px to 979px
+                    },
+                    980: {
+                        items: 3 // 3 items on screens from 980px to 1199px
+                    },
+                    1200: {
+                        items: 3 // 3 items on screens larger than 1199px
+                    }
+                },
+                navigation: true,
+                nav: true,
+                margin: 20,
+                navigationText: ["Next", "Prev"],
+                // navText: ["‹", "›"],
+                navText: [
+                    '<img src="{{ asset('assets/images/a1.svg') }}" alt="Previous" style="width: 30px; height: 30px;">',
+                    '<img src="{{ asset('assets/images/a2.svg') }}" alt="Next" style="width: 30px; height: 30px;">'
+                ], 
+                pagination: true,
+                loop: false,
+                dots: false,
+                autoPlay: true
+            });
+        });
 
-    // Initialize the slick slider
-    $slider.slick({
-        centerMode: true, // Enable center mode
-        centerPadding: '60px', // Padding around the center slide
-        slidesToShow: 3, // Show 3 slides at a time
-        arrows: true, // Enable arrows
-        autoplay: false, // Autoplay the slides
-        autoplaySpeed: 2000, // Autoplay speed in milliseconds
-        speed: 500, // Smooth slide transition speed
-        responsive: [{
-                breakpoint: 768, // For screens <= 768px
-                settings: {
-                    arrows: true, // Enable arrows on smaller screens
-                    centerMode: true,
-                    centerPadding: '40px', // Reduce padding for smaller screens
-                    slidesToShow: 3 // Show 3 slides on smaller screens
-                }
-            },
-            {
-                breakpoint: 480, // For screens <= 480px
-                settings: {
-                    arrows: true, // Enable arrows on very small screens
-                    centerMode: true,
-                    centerPadding: '40px', // Reduce padding
-                    slidesToShow: 1 // Show 1 slide on very small screens
-                }
-            }
-        ]
-    });
-
-    // Hide the previous arrow by default
-    $('.slick-prev').hide();
-
-    // Hide arrows when at the first or last slide
-    $slider.on('beforeChange', function(event, slick, currentSlide, nextSlide) {
-        // Check if we are at the first slide
-        if (nextSlide === 0) {
-            $('.slick-prev').hide(); // Hide the 'previous' arrow
-        } else {
-            $('.slick-prev').show(); // Show the 'previous' arrow
-        }
-
-        // Check if we are at the last slide
-        if (nextSlide === slick.slideCount - 2) {
-            $('.slick-next').hide(); // Hide the 'next' arrow
-        } else {
-            $('.slick-next').show(); // Show the 'next' arrow
-        }
-    });
-
-    // Initialize by hiding the previous arrow if on the first slide
-    $slider.on('init', function(event, slick) {
-        if (slick.currentSlide === 0) {
-            $('.slick-prev').hide(); // Hide the 'previous' arrow on the first slide
-        } else {
-            $('.slick-prev').show(); // Show the 'previous' arrow if not on the first slide
-        }
-
-        // Ensure the next arrow visibility is set correctly
-        if (slick.currentSlide === slick.slideCount - 1) {
-            $('.slick-next').hide(); // Hide the 'next' arrow on the last slide
-        } else {
-            $('.slick-next').show(); // Show the 'next' arrow if not on the last slide
-        }
-    });
-});
-
-
-</script>
+        
+    </script>
 </body>
 
 
