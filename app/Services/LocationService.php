@@ -10,21 +10,21 @@ use Illuminate\Support\Facades\Hash;
 class LocationService {
     
     // Adding New Event
-    public function storeLocation($data) {
+    public function storeLocation($data, $fileName) {
         $location = new Location;
         $location->location_name = $data['location'];
-        $location->location_image = $data['image'];
+        $location->location_image = $fileName;
         $location->is_delete = '0';
         return $location->save();
     }
 
     // Edit Event
-    public function editLocation($data) {
+    public function editLocation($data, $fileName=Null) {
         $location = Location::where('id', $data['id'])->first();
         $location->location_name = $data['location'];
-        if(!empty($data['image']))
+        if(!empty($fileName))
         {
-            $location->location_image = $data['image'];
+            $location->location_image = $fileName;
         }
         $location->is_delete = '0';
 
