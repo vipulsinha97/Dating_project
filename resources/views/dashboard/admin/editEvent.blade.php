@@ -260,6 +260,13 @@ $sidebarMenu = 'Add Event';
                 </div>
 
                 <div class="form-group row">
+                  <label for="inputtitle" class="col-sm-2 col-form-label">Featured Image</label>
+                  <div class="col-sm-10">
+                    <a href="{{ asset('storage/app/public/uploads/event_feature_image/' . $data->featured_image) }}">{{$data->featured_image}}</a>
+                  </div>
+                </div>
+
+                <div class="form-group row">
                   <label for="inputtitle" class="col-sm-2 col-form-label">Title</label>
                   <div class="col-sm-10">
                     <input type="text" class="form-control" name="title" value="{{ $data->title }}" id="inputtitle" placeholder="Event title">
