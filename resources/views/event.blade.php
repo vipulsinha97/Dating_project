@@ -100,7 +100,7 @@
                 
                         @if(!empty($ageGroup) && !empty($event))
                             @foreach ($ageGroup as $group)
-                                @if($group->location_name == $currentLocation->location_name)
+                                @if(isset($group->location_name, $currentLocation->location_name) && $group->location_name == $currentLocation->location_name)
                                 <!-- Age Group: (25-30) START -->
                                 <div class="row">
                                     <div class="col-md-12">
