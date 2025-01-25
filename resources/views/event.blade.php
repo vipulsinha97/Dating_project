@@ -31,47 +31,6 @@
             </div>
         </section>
 
-        <section class="events-main mt-5 mb-5">
-            <div class="container-fluid py-5">
-                <!-- <div class="row">
-                    <div class="col-md-6">
-                        <h3>Mumbai Events:</h3>
-                    </div>
-                    <div class="col-md-6 align-right"><span class="seeall">See All</span>
-                        <span class="city-drpdwn dropdown">
-                            <button type="button" class="btn btn-citydrpdwn dropdown-toggle" data-bs-toggle="dropdown">
-                                Cities
-                            </button>
-                            <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="#">Link 1</a></li>
-                                <li><a class="dropdown-item" href="#">Link 2</a></li>
-                                <li><a class="dropdown-item" href="#">Link 3</a></li>
-                            </ul>
-                        </span>
-                    </div>
-                </div> -->
-                <!-- <div class="row">
-                    <div class="col-md-6">
-                        <h3 id="city-heading">Mumbai Events:</h3>
-                    </div>
-                    <div class="col-md-6 align-right mob-center">
-                        <span class="city-drpdwn dropdown">
-                            <button type="button" class="btn btn-citydrpdwn dropdown-toggle" data-bs-toggle="dropdown">
-                                See All Cities
-                            </button>
-                            <ul class="dropdown-menu" id="city-dropdown">
-                                <li><a class="dropdown-item" href="javascript:;" onclick="changeHeading('Mumbai')">Mumbai</a></li>
-                                <li><a class="dropdown-item" href="javascript:;" onclick="changeHeading('Delhi')">Delhi</a></li>
-                                <li><a class="dropdown-item" href="javascript:;" onclick="changeHeading('Banglore')">Banglore</a></li>
-                            </ul>
-                        </span>
-                    </div>
-                </div> -->
-
-
-            </div>
-        </section>
-
         <!-- NOTE THIS IS SAMPLE Design for VIPUL-->
         <section>
             <div class="container-fluid py-5">
