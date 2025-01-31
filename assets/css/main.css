@@ -15148,6 +15148,10 @@ text-decoration: none;
 }
 /* Media Query STRAT */
 @media only screen and (max-width: 768.98px) {
+  .logo {
+    width: 100%;
+    max-width: 100%;
+}
 .container-fluid {
   padding: 0 20px;
 }
