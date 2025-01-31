@@ -1,11 +1,11 @@
 <header class="njsheader">
 	<div class="container-fluid">
 		<div class="row">
-			<div class="col-4 col-md-4 ccmenuleft">
+			<div class="col-12 col-md-4 ccmenuleft">
 				<!-- Offcanvas Menu Hamburger Button -->
 				<span><a href="javascript:;" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" aria-controls="offcanvasExample"><img src="{{asset('assets/images/menu.svg')}}" /></a></span>
 			</div>
-			<div class="col-8 col-md-4">
+			<div class="col-12 col-md-4">
 				<!-- Offcanvas Menu Hamburger Button -->
 				<span><a href="https://notjustswipe.com/"><img class="logo" src="{{asset('assets/images/logo.svg')}}" /></a></span>
 			</div>
@@ -63,7 +63,7 @@
             </a>
         </li>
         <li>
-            <a href="#" class="nav-link {{ Request::is('faq') ? 'active' : '' }}" 
+            <a href="{{ url('/') }}#faq_section" class="nav-link {{ Request::is('faq') ? 'active' : '' }}" 
                data-inactive-src="{{asset('assets/images/faqicon-blue.svg')}}" 
                data-active-src="{{asset('assets/images/faqicon-white.svg')}}">
                 <img src="{{ Request::is('faq') ? asset('assets/images/faqicon-white.svg') : asset('assets/images/faqicon-blue.svg') }}" alt="">FAQ

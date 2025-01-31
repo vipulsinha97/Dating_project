@@ -682,8 +682,8 @@ html .testimonial-main #testimonialID .carousel-caption {
   font-size: 52px;
 }
 .h2-head {
-  font-size: 52px;
-  line-height: 62px;
+  font-size: 34px;
+  line-height: 40px;
 }
 .njs-speeddate h2 {
   font-size: 52px;
@@ -733,5 +733,73 @@ html .testimonial-main #testimonialID .carousel-caption {
 }
 .security-feat .hcenter {
   margin-top: 30px;
+}
+.nutino-font {
+  font-size: 24px;
+  line-height: 30px;
+}
+.bluebg p {
+  font-size: 24px;
+  line-height: 30px;
+}
+.bluebg {
+  border-radius: 20px;
+}
+.njs-speeddate h2 {
+  font-size: 34px;
+  line-height: 40px;
+}
+.njs-speeddate .p-desc {
+  font-size: 24px;
+  line-height: 30px;
+}
+.njs-speeddate ul li {
+  font-size: 24px;
+  line-height: 30px;
+}
+.njs-speeddate ul li b {
+  font-size: 24px;
+  line-height: 30px;
+}
+.eventsnearme h2 {
+  font-size: 34px;
+  line-height: 40px;
+}
+.eventsnearme .p-desc {
+  font-size: 24px;
+  line-height: 30px;
+}
+.howitworks h2 {
+  font-size: 34px;
+  line-height: 40px;
+}
+.howitworks ul li {
+  font-size: 24px;
+  line-height: 30px;
+  margin-bottom: 1rem;
+}
+.security-feat h2 {
+  font-size: 34px;
+  line-height: 40px;
+}
+.security-feat .p-desc {
+  font-size: 24px;
+  line-height: 30px;
+}
+.testimonial-main h2 {
+  font-size: 34px;
+  line-height: 30px;
+}
+.faq-main h2 {
+  font-size: 34px;
+  line-height: 40px;
+}
+.faq-inner .accordion-button {
+  font-size: 24px !important;
+  line-height: 30px !important;
+}
+.faq-inner .accordion-body p {
+  font-size: 24px;
+  line-height: 30px;
 }
 }
