@@ -1,11 +1,11 @@
 <header class="njsheader">
 	<div class="container-fluid">
 		<div class="row">
-			<div class="col-12 col-md-4 ccmenuleft">
+			<div class="col-2 col-md-4 ccmenuleft">
 				<!-- Offcanvas Menu Hamburger Button -->
 				<span><a href="javascript:;" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" aria-controls="offcanvasExample"><img src="{{asset('assets/images/menu.svg')}}" /></a></span>
 			</div>
-			<div class="col-12 col-md-4">
+			<div class="col-10 col-md-4">
 				<!-- Offcanvas Menu Hamburger Button -->
 				<span><a href="https://notjustswipe.com/"><img class="logo" src="{{asset('assets/images/logo.svg')}}" /></a></span>
 			</div>
