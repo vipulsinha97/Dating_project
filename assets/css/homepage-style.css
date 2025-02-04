@@ -802,4 +802,27 @@ html .testimonial-main #testimonialID .carousel-caption {
   font-size: 24px;
   line-height: 30px;
 }
+.njs-speeddate .p-desc {
+  font-size: 24px;
+  line-height: 30px;
+  margin: auto 10px;
+  text-align: left;
+}
+.barcont h2 br {
+display: none;
+}
+.barcont {
+  display: block !important;
+  margin-left: 0;
+  padding: 10px !important;
+  border-radius: 0px 0px 34px 34px;
+  width: 100%;
+  max-width: 100%;
+  margin: 0 auto;
+  text-align: center;
+}
+.outerbarr {
+  justify-content: center;
+  margin: 20px;
+}
 }
