@@ -83,6 +83,24 @@
                                     </div>
                                     <lable id="message"></lable>
                                 </div>
+                                <div class="mb-4">
+                                    <div class="input-group bb-1-light">
+                                        <input type="text" class="form-control fb-link" id="fblink" name="" placeholder="Enter your Facebook Profile URL">
+                                    </div>
+                                    <div id="error-fblink" class="error-message"></div>
+                                </div>
+                                <div class="mb-4">
+                                    <div class="input-group bb-1-light">
+                                        <input type="text" class="form-control linkedin-link" id="linkedinlink" name="" placeholder="Enter your Linkedin Profile URL">
+                                    </div>
+                                    <div id="error-linkedinlink" class="error-message"></div>
+                                </div>
+                                <div class="mb-4">
+                                    <div class="input-group bb-1-light">
+                                        <input type="text" class="form-control insta-link" id="instalink" name="" placeholder="Enter your Instagram Profile URL">
+                                    </div>
+                                    <div id="error-instalink" class="error-message"></div>
+                                </div>
                                 <div class="d-flex justify-content-end">
                                     <img src="{{asset('assets/images/next-blue.svg')}}" alt="Next" class="arrow-icon" onclick="nextStep(2)">
                                 </div>
@@ -243,24 +261,7 @@
                                         <textarea id="comment" class="form-control" placeholder="Comment" aria-label="Comment" rows="2"></textarea>
                                     </div>
                                 </div>
-                                <div class="mb-4">
-                                    <div class="input-group bb-1-light">
-                                        <input type="text" class="form-control fb-link" id="fblink" name="" placeholder="Enter your Facebook Profile URL">
-                                    </div>
-                                    <div id="error-fblink" class="error-message"></div>
-                                </div>
-                                <div class="mb-4">
-                                    <div class="input-group bb-1-light">
-                                        <input type="text" class="form-control linkedin-link" id="linkedinlink" name="" placeholder="Enter your Linkedin Profile URL">
-                                    </div>
-                                    <div id="error-linkedinlink" class="error-message"></div>
-                                </div>
-                                <div class="mb-4">
-                                    <div class="input-group bb-1-light">
-                                        <input type="text" class="form-control insta-link" id="instalink" name="" placeholder="Enter your Instagram Profile URL">
-                                    </div>
-                                    <div id="error-instalink" class="error-message"></div>
-                                </div>
+
                                 <div class="d-flex justify-content-between">
                                     <img src="{{asset('assets/images/prev.svg')}}" alt="Previous" class="arrow-icon" onclick="previousStep(3)">
                                     <img src="{{asset('assets/images/next-blue.svg')}}" alt="Next" id="next" class="arrow-icon" onclick="nextStep(5)">
