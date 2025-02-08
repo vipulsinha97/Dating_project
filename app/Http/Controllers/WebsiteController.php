@@ -24,7 +24,9 @@ class WebsiteController extends Controller
             ->leftJoin('age_groups', 'age_groups.id', '=', 'events.age_group')
             ->select('events.*', 'locations.location_name', 'age_groups.starting_age', 'age_groups.ending_age')
             ->where('location', $city)
+            ->groupBy('events.id')
             ->get();
+       
         $currentLocation = Location::where('id', $city)->first();
         //Fetching all the location
         $location = Location::all();

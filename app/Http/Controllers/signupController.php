@@ -36,7 +36,12 @@ class SignupController extends Controller
         $filePaths = [];
         foreach (['image1', 'image2', 'image3'] as $image) {
             if ($request->hasFile($image)) {
-                $filePaths[$image] = $request->file($image)->store('uploads');
+                // Get the uploaded file
+                $file = $request->file('image');
+                // Generate a unique filename
+                $fileName = time() . '_' . uniqid() . '.' . $file->getClientOriginalExtension();
+                // Store the file in the 'uploads/event_feature_image' directory on the public disk
+                $filePaths[$image] = $file->storeAs('uploads/profile_pictures', $fileName, 'public');
             }
         }
 
