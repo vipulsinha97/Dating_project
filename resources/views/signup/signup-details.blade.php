@@ -25,28 +25,8 @@
                     </div>
                     <div class="col-md-8">
                         <form class="form-main" id="multiStepForm" enctype="multipart/form-data">
-                            <!-- Step 1 -->
-                            <div class="form-step" id="step1">
-                                <div class="mb-5 tifle-box">
-                                    <img class="mb-2" src="{{asset('assets/images/intr-iconpp1.svg')}}" />
-                                    <h2>Professional profiles</h2>
-                                    <p class="weensure">We ensure genuineness by verifying social and professional profiles. Connect your LinkedIn for verification.</p>
-                                </div>
-                                <div class="mt-3 mb-5 social-btns w-40">
-                                    <a href="{{ route('linkedin.login')}}" class="btn mb-4 btn-outline"><img class="cw" src="{{asset('assets/images/logos_linkdin.svg')}}" /> Connect with Linkedin</a>
-                                </div>
-                                <div class="mb-4">
-                                    <label for="comment">Don’t have LinkedIn? Leave a comment for profile assessment:</label>
-                                    <div class="input-group bb-1-light0 bbr">
-                                        <textarea id="comment" class="form-control" placeholder="Comment" aria-label="Comment" rows="2"></textarea>
-                                    </div>
-                                </div>
-                                <div class="d-flex justify-content-end">
-                                    <img src="{{asset('assets/images/next-blue.svg')}}" alt="Next" class="arrow-icon" onclick="nextStep(2)">
-                                </div>
-                            </div>
-                            <!-- Step 2 -->
-                            <div class="form-step" id="step2" style="display: none;">
+                             <!-- Step 1  -Introduce -->
+                             <div class="form-step" id="step1">
                                 <div class="mb-5 tifle-box">
                                     <img class="mb-2" src="{{asset('assets/images/intr-icon1.svg')}}" />
                                     <h2>Introduce yourself</h2>
@@ -103,33 +83,31 @@
                                     </div>
                                     <lable id="message"></lable>
                                 </div>
-                                <div class="d-flex justify-content-between">
-                                    <img src="{{asset('assets/images/prev.svg')}}" alt="Previous" class="arrow-icon" onclick="previousStep(1)">
-                                    <img src="{{asset('assets/images/next-blue.svg')}}" alt="Next" id="next" class="arrow-icon" onclick="nextStep(3)">
-                                </div>
-                            </div>
-                            <!-- Step 3  - GENDER-->
-                            <div class="form-step" id="step3" style="display: none;">
-                                <div class="mb-5 tifle-box">
-                                    <img class="mb-2" src="{{asset('assets/images/gender.svg')}}" />
-                                    <h2>Gender</h2>
+                                <div class="mb-4">
+                                    <div class="input-group bb-1-light">
+                                        <input type="text" class="form-control fb-link" id="fblink" name="" placeholder="Enter your Facebook Profile URL">
+                                    </div>
+                                    <div id="error-fblink" class="error-message"></div>
                                 </div>
                                 <div class="mb-4">
-                                    <div class="input-group bb-1-light0 radiobtn">
-                                        <input type="radio" id="male" class="gender" name="gender" value="male">
-                                        <label for="male" class="option-button">Male</label>
-                                        <input type="radio" id="female" class="gender" name="gender" value="female">
-                                        <label for="female" class="option-button">Female</label>
+                                    <div class="input-group bb-1-light">
+                                        <input type="text" class="form-control linkedin-link" id="linkedinlink" name="" placeholder="Enter your Linkedin Profile URL">
                                     </div>
-                                    <div id="error-gender" class="error-message"></div>
+                                    <div id="error-linkedinlink" class="error-message"></div>
                                 </div>
-                                <div class="d-flex justify-content-between">
-                                    <img src="{{asset('assets/images/prev.svg')}}" alt="Previous" class="arrow-icon" onclick="previousStep(2)">
-                                    <img src="{{asset('assets/images/next-blue.svg')}}" alt="Next" class="arrow-icon" onclick="nextStep(4)">
+                                <div class="mb-4">
+                                    <div class="input-group bb-1-light">
+                                        <input type="text" class="form-control insta-link" id="instalink" name="" placeholder="Enter your Instagram Profile URL">
+                                    </div>
+                                    <div id="error-instalink" class="error-message"></div>
                                 </div>
+                                <div class="d-flex justify-content-end">
+                                    <img src="{{asset('assets/images/next-blue.svg')}}" alt="Next" class="arrow-icon" onclick="nextStep(2)">
+                                </div>
+
                             </div>
-                            <!-- Step 4 - Location-->
-                            <div class="form-step" id="step4" style="display: none;">
+                             <!-- Step 2 - Location-->
+                             <div class="form-step" id="step2" style="display: none;">
                                 <div class="mb-5 tifle-box">
                                     <img class="mb-2" src="{{asset('assets/images/location.svg')}}" />
                                     <h2>Location</h2>
@@ -185,22 +163,111 @@
                                 <div class="mb-4">
                                     <label for="plocation">Which city do you live in?</label>
                                     <div class="input-group0 bb-1-light bbr0">
-                                        <input type="text" class="form-control plocation" id="plocation" name="city" placeholder="Enter your permanent location">
+                                        <input type="text" class="form-control plocation" id="plocation" name="city" placeholder="Enter your current city">
                                     </div>
                                     <div id="error-plocation" class="error-message"></div>
                                 </div>
                                 <div class="mb-4">
-                                    <label for="clocation">Where are you originally from (City / State) </label>
+                                    <label for="clocation">Where are you originally from? </label>
                                     <div class="input-group0 bb-1-light bbr0">
-                                        <input type="text" class="form-control address" id="address" name="address" placeholder="Enter your current location">
+                                        <input type="text" class="form-control address" id="address" name="address" placeholder="Enter your hometown">
                                     </div>
                                     <div id="error-address" class="error-message"></div>
                                 </div>
                                 <div class="d-flex justify-content-between">
-                                    <img src="{{asset('assets/images/prev.svg')}}" alt="Previous" class="arrow-icon" onclick="previousStep(3)">
-                                    <img src="{{asset('assets/images/next-blue.svg')}}" alt="Next" class="arrow-icon" onclick="nextStep(5)">
+                                    <img src="{{asset('assets/images/prev.svg')}}" alt="Previous" class="arrow-icon" onclick="previousStep(1)">
+                                    <img src="{{asset('assets/images/next-blue.svg')}}" alt="Next" class="arrow-icon" onclick="nextStep(3)">
                                 </div>
                             </div>
+
+
+                            <!-- Step 3 - Professional Details  -->
+                            <div class="form-step" id="step3" style="display: none;">
+                                <div class="mb-5 tifle-box">
+                                    <img class="mb-2" src="{{asset('assets/images/professional-details.svg')}}" />
+                                    <h2>Professional Details</h2>
+                                </div>
+                                <div class="mb-4">
+                                    <div class="select-container">
+                                        <select id="pd-select" class="profession" name="profession">
+                                            <optgroup class="optlabel" label="Choose Your Profession">
+                                                <option class="dnone" value="" disabled selected>Choose Your Profession</option> 
+                                                <option value="Finance">Finance</option>
+                                                <option value="Sales">Sales</option>
+                                                <option value="Marketing">Marketing</option>
+                                                <option value="Information technology">Information technology</option>
+                                                <option value="Human resources">Human resources</option>
+                                                <option value="Admin">Admin</option>
+                                                <option value="Operations">Operations</option>
+                                                <option class="more" value="">Others..</option>
+                                                <!-- Add more options as needed -->
+                                            </optgroup>
+                                        </select>
+                                    </div>
+                                    <div id="error-profession" class="error-message"></div>
+                                </div>
+                                <div class="mb-4">
+                                    <div class="input-group bb-1-light">
+                                        <input type="text" class="form-control" id="education" name="education" placeholder="Education">
+                                    </div>
+                                    <div id="error-education" class="error-message"></div>
+                                </div>
+                                <div class="mb-4">
+                                    <div class="select-container">
+                                        <select id="sal-select" class="salary" name="salary">
+                                            <optgroup class="optlabel" label="Chose Your Salary  Package">
+                                                <option class="dnone" value="" disabled selected>Salary</option>
+                                                <option value="5 lakhs - 10 lakhs">5 lakhs - 10 lakhs</option>
+                                                <option value="10 lakhs - 20 lakhs">10 lakhs - 20 lakhs</option>
+                                                <option value="20 lakhs - 30 lakhs">20 lakhs - 30 lakhs</option>
+                                                <option value="30 lakhs - 50 lakhs">30 lakhs - 50 lakhs</option>
+                                                <option value="> 50 lakhs"> > 50 lakhs </option>
+                                                <!-- Add more options as needed -->
+                                            </optgroup>
+                                        </select>
+                                    </div>
+                                    <div id="error-salary" class="error-message"></div>
+                                </div>
+                                <div class="mb-4">
+                                    <div class="input-group bb-1-light">
+                                        <input type="text" class="form-control" id="jobTitle" name="" placeholder="Job Title">
+                                    </div>
+                                    <div id="error-jobTitle" class="error-message"></div>
+                                </div>
+                                <div class="mb-4">
+                                    <div class="input-group bb-1-light">
+                                        <input type="text" class="form-control" id="companyName" name="" placeholder="Company Name">
+                                    </div>
+                                    <div id="error-companyName" class="error-message"></div>
+                                </div>
+                                <div class="d-flex justify-content-between">
+                                    <img src="{{asset('assets/images/prev.svg')}}" alt="Previous" class="arrow-icon" onclick="previousStep(2)">
+                                    <img src="{{asset('assets/images/next-blue.svg')}}" alt="Next" class="arrow-icon" onclick="nextStep(4)">
+                                </div>
+                            </div>
+                            <!-- Step 4 Profesional Profile-->
+                            <div class="form-step" id="step4" style="display: none;">
+                                <div class="mb-5 tifle-box">
+                                    <img class="mb-2" src="{{asset('assets/images/intr-iconpp1.svg')}}" />
+                                    <h2>Professional profiles</h2>
+                                    <p class="weensure">We ensure genuineness by verifying social and professional profiles. Connect your LinkedIn for verification.</p>
+                                </div>
+                                <div class="mt-3 mb-5 social-btns w-40">
+                                    <a href="{{ route('linkedin.login')}}" class="btn mb-4 btn-outline"><img class="cw" src="{{asset('assets/images/logos_linkdin.svg')}}" /> Connect with Linkedin</a>
+                                </div>
+                                <div class="mb-4">
+                                    <label for="comment">Don’t have LinkedIn? Leave a comment for profile assessment:</label>
+                                    <div class="input-group bb-1-light0 bbr">
+                                        <textarea id="comment" class="form-control" placeholder="Comment" aria-label="Comment" rows="2"></textarea>
+                                    </div>
+                                </div>
+
+                                <div class="d-flex justify-content-between">
+                                    <img src="{{asset('assets/images/prev.svg')}}" alt="Previous" class="arrow-icon" onclick="previousStep(3)">
+                                    <img src="{{asset('assets/images/next-blue.svg')}}" alt="Next" id="next" class="arrow-icon" onclick="nextStep(5)">
+                                </div>
+                            </div>
+                          
                             <!-- Step 5  Height-->
                             <div class="form-step" id="step5" style="display: none;">
                                 <div class="mb-5 tifle-box">
@@ -238,54 +305,20 @@
                                     <img src="{{asset('assets/images/next-blue.svg')}}" alt="Next" class="arrow-icon" onclick="nextStep(6)">
                                 </div>
                             </div>
-                            <!-- Step 6 - Professional Details  -->
+                            <!-- Step 6  - GENDER-->
                             <div class="form-step" id="step6" style="display: none;">
                                 <div class="mb-5 tifle-box">
-                                    <img class="mb-2" src="{{asset('assets/images/professional-details.svg')}}" />
-                                    <h2>Professional Details</h2>
+                                    <img class="mb-2" src="{{asset('assets/images/gender.svg')}}" />
+                                    <h2>Gender</h2>
                                 </div>
                                 <div class="mb-4">
-                                    <div class="select-container">
-                                        <select id="pd-select" class="profession" name="profession">
-                                            <optgroup class="optlabel" label="Choose Your Profession">
-                                                <option class="dnone" value="" disabled selected>Choose Your Profession</option> 
-                                                <option value="Finance">Finance</option>
-                                                <option value="Sales">Sales</option>
-                                                <option value="Marketing">Marketing</option>
-                                                <option value="Information technology">Information technology</option>
-                                                <option value="Human resources">Human resources</option>
-                                                <option value="Admin">Admin</option>
-                                                <option value="Operations">Operations</option>
-                                                <option class="more" value="">Others..</option>
-                                                <!-- Add more options as needed -->
-                                            </optgroup>
-                                        </select>
+                                    <div class="input-group bb-1-light0 radiobtn">
+                                        <input type="radio" id="male" class="gender" name="gender" value="male">
+                                        <label for="male" class="option-button">Male</label>
+                                        <input type="radio" id="female" class="gender" name="gender" value="female">
+                                        <label for="female" class="option-button">Female</label>
                                     </div>
-                                    <div id="error-profession" class="error-message"></div>
-                                </div>
-                                <div class="mb-4">
-                                    <div class="input-group bb-1-light">
-                                        <input type="text" class="form-control" id="education" name="education" placeholder="Education">
-                                    </div>
-                                    <div id="error-education" class="error-message"></div>
-                                </div>
-                                <div class="mb-4">
-                                    <div class="select-container">
-                                        <select id="sal-select" class="salary" name="salary">
-                                            <optgroup class="optlabel" label="Chose Your Salary  Package">
-                                                <option class="dnone" value="" disabled selected>Salary</option>
-                                                <option value="< 5 lacs"> < 5 lacs </option>
-                                                <option value="5 lacs - 10 lacs">5 lacs - 10 lacs</option>
-                                                <option value="10 lacs - 15 lacs">10 lacs - 15 lacs</option>
-                                                <option value="15 lacs - 20 lacs">15 lacs - 20 lacs</option>
-                                                <option value="20 lacs - 25 lacs">20 lacs - 25 lacs</option>
-                                                <option value="25 lacs - 50 lacs">25 lacs - 50 lacs</option>
-                                                <option value="> 50 lacs"> > 50 lacs </option>
-                                                <!-- Add more options as needed -->
-                                            </optgroup>
-                                        </select>
-                                    </div>
-                                    <div id="error-salary" class="error-message"></div>
+                                    <div id="error-gender" class="error-message"></div>
                                 </div>
                                 <div class="d-flex justify-content-between">
                                     <img src="{{asset('assets/images/prev.svg')}}" alt="Previous" class="arrow-icon" onclick="previousStep(5)">
@@ -510,10 +543,10 @@
                                 <div class="mb-4">
                                     <h4 class="redcl">Smoke</h4>
                                     <div class="input-group bb-1-light0 radiobtn">
-                                        <input type="radio" id="dmsmoke" class="preferences_smoke" name="preferences_smoke" value="dmsmoke">
-                                        <label for="dmsmoke" class="option-button">Doesn’t matter</label>
-                                        <input type="radio" id="prefrence-notok" class="preferences_smoke" name="preferences-smoke" value="prefrence-notok">
-                                        <label for="prefrence-notok" class="option-button">Not Ok</label>
+                                        <input type="radio" id="partnersmoke-doesnotmatter" class="preferences_smoke" name="partnersmoke_smokeornot" value="partnersmoke-doesnotmatter">
+                                        <label for="partnersmoke-doesnotmatter" class="option-button">Doesn’t matter</label>
+                                        <input type="radio" id="partnersmoke-notok" class="preferences_smoke" name="partnersmoke_smokeornot" value="partnersmoke-notok">
+                                        <label for="partnersmoke-notok" class="option-button">Not Ok</label>
                                     </div>
                                     <div id="error-preferences_smoke" class="error-message"></div>
                                 </div>
