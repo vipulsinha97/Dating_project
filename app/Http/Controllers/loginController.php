@@ -26,6 +26,8 @@ class loginController extends Controller
             ]);
 
             $user = User::where('email', $requestData['email'])->first();
+            
+            $img = json_decode($user->picture);
 
             if ($user && Hash::check($requestData['password'], $user->password)) {
                 if($user->status === 'activate') {    
@@ -35,9 +37,13 @@ class loginController extends Controller
                     if 
                     ($user->role === 'admin') {
                         Session::put('role', 'admin');
+                        Session::put('name', $user->first_name);
+                        Session::put('profile_pic', $img->image1);
                         return redirect()->intended('/admin/dashboard');
                     } elseif ($user->role === 'user') {
                         Session::put('role', 'user');
+                        Session::put('name', $user->first_name);
+                        Session::put('profile_pic', $img->image1);
                         return redirect()->intended('/user/dashboard');
                     }
                 }

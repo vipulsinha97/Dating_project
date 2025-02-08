@@ -27,10 +27,20 @@
 	<div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
 		<div class="offcanvas-header">
 			<div class="profile-avtar">
-				<span><img src="{{asset('assets/images/profile-avtar.svg')}}" /></span>
-				<span>
-					<h5>REHINA D.</h5>
+                @if(!empty(session('profile_pic')))
+                <span><img src="{{ asset('storage/app/public/uploads/profile_pictures') }}/{{session('profile_pic')}}" /></span>
+                @else
+                <span><img src="{{asset('assets/images/profile-avtar.svg')}}" /></span>
+				@endif
+                @if(!empty(session('profile_pic')))
+                <span>
+					<h5>{{session('name')}}</h5>
 				</span>
+                @else
+                <span>
+					<h5>{{session('name')}}</h5>
+				</span>
+				@endif
 			</div>
 			<!-- <div class="logout-main">
 				<button type="button" class="btn btn-primary0 cbtnstyle-logout">
