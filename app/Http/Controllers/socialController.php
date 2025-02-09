@@ -21,14 +21,12 @@ class socialController extends Controller
     {
         //finding user data using facebook login
         $user = Socialite::driver('facebook')->stateless()->user();
-        dd($user);
         $user_email = $user->email;
         
         //Finding data in our database
         $existingUser = User::where('email', $user_email)->first();
 
-        if(!empty($existingUser)) {
-            
+        if (!empty($existingUser)) {            
             Auth::login($existingUser);
             return redirect('/user/dashboard');
         }
