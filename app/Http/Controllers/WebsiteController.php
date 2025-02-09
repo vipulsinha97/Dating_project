@@ -24,7 +24,7 @@ class WebsiteController extends Controller
             ->leftJoin('age_groups', 'age_groups.id', '=', 'events.age_group')
             ->select('events.*', 'locations.location_name', 'age_groups.starting_age', 'age_groups.ending_age')
             ->where('location', $city)
-            ->groupBy('events.id')
+            ->distinct()
             ->get();
        
         $currentLocation = Location::where('id', $city)->first();
@@ -35,6 +35,7 @@ class WebsiteController extends Controller
         $ageGroup = Age_group::join('events', 'events.age_group', '=', 'age_groups.id')
         ->leftJoin('locations', 'locations.id', '=', 'events.location')
         ->select('age_groups.starting_age', 'age_groups.ending_age', 'locations.location_name', 'events.age_group')
+        ->distinct()
         ->get();
         return view('event', ['event'=>$event, 'location'=>$location, 'ageGroup'=>$ageGroup, 'currentLocation'=>$currentLocation]);
     }

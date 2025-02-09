@@ -39,6 +39,12 @@ class RegistrationServices {
         $user->preferable_time = $data['preferable_time'];
         $user->preferable_date = $data['preferable_date'];
         $user->picture = $picture;
+        $user->linkedin_profile = $data['linkedin_profile'];
+        $user->facebook_profile = $data['facebook_profile'];
+        $user->instagram_profile = $data['instagram_profile'];
+        $user->companyName = $data['companyName'];
+        $user->jobTitle = $data['jobTitle'];
+        $user->comment = $data['comment'];
 
         if(Session::has('facebook_token')) {
             $user->facebook_token = Session::get('facebook_token');

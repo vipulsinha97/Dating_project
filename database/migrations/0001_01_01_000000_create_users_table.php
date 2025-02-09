@@ -42,6 +42,12 @@ return new class extends Migration
             $table->text('facebook_token')->nullable();
             $table->text('instagram_token')->nullable();
             $table->text('linkedIn_token')->nullable();
+            $table->text('linkedIn_profile')->nullable();
+            $table->text('facebook_profile')->nullable();
+            $table->text('instagram_profile')->nullable();
+            $table->text('jobTitle')->nullable();
+            $table->text('companyName')->nullable();
+            $table->text('comment')->nullable();
             $table->rememberToken();
             $table->timestamps();
         });

@@ -204,7 +204,19 @@
                       <th>CITY</th>
                       <th>EDUCATION</th>
                       <th>PROFESSION</th>
+                      <th>JOB TITLE</th>
+                      <th>COMPANY NAME</th>
                       <th>SALARY</th>
+                      <th>HEIGHT</th>
+                      <th>DRINK</th>
+                      <th>SMOKE</th>
+                      <th>RELATIONSHIP STATUS</th>
+                      <th>CHILDREN</th>
+                      <th>RELIGION</th>
+                      <th>PROFILE PICTURE</th>
+                      <th>LINKDIN PROFILE</th>
+                      <th>FACEBOOK PROFILE</th>
+                      <th>INSTAGRAM PROFILE</th>
                     </tr>
                   </thead>
                   <tbody>
@@ -212,6 +224,9 @@
                         $i=1;
                     @endphp
                     @foreach ($users as $users)
+                    @php
+                    $img = json_decode($users->picture);
+                    @endphp
                     <tr>
                         <td>@php echo $i++; @endphp</td>
                         <td>{{$users->first_name}}</td>
@@ -224,7 +239,19 @@
                         <td>{{$users->city}}</td>
                         <td>{{$users->education}}</td>
                         <td>{{$users->profession}}</td>
+                        <td>{{$users->jobTitle}}</td>
+                        <td>{{$users->companyName}}</td>
                         <td>{{$users->salary}}</td>
+                        <td>{{$users->height}}</td>
+                        <td>{{$users->drink}}</td>
+                        <td>{{$users->smoke}}</td>
+                        <td>{{$users->relationship_status}}</td>
+                        <td>{{$users->children}}</td>
+                        <td>{{$users->religion}}</td>
+                        <td><a href="{{ asset('storage/app/public/uploads/profile_pictures') }}/{{$img->image1}}" target="_blank">Profile Picture</a></td>
+                        <td>{{$users->linkedIn_profile}}</td>
+                        <td>{{$users->facebook_profile}}</td>
+                        <td>{{$users->instagram_profile}}</td>
                     </tr>    
                     @endforeach
                   </tbody>
