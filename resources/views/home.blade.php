@@ -189,37 +189,15 @@
                     <!-- Owl Carousel for Homepage -->
                     <div class="carousel-inner">
                         <div class="owl-carousel owl-theme" id="location-slider">
+                            @foreach($location as $loc)
                             <div class="card post-slide0 ">
-                                <img src="{{asset('assets/images/mumbai.png')}}" class="card-img-top" alt="...">
+                                <img src="{{ asset('storage/app/public/uploads/location_feature_image/' . $location->location_image) }}{{asset('assets/images/mumbai.png')}}" class="card-img-top" alt="...">
                                 <div class="card-body card-img-overlayed">
-                                    <h5 class="card-title">Mumbai</h5>
+                                    <h5 class="card-title">{{$loc->location_name}}</h5>
                                     <a href="#" class="btn btn-primary0 event-btn">Book Event <img src="{{asset('assets/images/arrow-diag.svg')}}" /></a>
                                 </div>
                             </div>
-
-                            <div class="card post-slide0">
-                                <img src="{{asset('assets/images/mumbai.png')}}" class="card-img-top" alt="...">
-                                <div class="card-body card-img-overlayed">
-                                    <h5 class="card-title">Delhi</h5>
-                                    <a href="#" class="btn btn-primary0 event-btn">Book Event <img src="{{asset('assets/images/arrow-diag.svg')}}" /></a>
-                                </div>
-                            </div>
-
-                            <div class="card post-slide0">
-                                <img src="{{asset('assets/images/mumbai.png')}}" class="card-img-top" alt="...">
-                                <div class="card-body card-img-overlayed">
-                                    <h5 class="card-title">punjab</h5>
-                                    <a href="#" class="btn btn-primary0 event-btn">Book Event <img src="{{asset('assets/images/arrow-diag.svg')}}" /></a>
-                                </div>
-                            </div>
-
-                            <div class="card post-slide0">
-                                <img src="{{asset('assets/images/mumbai.png')}}" class="card-img-top" alt="...">
-                                <div class="card-body card-img-overlayed">
-                                    <h5 class="card-title">Banglore</h5>
-                                    <a href="#" class="btn btn-primary0 event-btn">Book Event <img src="{{asset('assets/images/arrow-diag.svg')}}" /></a>
-                                </div>
-                            </div>
+                            @endforeach
                         </div>
                     </div>
                 </div>

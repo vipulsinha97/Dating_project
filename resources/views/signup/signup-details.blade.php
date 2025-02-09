@@ -85,21 +85,21 @@
                                 </div>
                                 <div class="mb-4">
                                     <div class="input-group bb-1-light">
-                                        <input type="text" class="form-control fb-link" id="fblink" name="" placeholder="Enter your Facebook Profile URL">
+                                        <input type="text" class="form-control fb-link" id="fblink" name="facebook_profile" placeholder="Enter your Facebook Profile URL">
                                     </div>
-                                    <div id="error-fblink" class="error-message"></div>
+                                    <div id="error-facebook_profile" class="error-message"></div>
                                 </div>
                                 <div class="mb-4">
                                     <div class="input-group bb-1-light">
-                                        <input type="text" class="form-control linkedin-link" id="linkedinlink" name="" placeholder="Enter your Linkedin Profile URL">
+                                        <input type="text" class="form-control linkedin-link" id="linkedinlink" name="linkedin_profile" placeholder="Enter your Linkedin Profile URL">
                                     </div>
-                                    <div id="error-linkedinlink" class="error-message"></div>
+                                    <div id="error-linkedin_profile" class="error-message"></div>
                                 </div>
                                 <div class="mb-4">
                                     <div class="input-group bb-1-light">
-                                        <input type="text" class="form-control insta-link" id="instalink" name="" placeholder="Enter your Instagram Profile URL">
+                                        <input type="text" class="form-control insta-link" id="instalink" name="instagram_profile" placeholder="Enter your Instagram Profile URL">
                                     </div>
-                                    <div id="error-instalink" class="error-message"></div>
+                                    <div id="error-instagram_profile" class="error-message"></div>
                                 </div>
                                 <div class="d-flex justify-content-end">
                                     <img src="{{asset('assets/images/next-blue.svg')}}" alt="Next" class="arrow-icon" onclick="nextStep(2)">
@@ -165,7 +165,7 @@
                                     <div class="input-group0 bb-1-light bbr0">
                                         <input type="text" class="form-control plocation" id="plocation" name="city" placeholder="Enter your current city">
                                     </div>
-                                    <div id="error-plocation" class="error-message"></div>
+                                    <div id="error-city" class="error-message"></div>
                                 </div>
                                 <div class="mb-4">
                                     <label for="clocation">Where are you originally from? </label>
@@ -230,13 +230,13 @@
                                 </div>
                                 <div class="mb-4">
                                     <div class="input-group bb-1-light">
-                                        <input type="text" class="form-control" id="jobTitle" name="" placeholder="Job Title">
+                                        <input type="text" class="form-control" id="jobTitle" name="jobTitle" placeholder="Job Title">
                                     </div>
                                     <div id="error-jobTitle" class="error-message"></div>
                                 </div>
                                 <div class="mb-4">
                                     <div class="input-group bb-1-light">
-                                        <input type="text" class="form-control" id="companyName" name="" placeholder="Company Name">
+                                        <input type="text" class="form-control" id="companyName" name="companyName" placeholder="Company Name">
                                     </div>
                                     <div id="error-companyName" class="error-message"></div>
                                 </div>
@@ -258,7 +258,7 @@
                                 <div class="mb-4">
                                     <label for="comment">Don’t have LinkedIn? Leave a comment for profile assessment:</label>
                                     <div class="input-group bb-1-light0 bbr">
-                                        <textarea id="comment" class="form-control" placeholder="Comment" aria-label="Comment" rows="2"></textarea>
+                                        <textarea id="comment" class="form-control" name="comment" placeholder="Comment" aria-label="Comment" rows="2"></textarea>
                                     </div>
                                 </div>
 
@@ -520,6 +520,7 @@
                                             </div>
                                         </div>
                                     </div>
+                                    
                                 </div>
                                 <div class="mb-4">
                                     <h4 class="redcl">Note</h4>
@@ -741,6 +742,10 @@
             showStep(step);
         }
 
+        $('.image1, .image2, .image3').on('change', function () {
+    console.log(this.id, this.files[0]);
+});
+
        // Preview upload File
         document.addEventListener('DOMContentLoaded', () => {
             const fileInputs = [{
@@ -790,115 +795,125 @@
         });
         //form action
         $('#submitRegistration').click(function(e) {
-    e.preventDefault();  // Prevent default form submission behavior
+            e.preventDefault();  // Prevent default form submission behavior
 
-    // Collect form data
-    var comment = $('#comment').val();
-    var firstName = $('.firstName').val();
-    var lastName = $('.lastName').val();
-    var email = $('.email').val();
-    var phone = $('.phone').val();
-    var dob = $('.dob').val();
-    var password = $('.createpass').val();
-    var confirmpass = $('.confirmpass').val();
-    var gender = $('.gender').val();
-    var state = $('.state').val();
-    var plocation = $('.plocation').val();
-    var address = $('.address').val();
-    var height = $('.height').val();
-    var profession = $('.profession').val();
-    var salary = $('.salary').val();
-    var education = $('#education').val();
-    var drink = $('.drink').val();
-    var smoke = $('.smoke').val();
-    var relation_status = $('.relation_status').val();
-    var hc = $('.hc').val();
-    var religion = $('.religion').val();
-    var qa1 = $('.qa1').val();
-    var qa2 = $('.qa2').val();
-    var preferences_smoke = $('.preferences_smoke').val();
-    var preferences_drink = $('.preferences_drink').val();
-    var preferences_marital_status = $('.preferences_marital_status').val();
-    var pwc = $('.pwc').val();
-    var pref_religion = $('.pref_religion').val();
-    var lookingfor = $('.lookingfor').val();
-    var preferable_date = $('.preferable_date').val();
-    var preferable_time = $('.preferable_time').val();
+            // Collect form data
+            var comment = $('#comment').val();
+            var firstName = $('.firstName').val();
+            var lastName = $('.lastName').val();
+            var email = $('.email').val();
+            var phone = $('.phone').val();
+            var dob = $('.dob').val();
+            var password = $('.createpass').val();
+            var confirmpass = $('.confirmpass').val();
+            var gender = $('.gender').val();
+            var state = $('.state').val();
+            var plocation = $('.plocation').val();
+            var address = $('.address').val();
+            var height = $('.height').val();
+            var profession = $('.profession').val();
+            var salary = $('.salary').val();
+            var education = $('#education').val();
+            var drink = $('.drink').val();
+            var smoke = $('.smoke').val();
+            var relation_status = $('.relation_status').val();
+            var hc = $('.hc').val();
+            var religion = $('.religion').val();
+            var qa1 = $('.qa1').val();
+            var qa2 = $('.qa2').val();
+            var preferences_smoke = $('.preferences_smoke').val();
+            var preferences_drink = $('.preferences_drink').val();
+            var preferences_marital_status = $('.preferences_marital_status').val();
+            var pwc = $('.pwc').val();
+            var pref_religion = $('.pref_religion').val();
+            var lookingfor = $('.lookingfor').val();
+            var preferable_date = $('.preferable_date').val();
+            var preferable_time = $('.preferable_time').val();
+            var companyName = $('#companyName').val();
+            var jobTitle = $('#jobTitle').val();
+            var facebook_profile = $('#fblink').val();
+            var linkedin_profile = $('#linkedinlink').val();
+            var instagram_profile = $('instalink').val();
 
-    // Create FormData object
-    var formData = new FormData();
-    formData.append('comment', comment);
-    formData.append('firstName', firstName);
-    formData.append('lastName', lastName);
-    formData.append('email', email);
-    formData.append('phone', phone);
-    formData.append('dob', dob);
-    formData.append('password', password);
-    formData.append('confirmpass', confirmpass);
-    formData.append('gender', gender);
-    formData.append('state', state);
-    formData.append('plocation', plocation);
-    formData.append('address', address);
-    formData.append('height', height);
-    formData.append('profession', profession);
-    formData.append('salary', salary);
-    formData.append('education', education);
-    formData.append('drink', drink);
-    formData.append('smoke', smoke);
-    formData.append('relation_status', relation_status);
-    formData.append('hc', hc);
-    formData.append('religion', religion);
-    formData.append('qa1', qa1);
-    formData.append('qa2', qa2);
-    formData.append('preferences_smoke', preferences_smoke);
-    formData.append('preferences_drink', preferences_drink);
-    formData.append('preferences_marital_status', preferences_marital_status);
-    formData.append('pwc', pwc);
-    formData.append('pref_religion', pref_religion);
-    formData.append('lookingfor', lookingfor);
-    formData.append('preferable_date', preferable_date);
-    formData.append('preferable_time', preferable_time);
+            // Create FormData object
+            var formData = new FormData();
+            formData.append('comment', comment);
+            formData.append('firstName', firstName);
+            formData.append('lastName', lastName);
+            formData.append('email', email);
+            formData.append('phone', phone);
+            formData.append('dob', dob);
+            formData.append('password', password);
+            formData.append('confirmpass', confirmpass);
+            formData.append('gender', gender);
+            formData.append('state', state);
+            formData.append('plocation', plocation);
+            formData.append('address', address);
+            formData.append('height', height);
+            formData.append('profession', profession);
+            formData.append('salary', salary);
+            formData.append('education', education);
+            formData.append('drink', drink);
+            formData.append('smoke', smoke);
+            formData.append('relation_status', relation_status);
+            formData.append('hc', hc);
+            formData.append('religion', religion);
+            formData.append('qa1', qa1);
+            formData.append('qa2', qa2);
+            formData.append('preferences_smoke', preferences_smoke);
+            formData.append('preferences_drink', preferences_drink);
+            formData.append('preferences_marital_status', preferences_marital_status);
+            formData.append('pwc', pwc);
+            formData.append('pref_religion', pref_religion);
+            formData.append('lookingfor', lookingfor);
+            formData.append('preferable_date', preferable_date);
+            formData.append('preferable_time', preferable_time);
 
-    // Append files
-    formData.append('image1', $('.image1')[0].files[0]); // Append first file
-    formData.append('image2', $('.image2')[0].files[0]); // Append second file
-    formData.append('image3', $('.image3')[0].files[0]); // Append third file
+            // Append files
+            formData.append('image1', $('.image1')[0].files[0]); // Append first file
+            formData.append('image2', $('.image2')[0].files[0]); // Append second file
+            formData.append('image3', $('.image3')[0].files[0]); // Append third file
 
-    // Add CSRF token
-    formData.append('_token', '{{ csrf_token() }}');
+            // Add CSRF token
+            formData.append('_token', '{{ csrf_token() }}');
+            formData.append('jobTitle', jobTitle);
+            formData.append('companyName', companyName);
+            formData.append('facebook_profile', facebook_profile);
+            formData.append('linkedin_profile', linkedin_profile);
+            formData.append('instagram_profile', instagram_profile);
 
-    // AJAX request
-    $.ajax({
-        type: "POST",
-        url: "{{ URL::to('/saveRegistration') }}",  // Your Laravel route
-        data: formData,  // Send the FormData object
-        contentType: false,  // Required for FormData
-        processData: false,  // Prevent jQuery from processing the data
-        success: function(response) {
-            $('#yourTrust').modal('show');
-        },
-        error: function(xhr, status, error) {
-                $('#yourTrust').modal('hide');
-                $('#receivedModal').modal('hide');
-            var response = xhr.responseJSON; // Get the JSON response object
-            if (!response.success) {
-                console.log('Validation errors:', response.message);
-                
-                $('#error').show();
-                // Loop through the data object and print the validation errors
-                $.each(response.data, function(field, errors) {
-                    console.log(field + ': ' + errors.join(', '));
+            // AJAX request
+            $.ajax({
+                type: "POST",
+                url: "{{ URL::to('/saveRegistration') }}",  // Your Laravel route
+                data: formData,  // Send the FormData object
+                contentType: false,  // Required for FormData
+                processData: false,  // Prevent jQuery from processing the data
+                success: function(response) {
+                    $('#yourTrust').modal('show');
+                },
+                error: function(xhr, status, error) {
+                        $('#yourTrust').modal('hide');
+                        $('#receivedModal').modal('hide');
+                    var response = xhr.responseJSON; // Get the JSON response object
+                    if (!response.success) {
+                        console.log('Validation errors:', response.message);
+                        
+                        $('#error').show();
+                        // Loop through the data object and print the validation errors
+                        $.each(response.data, function(field, errors) {
+                            console.log(field + ': ' + errors.join(', '));
 
-                    // Optionally, display the error messages on the page
-                    var errorMessage = errors.join(', ');
-                    // Assume you have a div to show errors for each field, e.g. <div id="error-firstName"></div>
-                    $('#error-' + field).text(errorMessage);
-                    $('#error').text(errorMessage);
-                });
-            }
-        }
-    });
-});
+                            // Optionally, display the error messages on the page
+                            var errorMessage = errors.join(', ');
+                            // Assume you have a div to show errors for each field, e.g. <div id="error-firstName"></div>
+                            $('#error-' + field).text(errorMessage);
+                            $('#error').text(errorMessage);
+                        });
+                    }
+                }
+            });
+        });
 
         
 //Flash data

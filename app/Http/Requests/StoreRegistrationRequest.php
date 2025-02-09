@@ -44,17 +44,21 @@ class StoreRegistrationRequest extends BaseRequest
             'religion' => 'required',
             'qa1' => 'required',
             'qa2' => 'required',
-            // 'preferences_smoke' => 'required',
-            // 'preferences_drink' => 'required',
-            // 'preferences_marital_status' => 'required',
-            // 'pwc' => 'required',
-            // 'pref_religion' => 'required',
-            // 'lookingfor' => 'required',
+            'preferences_smoke' => 'required',
+            'preferences_drink' => 'required',
+            'preferences_marital_status' => 'required',
+            'pwc' => 'required',
+            'pref_religion' => 'required',
+            'lookingfor' => 'required',
             'preferable_date' => 'required',
             'preferable_time' => 'required',
             'image1'=>'required|file|mimes:jpg,png',
             'image2'=>'required|file|mimes:jpg,png',
             'image3'=>'required|file|mimes:jpg,png',
+            'facebook_profile'=>'required',
+            'linkedin_profile'=>'required',
+            'companyName'=>'required',
+            'jobTitle'=>'required',
         ];
     }
 
@@ -92,6 +96,10 @@ class StoreRegistrationRequest extends BaseRequest
             'lookingfor.required' => 'Please select your option',
             'preferable_date.required' => 'Please select your option',
             'preferable_time.required' => 'Please select your option',
+            'linkedin_profile.required'=>'Please Enter your Linkedin profie',
+            'facebook_profile.required'=>'Please Enter your Facebook profie',
+            'jobTitle.required'=>'Please enter the Job title',
+            'companyName.required'=>'Please enter the Company Name'
         ];
     }
 }
