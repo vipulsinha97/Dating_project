@@ -28,17 +28,21 @@
 		<div class="offcanvas-header">
 			<div class="profile-avtar">
                 @if(!empty(session('profile_pic')))
-                <span><img src="{{ asset('storage/app/public/uploads/profile_pictures') }}/{{session('profile_pic')}}" /></span>
+                    @if(session('role')==='admin')
+                        <a href="{{URL::to('/admin/dashboard')}}"><span><img src="{{ asset('storage/app/public/uploads/profile_pictures') }}/{{session('profile_pic')}}" /></span></a>
+                    @else
+                        <a href="{{URL::to('/user/dashboard')}}"><span><img src="{{ asset('storage/app/public/uploads/profile_pictures') }}/{{session('profile_pic')}}" /></span></a>
+                    @endif
                 @else
-                <span><img src="{{asset('assets/images/profile-avtar.svg')}}" /></span>
 				@endif
-                @if(!empty(session('profile_pic')))
-                <span>
-					<h5>{{session('name')}}</h5>
-				</span>
+                @if(!empty(session('name')))
+                    @if(session('role')==='admin')
+                        <a href="{{URL::to('/admin/dashboard')}}"><span><h5>{{session('name')}}</h5></span></a>
+                    @else
+                        <a href="{{URL::to('/user/dashboard')}}"><span><h5>{{session('name')}}</h5></span></a>
+                    @endif
                 @else
                 <span>
-					<h5>{{session('name')}}</h5>
 				</span>
 				@endif
 			</div>
