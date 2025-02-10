@@ -26,13 +26,12 @@ class loginController extends Controller
             ]);
 
             $user = User::where('email', $requestData['email'])->first();
-            
-            $img = json_decode($user->picture);
 
             if ($user && Hash::check($requestData['password'], $user->password)) {
                 if($user->status === 'activate') {    
                     Auth::login($user);
-
+                    
+                    $img = json_decode($user->picture);
                     // Check user's role and redirect accordingly
                     if 
                     ($user->role === 'admin') {

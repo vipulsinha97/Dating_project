@@ -18,11 +18,11 @@
                                 <p>For your safety and to maintain the authenticity of our community, we require users to sign in via their social media profiles. This helps us verify identities and ensure that only genuine profiles are allowed to participate in our events. This information is kept private and your social media details are not shared.</p>
                             </div>
                             <div class="mt-3 social-btns">
-                                <a href="{{URL::to('/signup-details')}}" class="btn mb-4 btn-outline"><img src="{{asset('assets/images/logos_facebook.svg')}}" /> Sign up with Facebook</a>
+                                <a href="{{URL::to('/facebook/login')}}" class="btn mb-4 btn-outline"><img src="{{asset('assets/images/logos_facebook.svg')}}" /> Sign up with Facebook</a>
                             </div>
-                            <div class="mt-3 social-btns">
+                            {{-- <div class="mt-3 social-btns">
                                 <a href="{{URL::to('/signup-details')}}" class="btn mb-4 btn-outline"><img src="{{asset('assets/images/insta.svg')}}" style="width: 24px;height: 24px;" /> Sign up with Instagram</a>
-                            </div>
+                            </div> --}}
                             <div class="group-66">
                                 <div class="line-13">
                                 </div>

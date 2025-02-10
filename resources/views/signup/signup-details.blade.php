@@ -278,24 +278,24 @@
                                     <div class="select-container">
                                         <select id="height-select" class="height" name="height">
                                             <option value="5ft">5 feet</option>
-                                            <option value="5ft1in">5 feet 1 inch</option>
-                                            <option value="5ft2in">5 feet 2 inches</option>
-                                            <option value="5ft3in">5 feet 3 inches</option>
-                                            <option value="5ft4in">5 feet 4 inches</option>
-                                            <option value="5ft5in">5 feet 5 inches</option>
-                                            <option value="5ft6in">5 feet 6 inches</option>
-                                            <option value="5ft7in">5 feet 7 inches</option>
-                                            <option value="5ft8in">5 feet 8 inches</option>
-                                            <option value="5ft9in">5 feet 9 inches</option>
-                                            <option value="5ft10in">5 feet 10 inches</option>
-                                            <option value="5ft11in">5 feet 11 inches</option>
-                                            <option value="6ft0in">6 feet 0 inches</option>
-                                            <option value="6ft1in">6 feet 1 inch</option>
-                                            <option value="6ft2in">6 feet 2 inches</option>
-                                            <option value="6ft3in">6 feet 3 inches</option>
-                                            <option value="6ft4in">6 feet 4 inches</option>
-                                            <option value="6ft5in">6 feet 5 inches</option>
-                                            <option value="6ft6in">6 feet 6 inches</option>
+                                            <option value="5ft 1inches">5 feet 1 inch</option>
+                                            <option value="5ft 2inches">5 feet 2 inches</option>
+                                            <option value="5ft 3inches">5 feet 3 inches</option>
+                                            <option value="5ft 4inches">5 feet 4 inches</option>
+                                            <option value="5ft 5inches">5 feet 5 inches</option>
+                                            <option value="5ft 6inches">5 feet 6 inches</option>
+                                            <option value="5ft 7inches">5 feet 7 inches</option>
+                                            <option value="5ft 8inches">5 feet 8 inches</option>
+                                            <option value="5ft 9inches">5 feet 9 inches</option>
+                                            <option value="5ft1 0inches">5 feet 10 inches</option>
+                                            <option value="5ft1 1inches">5 feet 11 inches</option>
+                                            <option value="6ft 0inches">6 feet 0 inches</option>
+                                            <option value="6ft 1inches">6 feet 1 inch</option>
+                                            <option value="6ft 2inches">6 feet 2 inches</option>
+                                            <option value="6ft 3inches">6 feet 3 inches</option>
+                                            <option value="6ft 4inches">6 feet 4 inches</option>
+                                            <option value="6ft 5inches">6 feet 5 inches</option>
+                                            <option value="6ft 6inches">6 feet 6 inches</option>
                                         </select>
                                     </div>
                                     <div id="error-height" class="error-message"></div>
@@ -356,11 +356,11 @@
                                 </div>
                                 <div class="mb-4">
                                     <div class="input-group bb-1-light0 radiobtn">
-                                        <input type="radio" id="smoke_yes" class="smoke" name="smoke" value="smoke_yes">
+                                        <input type="radio" id="smoke_yes" class="smoke" name="smoke" value="yes">
                                         <label for="smoke_yes" class="option-button">Yes</label>
-                                        <input type="radio" id="smoke_no" class="smoke" name="smoke" value="smoke_no">
+                                        <input type="radio" id="smoke_no" class="smoke" name="smoke" value="no">
                                         <label for="smoke_no" class="option-button">No</label>
-                                        <input type="radio" id="smoke_occasionally" class="smoke" name="smoke" value="smoke_occasionally">
+                                        <input type="radio" id="smoke_occasionally" class="smoke" name="smoke" value="occasionally">
                                         <label for="smoke_occasionally" class="option-button">Occasionally</label>
                                     </div>
                                     <div id="error-smoke" class="error-message"></div>
@@ -379,25 +379,25 @@
                                 </div>
                                 <div class="mb-4">
                                     <div class="input-group bb-1-light0 radiobtn">
-                                        <input type="radio" id="nm" class="relation_status" name="relation_status" value="nm">
+                                        <input type="radio" id="nm" class="relation_status" name="relation_status" value="never married">
                                         <label for="nm" class="option-button">Never married</label>
                                         <input type="radio" id="widow" class="relation_status" name="relation_status" value="widow">
                                         <label for="widow" class="option-button">Widow</label>
                                         <input type="radio" id="divorced" class="relation_status" name="relation_status" value="divorced">
                                         <label for="divorced" class="option-button">Divorced</label>
                                         <input type="radio" id="ad" class="relation_status" name="relation_status" value="awaiting_divorce">
-                                        <label for="ad" class="option-button">Awaiting Divorce</label>
+                                        <label for="awaiting divorce" class="option-button">Awaiting Divorce</label>
                                     </div>
                                     <div id="error-relation_status" class="error-message"></div>
                                 </div>
                                 <div class="mb-4 mt-5">
                                     <h4 class="redcl-black mb-4">Do you have children?</h4>
                                     <div class="input-group bb-1-light0 radiobtn">
-                                        <input type="radio" id="hc-no" class="hc" name="hc" value="hc-no">
+                                        <input type="radio" id="hc-no" class="hc" name="hc" value="no">
                                         <label for="hc-no" class="option-button">No</label>
-                                        <input type="radio" id="hc-yes" class="hc" name="hc" value="hc-yes">
+                                        <input type="radio" id="hc-yes" class="hc" name="hc" value="yes">
                                         <label for="hc-yes" class="option-button">Yes</label>
-                                        <input type="radio" id="hc-ss" class="hc" name="hc" value="hc-ss">
+                                        <input type="radio" id="hc-ss" class="hc" name="hc" value="staying seperate">
                                         <label for="hc-ss" class="option-button">Yes but staying separately</label>
                                     </div>
                                     <div id="error-hc" class="error-message"></div>
@@ -419,23 +419,23 @@
                                         <!-- <input type="radio" id="nm" classs="religion-hinduism" name="religion" value="nm">
                                         <label for="nm" class="option-button">Hinduism</label> -->
 
-                                        <input type="radio" id="religion-hinduism" classs="religion" name="religion" value="religion-hinduism">
+                                        <input type="radio" id="religion-hinduism" classs="religion" name="religion" value="hinduism">
                                         <label for="religion-hinduism" class="option-button">Hindu</label>
 
-                                        <input type="radio" id="religion-sikh" classs="religion" name="religion" value="religion-sikh">
+                                        <input type="radio" id="religion-sikh" classs="religion" name="religion" value="sikh">
                                         <label for="religion-sikh" class="option-button">Sikh</label>
 
-                                        <input type="radio" id="religion-jain" classs="religion" name="religion" value="religion-jain">
+                                        <input type="radio" id="religion-jain" classs="religion" name="religion" value="rjain">
                                         <label for="religion-jain" class="option-button">Jain</label>
-                                        <input type="radio" id="religion-christian" classs="religion" name="religion" value="religion-christian">
+                                        <input type="radio" id="religion-christian" classs="religion" name="religion" value="christian">
                                         <label for="religion-christian" class="option-button"> Christian</label>
-                                        <input type="radio" id="religion-muslim" classs="religion" name="religion" value="religion-muslim">
+                                        <input type="radio" id="religion-muslim" classs="religion" name="religion" value="muslim">
                                         <label for="religion-muslim" class="option-button"> Muslim</label>
-                                        <input type="radio" id="religion-budh" classs="religion" name="religion" value="religion-budh">
+                                        <input type="radio" id="religion-budh" classs="religion" name="religion" value="Buddhist">
                                         <label for="religion-budh" class="option-button"> Buddhist</label>
-                                        <input type="radio" id="religion-spritual" classs="religion" name="religion" value="religion-spritual">
+                                        <input type="radio" id="religion-spritual" classs="religion" name="religion" value="spiritual">
                                         <label for="religion-spritual" class="option-button"> Spiritual</label>
-                                        <input type="radio" id="religion-others" classs="religion" name="religion" value="religion-others">
+                                        <input type="radio" id="religion-others" classs="religion" name="religion" value="others">
                                         <label for="religion-others" class="option-button"> Others</label>
                                     </div>
                                     <div id="error-religion" class="error-message"></div>
@@ -544,9 +544,9 @@
                                 <div class="mb-4">
                                     <h4 class="redcl">Smoke</h4>
                                     <div class="input-group bb-1-light0 radiobtn">
-                                        <input type="radio" id="partnersmoke-doesnotmatter" class="preferences_smoke" name="partnersmoke_smokeornot" value="partnersmoke-doesnotmatter">
+                                        <input type="radio" id="partnersmoke-doesnotmatter" class="preferences_smoke" name="partnersmoke_smokeornot" value="doesnotmatter">
                                         <label for="partnersmoke-doesnotmatter" class="option-button">Doesn’t matter</label>
-                                        <input type="radio" id="partnersmoke-notok" class="preferences_smoke" name="partnersmoke_smokeornot" value="partnersmoke-notok">
+                                        <input type="radio" id="partnersmoke-notok" class="preferences_smoke" name="partnersmoke_smokeornot" value="Not ok">
                                         <label for="partnersmoke-notok" class="option-button">Not Ok</label>
                                     </div>
                                     <div id="error-preferences_smoke" class="error-message"></div>
@@ -554,11 +554,11 @@
                                 <div class="mb-4">
                                     <h4 class="redcl">Drink</h4>
                                     <div class="input-group bb-1-light0 radiobtn">
-                                        <input type="radio" id="drink-doesnot" class="preferences_drink" name="preferences_drink" value="drink-doesnot">
+                                        <input type="radio" id="drink-doesnot" class="preferences_drink" name="preferences_drink" value="Does not matter">
                                         <label for="drink-doesnot" class="option-button">Doesn’t matter</label>
-                                        <input type="radio" id="drink-occasionally" class="preferences_drink" name="preferences_drink" value="drink-occasionally">
+                                        <input type="radio" id="drink-occasionally" class="preferences_drink" name="preferences_drink" value="occasionally">
                                         <label for="drink-occasionally" class="option-button">Occasionally</label>
-                                        <input type="radio" id="drink-notok" class="preferences_drink" name="preferences_drink" value="drink-notok">
+                                        <input type="radio" id="drink-notok" class="preferences_drink" name="preferences_drink" value="Not ok">
                                         <label for="drink-notok" class="option-button">Not Ok</label>
                                     </div>
                                     <div id="error-preferences_drink" class="error-message"></div>
@@ -602,11 +602,11 @@
                                 <div class="mb-4">
                                     <h4 class="redcl">Profile with children</h4>
                                     <div class="input-group bb-1-light0 radiobtn">
-                                        <input type="radio" id="pwc-doesnot" class="pwc" name="pwc" value="pwc-doesnot">
+                                        <input type="radio" id="pwc-doesnot" class="pwc" name="pwc" value="Doesnot matter">
                                         <label for="pwc-doesnot" class="option-button">Doesn’t matter</label>
-                                        <input type="radio" id="pwc-notok" class="pwc" name="pwc" value="pwc-notok">
+                                        <input type="radio" id="pwc-notok" class="pwc" name="pwc" value="Not ok">
                                         <label for="pwc-notok" class="option-button">Not Ok</label>
-                                        <input type="radio" id="pwc-occasionally" class="pwc" name="pwc" value="pwc-occasionally">
+                                        <input type="radio" id="pwc-occasionally" class="pwc" name="pwc" value="occasionally">
                                         <label for="pwc-occasionally" class="option-button"> If not living together</label>
                                     </div>
                                     <div id="error-pwc" class="error-message"></div>
@@ -615,49 +615,49 @@
                                     <h4 class="redcl">Religion</h4>
                                     <div class="input-group bb-1-light0 checkbtn">
                                         <div class="form-check">
-                                            <input class="form-check-input pref_religion" type="checkbox" id="pr-doesntmatter" name="pref_religion" value="pr-doesntmatter">
+                                            <input class="form-check-input pref_religion" type="checkbox" id="doesnt matter" name="pref_religion" value="pr-doesntmatter">
                                             <label class="form-check-label" for="pr-doesntmatter">
                                                 Doesn’t matter
                                             </label>
                                         </div>
                                         <div class="form-check">
-                                            <input class="form-check-input pref_religion" type="checkbox" id="pr-hinduism" name="pref_religion" value="pr-hinduism">
+                                            <input class="form-check-input pref_religion" type="checkbox" id="pr-hinduism" name="pref_religion" value="hinduism">
                                             <label class="form-check-label" for="pr-hinduism">
                                             Hindu 
                                             </label>
                                         </div>
                                         <div class="form-check">
-                                            <input class="form-check-input pref_religion" type="checkbox" id="pr-sikh" name="pref_religion" value="pr-sikh">
+                                            <input class="form-check-input pref_religion" type="checkbox" id="pr-sikh" name="pref_religion" value="sikh">
                                             <label class="form-check-label" for="pr-sikh">
                                                 Sikh
                                             </label>
                                         </div>
                                         <div class="form-check">
-                                            <input class="form-check-input pref_religion" type="checkbox" id="pr-jain" name="pref_religion" value="pr-jain">
+                                            <input class="form-check-input pref_religion" type="checkbox" id="pr-jain" name="pref_religion" value="jain">
                                             <label class="form-check-label" for="pr-jain">
                                                 Jain
                                             </label>
                                         </div>
                                         <div class="form-check">
-                                            <input class="form-check-input pref_religion" type="checkbox" id="pr-christ" name="pref_religion" value="pr-christ">
+                                            <input class="form-check-input pref_religion" type="checkbox" id="pr-christ" name="pref_religion" value="christ">
                                             <label class="form-check-label" for="pr-christ">
                                             Christian
                                             </label>
                                         </div>
                                         <div class="form-check">
-                                            <input class="form-check-input pref_religion" type="checkbox" id="pr-muslim" name="pref_religion" value="pr-muslim">
+                                            <input class="form-check-input pref_religion" type="checkbox" id="pr-muslim" name="pref_religion" value="muslim">
                                             <label class="form-check-label" for="pr-muslim">
                                                 Muslim
                                             </label>
                                         </div>
                                         <div class="form-check">
-                                            <input class="form-check-input pref_religion" type="checkbox" id="pr-budh" name="pref_religion" value="pr-budh">
+                                            <input class="form-check-input pref_religion" type="checkbox" id="pr-budh" name="pref_religion" value="buddhist">
                                             <label class="form-check-label" for="pr-budh">
                                                 Buddhist
                                             </label>
                                         </div>
                                         <div class="form-check">
-                                            <input class="form-check-input pref_religion" type="checkbox" id="pr-spiritual" name="pref_religion" value="pr-spiritual">
+                                            <input class="form-check-input pref_religion" type="checkbox" id="pr-spiritual" name="pref_religion" value="spiritual">
                                             <label class="form-check-label" for="pr-spiritual">
                                                 Spiritual
                                             </label>

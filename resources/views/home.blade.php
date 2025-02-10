@@ -191,10 +191,10 @@
                         <div class="owl-carousel owl-theme" id="location-slider">
                             @foreach($location as $loc)
                             <div class="card post-slide0 ">
-                                <img src="{{ asset('storage/app/public/uploads/location_feature_image/' . $location->location_image) }}{{asset('assets/images/mumbai.png')}}" class="card-img-top" alt="...">
+                                <img src="{{ asset('storage/app/public/uploads/location_feature_image/' . $loc->location_image) }}" class="card-img-top" alt="...">
                                 <div class="card-body card-img-overlayed">
                                     <h5 class="card-title">{{$loc->location_name}}</h5>
-                                    <a href="#" class="btn btn-primary0 event-btn">Book Event <img src="{{asset('assets/images/arrow-diag.svg')}}" /></a>
+                                    <a href="{{URL::to('/event')}}/{{$loc->id}}" class="btn btn-primary0 event-btn">Book Event <img src="{{asset('assets/images/arrow-diag.svg')}}" /></a>
                                 </div>
                             </div>
                             @endforeach
