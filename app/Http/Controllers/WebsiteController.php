@@ -12,7 +12,10 @@ class WebsiteController extends Controller
     //home page
     public function index()
     {
-        $location = Location::join('events', 'events.location', '=', 'location.id');
+        $location = Location::join('events', 'events.location', '=', 'locations.id')
+        ->select('locations.*')
+        ->distinct()
+        ->get();
         return view('home', ['location'=>$location]);
     }
 
