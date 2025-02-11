@@ -217,6 +217,7 @@
                       <th>LINKDIN PROFILE</th>
                       <th>FACEBOOK PROFILE</th>
                       <th>INSTAGRAM PROFILE</th>
+                      <th>ACTION</th>
                     </tr>
                   </thead>
                   <tbody>
@@ -252,6 +253,10 @@
                         <td>{{$users->linkedIn_profile}}</td>
                         <td>{{$users->facebook_profile}}</td>
                         <td>{{$users->instagram_profile}}</td>
+                        <td>
+                          <a href="{{ URL::to('/admin/dashboard/approveUser/') }}/{{$users->id}}" class="btn btn-primary">APPROVE</a>
+                          <a href="{{ URL::to('/admin/dashboard/disapproveUser/') }}/{{$users->id}}" class="btn btn-danger">DISAPPROVE</a>
+                        </td>
                     </tr>   
                     @endforeach
                   </tbody>
