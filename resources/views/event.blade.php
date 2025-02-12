@@ -88,7 +88,7 @@
                                                                         </div>
                                                                         <div class="post-content">
                                                                             <h3 class="post-title">
-                                                                                <a href="#">{{ $singleEvent->title }}</a>
+                                                                                <a href="{{URL::to('/event/details/'. $singleEvent->id)}}">{{ $singleEvent->title }}</a>
                                                                             </h3>
                                                                             <p class="post-description">{{ substr($singleEvent->description, 0, 25) }}...</p>
                                                                             @php
