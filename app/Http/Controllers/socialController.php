@@ -28,7 +28,14 @@ class socialController extends Controller
 
         if (!empty($existingUser)) {            
             Auth::login($existingUser);
-            return redirect('/user/dashboard');
+            if ($existingUser->role === 'admin')
+            {
+                return redirect('/admin/dashboard');
+            }
+            else
+            {
+                return redirect('/user/dashboard');
+            }
         }
         else {
 

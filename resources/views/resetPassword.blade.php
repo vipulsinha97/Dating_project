@@ -18,7 +18,10 @@
                 <div class="col-md-4"></div>
                     <div class="col-md-4">
                     <h1 class="title-abtus mb-5">Reset Password</h1>
-                        <form action="">
+                        <form action="{{URL::to('/reset-password')}}" method="POST" enctype="form-data/multipart">
+                            @csrf
+                            <input type="hidden" name="email" value="{{$email}}">
+                            <input type="hidden" name="token" value="{{$token}}">
                             <div class="mb-4">
                                 <div class="input-group bb-1-light0">
                                     <input type="password" class="form-control newpass" id="" name="" placeholder="Enter new password">

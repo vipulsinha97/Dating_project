@@ -12,6 +12,7 @@ use App\Http\Controllers\EventController;
 use App\Http\Controllers\LocationController;
 use App\Http\Controllers\AgeGroupController;
 use App\Http\Controllers\WebsiteController;
+use App\Http\Controllers\PasswordResetController;
 use App\Http\Middleware\AuthMiddleware;
 use App\Livewire\Chat\Index;
 use App\Livewire\Chat\Chat;
@@ -26,6 +27,10 @@ Route::get('/signup',[signupController::class, 'index']);
 Route::get('/signup-details',[signupController::class, 'signupDetails']);
 Route::post('/saveRegistration', [signupController::class, 'saveRegistration']);
 Route::post('/login', [loginController::class, 'loginPost'])->name('loginPost');
+
+Route::post('/request-password-reset', [PasswordResetController::class, 'requestReset']);
+Route::get('/reset-password', [PasswordResetController::class, 'showResetForm']);
+Route::post('/reset-password', [PasswordResetController::class, 'resetPassword']);
 
 //social facebook login
 Route::get('facebook/login', [socialController::class, 'provider'])->name('facebook.login');
