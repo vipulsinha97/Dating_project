@@ -219,6 +219,7 @@
                                 <th>Event Date</th>
                                 <th>Location</th>
                                 <th>Event Duration</th>
+                                <th>Event Age Group</th>
                                 <th>Action</th>
 
                             </tr>
@@ -235,6 +236,7 @@
                                   <td>{{$event->event_date}}</td>
                                   <td><span class="tag tag-success">{{$event->location_name}}</span></td>
                                   <td>{{$event->event_duration}}</td>
+                                  <td>{{$event->starting_age}}-{{$event->ending_age}}</td>
                                   <td>
                                     <a href="{{ URL::to('/admin/dashboard/edit-event/') }}/{{$event->id}}" class="btn btn-primary">Edit</a>
                                     <a href="{{ URL::to('/admin/dashboard/delete-event/') }}/{{$event->id}}" class="btn btn-danger">Delete</a>

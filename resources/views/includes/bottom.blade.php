@@ -101,17 +101,19 @@
       <!-- Modal body -->
       <div class="modal-body align-center ytop">
         <h4 class="modal-title my-4">Forgot Password</h4>
-        <div class="mb-4">
-          <form action="">
-            <div class="input-group bb-1-light0">
-              <input type="email" class="form-control email" id="" name="" placeholder="Enter your email" value="">
-            </div>
-            <div id="" class="error-message"></div>
-          </form>
-        </div>
-        <div class="modalbtnmain">
-          <button type="button" id="submitData3" class="btn btn-accept">SUBMIT</button>
-        </div>
+        <form action="{{URL::to('/request-password-reset')}}" method="POST" enctype="form-data/multipart">
+          <div class="mb-4">
+              @csrf
+              <div class="input-group bb-1-light0">
+                <input type="email" class="form-control email" id="" name="email" placeholder="Enter your email" value="">
+              </div>
+              <div id="" class="error-message"></div>
+            
+          </div>
+          <div class="modalbtnmain">
+            <button type="submit" id="submitData3" class="btn btn-accept">SUBMIT</button>
+          </div>
+        </form>
       </div>
       <!-- Modal footer -->
       <div class="modal-footer bord-none">

@@ -1,5 +1,5 @@
 $(document).ready(function(){
-      $('.center-slider').slick({
+      $('.center-slider').click({
         slidesToShow: 5,
         slidesToScroll: 1,
         centerMode: true,
